@@ -1,0 +1,21 @@
+@media(max-width: 860px){
+    section .container  {
+        flex-direction:column ;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        
+    }
+    section .container .contactForm .formBox .inputBox.w50 .inputBox.w100 {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+       padding:3rem;
+   }
+
+   
+  
+}
