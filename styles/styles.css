@@ -158,6 +158,10 @@ a {
   margin-left: -100px;
 }
 
+.main-2 {
+  display: none;
+}
+
 /* Section Main */
 .growth {
   display: flex;
@@ -339,5 +343,119 @@ footer .container .footer-content .socials a {
     width: 100%;
     margin: 0;
     margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .main {
+    height: 70vh;
+  }
+  .main .right {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .main .right p:nth-child(1) {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.6;
+    width: max-content;
+  }
+
+  .main .right p:nth-child(2) {
+    font-size: 18px;
+  }
+
+  .main .left {
+    margin: 10px 10px 0 -80px;
+  }
+
+  .cover {
+    visibility: hidden;
+  }
+
+  .main-2 {
+    display: block;
+  }
+
+  main img {
+    position: absolute;
+    height: 280px;
+    width: 300px;
+    right: 0;
+    top: 0;
+    margin: 250px 50px 0 0;
+  }
+
+  .growth {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--secondary-color);
+    margin: 0px 10px 0px 10px;
+    width: 95%;
+    height: 800px;
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding-top: -500px;
+  }
+
+  .growth .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .growth .top p:nth-child(1) {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .growth .top p:nth-child(2) {
+    font-size: 12px;
+  }
+  .growth .top p:nth-child(3) {
+    font-size: 12px;
+  }
+
+  .growth .bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 20px;
+    height: 400px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3px;
+  }
+  .box:hover {
+    background-color: white;
+    color: var(--secondary-color);
+    border-radius: 10px;
+  }
+
+  .audience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .audience .left p:nth-child(1) {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
