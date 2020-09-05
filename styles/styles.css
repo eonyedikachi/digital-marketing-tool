@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
+
 *,
 ::before,
 ::after {
@@ -8,11 +10,11 @@
 
 :root {
   --primary-color: #fff;
-  --secondary-color: #4169e1;
+  --secondary-color: #4eb1f5;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Baloo Tamma 2", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
@@ -104,6 +106,129 @@ a {
   transform: rotate(-45deg) translate(6px, -10px);
 }
 
+/* Main Div */
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main .right {
+  padding: 90px 0 0 0;
+}
+
+.main .right p:nth-child(1) {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.main .right p:nth-child(2) {
+  font-size: 20px;
+}
+.main .right button {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-family: "Baloo Tamma 2";
+  cursor: pointer;
+}
+
+.main .right button:focus {
+  outline: 0;
+}
+
+.main .left {
+  background-color: var(--secondary-color);
+  height: 70vh;
+  width: 70vh;
+  margin: 5px 0 0 0;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+
+.main .left .cover {
+  background-image: url("../images/marketing-1.jpg");
+  background-size: cover;
+  height: 250px;
+  width: 400px;
+  border-radius: 10px;
+  margin-top: 70px;
+  margin-left: -100px;
+}
+
+/* Section Main */
+.growth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfdfd;
+}
+
+.growth .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.growth .top p:nth-child(1) {
+  font-size: 40px;
+  font-weight: bold;
+}
+.growth .top p:nth-child(2) {
+  font-size: 20px;
+}
+.growth .top p:nth-child(3) {
+  font-size: 20px;
+}
+
+.growth .bottom {
+  display: flex;
+  padding: 0 20px 0 20px;
+  height: 200px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: 3px;
+}
+
+.box i {
+  font-size: 50px;
+}
+
+.box:hover {
+  background-color: white;
+}
+
+.audience {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.audience .right {
+  background-image: url("../images/audience.png");
+  background-size: cover;
+  height: 350px;
+  width: 400px;
+}
+
+.audience .left p:nth-child(1) {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.audience .left a {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
 /* Footer */
 footer {
   background: var(--secondary-color);
@@ -132,7 +257,7 @@ footer .container .footer-content .footer-logo {
   color: var(--primary-color);
 }
 
-footer .container .footer-content .footer-logo > p{
+footer .container .footer-content .footer-logo > p {
   padding: 1rem;
 }
 
@@ -159,14 +284,14 @@ footer .container .footer-content .support > ul > li > a {
 }
 
 footer .container .footer-content .socials {
-    text-align: center;
-    color: var(--primary-color);
+  text-align: center;
+  color: var(--primary-color);
 }
 
-footer .container .footer-content .socials a{
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    margin: 0 0.3rem;
+footer .container .footer-content .socials a {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin: 0 0.3rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -206,13 +331,13 @@ footer .container .footer-content .socials a{
 
   /* Footer */
   footer .container .footer-content {
-      flex-direction: column;
-      align-items: center;
-}
+    flex-direction: column;
+    align-items: center;
+  }
 
-.foot{
+  .foot {
     width: 100%;
     margin: 0;
     margin-bottom: 1.5rem;
-}
+  }
 }
