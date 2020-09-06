@@ -29,25 +29,25 @@
     font-size: 20px;
     color: #fff;
 }
-.container{
+.contact-container{
      width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
-.container .contactInfo {
+.contact-container .contactInfo {
     width: 50%;
     display: flex;
     flex-direction: column;
 }
-.container .contactInfo .box{
+.contact-container .contactInfo .box{
     position: relative;
     padding: 20px 0;
     display: flex;
 }
 
-.container .contactInfo .box .icon{
+.contact-container .contactInfo .box .icon{
     min-width: 60px;
     height: 60px;
     background: #fff;
@@ -57,7 +57,7 @@
     border-radius: 50%;
     font-size: 22px;
 }
-.container .contactInfo .box .text{
+.contact-container .contactInfo .box .text{
     display: flex;
     margin-left: 20px;
     font-size: 16px;
@@ -65,7 +65,7 @@
     flex-direction: column;
     font-weight: 300;
 }
-.container .contactInfo .box .text h3{
+.contact-container .contactInfo .box .text h3{
     font-weight: 500;
     color: #010b1f;
 }
@@ -129,13 +129,13 @@
     .contact{
         padding: 50px;
     }
-    .container{
+    .contact-container{
         flex-direction: column;
     }
-    .container .contactInfo{
+    .contact-container .contactInfo{
         margin-bottom: 40px;
     }
-    .container .contactInfo,
+    .contact-container .contactInfo,
     .contactForm{
         width: 100%;
     }
