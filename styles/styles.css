@@ -66,7 +66,7 @@ a {
   font-weight: bold;
 }
 
-.nav-list .nav-items .current{
+.nav-list .nav-items .current {
   color: var(--secondary-color);
   background-color: var(--primary-color);
   border-radius: 5px;
@@ -208,6 +208,7 @@ a {
   align-items: center;
   padding: 10px;
   margin: 3px;
+  text-align: justify;
 }
 
 .box i {
