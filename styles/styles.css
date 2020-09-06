@@ -29,7 +29,7 @@ a {
 
 /* Nav Bar */
 .navbar {
-  padding: 1rem;
+  padding: 0.4rem 0.8rem;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   font-size: 1.2rem;
@@ -49,7 +49,7 @@ a {
 }
 
 .navbar .container > nav > ul > li > a {
-  padding: 0.5rem;
+  padding: 0.3rem;
   margin: 0 0.25rem;
   color: var(--primary-color);
 }
@@ -59,6 +59,17 @@ a {
   background-color: var(--primary-color);
   border-radius: 5px;
   transition: all 0.2s ease;
+}
+
+.navbar .container .logo p {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.nav-list .nav-items .current{
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
 }
 
 /* Hamburger */
@@ -232,22 +243,19 @@ a {
 /* Footer */
 footer {
   background: var(--secondary-color);
-  padding: 1rem;
-}
-
-footer .container .copyright > p {
-  font-size: 0.7rem;
-  text-align: center;
+  padding: 0.5rem;
+  padding-bottom: 0;
 }
 
 .foot {
   width: 30%;
-  margin: 0 1rem;
+  width: calc(100%);
 }
 
 footer .container .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  border-bottom: solid var(--primary-color) 1px;
 }
 
 footer .container .footer-content .footer-logo {
@@ -267,7 +275,7 @@ footer .container .footer-content .support {
 }
 
 footer .container .footer-content h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 footer .container .footer-content .support > ul {
@@ -275,7 +283,7 @@ footer .container .footer-content .support > ul {
 }
 
 footer .container .footer-content .support > ul > li {
-  margin: 0.5rem 0;
+  margin: 0.1rem 0;
 }
 
 footer .container .footer-content .support > ul > li > a {
@@ -294,6 +302,17 @@ footer .container .footer-content .socials a {
   margin: 0 0.3rem;
 }
 
+footer .container .footer-content .footer-logo > p:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer .container .copyright > p {
+  padding-top: 0.6rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   /* Navbar */
   .navbar .container {
@@ -302,6 +321,9 @@ footer .container .footer-content .socials a {
 
   .navbar .container > .logo {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .navbar .container > nav > ul {
@@ -339,6 +361,15 @@ footer .container .footer-content .socials a {
     width: 100%;
     margin: 0;
     margin-bottom: 1.5rem;
+  }
+
+  footer .container .footer-content .footer-logo {
+    flex-direction: column;
+  }
+
+  footer .container .footer-content .footer-logo > p {
+    padding: 0.2rem;
+    text-align: center;
   }
 }
 
