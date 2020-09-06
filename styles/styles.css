@@ -158,10 +158,6 @@ a {
   margin-left: -100px;
 }
 
-.main-2 {
-  display: none;
-}
-
 /* Section Main */
 .growth {
   display: flex;
@@ -353,41 +349,29 @@ footer .container .footer-content .socials a {
   .main .right {
     width: 100%;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 20px;
     padding: 0;
     z-index: 1;
   }
 
   .main .right p:nth-child(1) {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     line-height: 1.6;
     width: max-content;
   }
 
   .main .right p:nth-child(2) {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .main .left {
-    margin: 10px 10px 0 -80px;
+    margin: 10px 10px 0 -180px;
+    border-radius: 51% 49% 88% 12% / 30% 59% 41% 70%;
   }
 
   .cover {
     visibility: hidden;
-  }
-
-  .main-2 {
-    display: block;
-  }
-
-  main img {
-    position: absolute;
-    height: 250px;
-    width: 250x;
-    right: 0;
-    top: 0;
-    margin: 280px 50px 0 0;
   }
 
   .growth {
@@ -412,7 +396,7 @@ footer .container .footer-content .socials a {
   }
 
   .growth .top p:nth-child(1) {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
   }
   .growth .top p:nth-child(2) {
