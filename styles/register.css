@@ -108,31 +108,31 @@ section .register .right .create a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    section .register{
-        flex-direction: column;
-    }
+  section .register {
+    flex-direction: column;
+  }
 
-    section .register .left{
-        width: 100%;
-        height: 200px;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: unset;
-    }
+  section .register .left {
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: unset;
+  }
 
-    section .register .right{
-        width: 100%;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: unset;
-        padding: 1rem;
-    }
+  section .register .right {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: unset;
+    padding: 1rem;
+  }
 
-    section .register .right > p:first-of-type {
-        font-size: 24px;
-    }
+  section .register .right > p:first-of-type {
+    font-size: 24px;
+  }
 
-    section .register {
-        padding: 1rem;
-    }
+  section .register {
+    padding: 1rem;
+  }
 }
