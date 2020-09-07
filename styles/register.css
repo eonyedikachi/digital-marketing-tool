@@ -14,7 +14,7 @@ section .register {
 }
 
 section .register .left {
-  height: 700px;
+  height: 780px;
   width: 50%;
   background: url(../images/register.png) center center/cover;
   border-top-left-radius: 10px;
@@ -22,7 +22,7 @@ section .register .left {
 }
 
 section .register .right {
-  height: 700px;
+  height: 780px;
   width: 50%;
   padding: 2rem;
   background: var(--secondary-color);
