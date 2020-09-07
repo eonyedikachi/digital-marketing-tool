@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+  #  
+}
+.allprice{
+    margin: 1rem;
+    display: flex;
+}
+.allprice .price{
+    height: 54rem;
+    width: 15rem;
+    border: #4eb1f5 0.7rem solid;
+    border-radius: 20px;
+    flex:1;
+    margin: 1rem;
+}
+.allprice .price .plan{
+    color: #4eb1f5;
+    font-size: 1.4rem;
+    border-bottom: #4eb1f5 5px solid;
+}
+.plan h2{
+    margin-left: 3rem;
+    padding: 1rem;
+}
+.pricing h3{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+.pricing p{
+    margin:10px;
+    color: #4eb1f5;
+}
+.topfeatures{
+    margin: 1rem;
+}
+.topfeatures i{
+    color: #4eb1f5;
+}
+.topfeatures h3{
+ margin-left: 3rem;
+}
+.topfeatures button{
+    color: black;
+    background:#4eb1f5;
+    padding:10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 2rem;
+}
+#pricing h1{
+    text-align: center;
+    margin: 2rem 0;
+    letter-spacing: 5px;
+    font-size: 2.5rem;
+    color:#4eb1f5 ;
+
+}
+@media(max-width: 500px ) {
+    .allprice{
+        flex-direction:column;
+        align-items: center;
+    }
+
+}
