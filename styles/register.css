@@ -131,4 +131,8 @@ section .register .right .create a:hover {
     section .register .right > p:first-of-type {
         font-size: 24px;
     }
+
+    section .register {
+        padding: 1rem;
+    }
 }
