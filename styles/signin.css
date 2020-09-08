@@ -4,7 +4,6 @@
 body{
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
     background: linear-gradient(120deg, #4eb1f5, #4eb1f5);
     height: 98vh;
     overflow: hidden;
