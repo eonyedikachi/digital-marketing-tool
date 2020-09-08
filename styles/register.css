@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #4eb1f5;
+}
+
+section .register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 1024px;
+  border-radius: 10px;
+}
+
+section .register .left {
+  height: 780px;
+  width: 50%;
+  background: url(../images/register.png) center center/cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+section .register .right {
+  height: 780px;
+  width: 50%;
+  padding: 2rem;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+section .register .right .signin {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+}
+
+section .register .right .signin a {
+  margin-left: 1rem;
+  padding: 5px;
+  border-radius: 15px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  transition: all ease 0.5s;
+}
+
+section .register .right .signin a:hover {
+  transform: scale(1.2);
+  transition: all ease 0.5s;
+}
+
+section .register .right > p:first-of-type {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+section .register .right form {
+  margin-top: 2rem;
+}
+
+section .register .right form label {
+  font-weight: bold;
+}
+
+section .register .right form input {
+  display: block;
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border-radius: 5px;
+}
+
+section .register .right form input[type="submit"] {
+  border: none;
+  margin: 1rem auto;
+  width: 30%;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+section .register .right form input[type="submit"]:hover {
+  transform: scale(1.2);
+  transition: all ease 0.5s;
+}
+
+section .register .right .create {
+  margin: 1rem 0;
+}
+
+section .register .right .create p {
+  margin: 1rem 0;
+}
+
+section .register .right .create a {
+  margin: 10px;
+  color: var(--primary-color);
+}
+
+section .register .right .create a:hover {
+  opacity: 0.6;
+  transition: all ease 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  section .register {
+    flex-direction: column;
+  }
+
+  section .register .left {
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: unset;
+  }
+
+  section .register .right {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: unset;
+    padding: 1rem;
+  }
+
+  section .register .right > p:first-of-type {
+    font-size: 24px;
+  }
+
+  section .register {
+    padding: 1rem;
+  }
+}
