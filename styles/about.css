@@ -6,7 +6,6 @@
 
 .card h3 {
   color: #4eb1f5;
-  font-size: 25px;
 }
 
 .margin-bottom {
@@ -61,8 +60,6 @@ h1 {
   .card img {
     width: 60vw;
     align-self: center;
-  }
-  .carddiv {
   }
   .imagediv {
     flex-direction: column;
