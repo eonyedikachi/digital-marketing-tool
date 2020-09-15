@@ -6,7 +6,7 @@
     <title>Sign Up | MartReach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/register.css" />
+    <link rel="stylesheet" href="./styles/support.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
@@ -51,46 +51,56 @@
         </div>
     </header>
 
-    <!-- Register Section -->
-    <section>
-        <div class="register">
-            <div class="left"></div>
-            <div class="right">
-                <div class="signin">
-                    <p>Already have an account?</p>
-                    <a href="./signin.html">Sign In</a>
-                </div>
-                <p>Welcome to MartReach!</p>
-                <p>Register your account</p>
+    <!-- Support Section -->
+    <section class="support">
+        <div class="container">
+            <h1>Looking for support? You are at the right place</h1>
+            <p>MartReach is a widely used digital marketing platform for helping business grow from scratch. If you are
+                looking for more information, or have a question about our services, contact us below.</p>
+        </div>
+    </section>
 
-                <form method="post" name="register">
-                    <label for="firstname">First Name</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
-
-                    <label for="lastname">Last Name</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
-
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Username" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="example@email.com" required>
-
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" required>
-
-                    <input type="submit" value="Register">
-                </form>
-
-                <div class="create">
-                    <p>Create account with :</p>
-                    <a href=""><i class="fab fa-google"></i></a>
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                </div>
-
+    <!-- Articles Section -->
+    <section class="container">
+        <div class="article-container">
+            <div class="articles">
+                <h2>Articles</h2>
+                <ul>
+                    <li><a href="">I can't remember my login or password</a></li>
+                    <li><a href="">I want to report a security issue</a></li>
+                    <li><a href="">I have a question concerning billing</a></li>
+                    <li><a href="">Can't find what you're looking for? Check out our FAQ</a></li>
+                </ul>
+                <a href="">See more help articles</a>
             </div>
+            <div class="contact">
+                <h2>Need Support?</h2>
+                <img src="./images/support.png" alt="support">
+                <a href="./contact.html">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="pricing-container container">
+            <div class="pricing-img"><img src="./images/pricing.jpg" alt="pricing"></div>
+            <div class="pricing-info">
+                <h2>Are you interest in how are pricing works and what services you have full access to?</h2>
+                <p>MartReach makes features like advanced audience insight, behavioral targeting, insightful analytics,
+                    prioritized support, phone chat, and more available to you at higher packages.</p>
+                <a href="./pricing.html">See Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section class="socials">
+        <h2>Our Social Accounts</h2>
+        <div class="socials-account">
+            <div class="account"><a href=""><i class="fab fa-twitter"></i></a></div>
+            <div class="account"><a href=""><i class="fab fa-instagram"></i></a></div>
+            <div class="account"><a href=""><i class="fab fa-facebook-f"></i></a></div>
         </div>
     </section>
 
