@@ -165,6 +165,10 @@
     width: 100%;
   }
 
+  .article-container .contact img {
+    width: 80%;
+  }
+
   .pricing .pricing-container {
     flex-direction: column;
   }
