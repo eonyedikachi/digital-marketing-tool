@@ -70,6 +70,8 @@ section .register .right form input {
   padding: 10px;
   margin-bottom: 1.5rem;
   width: 100%;
+  border: none;
+  outline: none;
   border-radius: 5px;
 }
 
