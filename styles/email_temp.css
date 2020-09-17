@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #4eb1f5;
+}
+
+/* Main */
+.emailTemp {
+  padding: 1rem;
+}
+
+/* Layout */
+.layout,
+.themes,
+.codeYourOwn {
+  padding: 1rem;
+}
+
+h2 {
+  margin-top: 1rem;
+}
+
+/* Featured */
+.featured {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured .feature-box {
+  width: 225px;
+  text-align: center;
+  margin: 20px;
+}
+
+.featured .feature-box:hover {
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.featured .feature-box img {
+  width: 100%;
+}
+
+.featured .feature-box p {
+  margin: 0;
+}
+
+.featured .feature-box p:first-of-type {
+  font-weight: 800;
+  margin-top: 1rem;
+}
