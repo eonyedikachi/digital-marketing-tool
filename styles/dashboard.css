@@ -332,6 +332,47 @@ footer .container .copyright > p {
     display: block;
   }
 
+  .main {
+    flex-direction: column;
+    background-color: violet;
+    width: 100%;
+    margin: 0;
+  }
+
+  #mart {
+    display: none;
+  }
+
+  .main .left {
+    width: 100%;
+    margin: 0;
+  }
+  .main .left .dash-list ul {
+    width: 100%;
+    display: flex;
+    font-size: 0.75em;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: space-around;
+  }
+  .dash-pro {
+    display: none;
+  }
+  .main .middle {
+    border: none;
+  }
+  .main .middle .search-notify {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+  }
+  .main .middle .search-notify .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+
   /* Footer */
   footer .container .footer-content {
     flex-direction: column;
