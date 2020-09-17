@@ -389,7 +389,7 @@ footer .container .copyright > p {
   }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 600px) {
   .main {
     height: 70vh;
   }
@@ -430,7 +430,7 @@ footer .container .copyright > p {
     background-color: var(--secondary-color);
     margin: 0px 10px 0px 10px;
     width: 95%;
-    height: 850px;
+    height: unset;
     color: var(--primary-color);
     border-radius: 10px;
     padding-top: -500px;
@@ -459,7 +459,7 @@ footer .container .copyright > p {
     display: flex;
     flex-direction: column;
     padding: 0 20px 0 20px;
-    height: 400px;
+    height: unset;
   }
 
   .box {
@@ -480,6 +480,10 @@ footer .container .copyright > p {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  .audience .right {
+    width: 100%;
   }
 
   .audience .left p:nth-child(1) {
