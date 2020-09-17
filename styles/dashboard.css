@@ -195,6 +195,7 @@ a {
 }
 .middle .chart {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .middle .chart img {
@@ -333,10 +334,11 @@ footer .container .copyright > p {
   }
 
   .main {
+    display: flex;
     flex-direction: column;
-    background-color: violet;
     width: 100%;
     margin: 0;
+    justify-content: space-evenly;
   }
 
   #mart {
@@ -345,6 +347,7 @@ footer .container .copyright > p {
 
   .main .left {
     width: 100%;
+    height: 70px;
     margin: 0;
   }
   .main .left .dash-list ul {
@@ -355,11 +358,19 @@ footer .container .copyright > p {
     margin: 0;
     justify-content: space-around;
   }
+  .left .dash-list ul li a:hover {
+    font-size: 0.8rem;
+  }
   .dash-pro {
     display: none;
   }
   .main .middle {
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    /* background-color: red; */
   }
   .main .middle .search-notify {
     display: flex;
@@ -371,6 +382,24 @@ footer .container .copyright > p {
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
+  }
+
+  .main .middle .chart {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding: 2px;
+  }
+  .main .middle .chart img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .main .right {
+    display: none;
   }
 
   /* Footer */
