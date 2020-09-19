@@ -2,10 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>MartReach | Boost your Digital Awareness</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>MartReach | Design</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="styles/createLanding.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -34,100 +42,55 @@
         <nav>
           <ul class="nav-list">
             <li class="nav-items">
-              <a class="current" href="index.html">HOME</a>
+              <a href="dashboard.html">Home</a>
+            </li>
+
+            <li class="nav-items">
+              <div class="dropdown">
+                <button
+                  class="btn btn-info dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="far fa-file-powerpoint"></i> Present
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#"
+                    ><i class="far fa-file-powerpoint"></i> Present</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-video"></i> Present and record
+                  </a>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-youtube"></i> Download as video</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-cloud-upload-alt"></i> Save on cloud</a
+                  >
+                </div>
+              </div>
             </li>
             <li class="nav-items">
-              <a href="services.html">SERVICES</a>
+              <a href="#">Share</a>
             </li>
             <li class="nav-items">
-              <a href="pricing.html">PRICING</a>
+              <a href="#"><i class="fas fa-download"></i></a>
             </li>
             <li class="nav-items">
-              <a href="about.html">ABOUT</a>
+              <a href="#">Try MartReach Pro <i class="fas fa-crown"></i></a>
             </li>
             <li class="nav-items">
-              <a href="contact.html">CONTACT</a>
-            </li>
-            <li class="nav-items">
-              <a href="signin.html">SIGN IN</a>
+              <a href="#">Sign Out</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="main" style="height: 87vh; background-color: #f1f9fe">
-      <div class="right">
-        <p>
-          Boost your <br />
-          Sale with <br />
-          MartReach
-        </p>
-        <p>
-          We help small and large business to grow their <br />audience reach.
-        </p>
-        <a href="./register.html"><button>Try us today</button></a>
-      </div>
-      <div class="left">
-        <div class="cover"></div>
-      </div>
-    </main>
-
-    <section class="growth">
-      <div class="top">
-        <p>How we help you on growth</p>
-        <p>
-          We provide best service to grow your sell and reach out to more target
-          audience and have control over your designs
-        </p>
-        <!-- <p></p> -->
-      </div>
-      <div class="bottom">
-        <div class="box">
-          <i class="fas fa-chart-bar"></i>
-          <p>Sales Growth</p>
-          <p>
-            We help you reach more audience and grow your sales very fast and
-            effectively
-          </p>
-        </div>
-        <div class="box">
-          <i class="fas fa-cog"></i>
-          <p>Site Optimizing</p>
-          <p>
-            Reach the top with Search Engine Optimization. Keywords, Links,
-            Content, Technical SEO & more
-          </p>
-        </div>
-        <div class="box">
-          <i class="fas fa-volume-up"></i>
-          <p>Marketing</p>
-          <p>
-            With our tools and strategy your audience are ever close to your
-            business than ever
-          </p>
-        </div>
-        <div class="box">
-          <i class="fas fa-headset"></i>
-          <p>Support</p>
-          <p>
-            Our customer relation expertise are ready to talk to you 24/7. Reach
-            out
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="audience">
-      <div class="right"></div>
-      <div class="left">
-        <p>Reach out to Your <br />Targeted Audience</p>
-        <p>
-          We can help you reach out to more customers,<br />
-          by using our platform your required audience <br />
-          is at your door step. <a href="#">Learn More</a>
-        </p>
-      </div>
-    </section>
+    <main class="main" style="height: 87vh; background-color: #f1f9fe"></main>
 
     <footer>
       <div class="container">
@@ -173,6 +136,21 @@
       </div>
     </footer>
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/main.js"></script>
     <script
       src="https://kit.fontawesome.com/0b544dd14e.js"
