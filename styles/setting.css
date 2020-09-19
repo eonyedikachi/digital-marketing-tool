@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
+:root {
+    --primary-color: #fff;
+    --secondary-color: #4eb1f5;
+  }
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    flex-grow: 1;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    display: flex;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    margin-top: 30px;
+  }
+  
+  .main {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    margin: 5px 80px 5px 80px;
+    background-color: transparent;
+    border-radius: 20px;
+    flex: 1.5;
+  }
+  .left {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0 10px 10px;
+    color: var(--primary-color);
+    flex: 1;
+  }
+  .left .dash-list ul li {
+    border-bottom: 1px solid var(--primary-color);
+    list-style: none;
+  }
+  .left .dash-list ul li a {
+    color: var(--primary-color);
+  }
+  .left .dash-list ul li:hover {
+    font-size: 1.2rem;
+  }
+  .left .dash-pro h3 a {
+    color: var(--secondary-color);
+  }
+  .left .dash-pro h3 a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .middle {
+    background-color: transparent;
+    border-right: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+  }
+  .search-notify {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 20px 5px 20px;
+  }
+  .middle .search-notify i {
+    color: var(--secondary-color);
+  }
+  .middle .search-notify .search input {
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  .middle .search-notify .search input::placeholder {
+    color: var(--secondary-color);
+    font-family: "Baloo Tamma 2", Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .middle .search-notify .search input[type="text"] {
+    padding-left: 5px;
+    color: var(--secondary-color);
+  }
+  .middle .chart {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .middle .chart img {
+    height: 200px;
+    width: auto;
+  }
+  .right {
+    height: 40%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+    flex: 1;
+  }
+  .right a {
+    color: var(--secondary-color);
+  }
+  .right .tool ul {
+    list-style: none;
+  }
+  
+  .right .user {
+    margin-top: 5px;
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding: 30px;
+  }
+  .profile-contrnt{
+    
+  }
