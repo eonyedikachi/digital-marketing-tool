@@ -8,6 +8,21 @@
   padding: 1rem;
 }
 
+.container .select a {
+  float: right;
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid #dee2e6;
+  border-bottom: none;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.container .select a:hover {
+  color: rgb(0, 123, 255);
+}
+
 /* Layout */
 .layout,
 .themes,
