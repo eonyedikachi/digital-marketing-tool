@@ -9,3 +9,56 @@
 .nav-list .nav-items .dropdown .dropdown-menu a {
   color: var(--secondary-color);
 }
+
+/* Bootstrap unset */
+a,
+a:hover,
+a:focus,
+:active {
+  text-decoration: none;
+}
+
+ul,
+p {
+  margin-bottom: unset;
+}
+
+button:focus,
+button:active {
+  cursor: unset;
+  border: none;
+  outline: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: unset;
+  font-family: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+button {
+  border-radius: unset;
+}
+
+.nav-tabs .nav-item a {
+  color: var(--secondary-color);
+}
+
+.nav-tabs .nav-item a:hover {
+  color: rgb(0, 123, 255);
+}
+
+.navbar {
+  display: block;
+  padding: 0.65rem 0.8rem;
+}
+
+.container {
+  padding-right: unset;
+  padding-left: unset;
+}
