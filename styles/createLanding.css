@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #4eb1f5;
+}
+.nav-list .nav-items .dropdown button {
+  background-color: transparent;
+  border-color: var(--primary-color);
+}
+.nav-list .nav-items .dropdown .dropdown-menu a {
+  color: var(--secondary-color);
+}

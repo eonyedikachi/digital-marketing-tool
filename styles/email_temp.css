@@ -8,6 +8,21 @@
   padding: 1rem;
 }
 
+.container .select a {
+  float: right;
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid #dee2e6;
+  border-bottom: none;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.container .select a:hover {
+  color: rgb(0, 123, 255);
+}
+
 /* Layout */
 .layout,
 .themes,
@@ -31,13 +46,14 @@ h2 {
   margin: 20px;
 }
 
-.featured .feature-box:hover {
-  border: 1px solid var(--secondary-color);
-  border-radius: 5px;
-}
-
 .featured .feature-box img {
   width: 100%;
+  border: 1px solid rgb(238, 232, 232);
+}
+
+.featured .feature-box img:hover {
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
 }
 
 .featured .feature-box p {
@@ -47,4 +63,69 @@ h2 {
 .featured .feature-box p:first-of-type {
   font-weight: 800;
   margin-top: 1rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .featured .feature-box {
+    margin: auto;
+    padding: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+/* Bootstrap unset */
+a,
+a:hover,
+a:focus,
+:active {
+  text-decoration: none;
+}
+
+ul,
+p {
+  margin-bottom: unset;
+}
+
+button:focus,
+button:active {
+  cursor: unset;
+  border: none;
+  outline: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: unset;
+  font-family: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+button {
+  border-radius: unset;
+}
+
+.nav-tabs .nav-item a {
+  color: var(--secondary-color);
+}
+
+.nav-tabs .nav-item a:hover {
+  color: rgb(0, 123, 255);
+}
+
+.navbar {
+  display: block;
+  padding: 0.65rem 0.8rem;
+}
+
+.container {
+  padding-right: unset;
+  padding-left: unset;
 }
