@@ -75,11 +75,18 @@ input {
   height: 100%;
 }
 
-.search form .inner-form .basic-search .search-box .search-icon i {
+.search form .inner-form .basic-search .search-box .search-icon a i {
   width: 34px;
   height: 34px;
   font-size: 34px;
+}
+
+.search form .inner-form .basic-search .search-box .search-icon a {
   color: #ccc;
+}
+
+.search form .inner-form .basic-search .search-box .search-icon a:hover {
+  color: black;
 }
 
 .search form .inner-form .advanced-search {
