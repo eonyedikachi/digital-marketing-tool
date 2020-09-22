@@ -3,7 +3,7 @@
   --secondary-color: #4eb1f5;
 }
 /* Support Section */
-.support {
+section.support {
   background: var(--secondary-color);
   color: var(--primary-color);
   padding: 2rem;
