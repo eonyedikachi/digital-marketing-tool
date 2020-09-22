@@ -1,92 +1,101 @@
-#faqpage h1{
-    margin-left: 1rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-    color: #4eb1f5;
+html {
+  scroll-behavior: smooth;
+}
+
+#faqpage h1 {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #4eb1f5;
 }
 .faqheader {
-    height: 7rem;
-    background: #4eb1f5;
-    margin: 2rem;
-    text-align: center;
-    border-radius: 7px;
-    
+  height: 7rem;
+  background: #4eb1f5;
+  margin: 2rem;
+  text-align: center;
+  border-radius: 7px;
 }
-.faqheader h3{
-    padding-top: 1rem;
+.faqheader h3 {
+  padding-top: 1rem;
 }
-.faqheader form{
-    padding-top:0.5rem ;
+.faqheader form {
+  padding-top: 0.5rem;
 }
-.faqheader input{
-    width:25rem ;
-    padding: 5px;
-    border-radius: 5px;
+.faqheader input {
+  width: 25rem;
+  padding: 5px;
+  border-radius: 5px;
 }
-.faqheader button{
-    font-size: 1rem;
-    padding: 3px;
-    color: #4eb1f5;
-    border-radius: 2px;
+.faqheader button {
+  font-size: 1rem;
+  padding: 3px;
+  color: #4eb1f5;
+  border-radius: 2px;
 }
-.mainfaq{
-    display: flex;
+.mainfaq {
+  display: flex;
 }
-.mainfaq div{
-    flex: 1;
+.mainfaq div {
+  flex: 1;
 }
-.faqsidebox{
-    height: 15rem;
-    width: 10rem;
-    background: #4eb1f5;
-    text-align: center;
-    border-radius: 7px;
-    margin-left: 2rem;
+.faqsidebox {
+  height: 15rem;
+  width: 10rem;
+  background: #4eb1f5;
+  text-align: center;
+  border-radius: 7px;
+  padding: 1rem;
+  margin-left: 2rem;
 }
-.faqsidebox ul{
-    list-style-type:;
-    color: white
+.faqsidebox ul {
+  list-style-type: none;
+  color: white;
 }
-.faqmainarea{
-    margin-top: 5rem;
+.faqsidebox ul li {
+  margin-bottom: 1rem;
+}
+.faqsidebox ul a {
+  color: white;
+}
 
+.faqmainarea {
+  margin-top: 5rem;
+  color: white;
 }
-.faqmainarea div{
-    height: 10rem;
-    background-color: #4eb1f5;
-    margin: 1rem;
-    border-radius: 7px;
-    padding: 0.5rem;
+.faqmainarea div {
+  height: 10rem;
+  background-color: #4eb1f5;
+  margin: 1rem;
+  border-radius: 7px;
+  padding: 0.5rem;
 }
-.mainfaq .faqmainarea{
-    flex: 2;
+
+.mainfaq .faqmainarea {
+  flex: 2;
 }
 /* footer modificationn */
-.support ul li a:hover{
-    text-decoration: underline;
-
+.support ul li a:hover {
+  text-decoration: underline;
 }
-@media screen and (max-width: 980px){
-    .faqsidebox{
-        display: none;
-    }
-    .faqmainarea{
-        margin-top: 2rem;
-    }
-    .faqheader input{
-        width: 15rem;
-
-    }
+@media screen and (max-width: 980px) {
+  .faqsidebox {
+    display: none;
+  }
+  .faqmainarea {
+    margin-top: 2rem;
+  }
+  .faqheader input {
+    width: 15rem;
+  }
 }
-@media screen and (max-width: 470px){
-    .faqheader input{
-      width: 12rem;
-    }
-    .faqheader{
-        padding-bottom: 10rem;
-        
-    }
-    .faqmainarea div{
-        padding-bottom: 12rem;
-    }
+@media screen and (max-width: 470px) {
+  .faqheader input {
+    width: 12rem;
+  }
+  .faqheader {
+    padding-bottom: 10rem;
+  }
+  .faqmainarea div {
+    padding-bottom: 12rem;
+  }
 }
