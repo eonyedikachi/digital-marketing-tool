@@ -129,13 +129,44 @@ a {
 }
 
 .main .right p:nth-child(1) {
+  transform: translateX(-1000px);
   font-size: 50px;
   font-weight: bold;
   line-height: 1.6;
+  -webkit-animation: heading 2s forwards ease;
+  animation: heading 2s forwards ease;
 }
+
 .main .right p:nth-child(2) {
+  transform: translateX(-1000px);
   font-size: 20px;
+  -webkit-animation: description 2s 1.2s forwards ease;
+  animation: description 2s 1.2s forwards ease;
 }
+
+/* Keyframes */
+@-webkit-keyframes heading {
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes heading {
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes description {
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes description {
+  to {
+    transform: translateX(0px);
+  }
+}
+
 .main .right button {
   color: var(--secondary-color);
   background: var(--primary-color);
@@ -145,7 +176,22 @@ a {
   border-radius: 15px;
   font-family: "Baloo Tamma 2";
   cursor: pointer;
+  opacity: 0;
   transition: all ease 0.5s;
+  -webkit-animation: opacity 2s 3s forwards ease;
+  animation: opacity 2s 3s forwards ease;
+}
+
+/* Keyframes */
+@-webkit-keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
 }
 
 .main .right button:hover {
