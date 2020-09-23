@@ -75,6 +75,18 @@ section .register .right form input {
   border-radius: 5px;
 }
 
+/* Toggle password */
+section .register .right form span {
+  display: flex;
+  align-items: center;
+}
+
+section .register .right form span i {
+  margin-left: -30px;
+  margin-top: -20px;
+  color: black;
+}
+
 section .register .right form input[type="submit"] {
   border: none;
   margin: 1rem auto;

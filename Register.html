@@ -64,11 +64,11 @@
                 <p>Register your account</p>
 
                 <form method="post" name="register">
-                    <label for="firstname">First Name</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
 
-                    <label for="lastname">Last Name</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
 
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="Username" required>
@@ -77,7 +77,10 @@
                     <input type="email" name="email" id="email" placeholder="example@email.com" required>
 
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <span>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <i class="far fa-eye" id="togglePassword"></i>
+                    </span>
 
                     <input type="submit" value="Register">
                 </form>
