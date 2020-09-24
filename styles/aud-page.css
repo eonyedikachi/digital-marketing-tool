@@ -137,9 +137,10 @@ h3{
 }
 
 @media screen and (max-width: 960px){
-    section .container .audience-btn .audience-btnn{
+    section .container {
         width: 100%;
-        
+        flex: 1;
+        flex-wrap: wrap;
           padding: 20px;
     }
 }
