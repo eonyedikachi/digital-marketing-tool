@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #4eb1f5;
+}
+
+/* Main */
+main .container .reports {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 1200px;
+  background: #e9f5ff;
+}
+
+/* Heading */
+main .container .reports .heading {
+  text-align: center;
+}
+
+main .container .reports .description {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .container .reports .description p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Analytics */
+main .container .reports .analytics .stats {
+  height: 200px;
+  margin: 2rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+}
+
+main .container .reports .analytics .stats p {
+  font-size: 2.5rem;
+}
+
+/* Landing Page */
+main .container .reports .analytics .charts {
+  width: 500px;
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+  border-radius: 20px;
+  background: var(--primary-color);
+}
+
+main .container .reports .analytics .charts img {
+  max-width: 100%;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .nav-link {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+/* Bootstrap unset */
+a,
+a:hover,
+a:focus,
+:active {
+  text-decoration: none;
+}
+
+ul,
+p {
+  margin-bottom: unset;
+}
+
+button:focus,
+button:active {
+  cursor: unset;
+  border: none;
+  outline: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: unset;
+  font-family: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+button {
+  border-radius: unset;
+}
+
+.nav-tabs .nav-item a {
+  color: var(--secondary-color);
+}
+
+.nav-tabs .nav-item a:hover {
+  color: rgb(0, 123, 255);
+}
+
+.navbar {
+  display: block;
+  padding: 0.65rem 0.8rem;
+}
+
+.container {
+  padding-right: unset;
+  padding-left: unset;
+}
