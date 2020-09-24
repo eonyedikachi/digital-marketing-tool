@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+section{
+    width: 90%;
+    height: 100vh;
+    margin-top: 4%;
+
+}
+.container{
+    width: 90%;
+    height: 70%;
+    justify-content: center;
+}
+.container h1{
+    margin-top: 2rem;
+    
+}
+.container h3{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+.container h6{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+section .container .audience-btn {
+    width: 9rem;
+    height: 2rem;
+    background-color: #f1f1f1;
+    float: right;
+    margin-right: 1rem;
+    cursor: pointer;
+    font-size: 18px;
+}
+section .container .audience-btnn #format{
+    width: 12rem;
+    height: 2rem;
+    background-color: #fff;
+    float: right;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    color: #333333;
+    font-size: 18px;
+   
+    
+}
+
+
+.upload-contact .aud-img{
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    justify-content: center;
+    left: 30%;
+    top:100px;
+    margin-bottom: 10rem;
+    
+}
+
+
+.import-contact {
+    left: 30%;
+    position: relative;
+    display: inline-block;
+}
+.import-contact img{
+    position: relative;
+    width: 20%;
+    margin-left: 8rem;
+}
+.import-contact .import-cont-heading{
+    
+    justify-content: center;
+    align-content: center;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.import-contact  h1{
+    font-weight: 400;
+    font-size: 51px;
+
+}
+.import-contact p{
+    font-size: 19px;
+    padding-left: 8rem;
+   
+}
+
+.import-contact .import-cont-btn{
+    width: 14rem;
+    height: 3rem;
+    background-color: #4eb1f5;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 3rem 8rem ;
+    border-radius: none;
+    position: relative;
+}
+.Wrapper-audience{
+    padding: 5px;
+    width: 95%;
+    margin: 20px auto;
+}
+.connect-links{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px;
+}
+.connect-col{
+    flex: 1;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 60px;
+    background-color: #fdfbfb;
+}
+h3{
+    color: #4eb1f5;
+}
+.connect-col img{
+    width: 75px;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+@media screen and (max-width: 960px){
+    section .container .audience-btn .audience-btnn{
+        width: 100%;
+        
+        padding: 20px;
+}
