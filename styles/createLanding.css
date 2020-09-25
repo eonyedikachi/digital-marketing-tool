@@ -137,3 +137,36 @@ button {
   background-color: #dcdcdc;
   width: 100%;
 }
+@media screen and (max-width: 600px) {
+  .main-landing {
+    height: 75vh;
+  }
+  .main-landing {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-landing .left-fixed {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: max-content;
+  }
+  .main-landing .left-fixed ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    padding: 5px;
+    color: green;
+  }
+  .main-landing .left-fixed ul li h6 {
+    font-size: 10px;
+    color: var(--primary-color);
+  }
+  .main-landing .left-fixed ul li i {
+    font-size: 0.75rem;
+  }
+  .main-landing .right-fixed {
+    padding-right: 10px;
+  }
+}
