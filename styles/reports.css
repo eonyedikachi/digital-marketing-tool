@@ -7,7 +7,7 @@
 main .container .reports {
   padding: 1rem;
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
   background: #e9f5ff;
 }
 
@@ -60,6 +60,23 @@ main .container .reports .analytics .charts img {
 @media screen and (max-width: 768px) {
   .nav-link {
     padding: 0.5rem 0.5rem;
+  }
+
+  main .container .reports .analytics .stats p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main .container .reports .analytics .row {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  main .container .reports .analytics .charts {
+    width: 100%;
   }
 }
 
