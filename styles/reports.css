@@ -3,12 +3,15 @@
   --secondary-color: #4eb1f5;
 }
 
+body {
+  background: #e9f5ff;
+}
+
 /* Main */
 main .container .reports {
   padding: 1rem;
   margin: 0 auto;
   max-width: 1200px;
-  background: #e9f5ff;
 }
 
 /* Heading */

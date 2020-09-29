@@ -371,6 +371,21 @@ footer .container .copyright > p {
   text-align: center;
 }
 
+/* Back Button Footer */
+.back-footer {
+  height: 70px;
+  color: var(--primary-color);
+}
+
+.back-footer .back-button {
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
 @media screen and (max-width: 768px) {
   /* Navbar */
   .navbar {
