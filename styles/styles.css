@@ -138,10 +138,11 @@ a {
 }
 
 .main .right p:nth-child(2) {
-  transform: translateX(-1000px);
+  transform: translateX(600px);
   font-size: 20px;
-  -webkit-animation: description 2s 1.2s forwards ease;
-  animation: description 2s 1.2s forwards ease;
+  opacity: 0;
+  -webkit-animation: description 2s forwards ease;
+  animation: description 2s forwards ease;
 }
 
 /* Keyframes */
@@ -159,11 +160,13 @@ a {
 @-webkit-keyframes description {
   to {
     transform: translateX(0px);
+    opacity: 1;
   }
 }
 @keyframes description {
   to {
     transform: translateX(0px);
+    opacity: 1;
   }
 }
 
@@ -178,8 +181,8 @@ a {
   cursor: pointer;
   opacity: 0;
   transition: all ease 0.5s;
-  -webkit-animation: opacity 2s 3s forwards ease;
-  animation: opacity 2s 3s forwards ease;
+  -webkit-animation: opacity 2s 1.5s forwards ease;
+  animation: opacity 2s 1.5s forwards ease;
 }
 
 /* Keyframes */

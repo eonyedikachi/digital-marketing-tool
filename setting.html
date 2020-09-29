@@ -5,11 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Setting | MartReach</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/setting.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/setting.css" />
+  <link rel="stylesheet" href="styles/createLanding.css" />
 </head>
 
 <body>
+
   <header class="navbar">
     <div class="container">
       <div class="logo">
@@ -25,22 +29,36 @@
       <nav>
         <ul class="nav-list">
           <li class="nav-items">
-            <a href="index.html">HOME</a>
+            <a href="dashboard.html">Home</a>
+          </li>
+
+          <li class="nav-items">
+            <div class="dropdown">
+              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-file-powerpoint"></i> Present
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><i class="far fa-file-powerpoint"></i> Present</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-video"></i> Present and record
+                </a>
+                <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as video</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-cloud-upload-alt"></i> Save on
+                  cloud</a>
+              </div>
+            </div>
           </li>
           <li class="nav-items">
-            <a href="services.html">SERVICES</a>
+            <a href="#">Share</a>
           </li>
           <li class="nav-items">
-            <a href="pricing.html">PRICING</a>
+            <a href="#"><i class="fas fa-download"></i></a>
           </li>
           <li class="nav-items">
-            <a href="about.html">ABOUT</a>
+            <a href="./pricing.html">Try MartReach Pro <i class="fas fa-crown"></i></a>
           </li>
           <li class="nav-items">
-            <a href="contact.html">CONTACT</a>
-          </li>
-          <li class="nav-items">
-            <a href="">SIGN OUT</a>
+            <a href="./signin.html">Sign Out</a>
           </li>
         </ul>
       </nav>
@@ -56,23 +74,23 @@
       </div>
       <div class="dash-list">
         <ul>
-          <li><i class="fas fa-columns"></i> <a href="#">Dashboard</a></li>
+          <li><i class="fas fa-columns"></i> <a href="./dashboard.html">Dashboard</a></li>
           <li>
             <i class="fas fa-business-time"></i>
             <a href="#">Create a business</a>
           </li>
-          <li><i class="fas fa-home"></i> <a href="#">Landing page</a></li>
+          <li><i class="fas fa-home"></i> <a href="./createLanding.html">Landing page</a></li>
           <li>
             <i class="fas fa-envelope-open-text"></i>
-            <a href="#">Email Template</a>
+            <a href="./email_temp.html">Email Template</a>
           </li>
-          <li><i class="fas fa-bullhorn"></i> <a href="#">Suggestions</a></li>
-          <li><i class="fas fa-chart-bar"></i> <a href="#">Reports</a></li>
-          <li><i class="fas fa-sliders-h"></i> <a href="#">Settings</a></li>
+          <li><i class="fas fa-bullhorn"></i> <a href="./suggestion.html">Suggestions</a></li>
+          <li><i class="fas fa-chart-bar"></i> <a href="./reports.html">Reports</a></li>
+          <li><i class="fas fa-sliders-h"></i> <a href="./setting.html">Settings</a></li>
         </ul>
       </div>
       <div class="dash-pro">
-        <h3><a href="#">Try Mart Reach Pro</a></h3>
+        <h3><a href="./pricing.html">Try Mart Reach Pro</a></h3>
       </div>
     </div>
     <div class="middle">
@@ -132,7 +150,7 @@
       <!-- CONTACT INFORMATION TAB  -->
       <div id="Contact Information" class="tabcontent">
         <h2>Contact Information</h2>
- 
+
         <h3>Profile</h3>
         <p>
           This is the information we have associated with your Mailchimp profile, which you can use to access multiple
@@ -158,7 +176,7 @@
           <p>abdulmalikmuhktar@gmail.com</p>
         </div>
         <button>Edit Profile Information</button>
-       
+
 
         <h3>Primary Account Contact</h3>
         <p>Information about this account, such as campaign send notifications, will be sent to the email address listed
@@ -262,26 +280,27 @@
         <h3>
           Verify Your Email Domain
         </h3>
-        <p>Verify your email domain to use as a “from” address when you send emails and automations. You can also authenticate the domain to improve deliverability.
+        <p>Verify your email domain to use as a “from” address when you send emails and automations. You can also
+          authenticate the domain to improve deliverability.
 
           Have questions? Read how to verify your email domain.</p>
-          <button> Verify Email Domain</button>
-<h3>
-  Connect Your Domain
-</h3>
-<p>
-  Have a domain you already own? Connect it to give your landing pages and website a more professional look.
+        <button> Verify Email Domain</button>
+        <h3>
+          Connect Your Domain
+        </h3>
+        <p>
+          Have a domain you already own? Connect it to give your landing pages and website a more professional look.
 
-Have questions? Read how to connect your domain or subdomain to MartReach.
-</p>
-<button> Connect Domain</button>
-<h3>Purchase a New Domain</h3>
-<p>
-  Find a custom domain name to help visitors remember your brand and drive traffic to your website.
+          Have questions? Read how to connect your domain or subdomain to MartReach.
+        </p>
+        <button> Connect Domain</button>
+        <h3>Purchase a New Domain</h3>
+        <p>
+          Find a custom domain name to help visitors remember your brand and drive traffic to your website.
 
-Have questions? Read how to purchase a domain with MartReach.
-</p>
-<button> Find Domains</button>
+          Have questions? Read how to purchase a domain with MartReach.
+        </p>
+        <button> Find Domains</button>
       </div>
 
       <!-- MANAGE MY ACCOUNT TAB  -->
@@ -289,58 +308,59 @@ Have questions? Read how to purchase a domain with MartReach.
         <h2>Manage my Data</h2>
         <h3>Export Data</h3>
         <p>
-          You can export most of your account data into CSV files. We’ll bundle everything together in a single Zip file and send an email to <span>malikmuhktar@gmail.com</span> when it’s done. <br>
+          You can export most of your account data into CSV files. We’ll bundle everything together in a single Zip file
+          and send an email to <span>malikmuhktar@gmail.com</span> when it’s done. <br>
 
-We have a limit of one export in a 24-hour period. <br>
+          We have a limit of one export in a 24-hour period. <br>
 
-You can download your most recent completed export. <br>
-<div>
-Choose which data you'd like to export:
-<div><input type="checkbox" name="campaigns" value="campaigns" id="campaigns" >
-  <label for="campaigns">Campaigns</label></div>
-<div><input type="checkbox" name="audiences" value="audiences" id="audiences">
-  <label for="audiences">Audiences</label></div>
-<div><input type="checkbox" name="reports" value="reports" id="reports">
-  <label for="reports">Reports</label></div>
-<div><input type="checkbox" name="templates" value="templates" id="templates" >
-  <label for="templates">Templates</label></div>
-<div><input type="checkbox" name="gallery" value="gallery" id="gallery">
-  <label for="gallery">Gallery</label></div>
-<div><input type="checkbox" name="events" value="events" id="events">
-  <label for="events">Events</label></div>
-</div>
+          You can download your most recent completed export. <br>
+        <div>
+          Choose which data you'd like to export:
+          <div><input type="checkbox" name="campaigns" value="campaigns" id="campaigns">
+            <label for="campaigns">Campaigns</label></div>
+          <div><input type="checkbox" name="audiences" value="audiences" id="audiences">
+            <label for="audiences">Audiences</label></div>
+          <div><input type="checkbox" name="reports" value="reports" id="reports">
+            <label for="reports">Reports</label></div>
+          <div><input type="checkbox" name="templates" value="templates" id="templates">
+            <label for="templates">Templates</label></div>
+          <div><input type="checkbox" name="gallery" value="gallery" id="gallery">
+            <label for="gallery">Gallery</label></div>
+          <div><input type="checkbox" name="events" value="events" id="events">
+            <label for="events">Events</label></div>
+        </div>
 
-<section>
-  <div class="days">
-    <input type="radio" id="control_01" name="select" value="1" checked>
-    <label for="control_01">
-      <h3>Last 30 days</h3>
-      <p>Export data in the last 30 days.</p>
-    </label>
-  </div>
-  <div class="days">
-    <input type="radio" id="control_02" name="select" value="2">
-    <label for="control_02">
-      <h3>Last 60 days</h3>
-      <p>Export data in the last 60 days.</p>
-    </label>
-  </div>
-  <div class="days">
-    <input type="radio" id="control_03" name="select" value="3">
-    <label for="control_03">
-      <h3>Last 90 days</h3>
-      <p>Export data in the last 90 days.</p>
-    </label>
-  </div>
-  <div class="days">
-    <input type="radio" id="control_04" name="select" value="4">
-    <label for="control_04">
-      <h3>All data</h3>
-      <p>Export all data for the account. (This may take a while)</p>
-    </label>
-  </div>
-  
-  </section>
+        <section>
+          <div class="days">
+            <input type="radio" id="control_01" name="select" value="1" checked>
+            <label for="control_01">
+              <h3>Last 30 days</h3>
+              <p>Export data in the last 30 days.</p>
+            </label>
+          </div>
+          <div class="days">
+            <input type="radio" id="control_02" name="select" value="2">
+            <label for="control_02">
+              <h3>Last 60 days</h3>
+              <p>Export data in the last 60 days.</p>
+            </label>
+          </div>
+          <div class="days">
+            <input type="radio" id="control_03" name="select" value="3">
+            <label for="control_03">
+              <h3>Last 90 days</h3>
+              <p>Export data in the last 90 days.</p>
+            </label>
+          </div>
+          <div class="days">
+            <input type="radio" id="control_04" name="select" value="4">
+            <label for="control_04">
+              <h3>All data</h3>
+              <p>Export all data for the account. (This may take a while)</p>
+            </label>
+          </div>
+
+        </section>
 
         </p>
       </div>
@@ -426,6 +446,14 @@ Choose which data you'd like to export:
       </div>
     </div>
   </footer>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 
   <script src="./js/main.js"></script>
   <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
