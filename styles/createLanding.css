@@ -23,6 +23,11 @@ p {
   margin-bottom: unset;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 button:focus,
 button:active {
   cursor: unset;
@@ -149,12 +154,16 @@ button {
     width: 100%;
     margin: 0;
     padding: 0;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
   .main-landing .left-fixed ul {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding: 5px;
     color: green;

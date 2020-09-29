@@ -90,6 +90,11 @@ p {
   margin-bottom: unset;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 button:focus,
 button:active {
   cursor: unset;

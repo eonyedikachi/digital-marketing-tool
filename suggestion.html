@@ -1,142 +1,167 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/suggestion.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Pricing | MartReach</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/suggestion.css" />
+  <link rel="stylesheet" href="styles/createLanding.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Suggestions | MartReach</title>
+</head>
 
-  <body>
-    <header class="navbar">
-      <div class="container">
-        <div class="logo">
-          <p>MartReach</p>
-          <button type="button" class="hamburger" aria-label="Toggle Navigation">
-            <span class="hamburger-box">
-              <span class="hamburger-list hamburger-list1"></span>
-              <span class="hamburger-list hamburger-list2"></span>
-              <span class="hamburger-list hamburger-list3"></span>
-            </span>
-          </button>
-        </div>
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-items">
-              <a href="index.html">HOME</a>
-            </li>
-            <li class="nav-items">
-              <a href="services.html">SERVICES</a>
-            </li>
-            <li class="nav-items">
-              <a  href="./pricing.html">PRICING</a>
-            </li>
-            <li class="nav-items">
-              <a href="about.html">ABOUT</a>
-            </li>
-            <li class="nav-items">
-              <a href="contact.html">CONTACT</a>
-            </li>
-            <li class="nav-items">
-              <a href="signin.html">SIGN IN</a>
-            </li>
-          </ul>
-        </nav>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <p>MartReach</p>
+        <button type="button" class="hamburger" aria-label="Toggle Navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-list hamburger-list1"></span>
+            <span class="hamburger-list hamburger-list2"></span>
+            <span class="hamburger-list hamburger-list3"></span>
+          </span>
+        </button>
       </div>
-    </header>
-    <section>
-        <!-- Suggestion heading -->
-        <h1 class="heading">Suggestions</h1>
-        
-        <!-- warning note -->
-        <h1 class="warning"> 
-            Pleae note this Form is intended for suggestions, not support requests bugs and other inquires
-        </h1>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-items">
+            <a href="dashboard.html">Home</a>
+          </li>
 
-        <!-- Select category -->
-        <div class="selectcat">
-      <h2> Select Category</h2>
-        <select name="" id="" class="categorylists">
-            <option value="">Customer Services
-            </option>
-            <option value="">User Registration
-            </option>
-            <option value="">Email Templete Design 
-            </option>
-            <option value="">Landing Page Design
-            </option>
-            <option value="">User Registration
-            </option>
-            <option value="">Sponsorships
-            </option>
-            <option value="">Marketing
-            </option>
-            <option value="">User experience
-            </option>
-            <option value="">Publicity
-            </option>
-        </select>
+          <li class="nav-items">
+            <div class="dropdown">
+              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-file-powerpoint"></i> Present
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><i class="far fa-file-powerpoint"></i> Present</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-video"></i> Present and record
+                </a>
+                <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as video</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-cloud-upload-alt"></i> Save on
+                  cloud</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-items">
+            <a href="#">Share</a>
+          </li>
+          <li class="nav-items">
+            <a href="#"><i class="fas fa-download"></i></a>
+          </li>
+          <li class="nav-items">
+            <a href="#">Try MartReach Pro <i class="fas fa-crown"></i></a>
+          </li>
+          <li class="nav-items">
+            <a href="#">Sign Out</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <!-- Suggestion heading -->
+    <h1 class="heading">Suggestions</h1>
+
+    <!-- warning note -->
+    <h3 class="warning">
+      Please note this Form is intended for suggestions, not support requests bugs and other inquires
+    </h3>
+
+    <!-- Select category -->
+    <div class="selectcat">
+      <h3> Select Category</h3>
+      <select name="" id="" class="categorylists">
+        <option value="">Customer Services
+        </option>
+        <option value="">User Registration
+        </option>
+        <option value="">Email Template Design
+        </option>
+        <option value="">Landing Page Design
+        </option>
+        <option value="">User Registration
+        </option>
+        <option value="">Sponsorships
+        </option>
+        <option value="">Marketing
+        </option>
+        <option value="">User experience
+        </option>
+        <option value="">Publicity
+        </option>
+      </select>
     </div>
 
-        <div class="mainsuggestion">
-            <h1>Suggestion</h1>
-                <textarea id="comment" name="comment" placeholder="Enter your comment here..." ></textarea>
-            </textarea>
+    <div class="mainsuggestion">
+      <h3>Suggestion</h3>
+      <textarea id="comment" name="comment" placeholder="Enter your comment here..."></textarea>
+      </textarea>
+    </div>
+  </section>
+  <div class="sendbtn">
+    <button>Send suggestion</button>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="foot footer-logo">
+          <p>MartReach</p>
+          <p>We help small and large business to grow their audience reach.</p>
         </div>
-    </section>
-      <div class="sendbtn">
-         <button>Send suggestion</button>
-      </div>
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="foot footer-logo">
-            <p>MartReach</p>
-            <p>We help small and large business to grow their audience reach.</p>
-          </div>
-          <div class="foot support">
-            <h2>Support</h2>
-            <ul>
-              <li>
-                <a href="./contact.html">Contact Us</a>
-              </li>
-              <li>
-                <a href="./support.html">Support</a>
-              </li>
-              <li>
-                <a href="FAQ.html">FAQ</a>
-              </li>
-              <li>
-                <a href="pricing.html">Pricing</a>
-              </li>
-              <li>
-                <a href="services.html">Services</a>
-              </li>
-            </ul>
-          </div>
-          <div class="foot socials">
-            <h2>Connect</h2>
-            <a href="#"><i class="fas fa-phone-alt"></i></a>
-            <a href="#"><i class="far fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-          </div>
+        <div class="foot support">
+          <h3>Support</h3>
+          <ul>
+            <li>
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li>
+              <a href="./support.html">Support</a>
+            </li>
+            <li>
+              <a href="FAQ.html">FAQ</a>
+            </li>
+            <li>
+              <a href="pricing.html">Pricing</a>
+            </li>
+            <li>
+              <a href="services.html">Services</a>
+            </li>
+          </ul>
         </div>
-        <div class="copyright">
-          <p>MartReach &copy; 2020, All Rights Reserved.</p>
+        <div class="foot socials">
+          <h2>Connect</h2>
+          <a href="#"><i class="fas fa-phone-alt"></i></a>
+          <a href="#"><i class="far fa-envelope"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
         </div>
       </div>
-    </footer>
+      <div class="copyright">
+        <p>MartReach &copy; 2020, All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="./js/main.js"></script>
-    <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
-  </body>
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 
-  </html>
+  <script src="./js/main.js"></script>
+  <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
