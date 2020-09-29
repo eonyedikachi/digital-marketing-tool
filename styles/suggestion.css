@@ -1,0 +1,78 @@
+/* Heading */
+.heading{
+    text-align: center;
+    color: #4eb1f5;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+/* warning note*/
+.warning{
+    text-align: center;
+    color:#fff;
+    margin: 0 3rem;
+    background-color: #4eb1f5; 
+     border-radius: 7px;
+     padding: 5px;
+}
+/* Select category */
+.selectcat{
+    margin-left: 3rem;
+}
+.selectcat h2{
+    color: #4eb1f5;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+.selectcat select{
+    width: 45%;
+    color: #4eb1f5;
+    padding: 0.4rem;
+    border: #4eb1f5 solid;
+    border-radius: 7px;
+    font-size: 1rem;
+    background-color: ;
+}
+.selectcat select option{
+    color: #4eb1f5;
+    padding: 10px;
+}
+.mainsuggestion{
+    margin-left:3rem;
+    margin-top: 1rem;
+}
+.mainsuggestion h1{
+    color: #4eb1f5;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+.mainsuggestion textarea{
+    width: 60%;
+    height: 7rem;
+    border: #4eb1f5 solid;
+    border-radius: 7px;
+}
+/* Send button */
+.sendbtn{
+  text-align: center;
+}
+.sendbtn button{
+    padding: 10px;
+    margin: 10px;
+    background: #4eb1f5;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+}
+/* Mobile view */
+@media screen and (max-width: 768px){
+    .heading{
+        padding: 0.5rem;
+    }
+    .selectcat select{
+        width: 70%;
+    }
+    .mainsuggestion textarea{
+        width: 90%;
+    }
+}
