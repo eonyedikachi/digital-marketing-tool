@@ -78,6 +78,10 @@ main .container .reports .analytics .charts img {
   main .container .reports .analytics .charts {
     width: 100%;
   }
+
+  main .container .reports .description {
+    flex-direction: column;
+  }
 }
 
 /* Bootstrap unset */
