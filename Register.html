@@ -178,9 +178,24 @@
     </footer>
 
     <script src="./js/main.js"></script>
+    <script src="js/register.js"></script>
     <script
       src="https://kit.fontawesome.com/0b544dd14e.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Toggle Password
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+
+      togglePassword.addEventListener("click", function (e) {
+        // toggle the type attribute
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the eye slash icon
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script>
   </body>
 </html>

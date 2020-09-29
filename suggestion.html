@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/reports.css" />
+    <link rel="stylesheet" href="./styles/suggestion.css" />
     <link rel="stylesheet" href="styles/createLanding.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -68,76 +68,74 @@
             </nav>
         </div>
     </header>
-
-    <!-- Main Section -->
-    <main>
-        <div class="container">
-            <div class="reports">
-                <div class="heading">
-                    <h1>Reports</h1>
-                </div>
-                <div class="description">
-                    <p>Name: Business Name</p>
-                    <p>Published: 28/09/2020</p>
-                </div>
-                <div class="analytics">
-                    <div class="row">
-                        <div class="col">
-                            <div class="stats visits">
-                                <p>10 Visits</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="stats clicks">
-                                <p>10 Clicks</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="stats subscribes">
-                                <p>10 Subscribes</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="charts landingPage">
-                                <h5>Landing page performance</h5>
-                                <img src="./images/analytics.png" alt="landingPage">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="charts emailTemp">
-                                <h5>Email template performance</h5>
-                                <img src="./images/analytics.png" alt="emailTemp">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section>
+        <!-- Suggestion heading -->
+        <h1 class="heading">Suggestions</h1>
+        
+       <!-- images categories -->
+       <div class="img">
+         <div><a href=""><img src="./images/email-temp.jpg" alt="Email Templete"></a>
+              <h4>Email Template</h4>
         </div>
-    </main>
+         <div><a href=""><img src="./images/Langing page.jpg" alt="Landing page"></a>
+          <h4>Landing page</h4>
+        </div>
+         <div><a href=""><img src="./images/Social Media.png" alt="Social Media"></a>
+          <h4>Social Media</h4>
+        </div>
+       </div>
 
+        <!-- Select category -->
+        <div class="selectcat">
+      <h2> Select Category</h2>
+        <select name="" id="" class="categorylists">
+            <option value="">Email Templete
+            </option>
+            <option value="">Landing Page
+            </option>
+            <option value=""> Social media
+            </option>
+            <option value="">Posters 
+            </option>
+            <option value="">Fliers
+            </option>
+            <option value="">Cards
+            </option>
+            <option value="">Presentation
+            </option>
+        </select>
+    </div>
+  </header>
 
+        <div class="mainsuggestion">
+            <h2>Suggestion</h2>
+                <textarea id="comment" name="comment" placeholder="Enter your suggestion" ></textarea>
+            </textarea>
+        </div>
+    </section>
+      <div class="sendbtn">
+         <button>Search </button>
+      </div>
     <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <div class="back-footer">
-                <i class="fas fa-chevron-left"></i>
-                <input type="button" onclick="history.back()" value="Back" class="back-button">
-            </div>
-        </div>
-    </footer>
+      <div class="container">
+          <div class="back-footer">
+              <i class="fas fa-chevron-left"></i>
+              <input type="button" onclick="history.back()" value="Back" class="back-button">
+          </div>
+      </div>
+  </footer>
 
-    <!-- jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
 
-    <script src="./js/main.js"></script>
-    <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
