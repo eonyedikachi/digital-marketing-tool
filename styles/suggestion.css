@@ -5,7 +5,6 @@
   margin-top: 1rem;
   font-size: 2rem;
 }
-<<<<<<< HEAD
 /* images categories */
 .img{
     margin-top: 1rem;
@@ -21,22 +20,12 @@
 }
 .img div h4{
      color: #4eb1f5;
-=======
-/* warning note*/
-.warning {
-  text-align: center;
-  color: #fff;
-  margin: 0 3rem;
-  background-color: #4eb1f5;
-  border-radius: 7px;
-  padding: 5px;
->>>>>>> 5bc283400ee6f50697bfcd7d47218ab5e729c3e5
 }
 /* Select category */
 .selectcat {
   margin-left: 3rem;
 }
-.selectcat h3 {
+.selectcat h2 {
   color: #4eb1f5;
   margin-top: 1rem;
   letter-spacing: 1px;
@@ -49,7 +38,6 @@
   border-radius: 7px;
   font-size: 1rem;
 }
-<<<<<<< HEAD
 .selectcat select option{
     color: #4eb1f5;
     padding: 1rem;
@@ -72,26 +60,6 @@
     height: 4rem;
     border: #4eb1f5 solid;
     border-radius: 7px;
-=======
-.selectcat select option {
-  color: #4eb1f5;
-  padding: 10px;
-}
-.mainsuggestion {
-  margin-left: 3rem;
-  margin-top: 1rem;
-}
-.mainsuggestion h3 {
-  color: #4eb1f5;
-  letter-spacing: 1px;
-  font-size: 2rem;
-}
-.mainsuggestion textarea {
-  width: 60%;
-  height: 7rem;
-  border: #4eb1f5 solid;
-  border-radius: 7px;
->>>>>>> 5bc283400ee6f50697bfcd7d47218ab5e729c3e5
 }
 /* Send button */
 .sendbtn {
@@ -111,7 +79,6 @@
     color: #4eb1f5;
 }
 /* Mobile view */
-<<<<<<< HEAD
 @media screen and (max-width: 768px){
    .img{
        flex-direction: column;
@@ -126,17 +93,11 @@
     .mainsuggestion textarea{
         width: 90%;
     }
+    /* images */
+    .img div a img{
+      margin: 1rem 0;
+    }
+    .img div h4{
+      text-align: center;
+    }
 }
-=======
-@media screen and (max-width: 768px) {
-  .heading {
-    padding: 0.5rem;
-  }
-  .selectcat select {
-    width: 70%;
-  }
-  .mainsuggestion textarea {
-    width: 90%;
-  }
-}
->>>>>>> 5bc283400ee6f50697bfcd7d47218ab5e729c3e5
