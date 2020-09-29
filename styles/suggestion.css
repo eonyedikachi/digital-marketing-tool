@@ -5,14 +5,21 @@
     margin-top: 1rem;
     font-size: 2rem;
 }
-/* warning note*/
-.warning{
-    text-align: center;
-    color:#fff;
-    margin: 0 3rem;
-    background-color: #4eb1f5; 
-     border-radius: 7px;
-     padding: 5px;
+/* images categories */
+.img{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.img div a:hover{
+    opacity: .3;
+}
+.img div a img{
+    max-width: 300px;
+    max-height: 100px;
+}
+.img div h4{
+     color: #4eb1f5;
 }
 /* Select category */
 .selectcat{
@@ -34,20 +41,24 @@
 }
 .selectcat select option{
     color: #4eb1f5;
-    padding: 10px;
+    padding: 1rem;
 }
+.categorylists option{
+    padding: rem;
+}
+/* suggestion Text Area */
 .mainsuggestion{
     margin-left:3rem;
     margin-top: 1rem;
 }
-.mainsuggestion h1{
+.mainsuggestion h2{
     color: #4eb1f5;
     letter-spacing: 1px;
-    font-size: 2rem;
+    
 }
 .mainsuggestion textarea{
     width: 60%;
-    height: 7rem;
+    height: 4rem;
     border: #4eb1f5 solid;
     border-radius: 7px;
 }
@@ -64,14 +75,22 @@
     color: #fff;
     font-weight: 600;
 }
+.sendbtn button:hover{
+    background-color: #fff;
+    color: #4eb1f5;
+}
 /* Mobile view */
 @media screen and (max-width: 768px){
-    .heading{
-        padding: 0.5rem;
-    }
+   .img{
+       flex-direction: column;
+       align-items: center;
+   }
+
+    /* select category */
     .selectcat select{
         width: 70%;
     }
+    /* suggestion Text area */
     .mainsuggestion textarea{
         width: 90%;
     }
