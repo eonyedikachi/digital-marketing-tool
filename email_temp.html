@@ -10,6 +10,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/email_temp.css" />
+    <link rel="stylesheet" href="styles/createLanding.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
@@ -32,22 +33,36 @@
             <nav>
                 <ul class="nav-list">
                     <li class="nav-items">
-                        <a href="./index.html">HOME</a>
+                        <a href="dashboard.html">Home</a>
+                    </li>
+
+                    <li class="nav-items">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-file-powerpoint"></i> Present
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"><i class="far fa-file-powerpoint"></i> Present</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-video"></i> Present and record
+                                </a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as video</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cloud-upload-alt"></i> Save on
+                                    cloud</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-items">
-                        <a href="services.html">SERVICES</a>
+                        <a href="#">Share</a>
                     </li>
                     <li class="nav-items">
-                        <a href="./pricing.html">PRICING</a>
+                        <a href="#"><i class="fas fa-download"></i></a>
                     </li>
                     <li class="nav-items">
-                        <a href="about.html">ABOUT</a>
+                        <a href="./pricing.html">Try MartReach Pro <i class="fas fa-crown"></i></a>
                     </li>
                     <li class="nav-items">
-                        <a href="contact.html">CONTACT</a>
-                    </li>
-                    <li class="nav-items">
-                        <a href="signin.html">SIGN IN</a>
+                        <a href="./signin.html">Sign Out</a>
                     </li>
                 </ul>
             </nav>
@@ -325,42 +340,9 @@
     <!-- Footer Section -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="foot footer-logo">
-                    <p>MartReach</p>
-                    <p>We help small and large business to grow their audience reach.</p>
-                </div>
-                <div class="foot support">
-                    <h2>Support</h2>
-                    <ul>
-                        <li>
-                            <a href="./contact.html">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="./support.html">Support</a>
-                        </li>
-                        <li>
-                            <a href="./FAQ.html">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="pricing.html">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="services.html">Services</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="foot socials">
-                    <h2>Connect</h2>
-                    <a href="#"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#"><i class="far fa-envelope"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>MartReach &copy; 2020, All Rights Reserved.</p>
+            <div class="back-footer">
+                <i class="fas fa-chevron-left"></i>
+                <input type="button" onclick="history.back()" value="Back" class="back-button">
             </div>
         </div>
     </footer>
