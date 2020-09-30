@@ -247,9 +247,9 @@ p {
     width: 150px;
     margin-top: 30px;
   }
-  button{
+  .tabcontent button{
     width: 150px;
-    margin-top: 30px;
+    margin: 30px 0;
   }
   input{
     width: 50vw;
@@ -270,8 +270,17 @@ p {
  .tabcontent h3{
    text-decoration: underline;
    text-decoration: 1px solid;
+   line-height: 2;
  }
 
- .tabcontent h5, h6, p{
+ .tabcontent h6{
    text-transform: uppercase;
+   line-height: 2;
+ }
+
+ .tabcontent h5{
+   line-height: 2;
+ }
+ .tabcontent p{
+   line-height: 2;
  }
