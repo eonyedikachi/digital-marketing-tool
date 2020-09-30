@@ -1,3 +1,9 @@
+.nav-list .nav-items .nav4 {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
 .card {
   padding: 40px;
   margin: 50px 70px;
