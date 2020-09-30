@@ -123,19 +123,19 @@ section.support {
 }
 
 /* Socials */
-.socials {
+.socials-media {
   text-align: center;
   padding: 1rem;
   margin: 1rem;
 }
 
-.socials .socials-account {
+.socials-media .socials-account {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.socials .socials-account .account {
+.socials-media .socials-account .account {
   background: var(--secondary-color);
   margin: 1rem;
   width: 200px;
@@ -144,7 +144,7 @@ section.support {
   box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
 }
 
-.socials .socials-account .account a {
+.socials-media .socials-account .account a {
   display: block;
   font-size: 60px;
   color: var(--primary-color);
@@ -152,13 +152,13 @@ section.support {
   transition: all ease 300ms;
 }
 
-.socials .socials-account .account a:hover {
+.socials-media .socials-account .account a:hover {
   background: #000;
   color: white;
   transition: all ease 300ms;
 }
 
-.socials .socials-account .account a i {
+.socials-media .socials-account .account a i {
   vertical-align: middle;
 }
 
