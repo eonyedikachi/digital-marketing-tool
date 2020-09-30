@@ -10,7 +10,7 @@
     border: 1px solid var(--secondary-color);
     background-color: var(--primary-color);
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   
   /* Style the buttons that are used to open the tab content */
@@ -42,7 +42,7 @@
     display: none;
     padding: 6px 12px;
     border-top: none;
-    margin-top: 30px;
+    margin-top: 0px;
   }
   
 /* STYLE THE SETTINGS ITEMS  */
@@ -222,8 +222,56 @@ p {
     flex-direction: column;
     overflow: scroll;
     scroll-behavior: smooth;
-    padding: 30px;
   }
-  .profile-contrnt{
-    
+  .profile img{
+    height: 120px;
+    margin-right: 20px;
   }
+  .profile{
+    margin: 30px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .profile button{
+    width: 120px;
+    margin: 10px;
+  }
+  .profile .btn{
+    display: flex;
+  }
+  .profile_texts_and_buttons{
+    display: flex;
+    flex-direction: column;
+  }
+  .profile_form button{
+    width: 150px;
+    margin-top: 30px;
+  }
+  button{
+    width: 150px;
+    margin-top: 30px;
+  }
+  input{
+    width: 50vw;
+    outline: none;
+  }
+  .profile_form {
+    margin: 30px;
+  }
+  
+
+ .tabcontent h2{
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 0;
+ }
+
+ .tabcontent h3{
+   text-decoration: underline;
+   text-decoration: 1px solid;
+ }
+
+ .tabcontent h5, h6, p{
+   text-transform: uppercase;
+ }
