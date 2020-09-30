@@ -16,3 +16,8 @@ i = currentUser.length - 1;
 document.getElementById(
   "usersname111"
 ).innerText = `${currentUser[i].firstName} ${currentUser[i].lastName}`;
+
+// clear the temporary local storage
+let signOut = () => {
+  localStorage.removeItem("currentUser");
+};

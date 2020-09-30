@@ -1,50 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
 :root {
-    --primary-color: #fff;
-    --secondary-color: #4eb1f5;
-  }
+  --primary-color: #fff;
+  --secondary-color: #4eb1f5;
+}
 /* Style the tab */
 .tab {
-    display: flex;
-    align-items: stretch;
-    border: 1px solid var(--secondary-color);
-    background-color: var(--primary-color);
-    flex-wrap: wrap;
-    margin-bottom: 0px;
-  }
-  
-  /* Style the buttons that are used to open the tab content */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    flex-grow: 1;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
-    display: flex;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-    margin-top: 0px;
-  }
-  
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  flex-wrap: wrap;
+  margin-bottom: 0px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  flex-grow: 1;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  display: flex;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  margin-top: 0px;
+}
+
 /* STYLE THE SETTINGS ITEMS  */
 section {
   display: flex;
@@ -57,15 +57,15 @@ section > div {
 input[type="radio"] {
   display: none;
 }
-  input[type="radio"]:not(:disabled) ~ {
-    cursor: pointer;
-  }
-  input[type="radio"]:disabled ~ label {
-    color: hsla(150, 5%, 75%, 1);
-    border-color: hsla(150, 5%, 75%, 1);
-    box-shadow: none;
-    cursor: not-allowed;
-  }
+input[type="radio"]:not(:disabled) ~ {
+  cursor: pointer;
+}
+input[type="radio"]:disabled ~ label {
+  color: hsla(150, 5%, 75%, 1);
+  border-color: hsla(150, 5%, 75%, 1);
+  box-shadow: none;
+  cursor: not-allowed;
+}
 .days label {
   height: auto;
   display: block;
@@ -85,23 +85,23 @@ input[type="radio"]:checked + label {
   box-shadow: 0px 0px 20px var(--secondary-color);
 }
 input[type="radio"]:checked + label ::after {
-    color: hsla(215, 5%, 25%, 1);
-    font-family: FontAwesome;
-    border: 2px solid var(--secondary-color);
-    content: "\f00c";
-    font-size: 24px;
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 50%;
-    background: white;
-    box-shadow: 0px 2px 5px -2px hsla(0, 0%, 0%, 0.25);
-  }
+  color: hsla(215, 5%, 25%, 1);
+  font-family: FontAwesome;
+  border: 2px solid var(--secondary-color);
+  content: "\f00c";
+  font-size: 24px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0px 2px 5px -2px hsla(0, 0%, 0%, 0.25);
+}
 input[type="radio"]#control_04:checked + label {
   background: red;
   border-color: red;
@@ -110,177 +110,190 @@ p {
   font-weight: 900;
 }
 
-
 @media only screen and (max-width: 700px) {
   section {
     flex-direction: column;
   }
 }
 
+.main {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  background-color: transparent;
+  flex: 1.5;
+}
+.left {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0 10px 10px;
+  color: var(--secondary-color);
+  flex: 1;
+  padding: 1rem;
+}
+.left .dash-list ul li {
+  border-bottom: 1px solid var(--primary-color);
+  list-style: none;
+}
+.left .dash-list ul li a {
+  color: var(--secondary-color);
+}
+.left .dash-list ul li:hover {
+  font-size: 1.2rem;
+}
+.left .dash-pro h3 a {
+  color: var(--secondary-color);
+}
+.left .dash-pro h3 a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 5px;
+  border-radius: 5px;
+}
 
+.middle {
+  background-color: transparent;
+  border-right: 2px solid var(--secondary-color);
+  border-left: 2px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  overflow: auto;
+}
+.search-notify {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 20px 5px 20px;
+}
+.middle .search-notify i {
+  color: var(--secondary-color);
+}
+.middle .search-notify .search input {
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.middle .search-notify .search input::-webkit-input-placeholder {
+  color: var(--secondary-color);
+  font-family: "Baloo Tamma 2", Verdana, Geneva, Tahoma, sans-serif;
+}
+.middle .search-notify .search input::-moz-placeholder {
+  color: var(--secondary-color);
+  font-family: "Baloo Tamma 2", Verdana, Geneva, Tahoma, sans-serif;
+}
+.middle .search-notify .search input:-ms-input-placeholder {
+  color: var(--secondary-color);
+  font-family: "Baloo Tamma 2", Verdana, Geneva, Tahoma, sans-serif;
+}
+.middle .search-notify .search input::-ms-input-placeholder {
+  color: var(--secondary-color);
+  font-family: "Baloo Tamma 2", Verdana, Geneva, Tahoma, sans-serif;
+}
+.middle .search-notify .search input::placeholder {
+  color: var(--secondary-color);
+  font-family: "Baloo Tamma 2", Verdana, Geneva, Tahoma, sans-serif;
+}
+.middle .search-notify .search input[type="text"] {
+  padding-left: 5px;
+  color: var(--secondary-color);
+}
+.middle .chart {
+  display: flex;
+  flex-wrap: wrap;
+}
+.middle .chart img {
+  height: 200px;
+  width: auto;
+}
+.right {
+  height: 40%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secondary-color);
+  flex: 1;
+  padding: 1rem;
+}
+.right a {
+  color: var(--secondary-color);
+}
+.right .tool ul {
+  list-style: none;
+}
 
+.right .user {
+  margin-top: 5px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.profile img {
+  height: 120px;
+  margin-right: 20px;
+}
+.profile {
+  margin: 30px;
+  display: flex;
+  align-items: flex-start;
+}
+.profile button {
+  width: 120px;
+  margin: 10px;
+}
+.profile .btn {
+  display: flex;
+}
+.profile_texts_and_buttons {
+  display: flex;
+  flex-direction: column;
+}
+.profile_form button {
+  width: 150px;
+  margin-top: 30px;
+}
+.tabcontent button {
+  width: 150px;
+  margin: 30px 0;
+}
+.profile_form input {
+  width: 50vw;
+  outline: none;
+}
+.profile_form {
+  margin: 30px;
+}
 
-  .main {
-    display: flex;
-    margin: auto;
-    flex-direction: row;
-    background-color: transparent;
-    border-radius: 20px;
-    flex: 1.5;
-  }
-  .left {
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 0 10px 10px;
-    color: var(--primary-color);
-    flex: 1;
-  }
-  .left .dash-list ul li {
-    border-bottom: 1px solid var(--primary-color);
-    list-style: none;
-  }
-  .left .dash-list ul li a {
-    color: var(--primary-color);
-  }
-  .left .dash-list ul li:hover {
-    font-size: 1.2rem;
-  }
-  .left .dash-pro h3 a {
-    color: var(--secondary-color);
-  }
-  .left .dash-pro h3 a:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 5px;
-    border-radius: 5px;
-  }
-  
-  .middle {
-    background-color: transparent;
-    border-right: 2px solid var(--secondary-color);
-    border-left: 2px solid var(--secondary-color);
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 100%;
-    overflow: auto;
-  }
-  .search-notify {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 20px 5px 20px;
-  }
-  .middle .search-notify i {
-    color: var(--secondary-color);
-  }
-  .middle .search-notify .search input {
-    height: 20px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-  }
-  .middle .search-notify .search input::placeholder {
-    color: var(--secondary-color);
-    font-family: "Baloo Tamma 2", Verdana, Geneva, Tahoma, sans-serif;
-  }
-  .middle .search-notify .search input[type="text"] {
-    padding-left: 5px;
-    color: var(--secondary-color);
-  }
-  .middle .chart {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .middle .chart img {
-    height: 200px;
-    width: auto;
-  }
-  .right {
-    height: 40%;
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--secondary-color);
-    flex: 1;
-  }
-  .right a {
-    color: var(--secondary-color);
-  }
-  .right .tool ul {
-    list-style: none;
-  }
-  
-  .right .user {
-    margin-top: 5px;
-  }
-  .contact{
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
-    scroll-behavior: smooth;
-  }
-  .profile img{
-    height: 120px;
-    margin-right: 20px;
-  }
-  .profile{
-    margin: 30px;
-    display: flex;
-    align-items: flex-start;
-  }
-  .profile button{
-    width: 120px;
-    margin: 10px;
-  }
-  .profile .btn{
-    display: flex;
-  }
-  .profile_texts_and_buttons{
-    display: flex;
-    flex-direction: column;
-  }
-  .profile_form button{
-    width: 150px;
-    margin-top: 30px;
-  }
-  .tabcontent button{
-    width: 150px;
-    margin: 30px 0;
-  }
-  input{
-    width: 50vw;
-    outline: none;
-  }
-  .profile_form {
-    margin: 30px;
-  }
-  
+.tabcontent h2 {
+  margin-right: 20px;
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 0;
+}
 
- .tabcontent h2{
-    margin-right: 20px;
-    font-size: 30px;
-    font-weight: 900;
-    margin-top: 0;
- }
+.tabcontent h3 {
+  text-decoration: underline;
+  -webkit-text-decoration: 1px solid;
+  text-decoration: 1px solid;
+  line-height: 2;
+}
 
- .tabcontent h3{
-   text-decoration: underline;
-   text-decoration: 1px solid;
-   line-height: 2;
- }
+.tabcontent h6 {
+  text-transform: uppercase;
+  line-height: 2;
+}
 
- .tabcontent h6{
-   text-transform: uppercase;
-   line-height: 2;
- }
-
- .tabcontent h5{
-   line-height: 2;
- }
- .tabcontent p{
-   line-height: 2;
- }
+.tabcontent h5 {
+  line-height: 2;
+}
+.tabcontent p {
+  line-height: 2;
+}
