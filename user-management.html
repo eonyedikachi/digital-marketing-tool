@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <link rel="stylesheet" href="./styles/user-management.css" />
+    <link rel="stylesheet" href="styles/createLanding.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <p>MartReach</p>
+                <button type="button" class="hamburger" aria-label="Toggle Navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-list hamburger-list1"></span>
+                        <span class="hamburger-list hamburger-list2"></span>
+                        <span class="hamburger-list hamburger-list3"></span>
+                    </span>
+                </button>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-items">
+                        <a href="dashboard.html">Home</a>
+                    </li>
+
+                    <li class="nav-items">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-file-powerpoint"></i> Present
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"><i class="far fa-file-powerpoint"></i> Present</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-video"></i> Present and record
+                                </a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as video</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cloud-upload-alt"></i> Save on
+                                    cloud</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-items">
+                        <a href="#">Share</a>
+                    </li>
+                    <li class="nav-items">
+                        <a href="#"><i class="fas fa-download"></i></a>
+                    </li>
+                    <li class="nav-items">
+                        <a href="./pricing.html">Try MartReach Pro <i class="fas fa-crown"></i></a>
+                    </li>
+                    <li class="nav-items">
+                        <a href="./signin.html" onclick="signOut()">Sign Out</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main" style="height: 87vh; background-color: #f1f9fe">
+
+        <!-- Left Sidebar -->
+        <div class="left">
+            <div id="mart">
+                <h3>Mart Reach</h3>
+            </div>
+            <div class="dash-list">
+                <ul>
+                    <li>
+                        <i class="fas fa-columns"></i>
+                        <a href="./admin-dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-user"></i>
+                        <a href="./user-management.html">User Management</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dash-pro">
+                <h3><a href="#">Administrator</a></h3>
+            </div>
+        </div>
+
+        <!-- Middle -->
+        <div class="middle">
+            <h1>Welcome to the Users Page</h1>
+            <div class="form">
+                <h2>Add and Update Users</h2>
+                <div class="form-input">
+                    <input type="hidden" id="index" placeholder="Index">
+                </div>
+                <div class="form-input">
+                    <input type="text" id="firstName" placeholder="Enter First Name" required>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="lastName" placeholder="Enter Last Name" required>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="email" placeholder="Enter Email Address" required>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="role" placeholder="Enter User Role" required>
+                </div>
+                <div class="form-input">
+                    <input type="file" id="pics">
+                </div>
+                <div class="form-input">
+                    <button class="addBtn">Add User</button>
+                    <button class="updateBtn" onclick="update()">Update</button>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="search" placeholder="Search Users">
+                    <button class="searchBtn" onclick="search()">Search</button>
+                    <button class="searchBtn cancel" onclick="cancelSearch()">Cancel</button>
+                </div>
+                <p id="searchResult"></p>
+            </div>
+
+            <h1 style="margin-top: 1.5rem;">Users</h1>
+            <div id="main">
+                Where content is appended
+            </div>
+        </div>
+
+        <!-- Right -->
+        <div class="right">
+            <div class="user">
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span id="usersname111">Malik Mukhtar</span>
+                </a>
+            </div>
+            <div class="tool">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fas fa-sticky-note"></i> <span>Sticky Notes</span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li><i class="fas fa-poll"></i> <span>Survey</span></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="back-footer">
+                <i class="fas fa-chevron-left"></i>
+                <input type="button" onclick="history.back()" value="Back" class="back-button">
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/user-management.js"></script>
+    <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
