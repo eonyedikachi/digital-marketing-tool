@@ -17,6 +17,26 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+#error{
+  color: red;
+  text-align: center;
+}
+
+.txt_field .fa{
+position: absolute;
+top: 50%;
+right: 8%;
+display: none;
+}
+.fa.times{
+  color: red;
+}
+.fa-check{
+  color: green;
+}
+
+
 .center-form {
   width: 400px;
   background: white;
