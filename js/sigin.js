@@ -78,12 +78,29 @@ function validate(){
     document.getElementById('error').innerHTML = 'Please fill the required fields!';  
     return false;
 
-  }else if(pass.value == 0 || pass.value.length < 8){
-    document.getElementById('error').innerHTML = 'Please fill the required fields!';  
+  }else if(pass.value == 0){
+    document.getElementById('error').innerHTML = 'Password field cannot be empty';  
     return false;
 
+  }else if(pass.value.length < 8){
+    document.getElementById('error').innerHTML = 'Password must be greater than 8 characters!';  
+    return false;
+  }else if(!(/[a-z]/.test(pass.value))){
+    document.getElementById('error').innerHTML = 'Password must contain atleast one lower case!';  
+    return false;
+  }else if(!(/[A-Z]/.test(pass.value))){
+    document.getElementById('error').innerHTML = 'Password must contain atleast one upper case!';  
+    return false;
+  }else if(!(/[0-9]/.test(pass.value))){
+    document.getElementById('error').innerHTML = 'Password must contain a number!';  
+    return false;
+  }else if(!(/[ /\W|_/g]/.test(pass.value))){
+    document.getElementById('error').innerHTML = 'Password must contain atleast one special charater!';  
+    return false;
   }else{
     alert('Successfully logged in');
   }
 }
+
+
 
