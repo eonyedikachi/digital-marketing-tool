@@ -13,30 +13,45 @@ if (currentUser == null) {
 // const logInUser = (e) => {
 //   //to prevent default submit
 //   e.preventDefault();
-//   let username = document.getElementById("login-username").value;
-//   let password = document.getElementById("login-password").value;
+//   let username = document.getElementById("use").value;
+//   let password = document.getElementById("Login").value;
 
 //   // Finds username and password in database
 //   let user = database.find(
 //     (element) => element.username == username && element.password == password
 //   );
 
-//   // Adds current user login to storage
+// //   // Adds current user login to storage
 //   currentUser.push(user);
 
 //   localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-//   // User validation
-//   user
-//     ? window.location.assign("../dashboard.html")
-//     : alert("Username or Password not correct");
-// };
-// cdfb00bc551dcd54efb908eb012dd1d3ce182301
-
-//Targeting the login  button
+// //   // User validation
+// //   user
+// //     ? window.location.assign("../dashboard.html")
+// //     : alert("Username or Password not correct");
+// // };
+// // cdfb00bc551dcd54efb908eb012dd1d3ce182301
+ 
+// // Targeting the login  button
 // document.getElementById("Login").addEventListener("click", logInUser);
 
+// Validate users and password
 
+function validate(){
+  if(use.value == 0 || use.value.length < 2){
+    document.getElementById('error').innerHTML = 'Username field cannot be empty!';  
+    return false;
+
+  }else if(pass.value == 0){
+    document.getElementById('error').innerHTML = 'Password field cannot be empty!';  
+    return false;
+
+
+  }else{
+    alert('Successfully logged in');
+  }
+}
 
 
 
@@ -72,35 +87,3 @@ pass.addEventListener('keyup', function(){
   p_check.style.display = 'block'; 
 }
 })
-
-function validate(){
-  if(use.value == 0 || use.value.length < 2){
-    document.getElementById('error').innerHTML = 'Please fill the required fields!';  
-    return false;
-
-  }else if(pass.value == 0){
-    document.getElementById('error').innerHTML = 'Password field cannot be empty';  
-    return false;
-
-  }else if(pass.value.length < 8){
-    document.getElementById('error').innerHTML = 'Password must be greater than 8 characters!';  
-    return false;
-  }else if(!(/[a-z]/.test(pass.value))){
-    document.getElementById('error').innerHTML = 'Password must contain atleast one lower case!';  
-    return false;
-  }else if(!(/[A-Z]/.test(pass.value))){
-    document.getElementById('error').innerHTML = 'Password must contain atleast one upper case!';  
-    return false;
-  }else if(!(/[0-9]/.test(pass.value))){
-    document.getElementById('error').innerHTML = 'Password must contain a number!';  
-    return false;
-  }else if(!(/[ /\W|_/g]/.test(pass.value))){
-    document.getElementById('error').innerHTML = 'Password must contain atleast one special charater!';  
-    return false;
-  }else{
-    alert('Successfully logged in');
-  }
-}
-
-
-

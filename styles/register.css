@@ -3,6 +3,8 @@
   --secondary-color: #4eb1f5;
 }
 
+
+
 section .register {
   display: flex;
   justify-content: center;
@@ -13,6 +15,12 @@ section .register {
   border-radius: 10px;
 }
 
+
+
+#error{
+  color: red;
+  text-align: center;
+}
 section .register .left {
   height: 780px;
   width: 50%;

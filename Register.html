@@ -28,22 +28,26 @@
         <p>Welcome to MartReach!</p>
         <p>Register your account</p>
 
-        <form>
+        <form onsubmit=" validate()" >
+          <p id="error"></p>
           <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName" placeholder="First Name" required />
+          <input type="text" name="firstName" id="firstName" placeholder="First Name"  />
 
           <label for="lastName">Last Name</label>
-          <input type="text" name="lastName" id="lastName" placeholder="Last Name" required />
+          <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
 
           <label for="username">Username</label>
-          <input type="text" name="username" id="username" placeholder="Username" required />
+          <input type="text" name="username" id="username" placeholder="Use" />
 
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="example@email.com" required />
+          <input type="email" name="email" id="email" placeholder="example@email.com" />
 
           <label for="password">Password</label>
           <span>
-            <input type="password" name="password" id="password" placeholder="Password" required />
+            <input type="password" name="password" id="password" placeholder="Pass"/>
+            <i class="far fa-eye" id="togglePassword"></i>
+          </span>
+          <input type="password" name="password" id="cpassword" placeholder="Confirm Password" />
             <i class="far fa-eye" id="togglePassword"></i>
           </span>
 
