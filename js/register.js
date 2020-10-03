@@ -4,10 +4,10 @@ let database = JSON.parse(localStorage.getItem("database"));
 if (database == null) {
   database = [];
 }
-// console.log(database);
 //Registering User
 
 const registerUser = (e) => {
+  //to prevent form from default submit
   e.preventDefault();
   newUser = {
     firstName: document.getElementById("firstName").value,
@@ -15,6 +15,7 @@ const registerUser = (e) => {
     username: document.getElementById("username").value,
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
+    role: "user",
   };
   //Storing inside the array
   database.push(newUser);

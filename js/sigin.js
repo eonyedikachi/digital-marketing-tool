@@ -9,6 +9,7 @@ if (currentUser == null) {
   currentUser = [];
 }
 //Logging User
+
 // const logInUser = (e) => {
 //   e.preventDefault();
 //   let username = document.getElementById("login-username").value;
@@ -28,6 +29,29 @@ if (currentUser == null) {
 //     ? window.location.assign("../dashboard.html")
 //     : alert("Username or Password not correct");
 // };
+
+const logInUser = (e) => {
+  //to prevent default submit
+  e.preventDefault();
+  let username = document.getElementById("login-username").value;
+  let password = document.getElementById("login-password").value;
+
+  // Finds username and password in database
+  let user = database.find(
+    (element) => element.username == username && element.password == password
+  );
+
+  // Adds current user login to storage
+  currentUser.push(user);
+
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+  // User validation
+  user
+    ? window.location.assign("../dashboard.html")
+    : alert("Username or Password not correct");
+};
+cdfb00bc551dcd54efb908eb012dd1d3ce182301
 
 //Targeting the login  button
 // document.getElementById("Login").addEventListener("click", logInUser);
