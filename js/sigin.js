@@ -10,6 +10,7 @@ if (currentUser == null) {
 }
 //Logging User
 const logInUser = (e) => {
+  //to prevent default submit
   e.preventDefault();
   let username = document.getElementById("login-username").value;
   let password = document.getElementById("login-password").value;
@@ -21,6 +22,7 @@ const logInUser = (e) => {
 
   // Adds current user login to storage
   currentUser.push(user);
+
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
   // User validation
