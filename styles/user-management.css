@@ -43,7 +43,7 @@ main .middle .form .form-input {
   width: 100%;
 }
 
-main .middle .form .form-input:nth-of-type(8) {
+main .middle .form .form-input:nth-of-type(9) {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -57,7 +57,7 @@ main .middle .form .form-input input {
   border: solid 1px var(--secondary-color);
 }
 
-main .middle .form .form-input:nth-of-type(9) {
+main .middle .form .form-input:nth-of-type(10) {
   display: flex;
   align-items: center;
   justify-content: space-between;
