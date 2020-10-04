@@ -21,10 +21,6 @@ const registerUser = (e) => {
 
   //Storing inside the array
   validate(newUser);
-  database.push(newUser);
-  
-  // updating local storage
-  localStorage.setItem("database", JSON.stringify(database));
 };
 
 let registerButton = document.getElementById("register");
@@ -69,6 +65,11 @@ function validate(user){
     document.getElementById('error').innerHTML = 'Passwords do not match!';
     return false;
   } else {
+    database.push(newUser);
+  
+  // updating local storage
+  localStorage.setItem("database", JSON.stringify(database));
+  // redirect user to dashboard
     location.assign("../dashboard.html");
   }
 }
