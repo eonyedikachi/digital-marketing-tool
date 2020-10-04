@@ -70,6 +70,14 @@ button {
 .main-landing {
   display: flex;
 }
+.landing-button {
+  background-color: var(--secondary-color);
+  width: 90px;
+  border: none;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
 
 .main-landing .left-fixed {
   background-color: var(--secondary-color);
