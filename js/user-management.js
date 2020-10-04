@@ -15,6 +15,7 @@ document.querySelector(".addBtn").addEventListener("click", () => {
     lastName: document.getElementById("lastName").value,
     email: document.getElementById("email").value,
     username: document.getElementById("username").value,
+    password: document.getElementById("password").value,
     role: document.getElementById("role").value,
     pics: document.getElementById("pics").value.split("\\")[2],
   };
@@ -24,6 +25,7 @@ document.querySelector(".addBtn").addEventListener("click", () => {
     newObj.lastName != "" &&
     newObj.email != "" &&
     newObj.username != "" &&
+    newObj.password != "" &&
     newObj.role != "" &&
     newObj.pics != ""
   ) {
@@ -60,6 +62,9 @@ function display() {
             </div>
             <div class="item">
             <strong>Username</strong> : ${users[i].username}<br>
+            </div>
+            <div class="item">
+            <strong>Password</strong> : ${users[i].password}<br>
             </div>
             <div class="item">
             <strong>Role</strong> : ${users[i].role}<br>
@@ -101,6 +106,7 @@ function edit(id) {
   document.getElementById("lastName").value = editUser.lastName;
   document.getElementById("email").value = editUser.email;
   document.getElementById("username").value = editUser.username;
+  document.getElementById("password").value = editUser.password;
   document.getElementById("role").value = editUser.role;
   document.getElementById("pics").value.split("\\")[2] = editUser.pics;
   document.getElementById("index").value = originalIndex;
@@ -115,6 +121,7 @@ function update() {
     lastName: document.getElementById("lastName").value,
     email: document.getElementById("email").value,
     username: document.getElementById("username").value,
+    password: document.getElementById("password").value,
     role: document.getElementById("role").value,
     pics: document.getElementById("pics").value.split("\\")[2],
   };
@@ -175,6 +182,7 @@ function empty() {
   document.getElementById("lastName").value = "";
   document.getElementById("email").value = "";
   document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
   document.getElementById("role").value = "";
   document.getElementById("pics").value.split("\\")[2] = "";
 }

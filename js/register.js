@@ -34,7 +34,7 @@ registerButton.addEventListener("click", registerUser);
 function validate(user){
   const regExEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if(user.firstName.length < 2){
-    document.getElementById('error').innerHTML = 'firstName must be greater than 2 charactrs!';  
+    document.getElementById('error').innerHTML = 'first Name must be greater than 2 charactrs!';  
     return false;
 
   }else if(user.lastName.length < 2){

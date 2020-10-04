@@ -28,28 +28,36 @@
         <p>Welcome to MartReach!</p>
         <p>Register your account</p>
 
+
         <form onsubmit=" validate() " >
+        <form onsubmit=" validate()">
+
           <p id="error"></p>
           <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName" placeholder="First Name"  />
+          <input type="text" name="firstName" id="firstName" placeholder="First Name" />
 
           <label for="lastName">Last Name</label>
           <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
 
           <label for="username">Username</label>
+
           <input type="text" name="username" id="userName" placeholder="Username" />
+
+          <input type="text" name="username" id="username" placeholder="Username" />
+
 
           <label for="email">Email</label>
           <input type="email" name="email" id="email" placeholder="example@email.com" />
 
           <label for="password">Password</label>
           <span>
-            <input type="password" name="password" id="password" placeholder="Password"/>
+          <input type="password" name="password" id="password" placeholder="Password"/>
             <i class="far fa-eye" id="togglePassword"></i>
           </span>
           <label for="password">Confirm Password</label>
+          <span>
           <input type="password" name="Confirm password" id="cpassword" placeholder="Confirm Password" />
-            <i class="far fa-eye" id="togglePassword"></i>
+            <i class="far fa-eye" id="togglePassword2"></i>
           </span>
 
           <input type="submit" id="register" value="Register" />
@@ -75,13 +83,24 @@
   <script>
     // Toggle Password
     const togglePassword = document.querySelector("#togglePassword");
+    const togglePassword2 = document.querySelector("#togglePassword2");
     const password = document.querySelector("#password");
+    const cpassword = document.querySelector("#cpassword");
 
     togglePassword.addEventListener("click", function (e) {
       // toggle the type attribute
       const type =
         password.getAttribute("type") === "password" ? "text" : "password";
       password.setAttribute("type", type);
+      // toggle the eye slash icon
+      this.classList.toggle("fa-eye-slash");
+    });
+
+    togglePassword2.addEventListener("click", function (e) {
+      // toggle the type attribute
+      const type =
+        cpassword.getAttribute("type") === "password" ? "text" : "password";
+      cpassword.setAttribute("type", type);
       // toggle the eye slash icon
       this.classList.toggle("fa-eye-slash");
     });
