@@ -10,6 +10,7 @@ if (users == null) {
 
 // Click event to add more users
 document.querySelector(".addBtn").addEventListener("click", () => {
+  // Radio buttons
   let userRole = "";
   if (document.getElementById("user-radio").checked) {
     userRole = "user";
@@ -18,35 +19,42 @@ document.querySelector(".addBtn").addEventListener("click", () => {
   } else {
     alert("Please select a user role");
   }
+
+  // New user object
   newObj = {
     firstName: document.getElementById("firstName").value,
     lastName: document.getElementById("lastName").value,
     email: document.getElementById("email").value,
-    username: document.getElementById("username").value,
+    userName: document.getElementById("username").value,
     password: document.getElementById("password").value,
     role: userRole,
     pics: document.getElementById("pics").value.split("\\")[2],
   };
 
+  // Check if all inputs are filled
   if (
     newObj.firstName != "" &&
     newObj.lastName != "" &&
     newObj.email != "" &&
-    newObj.username != "" &&
+    newObj.userName != "" &&
     newObj.password != "" &&
     newObj.role != "" &&
     newObj.pics != null
   ) {
+    // Store user object in array
     users.push(newObj);
 
-    // Empty text box
+    // Empty text boxes
     empty();
+
+    // Adds new user to local storage
+    localStorage.setItem("database", JSON.stringify(users));
+
+    alert("User added successfully");
+    location.reload();
   } else {
     alert("Fill in all input fields");
   }
-
-  // Adds it to local storage
-  localStorage.setItem("database", JSON.stringify(users));
 
   display();
 });
@@ -71,7 +79,7 @@ function display() {
             <strong>Email</strong> : ${users[i].email}<br>
             </div>
             <div class="item">
-            <strong>Username</strong> : ${users[i].username}<br>
+            <strong>Username</strong> : ${users[i].userName}<br>
             </div>
             <div class="item">
             <strong>Password</strong> : ${users[i].password}<br>
@@ -93,16 +101,18 @@ display();
 // Function to Delete
 function del(id) {
   originalIndex = originalUsers.findIndex(
-    (x) => x.username == users[id].username
+    (element) => element.userName == users[id].userName
   );
 
-  con = confirm(`Are you sure you want to delete ${users[id].username}?`);
+  con = confirm(`Are you sure you want to delete ${users[id].userName}?`);
   if (con == true) {
     originalUsers.splice(originalIndex, 1);
 
     users = originalUsers;
     localStorage.setItem("database", JSON.stringify(originalUsers));
     display();
+
+    empty();
   }
 }
 
@@ -110,12 +120,12 @@ function del(id) {
 function edit(id) {
   editUser = users[id];
   originalIndex = originalUsers.findIndex(
-    (x) => x.username == editUser.username
+    (x) => x.userName == editUser.userName
   );
   document.getElementById("firstName").value = editUser.firstName;
   document.getElementById("lastName").value = editUser.lastName;
   document.getElementById("email").value = editUser.email;
-  document.getElementById("username").value = editUser.username;
+  document.getElementById("username").value = editUser.userName;
   document.getElementById("password").value = editUser.password;
   document.getElementById("pics").value.split("\\")[2] = editUser.pics;
   document.getElementById("index").value = originalIndex;
@@ -138,7 +148,7 @@ function update() {
     firstName: document.getElementById("firstName").value,
     lastName: document.getElementById("lastName").value,
     email: document.getElementById("email").value,
-    username: document.getElementById("username").value,
+    userName: document.getElementById("username").value,
     password: document.getElementById("password").value,
     role: userRole,
     pics: document.getElementById("pics").value.split("\\")[2],
@@ -148,13 +158,14 @@ function update() {
     updatedRecord.firstName != "" &&
     updatedRecord.lastName != "" &&
     updatedRecord.email != "" &&
-    updatedRecord.username != "" &&
+    updatedRecord.userName != "" &&
     updatedRecord.password != "" &&
     updatedRecord.role != "" &&
     updatedRecord.pics != null
   ) {
     originalUsers[i] = updatedRecord;
     users = originalUsers;
+    alert("User updated successfully");
     localStorage.setItem("database", JSON.stringify(originalUsers));
     display();
 
@@ -172,7 +183,7 @@ function search() {
 
   // Filter
   users = users.filter((element) =>
-    element.username.toLowerCase().includes(param)
+    element.userName.toLowerCase().includes(param)
   );
 
   if (users == null || users == undefined || users.length == 0) {
@@ -195,6 +206,7 @@ function search() {
 function cancelSearch() {
   // Get from local storage
   users = JSON.parse(localStorage.getItem("database"));
+  originalUsers = JSON.parse(localStorage.getItem("database"));
 
   // Display Content in HTML
   display();
