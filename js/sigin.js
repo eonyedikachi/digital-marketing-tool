@@ -13,6 +13,10 @@ if (currentUser == null) {
 // const logInUser = (e) => {
 //   //to prevent default submit
 //   e.preventDefault();
+
+//   // Validate User Login details
+//   validate();
+
 //   let username = document.getElementById("use").value;
 //   let password = document.getElementById("Login").value;
 
@@ -21,19 +25,19 @@ if (currentUser == null) {
 //     (element) => element.username == username && element.password == password
 //   );
 
-// //   // Adds current user login to storage
-//   currentUser.push(user);
+//   // Adds current user login to storage
+  currentUser.push(user);
 
-//   localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-// //   // User validation
-// //   user
-// //     ? window.location.assign("../dashboard.html")
-// //     : alert("Username or Password not correct");
-// // };
-// // cdfb00bc551dcd54efb908eb012dd1d3ce182301
+//   // User validation
+//   user
+//     ? window.location.assign("../dashboard.html")
+//     : alert("Username or Password not correct");
+// };
+// cdfb00bc551dcd54efb908eb012dd1d3ce182301
  
-// // Targeting the login  button
+// Targeting the login  button
 // document.getElementById("Login").addEventListener("click", logInUser);
 
 // Validate users and password
