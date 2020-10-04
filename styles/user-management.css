@@ -129,6 +129,10 @@ main .middle button {
   margin-right: 5px !important;
 }
 
+.searchBtn:hover {
+  background: silver;
+}
+
 .cancel {
   display: none;
 }
