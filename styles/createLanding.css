@@ -46,6 +46,11 @@ textarea {
   line-height: unset;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
 button {
   border-radius: unset;
 }
