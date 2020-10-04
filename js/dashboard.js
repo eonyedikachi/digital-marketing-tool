@@ -15,7 +15,7 @@ i = currentUser.length - 1;
 // Displays Users Name
 document.getElementById(
   "usersname111"
-).innerText = `${currentUser[i].firstName} ${currentUser[i].lastName}`;
+).innerHTML = `${currentUser[i].firstName} ${currentUser[i].lastName}`;
 
 // clear the temporary local storage
 let signOut = () => {

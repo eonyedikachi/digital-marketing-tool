@@ -10,50 +10,45 @@ if (currentUser == null) {
 }
 
 
-// const logInUser = (e) => {
-//   //to prevent default submit
-//   e.preventDefault();
+const logInUser = (e) => {
+  //to prevent default submit
+  e.preventDefault();
 
-//   // Validate User Login details
-//   validate();
+  
+  // Validate User Login details
+  let username = document.getElementById("use").value;
+  let password = document.getElementById("pass").value;
 
-//   let username = document.getElementById("use").value;
-//   let password = document.getElementById("Login").value;
-
-//   // Finds username and password in database
-//   let user = database.find(
-//     (element) => element.username == username && element.password == password
-//   );
-
-//   // Adds current user login to storage
-  currentUser.push(user);
-
-  localStorage.setItem("currentUser", JSON.stringify(currentUser));
-
-//   // User validation
-//   user
-//     ? window.location.assign("../dashboard.html")
-//     : alert("Username or Password not correct");
-// };
-// cdfb00bc551dcd54efb908eb012dd1d3ce182301
+  console.log('I am a chosen one ', username, password, database);
+  validate(username, password);
+  // Finds username and password in database
+};
  
 // Targeting the login  button
-// document.getElementById("Login").addEventListener("click", logInUser);
+document.getElementById("Login").addEventListener("click", logInUser);
 
 // Validate users and password
 
-function validate(){
-  if(use.value == 0 || use.value.length < 2){
+function validate(username, password){
+  if(username.length == 0){
     document.getElementById('error').innerHTML = 'Username field cannot be empty!';  
     return false;
 
-  }else if(pass.value == 0){
+  }else if(password.length == 0){
     document.getElementById('error').innerHTML = 'Password field cannot be empty!';  
     return false;
 
-
   }else{
-    alert('Successfully logged in');
+    let user = database.find(
+      (element) => element.username == username && element.password == password
+    );
+  
+  //   // Adds current user login to storage
+    currentUser.push(user);
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  
+    // User validation
+    user ? window.location.assign("../dashboard.html") : alert('Invalid username or password');;
   }
 }
 

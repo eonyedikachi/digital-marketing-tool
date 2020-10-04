@@ -20,8 +20,9 @@ const registerUser = (e) => {
   };
 
   //Storing inside the array
-  database.push(newUser);
   validate(newUser);
+  database.push(newUser);
+  
   // updating local storage
   localStorage.setItem("database", JSON.stringify(database));
 };
