@@ -40,7 +40,7 @@ function validate(username, password) {
       (element) => element.userName == username && element.password == password
     );
 
-    //   // Adds current user login to storage
+    // Adds current user login to storage
     currentUser.push(user);
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
 

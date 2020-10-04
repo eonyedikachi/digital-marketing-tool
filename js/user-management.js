@@ -71,7 +71,7 @@ function display() {
             <strong>Email</strong> : ${users[i].email}<br>
             </div>
             <div class="item">
-            <strong>Username</strong> : ${users[i].username}<br>
+            <strong>Username</strong> : ${users[i].userName}<br>
             </div>
             <div class="item">
             <strong>Password</strong> : ${users[i].password}<br>
