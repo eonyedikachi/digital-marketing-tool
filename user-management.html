@@ -34,7 +34,7 @@
             <nav>
                 <ul class="nav-list">
                     <li class="nav-items">
-                        <a href="dashboard.html">Home</a>
+                        <a href="./admin-dashboard.html">Home</a>
                     </li>
 
                     <li class="nav-items">
@@ -119,8 +119,11 @@
                 <div class="form-input">
                     <input type="text" id="password" placeholder="Password" required>
                 </div>
-                <div class="form-input">
-                    <input type="text" id="role" placeholder="Enter User Role" required>
+                <div class="form-input radio">
+                    <input type="radio" name="role" id="user-radio" value="user">
+                    <label for="">User</label>
+                    <input type="radio" name="role" id="admin-radio" value="admin">
+                    <label for="">Admin</label>
                 </div>
                 <div class="form-input">
                     <input type="file" id="pics">
@@ -130,7 +133,7 @@
                     <button class="updateBtn" onclick="update()">Update</button>
                 </div>
                 <div class="form-input">
-                    <input type="text" id="search" placeholder="Search Users">
+                    <input type="text" id="search" placeholder="Search by Username">
                     <button class="searchBtn" onclick="search()">Search</button>
                     <button class="searchBtn cancel" onclick="cancelSearch()">Cancel</button>
                 </div>

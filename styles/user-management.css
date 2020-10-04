@@ -73,6 +73,10 @@ main .middle .form .form-input button {
   overflow: auto;
 }
 
+.form-input.radio input {
+  width: 5% !important;
+}
+
 /* Button Styling */
 main .middle button {
   border: none;

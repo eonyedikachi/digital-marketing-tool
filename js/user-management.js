@@ -10,13 +10,21 @@ if (users == null) {
 
 // Click event to add more users
 document.querySelector(".addBtn").addEventListener("click", () => {
+  let userRole = "";
+  if (document.getElementById("user-radio").checked) {
+    userRole = "user";
+  } else if (document.getElementById("admin-radio").checked) {
+    userRole = "admin";
+  } else {
+    alert("Please select a user role");
+  }
   newObj = {
     firstName: document.getElementById("firstName").value,
     lastName: document.getElementById("lastName").value,
     email: document.getElementById("email").value,
     username: document.getElementById("username").value,
     password: document.getElementById("password").value,
-    role: document.getElementById("role").value,
+    role: userRole,
     pics: document.getElementById("pics").value.split("\\")[2],
   };
 
@@ -27,12 +35,14 @@ document.querySelector(".addBtn").addEventListener("click", () => {
     newObj.username != "" &&
     newObj.password != "" &&
     newObj.role != "" &&
-    newObj.pics != ""
+    newObj.pics != null
   ) {
     users.push(newObj);
 
     // Empty text box
     empty();
+  } else {
+    alert("Fill in all input fields");
   }
 
   // Adds it to local storage
@@ -107,13 +117,21 @@ function edit(id) {
   document.getElementById("email").value = editUser.email;
   document.getElementById("username").value = editUser.username;
   document.getElementById("password").value = editUser.password;
-  document.getElementById("role").value = editUser.role;
   document.getElementById("pics").value.split("\\")[2] = editUser.pics;
   document.getElementById("index").value = originalIndex;
 }
 
 // Function to Update
 function update() {
+  let userRole = "";
+  if (document.getElementById("user-radio").checked) {
+    userRole = "user";
+  } else if (document.getElementById("admin-radio").checked) {
+    userRole = "admin";
+  } else {
+    alert("Please select a user role");
+  }
+
   i = document.getElementById("index").value;
 
   let updatedRecord = {
@@ -122,16 +140,29 @@ function update() {
     email: document.getElementById("email").value,
     username: document.getElementById("username").value,
     password: document.getElementById("password").value,
-    role: document.getElementById("role").value,
+    role: userRole,
     pics: document.getElementById("pics").value.split("\\")[2],
   };
-  originalUsers[i] = updatedRecord;
-  users = originalUsers;
-  localStorage.setItem("database", JSON.stringify(originalUsers));
-  display();
 
-  // Empty text box
-  empty();
+  if (
+    updatedRecord.firstName != "" &&
+    updatedRecord.lastName != "" &&
+    updatedRecord.email != "" &&
+    updatedRecord.username != "" &&
+    updatedRecord.password != "" &&
+    updatedRecord.role != "" &&
+    updatedRecord.pics != null
+  ) {
+    originalUsers[i] = updatedRecord;
+    users = originalUsers;
+    localStorage.setItem("database", JSON.stringify(originalUsers));
+    display();
+
+    // Empty text box
+    empty();
+  } else {
+    alert("Fill in all input fields");
+  }
 }
 
 // Search
@@ -183,6 +214,5 @@ function empty() {
   document.getElementById("email").value = "";
   document.getElementById("username").value = "";
   document.getElementById("password").value = "";
-  document.getElementById("role").value = "";
   document.getElementById("pics").value.split("\\")[2] = "";
 }
