@@ -3,26 +3,21 @@
   --secondary-color: #4eb1f5;
 }
 
-
-
 section .register {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
-  margin: 0 auto;
+  margin: 3rem auto;
   max-width: 1024px;
   border-radius: 10px;
 }
 
-
-
-#error{
+#error {
   color: red;
   text-align: center;
 }
 section .register .left {
-  height: 780px;
+  height: 853px;
   width: 50%;
   background: url(../images/register.png) center center/cover;
   border-top-left-radius: 10px;
@@ -30,7 +25,7 @@ section .register .left {
 }
 
 section .register .right {
-  height: 780px;
+  height: 853px;
   width: 50%;
   padding: 2rem;
   background: var(--secondary-color);
@@ -132,11 +127,12 @@ section .register .right .create a:hover {
 @media screen and (max-width: 768px) {
   section .register {
     flex-direction: column;
+    margin: 1rem auto;
   }
 
   section .register .left {
     width: 100%;
-    height: 200px;
+    height: 250px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: unset;

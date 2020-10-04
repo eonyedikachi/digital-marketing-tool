@@ -164,32 +164,37 @@ main .middle button {
   #main {
     width: 70%;
   }
-}
 
-@media screen and (max-width: 550px) {
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  main .middle .form {
-    width: 90%;
-  }
-
-  #main {
-    width: 90%;
-  }
-
-  .profile {
-    padding: 1.5rem;
-  }
-
-  .item {
+  .main .middle {
+    justify-content: unset;
     width: 100%;
   }
 
-  main .middle .form .form-input button {
-    width: 40%;
-    margin: 1rem auto;
-    padding: 0.8rem;
+  @media screen and (max-width: 550px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    main .middle .form {
+      width: 90%;
+    }
+
+    #main {
+      width: 90%;
+    }
+
+    .profile {
+      padding: 1.5rem;
+    }
+
+    .item {
+      width: 100%;
+    }
+
+    main .middle .form .form-input button {
+      width: 40%;
+      margin: 1rem auto;
+      padding: 0.8rem;
+    }
   }
 }
