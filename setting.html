@@ -128,47 +128,12 @@
 
       <!-- SETTINGS BAR -->
       <div class="tab">
-        <button class="tablinks" onclick="openSetting(event, 'Details')">Details</button>
         <button class="tablinks" onclick="openSetting(event, 'Security')">Security</button>
         <button class="tablinks" onclick="openSetting(event, 'Contact Information')">Contact Information</button>
         <button class="tablinks" onclick="openSetting(event, 'Domains')">Domains</button>
         <button class="tablinks" onclick="openSetting(event, 'Manage my Account')">Manage my Account</button>
         <button class="tablinks" onclick="openSetting(event, 'Pause or Delete Account')">Pause or Delete
           Account</button>
-      </div>
-
-      <!-- DETAILS TAB  -->
-      <div id="Details" class="tabcontent">
-        <h2>Details</h2>
-        <h3>Profile Photo</h3>
-        <div class="profile">
-          <img src="images/avatar1.png" alt="Avatar" class="avatar">
-          <div class="profile_texts_and_buttons">
-            <h4>Upload your Photo...</h4>
-            <p>Photo should be at least 300px x 300px</p>
-            <div class="btn">
-              <button>Upload Photo</button>
-              <button>Take a Photo!</button></div>
-          </div>
-
-
-        </div>
-        <h3>
-          Basic Information
-        </h3>
-        <form class="profile_form" action="">
-          <label for="name">Username:</label> <br>
-          <input type="name"> <br>
-          <label for="name">First name:</label> <br>
-          <input type="name"> <br>
-          <label for="name">Last name:</label> <br>
-          <input type="name"> <br>
-          <label for="name">Email Address:</label> <br>
-          <input type="name"> <br>
-          <label for="name">Website:</label> <br>
-          <input type="name"> <br>
-          <button>Update</button>
-        </form>
       </div>
 
       <!-- SECURITY TAB -->
@@ -217,7 +182,7 @@
           <h6>Email Address</h6>
           <p class="email-address"></p>
         </div>
-        <button>Edit Profile Information</button>
+        <button onclick="window.location.href='./editprofile.html'">Edit Profile Information</button>
 
 
         <h3>Primary Account Contact</h3>
