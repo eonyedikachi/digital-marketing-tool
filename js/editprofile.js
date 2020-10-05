@@ -1,27 +1,27 @@
-
 var randomNumber = Math.floor(Math.random() * 9) + 1;
 var randomAvatar = "avatar" + randomNumber + ".png";
 var randomImageSource = "images/" + randomAvatar;
 document.querySelector(".profile img").setAttribute("src", randomImageSource);
 
-function edit(id) {
-    editUser = currentUser[i];
-    document.getElementById("firstName").value = database[i].firstName;
-    document.getElementById("lastName").value = database[i].lastName;
-    document.getElementById("userName").value = database[i].userName;
-    document.getElementById("emailAddress").value = database[i].email;
-    document.getElementById("website").value = database[i].website;
-  }
-  function update() {
-    i = document.getElementById("index").value;
+editUser = currentUser[i];
+document.getElementById("firstName").value = editUser.firstName;
+document.getElementById("lastName").value = editUser.lastName;
+document.getElementById("userName").value = editUser.userName;
+document.getElementById("emailAddress").value = editUser.email;
+document.getElementById("website").value = editUser.website;
 
-    let edited = {
-      fullName: document.getElementById("fullName").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      pics: document.getElementById("pics").value.split("\\")[2],
-    };
-    users[i] = edited;
-    localStorage.setItem("users", JSON.stringify(users));
-    // display();
-  }
+// fetches most recent logged in user
+i = currentUser.length - 1;
+
+function update() {
+  let edited = {
+    firstName: document.getElementById("firstName").value,
+    lastName: document.getElementById("lastName").value,
+    userName: document.getElementById("userName").value,
+    email: document.getElementById("emailAddress").value,
+    website: document.getElementById("website").value,
+  };
+  currentUser[i] = edited;
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  // display();
+}

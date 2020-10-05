@@ -46,7 +46,7 @@ function validate(user) {
   const regExEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (user.firstName.length < 2) {
     document.getElementById("error").innerHTML =
-      "first Name must be greater than 2 charactrs!";
+      "first Name must be greater than 2 characters!";
     return false;
   } else if (user.lastName.length < 2) {
     document.getElementById("error").innerHTML =
@@ -65,11 +65,11 @@ function validate(user) {
     return false;
   } else if (!/[a-z]/.test(user.password)) {
     document.getElementById("error").innerHTML =
-      "Password must contain atleast one lower case!";
+      "Password must contain at least one lower case!";
     return false;
   } else if (!/[A-Z]/.test(user.password)) {
     document.getElementById("error").innerHTML =
-      "Password must contain atleast one upper case!";
+      "Password must contain at least one upper case!";
     return false;
   } else if (!/[0-9]/.test(user.password)) {
     document.getElementById("error").innerHTML =
@@ -77,7 +77,7 @@ function validate(user) {
     return false;
   } else if (!/[ /\W|_/g]/.test(user.password)) {
     document.getElementById("error").innerHTML =
-      "Password must contain atleast one special charater!";
+      "Password must contain at least one special character!";
     return false;
   } else if (user.password != user.cpassword) {
     document.getElementById("error").innerHTML = "Passwords do not match!";
@@ -88,6 +88,6 @@ function validate(user) {
     // updating local storage
     localStorage.setItem("database", JSON.stringify(database));
     // redirect user to dashboard
-    location.assign("../dashboard.html");
+    location.assign("../signin.html");
   }
 }
