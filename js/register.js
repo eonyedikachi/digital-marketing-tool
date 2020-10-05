@@ -26,6 +26,22 @@ const registerUser = (e) => {
 let registerButton = document.getElementById("register");
 registerButton.addEventListener("click", registerUser);
 
+let userName = usersObject;
+function taken() {
+  param = document.getElementById('searchParam').value;
+  document.getElementById('searchParam').value = "";
+
+  usersObject = users.find( users => users.fullName === param);
+  if (usersObject == undefined || usersObject == null) {
+  alert(`No record found for ${param}`);
+  } else {
+      users = [usersObject]
+
+      displayUsers();
+  }
+}
+
+
 function validate(user) {
   const regExEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (user.firstName.length < 2) {

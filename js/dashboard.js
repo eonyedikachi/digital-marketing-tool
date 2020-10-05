@@ -20,4 +20,4 @@ document.getElementById(
 // clear the temporary local storage
 let signOut = () => {
   localStorage.removeItem("currentUser");
-};
+}; 
