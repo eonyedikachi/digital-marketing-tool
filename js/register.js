@@ -83,6 +83,22 @@ function validate(user) {
     document.getElementById("error").innerHTML = "Passwords do not match!";
     return false;
   } else {
+    checkDuplicateUser(user.userName, user.email)
+  }
+}
+
+
+
+// Functin to check username and email alreday taken!
+function checkDuplicateUser(username, email){
+  let isUsername = database.find((element) => element.userName == username);
+  let isEmail = database.find((element) => element.email == email);
+
+  if(isUsername){
+    document.getElementById("error").innerHTML = "Username has been taken!";
+  } else if(isEmail){
+    document.getElementById("error").innerHTML = "Email has been taken!";
+  }else{
     database.push(newUser);
 
     // updating local storage
