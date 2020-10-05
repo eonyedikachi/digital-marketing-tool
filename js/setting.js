@@ -1,8 +1,4 @@
 
-var randomNumber = Math.floor(Math.random() * 9) + 1;
-var randomAvatar = "avatar" + randomNumber + ".png";
-var randomImageSource = "images/" + randomAvatar;
-document.querySelector(".profile img").setAttribute("src", randomImageSource);
 
 
 // TAB
@@ -22,7 +18,7 @@ function openSetting(evt, settingName) {
 
 //FirstName Display
 var mFirstName = database[i].firstName;
-var uFirstName = document.querySelectorAll("p.first-name");
+var uFirstName = document.querySelectorAll(".first-name");
 for (var i = 0; i < uFirstName.length; i++) {
   uFirstName[i].innerHTML = mFirstName;
 }
