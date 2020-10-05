@@ -108,6 +108,39 @@
           </li>
         </ul>
       </div>
+      <!-- <div  class="dash-list">
+        <ul>
+          <li>
+            <a class="phone-dash-list" href="./dashboard.html"><i class="fas fa-columns"></i></a>
+            <span class="tooltiptext">Dashboard</span>
+          </li>
+
+          <li>
+            <a href="createLanding.html"></a>
+            <span class="tooltiptext">Landing page</span>
+          </li><i class="fas fa-home"></i>
+          <li>
+            <a href="email_temp.html"><i class="fas fa-envelope-open-text"></i></a>
+            <span class="tooltiptext">Email Template</span>
+          </li>
+          <li>
+            <a href="aud-page.html"><i class="fas fa-id-card-alt"></i></a>
+            <span class="tooltiptext">Create Audience</span>
+          </li>
+          <li>
+            <a href="suggestion.html"><i class="fas fa-bullhorn"></i></a>
+            <span class="tooltiptext"> Suggestions</span>
+          </li>
+          <li>
+            <a href="reports.html"><i class="fas fa-chart-bar"></i></a>
+            <span class="tooltiptext">Reports</span>
+          </li>
+          <li>
+            <a href="setting.html"><i class="fas fa-sliders-h"></i></a>
+            <span class="tooltiptext">Settings</span>
+          </li>
+        </ul>
+      </div> -->
       <div class="dash-pro">
         <h3><a href="#">Try Mart Reach Pro</a></h3>
       </div>
@@ -167,20 +200,19 @@
           All contact information is kept strictly confidential. View our <a href="">privacy policy</a>
         </p>
         <div class="profile-content">
-          <h6>Username</h6>
-          <p class="user-name"></p>
+          <h6>Username:  </h6> &nbsp; <span class="unique user-name"></span>
         </div>
         <div class="profile-content">
-          <h6>First Name</h6>
-          <p class="first-name"></p>
+          <h6>First Name:</h6>
+          &nbsp; <span class="unique first-name"></span>
         </div>
         <div class="profile-content">
-          <h6>Last Name</h6>
-          <p class="last-name"></p>
+          <h6>Last Name:</h6>
+          &nbsp; <span class="unique last-name"></span>
         </div>
         <div class="profile-content">
-          <h6>Email Address</h6>
-          <p class="email-address"></p>
+          <h6>Email Address:</h6>
+          &nbsp; <span class="unique email-address"></span>
         </div>
         <button onclick="window.location.href='./editprofile.html'">Edit Profile Information</button>
 
@@ -189,8 +221,9 @@
         <p>Information about this account, such as campaign send notifications, will be sent to the email address listed
           here.</p>
         <div class="profile-content">
-          <h6>Contact Name</h6>
-          <p class="all-names"></p>
+          <h6>Contact Name: </h6>
+          &nbsp; <span class="unique all-names"></span>
+         
         </div>
         <div class="profile-content">
           <h6>Company / Organization</h6>
@@ -316,59 +349,87 @@
         <h3>Export Data</h3>
         <p>
           You can export most of your account data into CSV files. We’ll bundle everything together in a single Zip file
-          and send an email to <span>malikmuhktar@gmail.com</span> when it’s done. <br>
+          and send an email to <span class="unique email-address"></span> when it’s done. <br>
 
           We have a limit of one export in a 24-hour period. <br>
 
           You can download your most recent completed export. <br>
         <div>
           Choose which data you'd like to export:
-          <div><input type="checkbox" name="campaigns" value="campaigns" id="campaigns">
-            <label for="campaigns">Campaigns</label></div>
-          <div><input type="checkbox" name="audiences" value="audiences" id="audiences">
-            <label for="audiences">Audiences</label></div>
-          <div><input type="checkbox" name="reports" value="reports" id="reports">
-            <label for="reports">Reports</label></div>
-          <div><input type="checkbox" name="templates" value="templates" id="templates">
-            <label for="templates">Templates</label></div>
-          <div><input type="checkbox" name="gallery" value="gallery" id="gallery">
-            <label for="gallery">Gallery</label></div>
-          <div><input type="checkbox" name="events" value="events" id="events">
-            <label for="events">Events</label></div>
-        </div>
+          <label class="radio radio-before">
+            <span class="radio__input">
+              <input type="checkbox" name="radio">
+              <span class="radio__control"></span>
+            </span>
+            <span class="radio__label">Campaigns</span>
+          </label>
+          <label class="radio radio-before">
+            <span class="radio__input">
+              <input type="checkbox" name="radio">
+              <span class="radio__control"></span>
+            </span>
+            <span class="radio__label">Audiences</span>
+          </label>
+          <label class="radio radio-before">
+            <span class="radio__input">
+              <input type="checkbox" name="radio">
+              <span class="radio__control"></span>
+            </span>
+            <span class="radio__label">Reports</span>
+          </label>
+          <label class="radio radio-before">
+            <span class="radio__input">
+              <input type="checkbox" name="radio">
+              <span class="radio__control"></span>
+            </span>
+            <span class="radio__label">Templates</span>
+          </label>
+          <label class="radio radio-before">
+            <span class="radio__input">
+              <input type="checkbox" name="radio">
+              <span class="radio__control"></span>
+            </span>
+            <span class="radio__label">Gallery</span>
+          </label>
+          <label class="radio radio-before">
+            <span class="radio__input">
+              <input type="checkbox" name="radio">
+              <span class="radio__control"></span>
+            </span>
+            <span class="radio__label">Events</span>
+          </label>
 
         <section>
           <div class="days">
             <input type="radio" id="control_01" name="select" value="1" checked>
             <label for="control_01">
-              <h5>Last 30 days</h5>
+              <h6>Last 30 days</h6>
               <p>Export data in the last 30 days.</p>
             </label>
           </div>
           <div class="days">
             <input type="radio" id="control_02" name="select" value="2">
             <label for="control_02">
-              <h5>Last 60 days</h5>
+              <h6>Last 60 days</h6>
               <p>Export data in the last 60 days.</p>
             </label>
           </div>
           <div class="days">
             <input type="radio" id="control_03" name="select" value="3">
             <label for="control_03">
-              <h5>Last 90 days</h3>
+              <h6>Last 90 days</h6>
               <p>Export data in the last 90 days.</p>
             </label>
           </div>
           <div class="days">
             <input type="radio" id="control_04" name="select" value="4">
             <label for="control_04">
-              <h5>All data</h5>
+              <h6>All data</h6>
               <p>Export all data for the account. (This may take a while)</p>
             </label>
           </div>
-
         </section>
-
+<button> Export</button>
         </p>
       </div>
 
@@ -384,7 +445,7 @@
 
     </div>
 
-
+  </div>
 
 
 
