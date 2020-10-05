@@ -25,21 +25,21 @@ for (var i = 0; i < uFirstName.length; i++) {
 
 //LastName Display
 var mLastName = database[i].lastName;
-var uLastName = document.querySelectorAll("p.last-name");
+var uLastName = document.querySelectorAll(".last-name");
 for (var i = 0; i < uLastName.length; i++) {
   uLastName[i].innerHTML = mLastName;
 }
 
 //UserName Display
 var mUserName = database[i].userName;
-var uUserName = document.querySelectorAll("p.user-name");
+var uUserName = document.querySelectorAll(".user-name");
 for (var i = 0; i < uUserName.length; i++) {
   uUserName[i].innerHTML = mUserName;
 }
 
 //Email Display
 var mEmail = database[i].email;
-var uEmail = document.querySelectorAll("p.email-address");
+var uEmail = document.querySelectorAll(".email-address");
 for (var i = 0; i < uEmail.length; i++) {
   uEmail[i].innerHTML = mEmail;
 }
