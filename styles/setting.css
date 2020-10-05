@@ -411,16 +411,16 @@ button:not(.tablinks):hover{
     padding: 5px 0;
     
     /* Position the tooltip */
-    position: absolute;
+    /* position: absolute;
     z-index: 1;
     bottom: 100%;
     left: 50%;
     margin-left: -60px;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
   } */
+  
+  /* .tooltip:hover .tooltiptext {
+    visibility: visible;
+  } */ 
   h3{
     font-size: 25px;
   }
