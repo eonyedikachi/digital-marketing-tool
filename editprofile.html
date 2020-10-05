@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setting | MartReach</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/setting.css" />
+  <link rel="stylesheet" href="styles/createLanding.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <p>MartReach</p>
+        <button type="button" class="hamburger" aria-label="Toggle Navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-list hamburger-list1"></span>
+            <span class="hamburger-list hamburger-list2"></span>
+            <span class="hamburger-list hamburger-list3"></span>
+          </span>
+        </button>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-items">
+            <a href="dashboard.html">Home</a>
+          </li>
+
+          <li class="nav-items">
+            <div class="dropdown">
+              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-file-powerpoint"></i> Present
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><i class="far fa-file-powerpoint"></i> Present</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-video"></i> Present and record
+                </a>
+                <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as video</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-cloud-upload-alt"></i> Save on
+                  cloud</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-items">
+            <a href="#">Share</a>
+          </li>
+          <li class="nav-items">
+            <a href="#"><i class="fas fa-download"></i></a>
+          </li>
+          <li class="nav-items">
+            <a href="./pricing.html">Try MartReach Pro <i class="fas fa-crown"></i></a>
+          </li>
+          <li class="nav-items">
+            <a href="./signin.html" onclick="signOut()">Sign Out</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <main class="main" style="height: 87vh; background-color: #f1f9fe">
+    <div class="left">
+      <div id="mart">
+        <h3>Mart Reach</h3>
+      </div>
+      <div class="dash-list">
+        <ul>
+          <li>
+            <i class="fas fa-columns"></i>
+            <a href="./dashboard.html">Dashboard</a>
+          </li>
+
+          <li>
+            <i class="fas fa-home"></i>
+            <a href="createLanding.html">Landing page</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope-open-text"></i>
+            <a href="email_temp.html">Email Template</a>
+          </li>
+          <li>
+            <i class="fas fa-id-card-alt"></i>
+            <a href="aud-page.html">Create Audience</a>
+          </li>
+          <li>
+            <i class="fas fa-bullhorn"></i>
+            <a href="suggestion.html">Suggestions</a>
+          </li>
+          <li>
+            <i class="fas fa-chart-bar"></i>
+            <a href="reports.html">Reports</a>
+          </li>
+          <li>
+            <i class="fas fa-sliders-h"></i>
+            <a href="setting.html">Settings</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dash-pro">
+        <h3><a href="#">Try Mart Reach Pro</a></h3>
+      </div>
+    </div>
+    <div class="middle">
+      <div class="search-notify">
+        <div class="search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="search" />
+        </div>
+        <div class="notify">
+          <a href="#">
+            <i class="fas fa-bell"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="Details">
+        <h2>Details</h2>
+        <h3>Profile Photo</h3>
+        <div class="profile">
+          <img src="images/avatar1.png" alt="Avatar" class="avatar">
+          <div class="profile_texts_and_buttons">
+            <h4>Upload your Photo...</h4>
+            <p>Photo should be at least 300px x 300px</p>
+            <div class="btn">
+              <button>Upload Photo</button>
+              <button>Take a Photo!</button></div>
+          </div>
+
+
+        </div>
+        <h3>
+         Edit Basic Information
+        </h3>
+        <form class="profile_form" action="">
+          <label for="name">Username:</label> <br>
+          <input type="name" id="userName"> <br>
+          <label for="name">First name:</label> <br>
+          <input type="name" id="firstName"> <br>
+          <label for="name">Last name:</label> <br>
+          <input type="name" id="lastName"> <br>
+          <label for="name">Email Address:</label> <br>
+          <input type="name" id="emailAddress"> <br>
+          <label for="name">Website:</label> <br>
+          <input type="name" id="website"> <br>
+          <button onclick="update()">Update</button>
+        </form>
+      </div>
+    </div>
+      <div class="right">
+        <div class="user">
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span id="usersname111">Malik Mukhtar</span>
+          </a>
+        </div>
+        <div class="tool">
+          <ul>
+            <a href="#">
+              <li>
+                <i class="fas fa-sticky-note"></i> <span>Sticky Notes</span>
+              </li>
+            </a>
+            <a href="#">
+              <li><i class="fas fa-poll"></i> <span>Survey</span></li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </main>
+  
+    <footer>
+      <div class="container">
+        <div class="back-footer">
+          <i class="fas fa-chevron-left"></i>
+          <input type="button" onclick="history.back()" value="Back" class="back-button">
+        </div>
+      </div>
+    </footer>
+  
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+  
+    <script src="./js/nav.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/editprofile.js"></script>
+    <script src="js/setting.js"></script>
+    <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+  
+  </body>
+  
+  </html>
