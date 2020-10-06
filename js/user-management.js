@@ -90,8 +90,7 @@ document.querySelector(".addBtn").addEventListener("click", () => {
         // Adds new user to local storage
         localStorage.setItem("database", JSON.stringify(users));
 
-        alert("User added Successfully");
-        location.reload();
+        swal("Done!", "User Added Successfully!", "success");
       }
       display();
     }
@@ -207,7 +206,7 @@ function update() {
   ) {
     originalUsers[i] = updatedRecord;
     users = originalUsers;
-    alert("User updated successfully");
+    swal("Done!", "User Updated Successfully!", "success");
     localStorage.setItem("database", JSON.stringify(originalUsers));
     display();
 
@@ -228,20 +227,26 @@ function search() {
     element.userName.toLowerCase().includes(param)
   );
 
-  if (users == null || users == undefined || users.length == 0) {
-    alert("No record found for " + param);
+  if (
+    users == null ||
+    users == undefined ||
+    users.length == 0 ||
+    document.getElementById("search").value == ""
+  ) {
+    swal("No Result!", "No Record Found!", "error");
   } else {
-    display();
+    if (users.length == 1) {
+      document.getElementById("searchResult").innerHTML =
+        users.length + " record found";
+    } else {
+      document.getElementById("searchResult").innerHTML =
+        users.length + " records found";
+    }
   }
-
-  users.length == 1
-    ? (document.getElementById("searchResult").innerHTML =
-        users.length + " record found")
-    : (document.getElementById("searchResult").innerHTML =
-        users.length + " records found");
-
   // display cancel button
   document.querySelector(".cancel").style.display = "block";
+
+  display();
 }
 
 // Cancel Search
