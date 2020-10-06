@@ -373,7 +373,7 @@ h6 {
 .profile_form {
   margin: 30px;
 }
-button:not(.tablinks){
+.button:){
   width: max-content;
   color: var(--secondary-color);
   background-color: var(--primary-color);
@@ -384,7 +384,7 @@ button:not(.tablinks){
   transition-duration: 0.4s;
   font-weight: 700;
 }
-button:not(.tablinks):hover{
+.button:hover{
   border: 2px solid var(--secondary-color);
   color: var(--primary-color);
   background-color: var(--secondary-color);
