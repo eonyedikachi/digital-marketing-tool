@@ -108,39 +108,6 @@
           </li>
         </ul>
       </div>
-      <!-- <div  class="dash-list">
-        <ul>
-          <li>
-            <a class="phone-dash-list" href="./dashboard.html"><i class="fas fa-columns"></i></a>
-            <span class="tooltiptext">Dashboard</span>
-          </li>
-
-          <li>
-            <a href="createLanding.html"></a>
-            <span class="tooltiptext">Landing page</span>
-          </li><i class="fas fa-home"></i>
-          <li>
-            <a href="email_temp.html"><i class="fas fa-envelope-open-text"></i></a>
-            <span class="tooltiptext">Email Template</span>
-          </li>
-          <li>
-            <a href="aud-page.html"><i class="fas fa-id-card-alt"></i></a>
-            <span class="tooltiptext">Create Audience</span>
-          </li>
-          <li>
-            <a href="suggestion.html"><i class="fas fa-bullhorn"></i></a>
-            <span class="tooltiptext"> Suggestions</span>
-          </li>
-          <li>
-            <a href="reports.html"><i class="fas fa-chart-bar"></i></a>
-            <span class="tooltiptext">Reports</span>
-          </li>
-          <li>
-            <a href="setting.html"><i class="fas fa-sliders-h"></i></a>
-            <span class="tooltiptext">Settings</span>
-          </li>
-        </ul>
-      </div> -->
       <div class="dash-pro">
         <h3><a href="#">Try Mart Reach Pro</a></h3>
       </div>
@@ -165,7 +132,7 @@
         <button class="tablinks" onclick="openSetting(event, 'Contact Information')">Contact Information</button>
         <button class="tablinks" onclick="openSetting(event, 'Domains')">Domains</button>
         <button class="tablinks" onclick="openSetting(event, 'Manage my Account')">Manage my Account</button>
-        <button class="tablinks" onclick="openSetting(event, 'Pause or Delete Account')">Pause or Delete
+        <button class="tablinks" onclick="openSetting(event, 'Delete Account')">Delete
           Account</button>
       </div>
 
@@ -178,13 +145,13 @@
           verification.</p>
         <h5>Use an authenticator app for two factor authentication</h5>
         <p>MartReach integrates with mobile apps for two-factor authentication.</p>
-        <button>Enable</button>
+        <button class="button">Enable</button>
         <h3>Account verification</h3>
         <p>If we see patterns that seem unusual for your account, we'll need to verify your identity.</p>
         <h5>Verify identity via SMS</h5>
-        <button>Enable</button>
+        <button class="button">Enable</button>
         <h5>Verify identity with security questions</h5>
-        <button>Enable</button>
+        <button class="button">Enable</button>
       </div>
 
       <!-- CONTACT INFORMATION TAB  -->
@@ -214,7 +181,7 @@
           <h6>Email Address:</h6>
           &nbsp; <span class="unique email-address"></span>
         </div>
-        <button onclick="window.location.href='./editprofile.html'">Edit Profile Information</button>
+        <button class="button" onclick="window.location.href='./editprofile.html'">Edit Profile Information</button>
 
 
         <h3>Primary Account Contact</h3>
@@ -227,7 +194,7 @@
         </div>
         <div class="profile-content">
           <h6>Company / Organization</h6>
-          <p>MartReach</p>
+          &nbsp; <span class="unique company-name"></span>
         </div>
         <div class="profile-content">
           <h6>Address</h6>
@@ -235,13 +202,13 @@
         </div>
         <div class="profile-content">
           <h6>Phone</h6>
-          <p>0900abdulmalikmuhktar</p>
+          &nbsp; <span class="unique phone"></span>
         </div>
         <div class="profile-content">
           <h6>Email</h6>
-          <p class="email-address"></p>
+          &nbsp; <span class="unique email-address"></span>
         </div>
-        <button>Edit Contact Information</button>
+        <button class="button" onclick="window.location.href='./editprimaryaccountcontact.html'">Edit Contact Information</button>
 
         <h3>Billing Info</h3>
         <p>
@@ -249,28 +216,28 @@
         </p>
         <div class="profile-content">
           <h6>Contact name</h6>
-          <p>MartReach</p>
+          &nbsp; <span class="unique contact-name"></span>
         </div>
 
         <div class="profile-content">
           <h6>Company / Organization</h6>
-          <p>MartReach and Fellows.</p>
+          &nbsp; <span class="unique company-name"></span>
         </div>
 
         <div class="profile-content">
           <h6>Address</h6>
-          <p>6, MartReach@Lugbe Big house</p>
+          &nbsp; <span class="unique billing-address"></span>
         </div>
 
         <div class="profile-content">
           <h6>Phone</h6>
-          <p>08000MartReach</p>
+          &nbsp; <span class="unique billing-phone-number"></span>
         </div>
         <div class="profile-content">
-          <h6>Email</h6>
-          <p>aminubenitachineduekesoglorymalik@gmail.com</p>
+          <h6>Email:</h6>
+          &nbsp; <span class="unique billing-email-address"></span>
         </div>
-        <button>Edit Billing Information</button>
+        <button class="button" onclick="window.location.href='./editbillinginfo.html'">Edit Billing Information</button>
 
 
         <h3>Audiences in this Account</h3>
@@ -310,7 +277,7 @@
 
         <button>
           Edit Audience Information
-        </button>
+        </button class="button">
       </div>
 
 
@@ -324,7 +291,7 @@
           authenticate the domain to improve deliverability.
 
           Have questions? Read how to verify your email domain.</p>
-        <button> Verify Email Domain</button>
+        <button class="button"> Verify Email Domain</button>
         <h3>
           Connect Your Domain
         </h3>
@@ -340,7 +307,7 @@
 
           Have questions? Read how to purchase a domain with MartReach.
         </p>
-        <button> Find Domains</button>
+        <button class="button"> Find Domains</button>
       </div>
 
       <!-- MANAGE MY ACCOUNT TAB  -->
@@ -429,13 +396,26 @@
             </label>
           </div>
         </section>
-<button> Export</button>
+<button class="button"> Export</button>
         </p>
       </div>
 
       <!-- DELETE ACCOUNT TAB  -->
       <div id="Pause or Delete Account" class="tabcontent">
-        <h3>Pause or Delete Account</h3>
+        <h3>Delete Account</h3>
+        <label class="radio radio-before">
+          <span class="radio__input">
+            <input type="radio" name="radio">
+            <span class="radio__control"></span>
+          </span>
+          <h4 class="radio__label">
+            Permanently Delete this Account
+          </h4>
+          <p>
+            This account and all the data associated
+             with it will be permanently deleted.
+          </p>
+        </label>
       </div>
 
 
@@ -491,6 +471,7 @@
   <script src="./js/nav.js"></script>
   <script src="js/dashboard.js"></script>
   <script src="js/setting.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
 
 </body>
