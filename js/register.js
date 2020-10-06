@@ -28,19 +28,18 @@ registerButton.addEventListener("click", registerUser);
 
 let userName = usersObject;
 function taken() {
-  param = document.getElementById('searchParam').value;
-  document.getElementById('searchParam').value = "";
+  param = document.getElementById("searchParam").value;
+  document.getElementById("searchParam").value = "";
 
-  usersObject = users.find( users => users.fullName === param);
+  usersObject = users.find((users) => users.fullName === param);
   if (usersObject == undefined || usersObject == null) {
-  alert(`No record found for ${param}`);
+    alert(`No record found for ${param}`);
   } else {
-      users = [usersObject]
+    users = [usersObject];
 
-      displayUsers();
+    displayUsers();
   }
 }
-
 
 function validate(user) {
   const regExEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -83,22 +82,20 @@ function validate(user) {
     document.getElementById("error").innerHTML = "Passwords do not match!";
     return false;
   } else {
-    checkDuplicateUser(user.userName, user.email)
+    checkDuplicateUser(user.userName, user.email);
   }
 }
 
-
-
-// Functin to check username and email alreday taken!
-function checkDuplicateUser(username, email){
+// Function to check username and email already taken!
+function checkDuplicateUser(username, email) {
   let isUsername = database.find((element) => element.userName == username);
   let isEmail = database.find((element) => element.email == email);
 
-  if(isUsername){
+  if (isUsername) {
     document.getElementById("error").innerHTML = "Username has been taken!";
-  } else if(isEmail){
+  } else if (isEmail) {
     document.getElementById("error").innerHTML = "Email has been taken!";
-  }else{
+  } else {
     database.push(newUser);
 
     // updating local storage

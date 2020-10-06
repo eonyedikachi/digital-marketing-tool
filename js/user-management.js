@@ -14,10 +14,13 @@ document.querySelector(".addBtn").addEventListener("click", () => {
   let userRole = "";
   if (document.getElementById("user-radio").checked) {
     userRole = "user";
+    document.getElementById("roleError").innerHTML = "";
   } else if (document.getElementById("admin-radio").checked) {
     userRole = "admin";
+    document.getElementById("roleError").innerHTML = "";
   } else {
-    alert("Please select a user role");
+    document.getElementById("roleError").innerHTML =
+      "Please select a user role!";
   }
 
   // New user object
@@ -41,22 +44,60 @@ document.querySelector(".addBtn").addEventListener("click", () => {
     newObj.role != "" &&
     newObj.pics != null
   ) {
-    // Store user object in array
-    users.push(newObj);
+    if (newObj.password.length < 8) {
+      document.getElementById("passwordError").innerHTML =
+        "Password must be greater than 8 characters!";
+      document.getElementById("password").style.borderColor = "red";
+    } else if (!/[a-z]/.test(newObj.password)) {
+      document.getElementById("passwordError").innerHTML =
+        "Password must contain at least one lower case!";
+      document.getElementById("password").style.borderColor = "red";
+    } else if (!/[A-Z]/.test(newObj.password)) {
+      document.getElementById("passwordError").innerHTML =
+        "Password must contain at least one upper case!";
+      document.getElementById("password").style.borderColor = "red";
+    } else if (!/[0-9]/.test(newObj.password)) {
+      document.getElementById("passwordError").innerHTML =
+        "Password must contain a number!";
+      document.getElementById("password").style.borderColor = "red";
+    } else if (!/[ /\W|_/g]/.test(newObj.password)) {
+      document.getElementById("passwordError").innerHTML =
+        "Password must contain at least one special character!";
+      document.getElementById("password").style.borderColor = "red";
+    } else {
+      document.getElementById("passwordError").innerHTML = "";
+      document.getElementById("password").style.borderColor = "green";
 
-    // Empty text boxes
-    empty();
+      // Checks if username and email exist already
+      let isUsername = database.find(
+        (element) => element.userName == newObj.userName
+      );
+      let isEmail = database.find((element) => element.email == newObj.email);
 
-    // Adds new user to local storage
-    localStorage.setItem("database", JSON.stringify(users));
+      if (isUsername) {
+        document.getElementById("userNameError").innerHTML =
+          "Username has been taken!";
+      } else if (isEmail) {
+        document.getElementById("emailError").innerHTML =
+          "Email has been taken!";
+      } else {
+        // Store user object in array
+        users.push(newObj);
 
-    alert("User added successfully");
-    location.reload();
+        // Empty text boxes
+        empty();
+
+        // Adds new user to local storage
+        localStorage.setItem("database", JSON.stringify(users));
+
+        alert("User added Successfully");
+        location.reload();
+      }
+      display();
+    }
   } else {
-    alert("Fill in all input fields");
+    document.getElementById("error").innerHTML = "Fill in all input fields";
   }
-
-  display();
 });
 
 // Display Content in HTML
@@ -139,7 +180,8 @@ function update() {
   } else if (document.getElementById("admin-radio").checked) {
     userRole = "admin";
   } else {
-    alert("Please select a user role");
+    document.getElementById("roleError").innerHTML =
+      "Please select a user role!";
   }
 
   i = document.getElementById("index").value;
@@ -172,7 +214,7 @@ function update() {
     // Empty text box
     empty();
   } else {
-    alert("Fill in all input fields");
+    document.getElementById("error").innerHTML = "Fill in all input fields";
   }
 }
 

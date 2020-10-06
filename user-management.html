@@ -101,32 +101,40 @@
             <h1>Welcome to the Users Page</h1>
             <div class="form">
                 <h2>Add and Update Users</h2>
+                <p id="error" class="error"></p>
                 <div class="form-input">
                     <input type="hidden" id="index" placeholder="Index">
                 </div>
                 <div class="form-input">
                     <input type="text" id="firstName" placeholder="Enter First Name" required>
+                    <p id="firstNameError" class="error"></p>
                 </div>
                 <div class="form-input">
                     <input type="text" id="lastName" placeholder="Enter Last Name" required>
+                    <p id="lastNameError" class="error"></p>
                 </div>
                 <div class="form-input">
                     <input type="text" id="email" placeholder="Enter Email Address" required>
+                    <p id="emailError" class="error"></p>
                 </div>
                 <div class="form-input">
                     <input type="text" id="username" placeholder="Username" required>
+                    <p id="userNameError" class="error"></p>
                 </div>
                 <div class="form-input">
                     <input type="text" id="password" placeholder="Password" required>
+                    <p id="passwordError" class="error"></p>
                 </div>
                 <div class="form-input radio">
                     <input type="radio" name="role" id="user-radio" value="user">
                     <label for="">User</label>
                     <input type="radio" name="role" id="admin-radio" value="admin">
                     <label for="">Admin</label>
+                    <p id="roleError" class="error"></p>
                 </div>
                 <div class="form-input">
                     <input type="file" id="pics">
+                    <p id="picsError" class="error"></p>
                 </div>
                 <div class="form-input">
                     <button class="addBtn">Add User</button>

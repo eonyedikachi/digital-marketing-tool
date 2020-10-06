@@ -163,6 +163,12 @@ main .middle button {
   width: 50%;
 }
 
+.error {
+  color: red;
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
 /* Media queries */
 @media screen and (max-width: 768px) {
   main .middle .form {
