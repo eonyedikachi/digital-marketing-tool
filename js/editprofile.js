@@ -20,7 +20,7 @@ function update() {
     userName: document.getElementById("userName").value,
     email: document.getElementById("emailAddress").value,
     website: document.getElementById("website").value,
-  };
+    };
   currentUser[i] = edited;
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
   // display();
