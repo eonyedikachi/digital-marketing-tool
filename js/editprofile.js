@@ -3,6 +3,8 @@ var randomAvatar = "avatar" + randomNumber + ".png";
 var randomImageSource = "images/" + randomAvatar;
 document.querySelector(".profile img").setAttribute("src", randomImageSource);
 
+document.getElementById("website").value = "";
+
 editUser = currentUser[i];
 document.getElementById("firstName").value = editUser.firstName;
 document.getElementById("lastName").value = editUser.lastName;
@@ -20,7 +22,7 @@ function update() {
     userName: document.getElementById("userName").value,
     email: document.getElementById("emailAddress").value,
     website: document.getElementById("website").value,
-    };
+  };
   currentUser[i] = edited;
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
   // display();

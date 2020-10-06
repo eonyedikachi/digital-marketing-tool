@@ -39,15 +39,31 @@ function validate(username, password) {
     let user = database.find(
       (element) => element.userName == username && element.password == password
     );
-
     // Adds current user login to storage
     currentUser.push(user);
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-    // User validation
-    user
-      ? window.location.assign("../dashboard.html")
-      : alert("Invalid username or password");
+    if (user == undefined) {
+      swal("Invalid username or password!", "Enter correct details", "error");
+    } else if (user.role == "user") {
+      // User validation
+      user
+        ? window.location.assign("../dashboard.html")
+        : swal(
+            "Invalid username or password!",
+            "Enter correct details",
+            "error"
+          );
+    } else {
+      // User validation
+      user
+        ? window.location.assign("../admin-dashboard.html")
+        : swal(
+            "Invalid username or password!",
+            "Enter correct details",
+            "error"
+          );
+    }
   }
 }
 
