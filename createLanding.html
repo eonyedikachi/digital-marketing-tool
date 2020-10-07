@@ -71,6 +71,23 @@
 <main class="main-landing" style="height: 87vh">
   <div class="left-fixed">
     <ul>
+      <li>
+        <div class="btn-group dropright" >
+          <button type="button"  class="landing-button" id="photos-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            <a href="#"><i class="fas fa-image"></i>
+              <h6>Photos</h6>
+            </a>
+          </button>
+          <div class="dropdown-menu row"  style="margin-top: -10px;">
+            <!-- Dropdown menu links -->     
+            <div id="photos" style=" display: grid;grid-template-columns: auto auto;">
+
+            </div>      
+           
+          </div>
+        </div>
+        
+      </li>
       <li>       
         <div class="btn-group dropright" >
           <button type="button"  class="landing-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
@@ -80,7 +97,7 @@
           </button>
           <div class="dropdown-menu">
             <!-- Dropdown menu links -->
-            <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
+            <img src="images/avatar1.png" class="img-fluid" alt="Responsive image" >
             <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
             <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
             
@@ -104,20 +121,7 @@
         </div>
         
       </li>
-      <li>
-        <div class="btn-group dropright" >
-          <button type="button"  class="landing-button" id="photos-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            <a href="#"><i class="fas fa-image"></i>
-              <h6>Photos</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu row" id="photos">
-            <!-- Dropdown menu links -->           
-           
-          </div>
-        </div>
-        
-      </li>
+      
       <li>
         <div class="btn-group dropright" >
           <button type="button"  class="landing-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
@@ -205,21 +209,21 @@
       </li>
     </ul>
   </div>
-  <div class="right-fixed">
+  <div class="right-fixed" id="parent-container">
     <div class="first-page">
       <div class="page-top">
         <div class="top-left">
-          <h6>Page 1 - Add page title</h6>
+          <h6>Add page title</h6>
         </div>
         <div class="top-right">
-          <a href=""><i class="fas fa-chevron-up"></i></a>
-          <a href=""><i class="fas fa-chevron-down"></i></a>
-          <a href=""><i class="far fa-clone"></i></a>
-          <a href=""><i class="far fa-trash-alt"></i></a>
-          <a href=""><i class="fas fa-plus"></i></a>
+        
+         <i class="far fa-clone"></i>
+         <i class="far fa-trash-alt" ondragover="droppable(event)"  ondrop="discard(event)"></i>
         </div>
       </div>
-      <div class="page-bottom"></div>
+      <div class="page-bottom" id="container"
+      ondragover="droppable(event)"
+      ondrop="drop(event)"></div>
     </div>
   </div>
 </main>
