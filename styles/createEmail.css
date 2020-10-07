@@ -1,0 +1,141 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #4eb1f5;
+}
+
+html,
+body {
+  height: 100%;
+}
+main {
+  height: calc(100vh - 139px);
+  display: flex;
+}
+
+/* Email Template Area */
+main .email-area {
+  width: 65%;
+  height: 100%;
+  padding: 0.5rem;
+  /* background: rgba(0, 0, 255, 0.164); */
+  overflow: auto;
+}
+
+main .email-area .wrapper {
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .email-area .wrapper .template {
+  height: 100%;
+  width: 800px;
+}
+
+main .email-area .wrapper .template .content {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+main .email-area .wrapper .template .content .text {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+main .email-area .wrapper .template .content .close {
+  width: 100%;
+}
+
+main .email-area .wrapper .template .content .close button {
+  border: none;
+  background: none;
+}
+
+/* Controls */
+main .controls {
+  width: 35%;
+  height: 100%;
+  padding: 0.5rem;
+  border-left: 1px solid gray;
+  /* background: rgba(255, 0, 0, 0.178); */
+}
+
+main .controls .control-bar {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+}
+
+main .controls .control-bar button {
+  width: 50%;
+  height: 100%;
+  outline: none;
+  font-size: 1.3rem;
+  border: none;
+  background: none;
+  text-align: center;
+}
+
+main .controls .control-bar button:first-child {
+  border-right: 1px solid grey;
+}
+
+main .controls .control-bar button:hover {
+  background: #4eb2f53f;
+}
+
+main .controls .control-bar button.active {
+  background: #4eb1f5;
+  color: white;
+}
+
+main .controls .control-main {
+  height: calc(100% - 40px);
+  overflow: auto;
+}
+
+main .controls .control-main.hide {
+  display: none;
+}
+
+main .controls .control-main .control-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .controls .control-main .control-wrapper .control-box {
+  width: 148px;
+  height: 154px;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  border-radius: 6px;
+  margin: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+main .controls .control-main .control-wrapper .control-box:hover {
+  box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+main .controls .control-main .control-wrapper .control-box p {
+  font-size: 1.1rem;
+}
+
+main .controls .control-main .control-wrapper .control-box img {
+  width: 100px;
+  height: 100px;
+}
+
+main .controls .control-style {
+  display: none;
+  height: calc(100% - 54px);
+  background: rgba(0, 0, 255, 0.164);
+}
+
+main .controls .control-style.show {
+  display: block;
+}

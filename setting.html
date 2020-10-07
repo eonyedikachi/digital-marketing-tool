@@ -167,7 +167,7 @@
           All contact information is kept strictly confidential. View our <a href="">privacy policy</a>
         </p>
         <div class="profile-content">
-          <h6>Username:  </h6> &nbsp; <span class="unique user-name"></span>
+          <h6>Username: </h6> &nbsp; <span class="unique user-name"></span>
         </div>
         <div class="profile-content">
           <h6>First Name:</h6>
@@ -190,7 +190,7 @@
         <div class="profile-content">
           <h6>Contact Name: </h6>
           &nbsp; <span class="unique all-names"></span>
-         
+
         </div>
         <div class="profile-content">
           <h6>Company / Organization</h6>
@@ -208,7 +208,8 @@
           <h6>Email</h6>
           &nbsp; <span class="unique email-address"></span>
         </div>
-        <button class="button" onclick="window.location.href='./editprimaryaccountcontact.html'">Edit Contact Information</button>
+        <button class="button" onclick="window.location.href='./editprimaryaccountcontact.html'">Edit Contact
+          Information</button>
 
         <h3>Billing Info</h3>
         <p>
@@ -366,66 +367,66 @@
             <span class="radio__label">Events</span>
           </label>
 
-        <section>
-          <div class="days">
-            <input type="radio" id="control_01" name="select" value="1" checked>
-            <label for="control_01">
-              <h6>Last 30 days</h6>
-              <p>Export data in the last 30 days.</p>
-            </label>
-          </div>
-          <div class="days">
-            <input type="radio" id="control_02" name="select" value="2">
-            <label for="control_02">
-              <h6>Last 60 days</h6>
-              <p>Export data in the last 60 days.</p>
-            </label>
-          </div>
-          <div class="days">
-            <input type="radio" id="control_03" name="select" value="3">
-            <label for="control_03">
-              <h6>Last 90 days</h6>
-              <p>Export data in the last 90 days.</p>
-            </label>
-          </div>
-          <div class="days">
-            <input type="radio" id="control_04" name="select" value="4">
-            <label for="control_04">
-              <h6>All data</h6>
-              <p>Export all data for the account. (This may take a while)</p>
-            </label>
-          </div>
-        </section>
-<button class="button"> Export</button>
-        </p>
-      </div>
-
-      <!-- DELETE ACCOUNT TAB  -->
-      <div id="Pause or Delete Account" class="tabcontent">
-        <h3>Delete Account</h3>
-        <label class="radio radio-before">
-          <span class="radio__input">
-            <input type="radio" name="radio">
-            <span class="radio__control"></span>
-          </span>
-          <h4 class="radio__label">
-            Permanently Delete this Account
-          </h4>
-          <p>
-            This account and all the data associated
-             with it will be permanently deleted.
+          <section>
+            <div class="days">
+              <input type="radio" id="control_01" name="select" value="1" checked>
+              <label for="control_01">
+                <h6>Last 30 days</h6>
+                <p>Export data in the last 30 days.</p>
+              </label>
+            </div>
+            <div class="days">
+              <input type="radio" id="control_02" name="select" value="2">
+              <label for="control_02">
+                <h6>Last 60 days</h6>
+                <p>Export data in the last 60 days.</p>
+              </label>
+            </div>
+            <div class="days">
+              <input type="radio" id="control_03" name="select" value="3">
+              <label for="control_03">
+                <h6>Last 90 days</h6>
+                <p>Export data in the last 90 days.</p>
+              </label>
+            </div>
+            <div class="days">
+              <input type="radio" id="control_04" name="select" value="4">
+              <label for="control_04">
+                <h6>All data</h6>
+                <p>Export all data for the account. (This may take a while)</p>
+              </label>
+            </div>
+          </section>
+          <button class="button"> Export</button>
           </p>
-        </label>
+        </div>
+
+        <!-- DELETE ACCOUNT TAB  -->
+        <div id="Pause or Delete Account" class="tabcontent">
+          <h3>Delete Account</h3>
+          <label class="radio radio-before">
+            <span class="radio__input">
+              <input type="radio" name="radio">
+              <span class="radio__control"></span>
+            </span>
+            <h4 class="radio__label">
+              Permanently Delete this Account
+            </h4>
+            <p>
+              This account and all the data associated
+              with it will be permanently deleted.
+            </p>
+          </label>
+        </div>
+
+
+
+        <!-- SETTINGS TAB END -->
+
+
       </div>
-
-
-
-      <!-- SETTINGS TAB END -->
-
 
     </div>
-
-  </div>
 
 
 
@@ -455,7 +456,7 @@
     <div class="container">
       <div class="back-footer">
         <i class="fas fa-chevron-left"></i>
-        <input type="button" onclick="history.back()" value="Back" class="back-button">
+        <input type="button" onclick="location.assign('./dashboard.html')" value="Back" class="back-button">
       </div>
     </div>
   </footer>
