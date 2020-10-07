@@ -112,11 +112,12 @@
               <h6>Uploads</h6>
             </a>
           </button>
-          <div class="dropdown-menu">
+          <div class="dropdown-menu" style=" width: 220px; ">
             <!-- Dropdown menu links -->
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <button class="btn btn-primary"><p><label for="file" style="cursor: pointer;">Upload image or video</label></p></button>
+            <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+            <p><img id="output" width="100"  draggable="true" ondragstart="drag(event)" /></p>
+            
 
           </div>
         </div>
