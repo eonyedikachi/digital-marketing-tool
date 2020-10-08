@@ -7,6 +7,11 @@ html,
 body {
   height: 100%;
 }
+
+label {
+  margin-bottom: unset;
+}
+
 main {
   height: calc(100vh - 139px);
   display: flex;
@@ -17,7 +22,7 @@ main .email-area {
   width: 65%;
   height: 100%;
   padding: 0.5rem;
-  /* background: rgba(0, 0, 255, 0.164); */
+  text-align: center;
   overflow: auto;
 }
 
@@ -31,27 +36,64 @@ main .email-area .wrapper {
 
 main .email-area .wrapper .template {
   height: 100%;
-  width: 800px;
+  width: 100%;
 }
 
-main .email-area .wrapper .template .content {
+main .email-area .wrapper .template .text-content {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 60%;
+  margin: 1rem auto;
 }
 
-main .email-area .wrapper .template .content .text {
+main .email-area .wrapper .template .text-content .text {
   padding: 0.5rem;
   width: 100%;
+  height: 47px;
 }
 
-main .email-area .wrapper .template .content .close {
+.settings {
   width: 100%;
 }
 
-main .email-area .wrapper .template .content .close button {
+.settings .close-button {
   border: none;
+  float: left;
   background: none;
+}
+
+.settings .save-button {
+  border: none;
+  float: right;
+  background: none;
+}
+
+main .email-area .wrapper .template .img-content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 1rem auto;
+}
+
+main .email-area .wrapper .template .img-content .settings {
+  width: 100%;
+}
+
+main .email-area .wrapper .template .img-content .image-wrapper {
+  width: 100%;
+}
+
+main .email-area .wrapper .template .img-content img {
+  width: 300px;
+}
+
+.newContent {
+  cursor: pointer;
+}
+
+.newContent:hover {
+  transform: scale(1.1);
+  border: 1px solid rgba(128, 128, 128, 0.274);
 }
 
 /* Controls */
