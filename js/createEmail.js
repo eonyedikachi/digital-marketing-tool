@@ -83,6 +83,9 @@ function drop(e) {
                             <button class="close-button" id="closeButton" onclick="remove(event)">
                                 <i class="fas fa-times" id="inner"></i>
                             </button>
+                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                                <i class="fas fa-edit" id="inner"></i>
+                            </button>
                             <button class="save-button" id="saveButton" onclick="saveImage(event)">
                                 <i class="fas fa-save" id="inner"></i>
                             </button>
@@ -176,7 +179,32 @@ function editImage(e) {
   editId = document.getElementById(edit);
 
   // Append to content
-  editId.parentNode.parentNode.innerHTML = `<div id="upload">
+  editId.parentNode.parentNode.innerHTML = `<div class="settings" id="settings" style="display: block;">
+                            <button class="close-button" id="closeButton" onclick="remove(event)">
+                                <i class="fas fa-times" id="inner"></i>
+                            </button>
+                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                                <i class="fas fa-edit" id="inner"></i>
+                            </button>
+                            <button class="save-button" id="saveButton" onclick="saveImage(event)">
+                                <i class="fas fa-save" id="inner"></i>
+                            </button>
+                        </div>
+                        <div class="image-wrapper">
+                            <img id="output" draggable="true" ondragstart="drag(event)" src="${editId.src}">
+                        </div>`;
+}
+
+// Upload different image
+function upload(e) {
+  // target selected text id
+  let upload = e.target.id;
+
+  if (upload == `inner`) {
+    uploadId = document.getElementById(upload);
+
+    // Append content
+    uploadId.parentNode.parentNode.parentNode.innerHTML = `<div id="upload">
                             <button class="btn btn-primary">
                                 <p><label for="file" style="cursor: pointer;">Upload image or video</label></p>
                             </button>
@@ -187,6 +215,9 @@ function editImage(e) {
                             <button class="close-button" id="closeButton" onclick="remove(event)">
                                 <i class="fas fa-times" id="inner"></i>
                             </button>
+                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                                <i class="fas fa-edit" id="inner"></i>
+                            </button>
                             <button class="save-button" id="saveButton" onclick="saveImage(event)">
                                 <i class="fas fa-save" id="inner"></i>
                             </button>
@@ -194,6 +225,7 @@ function editImage(e) {
                         <div class="image-wrapper">
                             <img id="output" draggable="true" ondragstart="drag(event)" />
                         </div>`;
+  }
 }
 
 //upload picture or video from device

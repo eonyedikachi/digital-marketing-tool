@@ -68,6 +68,11 @@ main .email-area .wrapper .template .text-content .text {
   background: none;
 }
 
+.settings .upload-button {
+  border: none;
+  background: none;
+}
+
 main .email-area .wrapper .template .img-content {
   display: flex;
   flex-direction: column;
