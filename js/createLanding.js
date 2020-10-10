@@ -21,11 +21,13 @@ function droppable(e) {
 }
 
 function drag(e) {
-  let elementId = e.target.id;
   // alert(elementId);
+  let elementId = e.target.id;
   let elementName = e.target.name;
+  let elementTagName = e.target.tagName;
   e.dataTransfer.setData("id", elementId);
   e.dataTransfer.setData("name", elementName);
+  e.dataTransfer.setData("tagName", elementTagName);
 }
 
 function drop(e) {
@@ -33,10 +35,12 @@ function drop(e) {
 
   // get element to be dragged by ID
   let elementId = e.dataTransfer.getData("id");
+  let elementTagName = e.dataTransfer.getData("tagName");
   // alert(elementId);
   let element = document.getElementById(elementId);
 
   //creating copy of the element
+  //copying image element
   let newImage = document.createElement("img");
   newImage.src = element.src;
   newImage.style.width = "100px";
@@ -44,10 +48,37 @@ function drop(e) {
   newImage.id = element.id + "a";
   newImage.setAttribute("ondragstart", "drag(event)");
 
+  //copying video element
+  let newVideo = document.createElement("video");
+  newVideo.src = element.src;
+  newVideo.style.width = "100px";
+  newVideo.style.height = "100px";
+  newVideo.id = element.id + "a";
+  newVideo.setAttribute("ondragstart", "drag(event)");
+
+  //copying music
+  let newAudio = document.createElement("audio");
+  newAudio.src = element.src;
+  newAudio.innerText = `<source src="${newAudio.src}" type="audio/mpeg">`;
+  newAudio.style.width = "100px";
+  newAudio.style.height = "100px";
+  newAudio.id = element.id + "a";
+  newAudio.setAttribute("ondragstart", "drag(event)");
+
   //Appending the image to the container holder
   let container = document.getElementById("container");
-  container.appendChild(newImage);
+  if (elementTagName == "IMG") {
+    container.appendChild(newImage);
+  }
+  if (elementTagName == "VIDEO") {
+    container.appendChild(newVideo);
+  }
+  if (elementTagName == "AUDIO") {
+    container.appendChild(newAudio);
+    alert(elementTagName);
+  }
 }
+// outputa output2a
 
 function discard(e) {
   e.preventDefault();
@@ -63,5 +94,9 @@ function discard(e) {
 //upload picture or video from device
 var loadFile = function (event) {
   var image = document.getElementById("output");
+  var video = document.getElementById("output2");
+  var audio = document.getElementById("output3");
   image.src = URL.createObjectURL(event.target.files[0]);
+  video.src = URL.createObjectURL(event.target.files[0]);
+  audio.src = URL.createObjectURL(event.target.files[0]);
 };
