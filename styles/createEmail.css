@@ -54,23 +54,18 @@ main .email-area .wrapper .template .text-content .text {
 
 .settings {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.settings .close-button {
+.settings .button {
   border: none;
-  float: left;
-  background: none;
-}
-
-.settings .save-button {
-  border: none;
-  float: right;
   background: none;
 }
 
-.settings .upload-button {
-  border: none;
-  background: none;
+.settings .button i {
+  padding: 4px;
 }
 
 main .email-area .wrapper .template .img-content {
@@ -81,7 +76,9 @@ main .email-area .wrapper .template .img-content {
 }
 
 main .email-area .wrapper .template .img-content .settings {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 main .email-area .wrapper .template .img-content .image-wrapper {
@@ -105,9 +102,7 @@ main .email-area .wrapper .template .img-content img {
 main .controls {
   width: 35%;
   height: 100%;
-  padding: 0.5rem;
   border-left: 1px solid gray;
-  /* background: rgba(255, 0, 0, 0.178); */
 }
 
 main .controls .control-bar {
@@ -136,8 +131,7 @@ main .controls .control-bar button:hover {
 }
 
 main .controls .control-bar button.active {
-  background: #4eb1f5;
-  color: white;
+  background: #d1ecff;
 }
 
 main .controls .control-main {
@@ -180,9 +174,62 @@ main .controls .control-main .control-wrapper .control-box img {
 main .controls .control-style {
   display: none;
   height: calc(100% - 54px);
-  background: rgba(0, 0, 255, 0.164);
 }
 
 main .controls .control-style.show {
+  display: block;
+}
+
+main .controls .control-style .control-wrapper {
+  height: 100%;
+}
+
+main .controls .control-style .control-wrapper .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 1px solid rgba(128, 128, 128, 0.274);
+}
+
+main .controls .control-style .control-wrapper .box:hover {
+  background: rgba(236, 233, 233, 0.301);
+  cursor: pointer;
+}
+
+main .controls .control-style .control-wrapper .page-style {
+  display: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+main .controls .control-style .control-wrapper .page-style.show {
+  display: block;
+}
+
+main .controls .control-style .control-wrapper .page-style .color {
+  display: flex;
+}
+
+main
+  .controls
+  .control-style
+  .control-wrapper
+  .page-style
+  .color
+  input[type="color"] {
+  margin-left: 1rem;
+}
+
+main .controls .control-style .control-wrapper .text-style {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  display: none;
+}
+
+main .controls .control-style .control-wrapper .text-style.show {
   display: block;
 }
