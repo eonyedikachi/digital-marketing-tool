@@ -129,13 +129,18 @@
         <h2>Details</h2>
         <h3>Profile Photo</h3>
         <div class="profile">
-          <img src="images/avatar1.png" alt="Avatar" class="avatar">
+          <img id="output" src="images/avatar1.png" alt="Avatar" class="avatar">
           <div class="profile_texts_and_buttons">
             <h4>Upload your Photo...</h4>
             <p>Photo should be at least 300px x 300px</p>
             <div class="btn">
-              <button>Upload Photo</button>
-              <button>Take a Photo!</button></div>
+              <button class="btn btn-primary">
+                <p><label for="file" style="cursor: pointer;">Upload Image </label></p>
+              </button>
+              <p><input type="file" accept="image" name="image" id="file" onchange="loadFile(event)"
+                  style="display: none;"></p>
+              <button>Take a Photo!</button>
+            </div>
           </div>
 
 
