@@ -64,9 +64,29 @@ function drop(e) {
   newAudio.style.height = "100px";
   newAudio.id = element.id + "a";
   newAudio.setAttribute("ondragstart", "drag(event)");
+  // Creating new element
+  let newElement = document.createElement("div");
 
   //Appending the image to the container holder
   let container = document.getElementById("container");
+
+  // chech if element dragged is text
+  if (elementId == "text") {
+    newElement.setAttribute("class", "text-content");
+
+    newElement.innerHTML = `<div class="settings">
+    <button class="close-button" id="closeButton" onclick="remove(event)">
+        <i class="fas fa-times" id="inner"></i>
+    </button>
+    <button class="save-button" id="saveButton" onclick="saveText(event)">
+    <i class="fas fa-save" id="inner"></i>
+    </button>
+</div>
+<input type="text" class="text" id='input'>
+<p style='display:none' id='error'>Put input or delete input box</p>`;
+    container.appendChild(newElement);
+  }
+
   if (elementTagName == "IMG") {
     container.appendChild(newImage);
   }
@@ -100,3 +120,71 @@ var loadFile = function (event) {
   video.src = URL.createObjectURL(event.target.files[0]);
   audio.src = URL.createObjectURL(event.target.files[0]);
 };
+
+function dropText(e) {
+  e.preventDefault();
+
+  // get data
+  let data = e.dataTransfer.getData("id");
+
+  // get element to be dragged by ID
+  let element = document.getElementById(data);
+
+  // create copy of element
+  let newElement = document.createElement("div");
+
+  // check if data dragged is text id
+  if (data == "text") {
+    // set class in div
+    newElement.setAttribute("class", "text-content");
+
+    // append into created div
+    newElement.innerHTML = `<div class="settings">
+                            <button class="close-button" id="closeButton" onclick="remove(event)">
+                                <i class="fas fa-times" id="inner"></i>
+                            </button>
+                            <button class="save-button" id="saveButton" onclick="saveText(event)">
+                            <i class="fas fa-save" id="inner"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="text" id='input'>
+                        <p style='display:none' id='error'>Put input or delete input box</p>`;
+
+    // Append div to drop target
+    e.target.appendChild(newElement);
+  }
+}
+
+// delete new elements
+function remove(e) {
+  // target close button id
+  let close = e.target.id;
+  if (close == `inner`) {
+    closeId = document.getElementById(close);
+
+    // Delete content
+    closeId.parentNode.parentNode.parentNode.remove();
+  }
+}
+
+// Save text elements
+function saveText(e) {
+  // target save button id
+  let save = e.target.id;
+
+  // get value in input box
+  let input = document.getElementById("input").value;
+
+  // check if input is empty
+  if (input != "") {
+    if (save == "inner") {
+      saveId = document.getElementById(save);
+
+      // Append content
+      saveId.parentNode.parentNode.parentNode.innerHTML = `<p id='newContent-${i++}' class='newContent' onclick='editText(event)'>${input}</p>`;
+    }
+  } else {
+    document.getElementById("error").style.display = "block";
+    document.getElementById("error").style.color = "red";
+  }
+}

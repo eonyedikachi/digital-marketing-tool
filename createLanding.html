@@ -152,9 +152,10 @@
           </button>
           <div class="dropdown-menu">
             <!-- Dropdown menu links -->
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="control-box text" id="text" draggable="true" ondragstart="drag(event)">
+              <img src="./images/text.png" alt="text" draggable="false">
+              
+          </div>
 
           </div>
         </div>
@@ -172,7 +173,7 @@
             <!-- Dropdown menu links -->
             <button class="btn btn-primary"><p><label for="file" style="cursor: pointer;">Upload Music </label></p></button>
             <p><input type="file"  accept="audio/*" name="mp3" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-            <p style="background-color: red; z-index: 999;" draggable="true" ondragstart="drag(event)"><audio controls id="output3" width="100"  draggable="true" ondragstart="drag(event)"></audio></p>
+            <p style="z-index: 999;" draggable="true" ondragstart="drag(event)"><audio controls id="output3" width="100"  draggable="true" ondragstart="drag(event)"></audio></p>
 
           </div>
         </div>
@@ -230,7 +231,7 @@
       </div>
       <div class="page-bottom" id="container"
       ondragover="droppable(event)"
-      ondrop="drop(event)"></div>
+      ondrop="drop(event)" ></div>
     </div>
   </div>
 </main>
