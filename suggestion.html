@@ -68,7 +68,7 @@
             </nav>
         </div>
     </header>
-    <section>
+    <main>
         <!-- Suggestion heading -->
         <h1 class="heading">Suggestions</h1>
 
@@ -86,36 +86,40 @@
         </div>
 
         <!-- Select category -->
-        <div class="selectcat">
-            <h2> Select Category</h2>
-            <select name="" id="" class="categorylists">
-                <option value="">Email Templete
-                </option>
-                <option value="">Landing Page
-                </option>
-                <option value=""> Social media
-                </option>
-                <option value="">Posters
-                </option>
-                <option value="">Fliers
-                </option>
-                <option value="">Cards
-                </option>
-                <option value="">Presentation
-                </option>
-            </select>
-        </div>
-        </header>
+        <div class="select-category">
+            <div class="selectcat">
+                <h2> Select Category</h2>
+                <select name="" id="" class="categorylists">
+                    <option value="">Email Templete
+                    </option>
+                    <option value="">Landing Page
+                    </option>
+                    <option value=""> Social media
+                    </option>
+                    <option value="">Posters
+                    </option>
+                    <option value="">Fliers
+                    </option>
+                    <option value="">Cards
+                    </option>
+                    <option value="">Presentation
+                    </option>
+                </select>
+            </div>
+            </header>
 
-        <div class="mainsuggestion">
-            <h2>Suggestion</h2>
-            <textarea id="comment" name="comment" placeholder="Enter your suggestion"></textarea>
-            </textarea>
+            <div class="mainsuggestion">
+                <h2>Suggestion</h2>
+                <form data-netlify="true" method="post" name="suggestion">
+                    <textarea id="comment" name="comment" placeholder="Enter your suggestion"></textarea>
+                    </textarea>
+                    <br>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </div>
-    </section>
-    <div class="sendbtn">
-        <button>Send</button>
-    </div>
+    </main>
+
     <!-- Footer Section -->
     <footer>
         <div class="container">
