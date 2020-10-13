@@ -118,7 +118,13 @@ function drop(e) {
                             <button class="button" id="closeButton" onclick="remove(event)">
                                 <i class="far fa-trash-alt" id="inner"></i>
                             </button>
-                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                            <button class="button" id="zoomInButton" onclick="zoomIn()">
+                                <i class="fas fa-search-plus" id="inner"></i>
+                            </button>
+                            <button class="button" id="zoomOutButton" onclick="zoomOut()">
+                                <i class="fas fa-search-minus" id="inner"></i>
+                            </button>
+                            <button class="button" id="uploadButton" onclick="upload(event)">
                                 <i class="fas fa-edit" id="inner"></i>
                             </button>
                             <button class="button" id="saveButton" onclick="saveImage(event)">
@@ -176,13 +182,14 @@ function saveImage(e) {
   let save = e.target.id;
 
   output = document.getElementById("output");
+  width = output.style.width;
 
   if (save == "inner") {
     saveId = document.getElementById(save);
 
     // Append content
     saveId.parentNode.parentNode.parentNode.innerHTML = `<div class="image-wrapper newContent" id="newImgContent-${i}" onclick="editImage(event)">
-                            <img id="imgOutput-${i++}" draggable="true" ondragstart="drag(event)" src="${
+                            <img id="imgOutput-${i++}" draggable="true" ondragstart="drag(event)" style="width:${width}" src="${
       output.src
     }"/>
                             </div>`;
@@ -242,13 +249,20 @@ function editImage(e) {
   let edit = e.target.id;
 
   editId = document.getElementById(edit);
+  width = output.style.width;
 
   // Append to content
   editId.parentNode.parentNode.innerHTML = `<div class="settings" id="settings">
                             <button class="button" id="closeButton" onclick="remove(event)">
                                 <i class="far fa-trash-alt" id="inner"></i>
                             </button>
-                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                            <button class="button" id="zoomInButton" onclick="zoomIn()">
+                                <i class="fas fa-search-plus" id="inner"></i>
+                            </button>
+                            <button class="button" id="zoomOutButton" onclick="zoomOut()">
+                                <i class="fas fa-search-minus" id="inner"></i>
+                            </button>
+                            <button class="button" id="uploadButton" onclick="upload(event)">
                                 <i class="fas fa-edit" id="inner"></i>
                             </button>
                             <button class="button" id="saveButton" onclick="saveImage(event)">
@@ -256,7 +270,7 @@ function editImage(e) {
                             </button>
                         </div>
                         <div class="image-wrapper">
-                            <img id="output" draggable="true" ondragstart="drag(event)" src="${editId.src}">
+                            <img id="output" draggable="true" ondragstart="drag(event)" style="width:${width}" src="${editId.src}">
                         </div>`;
 }
 
@@ -280,7 +294,13 @@ function upload(e) {
                             <button class="button" id="closeButton" onclick="remove(event)">
                                 <i class="far fa-trash-alt" id="inner"></i>
                             </button>
-                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                            <button class="button" id="zoomInButton" onclick="zoomIn()">
+                                <i class="fas fa-search-plus" id="inner"></i>
+                            </button>
+                            <button class="button" id="zoomOutButton" onclick="zoomOut()">
+                                <i class="fas fa-search-minus" id="inner"></i>
+                            </button>
+                            <button class="button" id="uploadButton" onclick="upload(event)">
                                 <i class="fas fa-edit" id="inner"></i>
                             </button>
                             <button class="button" id="saveButton" onclick="saveImage(event)">
@@ -302,6 +322,20 @@ let loadFile = function (e) {
   upload.remove();
   settings.style.display = "flex";
 };
+
+// Zoom image in
+function zoomIn() {
+  let img = document.getElementById("output");
+  let currentWidth = img.clientWidth;
+  img.style.width = currentWidth + 50 + "px";
+}
+
+// Zoom image out
+function zoomOut() {
+  let img = document.getElementById("output");
+  let currentWidth = img.clientWidth;
+  img.style.width = currentWidth - 50 + "px";
+}
 
 // Change page color
 function changePageColor() {

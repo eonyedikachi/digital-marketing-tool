@@ -21,9 +21,7 @@ main {
 main .email-area {
   width: 65%;
   height: 100%;
-  padding: 0.5rem;
   text-align: center;
-  overflow: auto;
 }
 
 main .email-area .wrapper {
@@ -37,6 +35,8 @@ main .email-area .wrapper {
 main .email-area .wrapper .template {
   height: 100%;
   width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 main .email-area .wrapper .template .text-content {
@@ -71,7 +71,7 @@ main .email-area .wrapper .template .text-content .text {
 main .email-area .wrapper .template .img-content {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 70%;
   margin: 1rem auto;
 }
 
@@ -86,7 +86,7 @@ main .email-area .wrapper .template .img-content .image-wrapper {
 }
 
 main .email-area .wrapper .template .img-content img {
-  width: 300px;
+  width: 100%;
 }
 
 .newContent {
