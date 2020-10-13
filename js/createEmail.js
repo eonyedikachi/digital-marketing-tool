@@ -102,7 +102,9 @@ function drop(e) {
 
     // Append div to drop target
     e.target.appendChild(newElement);
-  } else {
+
+    // check if data dragged is image id
+  } else if (data == "image") {
     // set class in div
     newElement.setAttribute("class", "img-content");
 
@@ -138,6 +140,16 @@ function drop(e) {
     // Append div to drop target
     e.target.appendChild(newElement);
   }
+  // check if data dragged is imgOutput id
+  else if (data.includes("imgOutput")) {
+    element.parentNode.parentNode.parentNode.appendChild(
+      element.parentNode.parentNode
+    );
+  }
+  // check if data dragged is newContent text id
+  else {
+    element.parentNode.parentNode.appendChild(element.parentNode);
+  }
 }
 
 // delete new elements
@@ -168,7 +180,7 @@ function saveText(e) {
       saveId = document.getElementById(save);
 
       // Append content
-      saveId.parentNode.parentNode.parentNode.innerHTML = `<p id='newContent-${i++}' class='newContent' style='font-size:${fontSize}; color:${color}' onclick='editText(event)'>${input}</p>`;
+      saveId.parentNode.parentNode.parentNode.innerHTML = `<p draggable="true" ondragstart="drag(event)" id='newContent-${i++}' class='newContent' style='font-size:${fontSize}; color:${color}' onclick='editText(event)'>${input}</p>`;
     }
   } else {
     document.getElementById("error").style.display = "block";
