@@ -54,6 +54,9 @@ textarea {
 button {
   border-radius: unset;
 }
+.control-box {
+  cursor: pointer;
+}
 
 .nav-tabs .nav-item a {
   color: var(--secondary-color);

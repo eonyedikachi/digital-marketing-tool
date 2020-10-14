@@ -19,6 +19,16 @@ styles.addEventListener("click", () => {
   controlMain.classList.add("hide");
 });
 
+// Show page styles
+document.getElementById("page").addEventListener("click", () => {
+  document.getElementById("pageStyle").classList.toggle("show");
+});
+
+// Show text styles
+document.getElementById("styleText").addEventListener("click", () => {
+  document.getElementById("textStyle").classList.toggle("show");
+});
+
 // Used to change id of each element
 var i = 1;
 
@@ -55,19 +65,58 @@ function drop(e) {
 
     // append into created div
     newElement.innerHTML = `<div class="settings">
-                            <button class="close-button" id="closeButton" onclick="remove(event)">
-                                <i class="fas fa-times" id="inner"></i>
+                            <button class="button" id="closeButton" onclick="remove(event)">
+                                <i class="far fa-trash-alt" id="inner"></i>
                             </button>
-                            <button class="save-button" id="saveButton" onclick="saveText(event)">
+                            <button class="button" id="boldButton" onclick="boldText(event)">
+                            <i class="fas fa-bold" id="innerBold"></i>
+                            </button>
+                            <button class="button" id="italicButton" onclick="italicText(event)">
+                            <i class="fas fa-italic" id="innerItalic"></i>
+                            </button>
+                            <button class="button" id="underlineButton" onclick="underlineText(event)">
+                            <i class="fas fa-underline" id="innerUnderline"></i>
+                            </button>
+                            <select name="font-size" id="fontSize">
+                                <option value="16px">16px</option>
+                                <option value="18px">18px</option>
+                                <option value="20px">20px</option>
+                                <option value="22px">22px</option>
+                                <option value="24px">24px</option>
+                                <option value="26px">26px</option>
+                                <option value="28px">28px</option>
+                                <option value="30px">30px</option>
+                                <option value="32px">32px</option>
+                                <option value="34px">34px</option>
+                                <option value="36px">36px</option>
+                                <option value="38px">38px</option>
+                                <option value="40px">40px</option>
+                            </select>
+                            <button class="button" id="alignLeftButton" onclick="alignLeft(event)">
+                            <i class="fas fa-align-left" id="innerAlignLeft"></i>
+                            </button>
+                            <button class="button" id="alignCenterButton" onclick="alignCenter(event)">
+                            <i class="fas fa-align-center" id="innerAlignCenter"></i>
+                            </button>
+                            <button class="button" id="alignRightButton" onclick="alignRight(event)">
+                            <i class="fas fa-align-right" id="innerAlignRight"></i>
+                            </button>
+                            <button class="button" id="justifyButton" onclick="justify(event)">
+                            <i class="fas fa-align-justify" id="innerJustify"></i>
+                            </button>
+                            <input type="color" name="text-element-color" id="textElementColor" onchange="changeTextElementColor()">
+                            <button class="button" id="saveButton" onclick="saveText(event)">
                             <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
-                        <input type="text" class="text" id='input'>
+                        <textarea rows="4" class="text" id='input'></textarea>
                         <p style='display:none' id='error'>Put input or delete input box</p>`;
 
     // Append div to drop target
     e.target.appendChild(newElement);
-  } else {
+
+    // check if data dragged is image id
+  } else if (data == "image") {
     // set class in div
     newElement.setAttribute("class", "img-content");
 
@@ -80,13 +129,19 @@ function drop(e) {
                                     style="display: none;"></p>
                         </div>
                         <div class="settings" id="settings" style="display: none;">
-                            <button class="close-button" id="closeButton" onclick="remove(event)">
-                                <i class="fas fa-times" id="inner"></i>
+                            <button class="button" id="closeButton" onclick="remove(event)">
+                                <i class="far fa-trash-alt" id="inner"></i>
                             </button>
-                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                            <button class="button" id="zoomInButton" onclick="zoomIn()">
+                                <i class="fas fa-search-plus" id="inner"></i>
+                            </button>
+                            <button class="button" id="zoomOutButton" onclick="zoomOut()">
+                                <i class="fas fa-search-minus" id="inner"></i>
+                            </button>
+                            <button class="button" id="uploadButton" onclick="upload(event)">
                                 <i class="fas fa-edit" id="inner"></i>
                             </button>
-                            <button class="save-button" id="saveButton" onclick="saveImage(event)">
+                            <button class="button" id="saveButton" onclick="saveImage(event)">
                                 <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
@@ -96,6 +151,16 @@ function drop(e) {
 
     // Append div to drop target
     e.target.appendChild(newElement);
+  }
+  // check if data dragged is imgOutput id
+  else if (data.includes("imgOutput")) {
+    element.parentNode.parentNode.parentNode.appendChild(
+      element.parentNode.parentNode
+    );
+  }
+  // check if data dragged is newContent text id
+  else {
+    element.parentNode.parentNode.appendChild(element.parentNode);
   }
 }
 
@@ -116,8 +181,11 @@ function saveText(e) {
   // target save button id
   let save = e.target.id;
 
-  // get value in input box
+  // get values in input box
   let input = document.getElementById("input").value;
+  let fontSize = document.getElementById("fontSize").value;
+  let color = document.getElementById("input").style.color;
+  let align = document.getElementById("input").style.textAlign;
 
   // check if input is empty
   if (input != "") {
@@ -125,7 +193,7 @@ function saveText(e) {
       saveId = document.getElementById(save);
 
       // Append content
-      saveId.parentNode.parentNode.parentNode.innerHTML = `<p id='newContent-${i++}' class='newContent' onclick='editText(event)'>${input}</p>`;
+      saveId.parentNode.parentNode.parentNode.innerHTML = `<p draggable="true" ondragstart="drag(event)" id='newContent-${i++}' class='newContent' style='font-size:${fontSize}; color:${color}; text-align:${align}' onclick='editText(event)'>${input}</p>`;
     }
   } else {
     document.getElementById("error").style.display = "block";
@@ -139,13 +207,14 @@ function saveImage(e) {
   let save = e.target.id;
 
   output = document.getElementById("output");
+  width = output.style.width;
 
   if (save == "inner") {
     saveId = document.getElementById(save);
 
     // Append content
     saveId.parentNode.parentNode.parentNode.innerHTML = `<div class="image-wrapper newContent" id="newImgContent-${i}" onclick="editImage(event)">
-                            <img id="imgOutput-${i++}" draggable="true" ondragstart="drag(event)" src="${
+                            <img id="imgOutput-${i++}" draggable="true" ondragstart="drag(event)" style="width:${width}" src="${
       output.src
     }"/>
                             </div>`;
@@ -157,17 +226,59 @@ function editText(e) {
   // target selected text id
   let edit = e.target.id;
   editId = document.getElementById(edit);
+  color = editId.style.color;
+  font = editId.style.fontSize;
+  align = editId.style.textAlign;
+  text = editId.textContent;
 
   // Append to content
   editId.parentNode.innerHTML = `<div class="settings">
-                            <button class="close-button" id="closeButton" onclick="remove(event)">
-                                <i class="fas fa-times" id="inner"></i>
+                            <button class="button" id="closeButton" onclick="remove(event)">
+                                <i class="far fa-trash-alt" id="inner"></i>
                             </button>
-                            <button class="save-button" id="saveButton" onclick="saveText(event)">
+                            <button class="button" id="boldButton" onclick="boldText(event)">
+                            <i class="fas fa-bold" id="innerBold"></i>
+                            </button>
+                            <button class="button" id="italicButton" onclick="italicText(event)">
+                            <i class="fas fa-italic" id="innerItalic"></i>
+                            </button>
+                            <button class="button" id="underlineButton" onclick="underlineText(event)">
+                            <i class="fas fa-underline" id="innerUnderline"></i>
+                            </button>
+                            <select name="font-size" id="fontSize">
+                                <option value="${font}" hidden disabled selected>${font}</option>
+                                <option value="16px">16px</option>
+                                <option value="18px">18px</option>
+                                <option value="20px">20px</option>
+                                <option value="22px">22px</option>
+                                <option value="24px">24px</option>
+                                <option value="26px">26px</option>
+                                <option value="28px">28px</option>
+                                <option value="30px">30px</option>
+                                <option value="32px">32px</option>
+                                <option value="34px">34px</option>
+                                <option value="36px">36px</option>
+                                <option value="38px">38px</option>
+                                <option value="40px">40px</option>
+                            </select>
+                            <button class="button" id="alignLeftButton" onclick="alignLeft(event)">
+                            <i class="fas fa-align-left" id="innerAlignLeft"></i>
+                            </button>
+                            <button class="button" id="alignCenterButton" onclick="alignCenter(event)">
+                            <i class="fas fa-align-center" id="innerAlignCenter"></i>
+                            </button>
+                            <button class="button" id="alignRightButton" onclick="alignRight(event)">
+                            <i class="fas fa-align-right" id="innerAlignRight"></i>
+                            </button>
+                            <button class="button" id="justifyButton" onclick="justify(event)">
+                            <i class="fas fa-align-justify" id="innerJustify"></i>
+                            </button>
+                            <input type="color" name="text-element-color" id="textElementColor" onchange="changeTextElementColor()">
+                            <button class="button" id="saveButton" onclick="saveText(event)">
                             <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
-                        <input type="text" class="text" id='input' value='${editId.textContent}'>
+                        <textarea rows="4" class="text" id='input' style='font-size:${font}; color:${color}; text-align:${align}'>${text}</textarea>
                         <p style='display:none' id='error'>Put input or delete input box</p>`;
 }
 
@@ -177,21 +288,28 @@ function editImage(e) {
   let edit = e.target.id;
 
   editId = document.getElementById(edit);
+  width = output.style.width;
 
   // Append to content
-  editId.parentNode.parentNode.innerHTML = `<div class="settings" id="settings" style="display: block;">
-                            <button class="close-button" id="closeButton" onclick="remove(event)">
-                                <i class="fas fa-times" id="inner"></i>
+  editId.parentNode.parentNode.innerHTML = `<div class="settings" id="settings">
+                            <button class="button" id="closeButton" onclick="remove(event)">
+                                <i class="far fa-trash-alt" id="inner"></i>
                             </button>
-                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                            <button class="button" id="zoomInButton" onclick="zoomIn()">
+                                <i class="fas fa-search-plus" id="inner"></i>
+                            </button>
+                            <button class="button" id="zoomOutButton" onclick="zoomOut()">
+                                <i class="fas fa-search-minus" id="inner"></i>
+                            </button>
+                            <button class="button" id="uploadButton" onclick="upload(event)">
                                 <i class="fas fa-edit" id="inner"></i>
                             </button>
-                            <button class="save-button" id="saveButton" onclick="saveImage(event)">
+                            <button class="button" id="saveButton" onclick="saveImage(event)">
                                 <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
                         <div class="image-wrapper">
-                            <img id="output" draggable="true" ondragstart="drag(event)" src="${editId.src}">
+                            <img id="output" draggable="true" ondragstart="drag(event)" style="width:${width}" src="${editId.src}">
                         </div>`;
 }
 
@@ -212,13 +330,19 @@ function upload(e) {
                                     style="display: none;"></p>
                         </div>
                         <div class="settings" id="settings" style="display: none;">
-                            <button class="close-button" id="closeButton" onclick="remove(event)">
-                                <i class="fas fa-times" id="inner"></i>
+                            <button class="button" id="closeButton" onclick="remove(event)">
+                                <i class="far fa-trash-alt" id="inner"></i>
                             </button>
-                            <button class="upload-button" id="uploadButton" onclick="upload(event)">
+                            <button class="button" id="zoomInButton" onclick="zoomIn()">
+                                <i class="fas fa-search-plus" id="inner"></i>
+                            </button>
+                            <button class="button" id="zoomOutButton" onclick="zoomOut()">
+                                <i class="fas fa-search-minus" id="inner"></i>
+                            </button>
+                            <button class="button" id="uploadButton" onclick="upload(event)">
                                 <i class="fas fa-edit" id="inner"></i>
                             </button>
-                            <button class="save-button" id="saveButton" onclick="saveImage(event)">
+                            <button class="button" id="saveButton" onclick="saveImage(event)">
                                 <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
@@ -235,5 +359,155 @@ let loadFile = function (e) {
   let image = document.getElementById("output");
   image.src = URL.createObjectURL(e.target.files[0]);
   upload.remove();
-  settings.style.display = "block";
+  settings.style.display = "flex";
 };
+
+// Zoom image in
+function zoomIn() {
+  let img = document.getElementById("output");
+  let currentWidth = img.clientWidth;
+  img.style.width = currentWidth + 50 + "px";
+}
+
+// Zoom image out
+function zoomOut() {
+  let img = document.getElementById("output");
+  let currentWidth = img.clientWidth;
+  img.style.width = currentWidth - 50 + "px";
+}
+
+// Change page color
+function changePageColor() {
+  pageColor = document.getElementById("pageColor").value;
+  templateArea = document.getElementById("container");
+  templateArea.style.backgroundColor = pageColor;
+}
+
+function changeTextColor() {
+  textColor = document.getElementById("textColor").value;
+  templateArea = document.getElementById("container");
+  templateArea.style.color = textColor;
+}
+
+function changeTextElementColor() {
+  textColor = document.getElementById("textElementColor").value;
+  input = document.getElementById("input");
+  input.style.color = textColor;
+}
+
+// Bold text
+function boldText(e) {
+  input = document.getElementById("input");
+  // target bold button id
+  let bold = e.target.id;
+  if (bold == `innerBold`) {
+    let boldId = document.getElementById(bold);
+
+    if (boldId.parentNode.parentNode.parentNode.style.fontWeight == "bold") {
+      input.style.fontWeight = "normal";
+      boldId.parentNode.parentNode.parentNode.style.fontWeight = "normal";
+      boldId.style.border = "unset";
+    } else {
+      input.style.fontWeight = "bold";
+      boldId.parentNode.parentNode.parentNode.style.fontWeight = "bold";
+      boldId.style.border = "1px solid black";
+    }
+  }
+}
+
+// italic text
+function italicText(e) {
+  input = document.getElementById("input");
+  // target italic button id
+  let italic = e.target.id;
+  if (italic == `innerItalic`) {
+    italicId = document.getElementById(italic);
+
+    if (italicId.parentNode.parentNode.parentNode.style.fontStyle == "italic") {
+      input.style.fontStyle = "normal";
+      italicId.parentNode.parentNode.parentNode.style.fontStyle = "normal";
+      italicId.style.border = "unset";
+    } else {
+      input.style.fontStyle = "italic";
+      italicId.parentNode.parentNode.parentNode.style.fontStyle = "italic";
+      italicId.style.border = "1px solid black";
+    }
+  }
+}
+
+// underline text
+function underlineText(e) {
+  input = document.getElementById("input");
+  // target underline button id
+  let underline = e.target.id;
+  if (underline == `innerUnderline`) {
+    underlineId = document.getElementById(underline);
+
+    if (
+      underlineId.parentNode.parentNode.parentNode.style.textDecoration ==
+      "underline"
+    ) {
+      input.style.textDecoration = "none";
+      underlineId.parentNode.parentNode.parentNode.style.textDecoration =
+        "none";
+      underlineId.style.border = "unset";
+    } else {
+      input.style.textDecoration = "underline";
+      underlineId.parentNode.parentNode.parentNode.style.textDecoration =
+        "underline";
+      underlineId.style.border = "1px solid black";
+    }
+  }
+}
+
+// align left text
+function alignLeft(e) {
+  input = document.getElementById("input");
+  // target alignLeft button id
+  let alignLeft = e.target.id;
+  if (alignLeft == `innerAlignLeft`) {
+    alignLeftId = document.getElementById(alignLeft);
+
+    input.style.textAlign = "left";
+    alignLeftId.parentNode.parentNode.parentNode.style.textAlign = "left";
+  }
+}
+
+// align right text
+function alignRight(e) {
+  input = document.getElementById("input");
+  // target alignRight button id
+  let alignRight = e.target.id;
+  if (alignRight == `innerAlignRight`) {
+    alignRightId = document.getElementById(alignRight);
+
+    input.style.textAlign = "right";
+    alignRightId.parentNode.parentNode.parentNode.style.textAlign = "right";
+  }
+}
+
+// align center text
+function alignCenter(e) {
+  input = document.getElementById("input");
+  // target alignCenter button id
+  let alignCenter = e.target.id;
+  if (alignCenter == `innerAlignCenter`) {
+    alignCenterId = document.getElementById(alignCenter);
+
+    input.style.textAlign = "center";
+    alignCenterId.parentNode.parentNode.parentNode.style.textAlign = "center";
+  }
+}
+
+// justify text
+function justify(e) {
+  input = document.getElementById("input");
+  // target justify button id
+  let justify = e.target.id;
+  if (justify == `innerJustify`) {
+    justifyId = document.getElementById(justify);
+
+    input.style.textAlign = "justify";
+    justifyId.parentNode.parentNode.parentNode.style.textAlign = "justify";
+  }
+}

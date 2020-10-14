@@ -103,18 +103,28 @@
                     <div class="control-box button"></div>
                     <div class="control-box button"></div>
                     <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
                 </div>
             </div>
 
             <!-- Styles -->
             <div class="control-style" id="stylesMain">
                 <div class='control-wrapper'>
-                    <div class="box text"></div>
-                    <div class="box image"></div>
-                    <div class="box button"></div>
+                    <div class="box page" id="page">Page <i class="fas fa-angle-right"></i></div>
+                    <div class="page-style" id="pageStyle">
+                        <div class="color">
+                            <p>Background Color:</p>
+                            <input type="color" name="page-color" id="pageColor" onchange="changePageColor()">
+                        </div>
+                    </div>
+                    <div class="box text" id="styleText">Text <i class="fas fa-angle-right"></i></div>
+                    <div class="text-style" id="textStyle">
+                        <div class="color">
+                            <div class="color">
+                                <p>Text Color:</p>
+                                <input type="color" name="text-color" id="textColor" onchange="changeTextColor()">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

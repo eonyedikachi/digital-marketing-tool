@@ -1,7 +1,5 @@
-var randomNumber = Math.floor(Math.random() * 9) + 1;
-var randomAvatar = "avatar" + randomNumber + ".png";
-var randomImageSource = "images/" + randomAvatar;
-document.querySelector(".profile img").setAttribute("src", randomImageSource);
+// fetches most recent logged in user
+i = currentUser.length - 1;
 
 document.getElementById("website").value = "";
 
@@ -12,8 +10,14 @@ document.getElementById("userName").value = editUser.userName;
 document.getElementById("emailAddress").value = editUser.email;
 document.getElementById("website").value = editUser.website;
 
-// fetches most recent logged in user
-i = currentUser.length - 1;
+var randomNumber = Math.floor(Math.random() * 9) + 1;
+var randomAvatar = "avatar" + randomNumber + ".png";
+var randomImageSource = "images/" + randomAvatar;
+if (editUser.image == null || editUser.image == undefined) {
+  document.querySelector(".profile img").setAttribute("src", randomImageSource);
+} else {
+  document.querySelector(".profile img").setAttribute("src", editUser.image);
+}
 
 function update() {
   let edited = {
@@ -27,3 +31,11 @@ function update() {
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
   // display();
 }
+
+//upload picture or video from device
+var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+  editUser.image = image.src;
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+};
