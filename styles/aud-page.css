@@ -33,17 +33,65 @@ section .container .audience-btn {
   cursor: pointer;
   font-size: 18px;
 }
-section .container .audience-btnn #format {
-  width: 12rem;
-  height: 2rem;
-  background-color: #fff;
-  float: right;
-  cursor: pointer;
-  margin-bottom: 2rem;
-  color: #333333;
-  font-size: 18px;
+
+
+/* Dropdown CSS */
+.hide {
+  max-height: 0 !important;
 }
 
+.dropdownn{
+border: 0.1em solid black;
+margin-bottom: 1em;
+width: 12rem;
+height: 2rem;
+background-color: #fff;
+float: right;
+cursor: pointer;
+margin-bottom: 2rem;
+color: #333333;
+font-size: 18px;
+z-index:1000
+}
+
+.dropdownn .title{
+margin: .3em .3em .3em .3em;	
+width: 100%;
+}
+
+.dropdownn .title .fa-angle-right{
+float: right;
+margin-right: .7em;
+transition: transform .3s;
+}
+
+.dropdownn .menu{
+transition: max-height .5s ease-out;
+max-height: 20em;
+overflow: hidden;
+}
+
+.dropdownn .menu .option{
+margin: .3em .3em .3em .3em;
+margin-top: 0.3em;
+}
+
+.dropdownn .menu .option:hover{
+background: rgba(0,0,0,0.2);
+cursor: pointer;
+}
+
+.pointerCursor:hover{
+cursor: pointer;
+}
+
+.rotate-90{
+transform: rotate(90deg);
+}
+
+
+
+/* Upload contacts */
 .upload-contact .aud-img {
   width: 15rem;
   height: 15rem;
@@ -74,6 +122,7 @@ section .container .audience-btnn #format {
 .import-contact p {
   font-size: 19px;
 }
+
 
 .import-contact .import-cont-btn {
   width: 14rem;
@@ -118,5 +167,99 @@ h3 {
     flex: 1;
     flex-wrap: wrap;
     padding: 20px;
+  }
+}
+
+
+
+/* -----addASubscriber Section */
+#addASubscriber{
+    position: relative;
+    display: flex;
+    padding:47px;
+    margin: 40px;
+    top:-6rem;
+    display: none;
+   }
+
+   input[type=text], [type=email], [type=phone],select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .heading{
+    padding: 1px;
+    position: relative;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 1px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .heading h2{
+    font-size: 50px;
+    margin-top: 20px;
+    top:-3rem;
+  }
+  .heading p{
+    font-size: 15px;
+    margin-top: 8px;
+    background-color: rgb(34, 174, 230);
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    height: 3rem;
+   }
+
+  .birth-date {
+    display: flex;
+    width: 15rem;
+    height: 3rem;
+    
+  }
+  .birth-date h1{
+    height: 5rem;
+    margin: 10px;
+  }
+
+input[type=checkbox]  {
+  width: 1.5rem;
+  padding: 5px;
+  margin: 10px;
+  height: 1.5rem;
+  position: relative;
+  display: block;
+
+}
+#subscribe {
+  width: 9rem;
+  height: 3rem;
+  background-color: #565758;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 3rem 1rem;
+  border-radius: none;
+  position: absolute;
+  display: block;
+}
+@media screen and (max-width: 960px) {
+  #addASubscriber{
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+  }
+  h1 h2 h5 p{
+    display: block;
+    width: 100px;
+    padding: 20px;
+    margin: 10px;
+
   }
 }

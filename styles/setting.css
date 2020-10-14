@@ -373,7 +373,7 @@ h6 {
 .profile_form {
   margin: 30px;
 }
-.button:){
+.button:{
   width: max-content;
   color: var(--secondary-color);
   background-color: var(--primary-color);
