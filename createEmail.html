@@ -75,7 +75,30 @@
         <div class="email-area">
             <div class="wrapper">
                 <div class="template" id="container" ondragover="droppable(event)" ondrop="drop(event)">
-
+                    <!-- <div class="img-content">
+                        <div class="image-wrapper newContent" id="newImgContent-1" onclick="editImage(event)">
+                            <img id="imgOutput-1" draggable="true" ondragstart="drag(event)" style="width:454px"
+                                src="./images/widowmaker_under_the_spotlight_by_zombieresorthq-dbg8lnx_3.jpg">
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <p draggable="true" ondragstart="drag(event)" id="newContent-3" class="newContent"
+                            style="font-size:16px;" onclick="editText(event)">This is the first
+                            email I've made and it's
+                            a template for you to use and edit</p>
+                    </div>
+                    <div class="text-content">
+                        <p draggable="true" ondragstart="drag(event)" id="newContent-4" class="newContent"
+                            style="font-size:16px;" onclick="editText(event)">Each line is a
+                            paragraph that should be
+                            edited separately and should work as intended </p>
+                    </div>
+                    <div class="img-content">
+                        <div class="image-wrapper newContent" id="newImgContent-5" onclick="editImage(event)">
+                            <img id="imgOutput-5" draggable="true" ondragstart="drag(event)" style="width:392px"
+                                src="./images/wolf_silhouette_hills_130119_1920x1080.jpg">
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -131,13 +154,35 @@
         </div>
     </main>
 
+    <!-- Save Box -->
+    <div class="save-confirm" id="confirmSave">
+        <div class="confirm-save">
+            <h1>Save Template</h1>
+            <form>
+                <input type="text" name="save" id="saveInput" placeholder="Enter Name for Template" required>
+                <div class="buttons">
+                    <button id="save" type="button" onclick="saveTemplate()">Save</button>
+                    <button type="button" onclick="cancelSave()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
     <!-- Footer Section -->
     <footer>
         <div class="container">
-            <div class="back-footer">
-                <i class="fas fa-chevron-left"></i>
-                <input type="button" onclick="location.assign('./email_temp.html')" value="Back" class="back-button">
+            <div class="footer">
+                <div class="back-footer">
+                    <i class="fas fa-chevron-left"></i>
+                    <input type="button" onclick="location.assign('./email_templates.html')" value="Back"
+                        class="back-button">
+                </div>
+
+                <div class="save">
+                    <input type="button" value="Save & Exit" onclick="displaySave()" class="button">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
             </div>
         </div>
     </footer>

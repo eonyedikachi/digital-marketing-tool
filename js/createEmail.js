@@ -1,3 +1,29 @@
+// Local Storage
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+// fetches most recent logged in user
+i = currentUser.length - 1;
+
+let templates = JSON.parse(
+  localStorage.getItem(`${currentUser[i].userName}Templates`)
+);
+
+if (currentUser == null) {
+  currentUser = [];
+}
+
+if (templates == null) {
+  templates = [];
+}
+
+// if (templates.length > 1) {
+//   i = templates.length - 1;
+//   document.getElementById("container").innerHTML = templates[i].template;
+// } else {
+//   document.getElementById("container").innerHTML = templates[0].template;
+// }
+
+// Controls and Styles Tabs
 let controls = document.getElementById("controls");
 let styles = document.getElementById("styles");
 let controlMain = document.getElementById("controlMain");
@@ -288,7 +314,7 @@ function editImage(e) {
   let edit = e.target.id;
 
   editId = document.getElementById(edit);
-  width = output.style.width;
+  width = editId.clientWidth;
 
   // Append to content
   editId.parentNode.parentNode.innerHTML = `<div class="settings" id="settings">
@@ -309,7 +335,7 @@ function editImage(e) {
                             </button>
                         </div>
                         <div class="image-wrapper">
-                            <img id="output" draggable="true" ondragstart="drag(event)" style="width:${width}" src="${editId.src}">
+                            <img id="output" draggable="true" ondragstart="drag(event)" style="width:${width}px" src="${editId.src}">
                         </div>`;
 }
 
@@ -510,4 +536,35 @@ function justify(e) {
     input.style.textAlign = "justify";
     justifyId.parentNode.parentNode.parentNode.style.textAlign = "justify";
   }
+}
+
+// Display Save
+function displaySave() {
+  let box = document.getElementById("confirmSave");
+  box.style.display = "flex";
+}
+
+// Cancel Save
+function cancelSave() {
+  let box = document.getElementById("confirmSave");
+  box.style.display = "none";
+}
+
+// Save Email Template
+function saveTemplate() {
+  // fetches most recent logged in user
+  i = currentUser.length - 1;
+
+  let newTemplate = document.getElementById("container").innerHTML;
+  let name = document.getElementById("saveInput").value;
+  templates.push({
+    name: name,
+    template: newTemplate,
+    user: currentUser[i].userName,
+  });
+  localStorage.setItem(
+    `${currentUser[i].userName}Templates`,
+    JSON.stringify(templates)
+  );
+  location.assign("./email_templates.html");
 }
