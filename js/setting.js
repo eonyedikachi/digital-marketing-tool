@@ -1,4 +1,4 @@
-// TAB
+// TAB FUNCTION
 function openSetting(evt, settingName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
