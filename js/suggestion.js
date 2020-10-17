@@ -64,6 +64,25 @@ p.style.fontSize= `${size}px`
 
 // collecting suggestion content
 
+
+
+// collecting data from local storage
+let database = JSON.parse(localStorage.getItem("database"));
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+if (database == null) {
+  database = [];
+}
+
+if (currentUser == null) {
+  currentUser = [];
+}
+
+i=currentUser.legth-1
+
+alert(i)
+
+
 // unbold= text.style.cssText="Font-weight:100";
 //     if(text.style.cssText !=unbold){
 //         text.style.cssText=bold
