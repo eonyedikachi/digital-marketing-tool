@@ -86,13 +86,8 @@
             
             <div class='menu pointerCursor hide'>
               <div class='option' id='option1' onclick="AddSubscriber()">Add a subscriber</div>
-              <div class='option' id='option2'>Import contacts</div>
-              <div class='option' id='option3'>Signup forms</div>
-              <div class='option' id='option4'>Surveys</div>
-              <div class='option' id='option4'>Inbox</div>
-              <div class='option' id='option4'>Manage contacts</div>
-              <div class='option' id='option4'>Settings</div>
-              <div class='option' id='option4'>View audiences</div>
+              <div class='option' id='option2' onclick="importContact()">Import contacts</div>
+              <div class='option' id='option4' onclick="manageContact()">Manage contacts</div>
             </div>
            </div>
           <button type="button" class="audience-btn">View Contacts</button>
@@ -101,7 +96,7 @@
 
      
     
-
+<!-- Add A new Subscribber -->
  
   <section id="addASubscriber" class="newSubsciber">
     <div class="heading">
@@ -109,23 +104,23 @@
           <p >Want to subscribe more than one person at a time? <a href="#" style="text-decoration: underline; color: rgb(37, 36, 36);">Import an audience</p></a>
         </div>
   <form class="form-field">
+    <p id="error"></p>
     <label for="email">Email Address</label>
     <input type="email" name="email" id="email"  />
 
-    <label for="firstName">Last Name</label>
+    <label for="firstName">First Name</label>
     <input type="text" name="firstName" id="firstName"  />
 
     <label for="lastName">Last Name</label>
-
-    <input type="text" name="username" id="lastName" />
+    <input type="text" name="lastName" id="lastName" />
 
 
     <label for="address"><Address></Address></label>
-    <input type="text" name="address" id="address" placeholder="Street Address" />
-    <input type="text" name="address" id="address" placeholder="Address Line 2" />
-    <input type="text" name="address" id="address" placeholder="City" />
-    <input type="text" name="address" id="address" placeholder="State/Prov/Region" />
-    <input type="text" name="address" id="address" placeholder="Postal/Zip" />
+    <input type="text" name="address1" id="address1" placeholder="Street Address" />
+    <input type="text" name="address2" id="address2" placeholder="Address Line 2" />
+    <input type="text" name="city" id="city" placeholder="City" />
+    <input type="text" name="state" id="state" placeholder="State/Prov/Region" />
+    <input type="text" name="postal" id="postal" placeholder="Postal/Zip" />
      <select id="country" name="country">
       <option value="Afganistan">Afghanistan</option>
       <option value="Albania">Albania</option>
@@ -378,24 +373,88 @@
    <input type="phone" name="phone" id="phone"  />
    <div class="birth-date">
    <label for="birth-date" >Birthday</label>
-   <input type="text" name="MM" id="mm" placeholder="MM"  /> <h1>/</h1>
-   <input type="text" name="DD" id="dd" placeholder="DD" />
+   <input type="text" name="Month" id="month" placeholder="MM"  /> <h1>/</h1>
+   <input type="text" name="Day" id="day" placeholder="DD" />
   </div>
 
-  <input type="checkbox" id="newuser" name="newuser" value="newuser">
+  <input type="checkbox" id="newuserr" name="newuser" value="newuser">
   <label for="newuser"> <h5>This person gave me permission to email them</h5>
     <p>This person will not receive a confirmation email from MartReach. <br>Since you're adding this recipient manually,<br> they won't have an opt-in IP address or date in your records,<br> so be extra sure you have permission first. Learn more</address></p></label><br>
-  <input type="checkbox" id="updateuser" name="updateuser" value="updateuser">
+  <input type="checkbox" id="updateuserr" name="updateuser" value="updateuser">
   <label for="updateuser"> <h5>If this person is already in my audience, update their profile</h5></label>
 
- <input type="submit" id="subscribe" value="subscribe" />
+ <button type="submit" id="subscribe" value="subscribe" onclick="subscribeUser()">Subscribe</button>
   </form>
 </div>
-</section>
- 
+</sectio>
+    </div>
+
+    <section id="importContact">
+    <h1>How would you like to import your contacts?</h1>
+    <p>Not sure how to format your file? <a href="#">Learn how</p></a>
+    <div class="containerr">
+      <div class="roundd">
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male"><h4>Upload file</h4></label><br>
+      <h5>Upload a CSV or tab-delimited TXT file.</h5>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female"><h4>Copy and paste</h4></label><br>
+     <h5>Copy and paste contacts from a spreadsheet.</h5>
+     <a href="#organizeContact"><button type="submit" class="upload" value="Submit">Continue to Upload</button></a>
+    </div>
+    </div>
+    </section>
+
+    <!-- Continue to Organize Page -->
+    <section id="organizeContact"> 
+      <h2>Upload your contacts</h2>
+      <div class="organizeCont">
+        <a href="#"><img src="./images/upload.png" class="uploadimg"></a>
+        <a href="#"><h5>Browse files</h5></a>
+        <div class="localUpload">
+          <button type="submit" class="organize" value="Submit">Continue to Upload</button>
+       
+        </div>
+      </div>
+
+
+
+
+
+    </section>
+    <section id="manageContact">
+      <div class="mgContainer">
+    <h1>Manage contacts</h1>
+    <a href="#"><h1>View all contacts</h1></a>
+    <p>View all the contacts in your audience.</p>
+    
+    <a href="#"><h1>Add subscriber</h1></a>
+    <p>Add a subscriber to your audience.</p>
+    
+    <a href="#"><h1>Unsubscribe people</h1></a>
+    <p>Unsubscribe people from your email marketing.</p>
+    
+    <a href="#"><h1>Groups</h1></a>
+    <p>Divide your audience into groups that contacts can opt-in to for more tailored content.</p>
+    
+    <a href="#"><h1>Segments</h1></a>
+    <p>Target specific contacts in your audience and save them in a segment to reuse later.</p>
+    
+    <a href="#"><h1>Import history</h1></a>
+    <p>View the import history for this audience.</p>
+    
+    <a href="#"><h1>Archive all contacts</h1></a>
+    <p>Archive all the contacts in your audience.</p>
+      </div>
+    
+    </section>
+<div id="bottom-container" class="">
+<!-- Import contact dropdown -->
+
+
+
 
 <!-- Import Contact -->
-
 <div class="import-contact">
     <img src="./images/aud-pic.png" alt="1">
     <div class="import-cont-heading">
@@ -404,8 +463,6 @@
       <p>data that help you market smarter.</p>
       <button type="button" class="import-cont-btn">Import Your Contacts</button>
     </div>
-
-  </div>
   </div>
 
 
@@ -438,7 +495,7 @@
   </div>
   </div>
   </div>
-
+</div>
   <footer>
     <div class="container">
       <div class="back-footer">

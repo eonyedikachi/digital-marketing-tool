@@ -35,6 +35,7 @@ section .container .audience-btn {
 }
 
 
+
 /* Dropdown CSS */
 .hide {
   max-height: 0 !important;
@@ -69,11 +70,15 @@ transition: transform .3s;
 transition: max-height .5s ease-out;
 max-height: 20em;
 overflow: hidden;
+border: #333;
+border-radius: 6px solid black;
 }
 
 .dropdownn .menu .option{
 margin: .3em .3em .3em .3em;
 margin-top: 0.3em;
+border: #333;
+border-radius: 6px solid black;
 }
 
 .dropdownn .menu .option:hover{
@@ -87,6 +92,254 @@ cursor: pointer;
 
 .rotate-90{
 transform: rotate(90deg);
+}
+
+.hidden{
+  display: none;
+}
+
+/* -----addASubscriber Section */
+#addASubscriber{
+  position: relative;
+  display: flex;
+  padding:47px;
+  margin: 40px;
+  top:-6rem;
+  display: none;
+ }
+
+ #error {
+  color: orangered;
+  text-align: center;
+  background-color: #333;
+  justify-items: center;
+  align-items: center;
+  /* margin-bottom: 2rem; */
+  font-weight: 600;
+  width: 60%;
+}
+
+ input[type=text], [type=email], [type=phone],select {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.heading{
+  padding: 1px;
+  position: relative;
+  font-weight: 300;
+  font-size: 15px;
+  margin: 1px;
+  margin-bottom: 20px;
+}
+
+
+.heading h2{
+  font-size: 50px;
+  margin-top: 20px;
+  top:-3rem;
+}
+.heading p{
+  font-size: 15px;
+  margin-top: 8px;
+  background-color: rgb(34, 174, 230);
+  width: 60%;
+  text-align: center;
+  justify-content: center;
+  height: 3rem;
+ }
+
+.birth-date {
+  display: flex;
+  width: 15rem;
+  height: 3rem;
+  
+}
+.birth-date h1{
+  height: 5rem;
+  margin: 10px;
+}
+
+input[type=checkbox]  {
+width: 1.5rem;
+padding: 5px;
+margin: 10px;
+height: 1.5rem;
+position: relative;
+display: block;
+
+}
+#subscribe {
+width: 9rem;
+height: 3rem;
+background-color: #565758;
+color: #fff;
+cursor: pointer;
+font-size: 16px;
+margin: 1rem 1rem;
+border-radius: none;
+position: absolute;
+display: block;
+}
+@media screen and (max-width: 960px) {
+#addASubscriber{
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+}
+h1 h2 h5 p{
+  display: block;
+  width: 100px;
+  padding: 20px;
+  margin: 10px;
+
+}
+}
+
+/* Radio button */
+
+#importContact{
+width: 98vw;
+height: 98vh;
+padding: 50px;
+margin: 50px;
+display: none;
+padding-bottom: 200px;
+margin-bottom: 200px;
+}
+.containerr{
+height: 98vh;
+width: 80vw;
+padding: 30px;
+margin: 30px;
+position: relative;
+}
+
+
+input[type="radio"] {
+  -ms-transform: scale(2.5); 
+  -webkit-transform: scale(2.5); 
+  transform: scale(2.5);
+}
+#importContact h1 p{
+position: relative;
+padding: 50px;
+margin: 5opx;
+}
+
+
+h4{
+position: relative;
+margin-left: 20px;
+top:0px;
+
+}
+
+h5{
+position: relative;
+margin: 20px;
+top:-50px;
+padding: 20px;
+}
+
+.upload {
+width: 12rem;
+height: 3rem;
+background-color: #3885d1;
+color: #fff;
+cursor: pointer;
+font-size: 16px;
+margin: 1rem 1rem;
+border-radius: none;
+position: absolute;
+display: block;
+}
+
+
+/* Continue to Organize Page */
+#organizeContact{
+  
+  width: 98vw;
+  height: 98vh;
+  padding:100px;
+  margin: 100px;
+  
+}
+.organizeCont{
+  width: 60%;
+  height: 30%;
+  background-color: rgb(238, 235, 235);
+  padding: 50px;
+  margin: 50px;
+}
+
+.organize{
+position: relative;
+width: 15rem;
+height: 3rem;
+background-color: #3885d1;
+color: #fff;
+cursor: pointer;
+font-size: 16px;
+margin-bottom: 20px;
+border-radius: none;
+position: absolute;
+display: block;
+margin-top: -50px;
+left: 15.5rem;
+
+}
+h2{
+  padding: 25px;
+  margin: 25px;
+}
+.uploadimg{
+  position: relative;
+  width: 3rem;
+  height: 2rem;
+ margin-bottom: 40px;
+  left: 44%;
+  top: -38px;
+  
+}
+h5{
+  font-size: 25px;
+  left: 32%;
+  top: -100px;
+}
+
+
+/* Manage Contact */
+#manageContact{
+position: relative;
+
+margin: 50px 50px 50px 50px;
+width: 98vw;
+height: 98vh;
+display: none;
+padding: 50px;
+margin: 50px;
+
+}
+
+.mgContainer{
+margin-bottom: 50px;
+position: relative;
+margin-bottom: 50px;
+padding-bottom: 50px;
+
+
+}
+h1 h2 p{
+
+position: relative;
+font-weight: 700;
+font-size: 100px;
 }
 
 
@@ -243,7 +496,7 @@ input[type=checkbox]  {
   color: #fff;
   cursor: pointer;
   font-size: 16px;
-  margin: 3rem 1rem;
+  margin: 1rem 1rem;
   border-radius: none;
   position: absolute;
   display: block;
@@ -263,3 +516,4 @@ input[type=checkbox]  {
 
   }
 }
+
