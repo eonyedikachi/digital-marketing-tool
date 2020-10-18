@@ -1,0 +1,198 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #4eb1f5;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main */
+.emailTemp {
+  padding: 1rem;
+  min-height: calc(100vh - 138.7778px);
+}
+
+/* Templates */
+.templates {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.templates a {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.7rem;
+  width: 150px;
+  text-align: center;
+}
+
+.email_temp .search {
+  width: 500px;
+  height: 36px;
+}
+
+.email_temp .search input {
+  width: 80%;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border: 1px solid grey;
+}
+
+.email_temp .search button {
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 9%;
+  border: 1px solid grey;
+  background: none;
+}
+
+#cancelBtn {
+  background: red;
+  display: none;
+}
+
+.email_temp .search i {
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.template_list {
+  margin-top: 2rem;
+}
+
+.template_list .temp {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+  padding: 1rem 0;
+}
+
+.template_list .temp .description {
+  display: flex;
+  align-items: center;
+}
+
+.template_list .temp .description .image {
+  width: 120px;
+  margin: 0 1rem;
+  border: 1px solid grey;
+}
+
+.template_list .temp .description .image img {
+  width: 100%;
+}
+
+.template_list .temp .description .info {
+  margin: 0 1rem;
+}
+
+.template_list .temp .description .info a {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.template_list .temp .description .info a:hover {
+  color: rgb(59, 59, 238);
+}
+
+.template_list .temp .description .info p {
+  font-size: 1.2rem;
+}
+
+.template_list .temp .description .info p span {
+  font-weight: bold;
+}
+
+.template_list .temp .edit button {
+  width: 100px;
+  padding: 0.5rem;
+  border: none;
+  margin: 0 0.5rem;
+}
+
+.template_list .temp .edit button:last-child {
+  background: red;
+  color: white;
+}
+
+.template_list .temp .edit button:first-child:hover {
+  background: rgb(184, 182, 182);
+}
+
+.template_list .temp .edit button:last-child:hover {
+  background: rgb(224, 7, 7);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .nav-link {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+/* Bootstrap unset */
+a,
+a:hover,
+a:focus,
+:active {
+  text-decoration: none;
+}
+
+ul,
+p {
+  margin-bottom: unset;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+button:focus,
+button:active {
+  cursor: unset;
+  border: none;
+  outline: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: unset;
+  font-family: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+button {
+  border-radius: unset;
+}
+
+.nav-tabs .nav-item a {
+  color: var(--secondary-color);
+}
+
+.nav-tabs .nav-item a:hover {
+  color: rgb(0, 123, 255);
+}
+
+.navbar {
+  display: block;
+  padding: 0.65rem 0.8rem;
+}
+
+.container {
+  padding-right: unset;
+  padding-left: unset;
+}

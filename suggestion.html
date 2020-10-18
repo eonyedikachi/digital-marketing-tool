@@ -104,21 +104,36 @@
                     </option>
                     <option value="">Presentation
                     </option>
+                    <option value="">Complains
+                    </option>
+                    <option value="">Others
+                    </option>
                 </select>
             </div>
             </header>
 
             <div class="mainsuggestion">
                 <h2>Suggestion</h2>
-                <form data-netlify="true" method="post" name="suggestion">
+                <fieldset>
+                    <button onclick="boldd()" ><i class="fas fa-bold" id="innerBold"></i></button>
+                    <button onclick="ittalize()"><i class="fas fa-italic" id="innerItalic"></i></button>
+                    <button onclick="underline()"><i class="fas fa-underline" id="innerUnderline"></i></button>
+                    <button onclick="tleft()"><i class="fas fa-align-left" id="innerAlignLeft"></i></button>
+                    <button onclick="tcenter()"><i class="fas fa-align-center" id="innerAlignCenter"></i></button>
+                    <button onclick="tright()"><i class="fas fa-align-right" id="innerAlignRight"></i></button>
+                    <input type="number" name="" id="fontsize" onclick="fontsize()" value="16">
+                </fieldset>
+                <form data-netlify="true" method="post" name="suggestion" id="form">
                     <textarea id="comment" name="comment" placeholder="Enter your suggestion"></textarea>
                     </textarea>
                     <br>
                     <button type="submit">Send</button>
+
                 </form>
             </div>
         </div>
     </main>
+    
 
     <!-- Footer Section -->
     <footer>
@@ -139,6 +154,7 @@
         crossorigin="anonymous"></script>
 
     <script src="./js/nav.js"></script>
+    <script src="./js/suggestion.js"></script>
     <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
 </body>
 
