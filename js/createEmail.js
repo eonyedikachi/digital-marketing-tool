@@ -548,23 +548,65 @@ function displaySave() {
 function cancelSave() {
   let box = document.getElementById("confirmSave");
   box.style.display = "none";
+  let error = document.getElementById("error");
+  error.innerHTML = "";
 }
 
 // Save Email Template
 function saveTemplate() {
+  // Get date
+  var d = new Date();
+
+  let month = d.getMonth();
+  d.setMonth(month);
+  let date = d.getDate();
+  d.setDate(date);
+  let year = d.getFullYear();
+  d.setFullYear(year);
+  let hours = d.getHours();
+  d.setHours(hours);
+  let minutes = d.getMinutes();
+  d.setMinutes(minutes);
+
+  var months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  months[month];
+
   // fetches most recent logged in user
   i = currentUser.length - 1;
 
   let newTemplate = document.getElementById("container").innerHTML;
   let name = document.getElementById("saveInput").value;
-  templates.push({
-    name: name,
-    template: newTemplate,
-    user: currentUser[i].userName,
-  });
-  localStorage.setItem(
-    `${currentUser[i].userName}Templates`,
-    JSON.stringify(templates)
-  );
-  location.assign("./email_templates.html");
+  if (name == "" || name == null || name == undefined) {
+    let error = document.getElementById("error");
+    error.innerHTML = "Please enter name for template";
+    error.style.color = "red";
+  } else {
+    templates.push({
+      name: name,
+      template: newTemplate,
+      user: currentUser[i].userName,
+      date: `${
+        months[d.getMonth()]
+      } ${d.getDate()}, ${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`,
+    });
+    localStorage.setItem(
+      `${currentUser[i].userName}Templates`,
+      JSON.stringify(templates)
+    );
+    location.assign("./email_templates.html");
+  }
 }
