@@ -583,11 +583,6 @@ function saveTemplate() {
     "December",
   ];
 
-  months[month];
-
-  // fetches most recent logged in user
-  i = currentUser.length - 1;
-
   let newTemplate = document.getElementById("container").innerHTML;
   let name = document.getElementById("saveInput").value;
   if (name == "" || name == null || name == undefined) {
@@ -595,18 +590,35 @@ function saveTemplate() {
     error.innerHTML = "Please enter name for template";
     error.style.color = "red";
   } else {
-    templates.push({
+    // fetches most current user
+    i = currentUser.length - 1;
+
+    // New email template object
+    let emailTemplate = {
       name: name,
       template: newTemplate,
       user: currentUser[i].userName,
       date: `${
         months[d.getMonth()]
       } ${d.getDate()}, ${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`,
-    });
-    localStorage.setItem(
-      `${currentUser[i].userName}Templates`,
-      JSON.stringify(templates)
+    };
+
+    // Checks if name exists already
+    let isName = templates.find(
+      (element) => element.name == emailTemplate.name
     );
-    location.assign("./email_templates.html");
+
+    if (isName) {
+      error.innerHTML = "Name has been taken!";
+      error.style.color = "red";
+    } else {
+      templates.push(emailTemplate);
+
+      localStorage.setItem(
+        `${currentUser[i].userName}Templates`,
+        JSON.stringify(templates)
+      );
+      location.assign("./email_templates.html");
+    }
   }
 }
