@@ -26,10 +26,6 @@ body {
 a {
   text-decoration: none;
 }
-#notify a i:hover{
-background-color: #4eb1f5;
-color: #fff;
-}
 
 /* Utilities */
 .container {
@@ -135,6 +131,7 @@ color: #fff;
   flex-direction: row;
   background-color: transparent;
   flex: 1.5;
+
 }
 .left {
   height: 70%;
@@ -166,16 +163,12 @@ color: #fff;
   border-radius: 5px;
 }
 
-
 .middle {
   height: 100%;
   width: 60%;
   background-color: transparent;
   border-right: 2px solid var(--secondary-color);
   border-left: 2px solid var(--secondary-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 .middle .search-notify {
   display: flex;
@@ -224,6 +217,53 @@ color: #fff;
   height: 200px;
   width: auto;
 }
+/* middle heading */
+.middleheading{
+    text-align: center;
+    margin-top: 2rem;
+    color: #4eb1f5;
+}
+/* each suggest box */
+#suggest{
+    line-height: 2rem;
+    margin: 1rem 2rem;
+    background-color: #4eb1f5;
+    padding: 10px;
+    border-radius: 1rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+#index{
+  /* display: none; */
+}
+/* responds */
+#responds{
+    display: flex;
+   
+}
+#responds button{
+    flex: 1;
+    background: #fff;
+    color: #4eb1f5;
+    border-radius: 5px;
+    padding: 5px;
+    justify-content: space-around; 
+}
+#responds button:hover{
+    background-color: #4eb1f5;
+    color: #fff;
+    border: 1px #fff solid;
+}
+/* reply textarea */
+input{
+  background-color: #4eb1f5;
+  color: #fff;
+  border-radius: 1rem;
+  ;
+  padding: 10px;
+  
+}
+
 .right {
   height: 40%;
   width: 15%;

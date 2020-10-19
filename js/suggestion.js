@@ -61,3 +61,86 @@ const  p=   document.getElementById("comment");
 const size = document.getElementById("fontsize").value;
 p.style.fontSize= `${size}px`
 }
+
+// collecting suggestion content
+
+
+
+// collecting data from local storage
+let database = JSON.parse(localStorage.getItem("database"));
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+if (database == null) {
+  database = [];
+}
+
+if (currentUser == null) {
+  currentUser = [];
+}
+// accessing loged in user
+let i= currentUser.length-1
+
+// fetcing the name of logged in user
+let namme=`${currentUser[i].firstName} ${currentUser[i].lastName}`;
+
+
+// feching the message of logged in user
+let message= document.getElementById("comment").value;
+
+//  feching selected category
+ let category= document.getElementById("catlist").value;
+
+//  putting all info into object
+function sendsuggest(){
+const message= document.getElementById("comment").value;
+const category= document.getElementById("catlist").value;
+const info =
+{
+           "fullname":`${namme}`,
+           "category":category,
+            "message": message
+           
+};
+suggestions = JSON.parse(localStorage.getItem("suggestions"));
+if (suggestions == null) {
+  suggestions = [];
+  suggestions.push(info);
+localStorage.setItem('suggestions',JSON.stringify(suggestions));
+alert("Suggestion Sent")
+}else{
+  // suggestions = JSON.parse(localStorage.getItem("suggestions"))
+  let infos = 
+  {
+    "fullname":`${namme}`,
+    "category":category,
+     "message": message
+    
+}
+suggestions.push(infos);
+localStorage.setItem('suggestions',JSON.stringify(suggestions));
+alert("Suggestion Sent");
+}
+}
+
+ 
+
+
+
+
+
+// unbold= text.style.cssText="Font-weight:100";
+//     if(text.style.cssText !=unbold){
+//         text.style.cssText=bold
+//     }
+//            else if( text.style.cssText=bold){
+//             text.style.cssText=unbold
+//            }
+//         }
+// setting Itallic
+// function itallic(){
+//     itallicc= text.style.cssText="font-style: italic;"
+//     initallicc= text.style.cssText="font-style: normal";
+//     if( text.style.cssText != itallicc){
+//         text.style.cssText=itallicc
+//     }
+// }

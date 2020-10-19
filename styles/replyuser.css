@@ -26,10 +26,6 @@ body {
 a {
   text-decoration: none;
 }
-#notify a i:hover{
-background-color: #4eb1f5;
-color: #fff;
-}
 
 /* Utilities */
 .container {
@@ -135,6 +131,7 @@ color: #fff;
   flex-direction: row;
   background-color: transparent;
   flex: 1.5;
+
 }
 .left {
   height: 70%;
@@ -166,16 +163,12 @@ color: #fff;
   border-radius: 5px;
 }
 
-
 .middle {
   height: 100%;
   width: 60%;
   background-color: transparent;
   border-right: 2px solid var(--secondary-color);
   border-left: 2px solid var(--secondary-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 .middle .search-notify {
   display: flex;
@@ -224,6 +217,65 @@ color: #fff;
   height: 200px;
   width: auto;
 }
+/* middle heading */
+.middleheading{
+    text-align: center;
+    margin-top: 2rem;
+    color: #4eb1f5;
+}
+/* styling reply box */
+#comment{
+    
+    background-color: #4eb1f5;
+    padding: 10px;
+    border-radius: 1rem;
+    color: #fff;
+    letter-spacing: 1px;
+    width: 80%;
+    height: 50%;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+/* whiziwig */
+fieldset{
+    display: flex;
+   justify-content: center;
+}
+fieldset button{
+    width: 2.5rem;
+    height: 3rem;
+    background-color: #4eb1f5;
+    border-radius: 5px;
+    padding: 0.1rem;
+    border-radius: 5px;
+    margin: 0 1rem;
+} 
+fieldset input{
+    width: 2.5rem;
+    height: 3rem;
+    background-color: #4eb1f5;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.1rem;
+    font-weight: bold;
+  }
+  /* Send button */
+  #sendbutton{
+    padding: 10px;
+    width: 100px;
+    margin: 10px;
+    background: #4eb1f5;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 22rem;
+    
+  }
+  #sendbutton:hover {
+    background-color: #fff;
+    color: #4eb1f5;
+  }
 .right {
   height: 40%;
   width: 15%;
