@@ -59,11 +59,13 @@ function drop(e) {
   //copying music
   let newAudio = document.createElement("audio");
   newAudio.src = element.src;
+  newAudio.controls = true;
   newAudio.innerText = `<source src="${newAudio.src}" type="audio/mpeg">`;
-  newAudio.style.width = "100px";
+  newAudio.style.width = "300px";
   newAudio.style.height = "100px";
   newAudio.id = element.id + "a";
   newAudio.setAttribute("ondragstart", "drag(event)");
+
   // Creating new element
   let newElement = document.createElement("div");
 
@@ -114,13 +116,137 @@ function drop(e) {
 
   if (elementTagName == "IMG") {
     container.appendChild(newImage);
+
+    // var width = window.innerWidth;
+    // var height = window.innerHeight;
+
+    // function update(activeAnchor) {
+    //   var group = activeAnchor.getParent();
+
+    //   var topLeft = group.get(".topLeft")[0];
+    //   var topRight = group.get(".topRight")[0];
+    //   var bottomRight = group.get(".bottomRight")[0];
+    //   var bottomLeft = group.get(".bottomLeft")[0];
+    //   var image = group.get("Image")[0];
+
+    //   var anchorX = activeAnchor.getX();
+    //   var anchorY = activeAnchor.getY();
+
+    //   // update anchor positions
+    //   switch (activeAnchor.getName()) {
+    //     case "topLeft":
+    //       topRight.y(anchorY);
+    //       bottomLeft.x(anchorX);
+    //       break;
+    //     case "topRight":
+    //       topLeft.y(anchorY);
+    //       bottomRight.x(anchorX);
+    //       break;
+    //     case "bottomRight":
+    //       bottomLeft.y(anchorY);
+    //       topRight.x(anchorX);
+    //       break;
+    //     case "bottomLeft":
+    //       bottomRight.y(anchorY);
+    //       topLeft.x(anchorX);
+    //       break;
+    //   }
+
+    //   image.position(topLeft.position());
+
+    //   var width = topRight.getX() - topLeft.getX();
+    //   var height = bottomLeft.getY() - topLeft.getY();
+    //   if (width && height) {
+    //     image.width(width);
+    //     image.height(height);
+    //   }
+    // }
+    // function addAnchor(group, x, y, name) {
+    //   var stage = group.getStage();
+    //   var layer = group.getLayer();
+
+    //   var anchor = new Konva.Circle({
+    //     x: x,
+    //     y: y,
+    //     stroke: "#666",
+    //     fill: "#ddd",
+    //     strokeWidth: 2,
+    //     radius: 8,
+    //     name: name,
+    //     draggable: true,
+    //     dragOnTop: false,
+    //   });
+
+    //   anchor.on("dragmove", function () {
+    //     update(this);
+    //     layer.draw();
+    //   });
+    //   anchor.on("mousedown touchstart", function () {
+    //     group.draggable(false);
+    //     this.moveToTop();
+    //   });
+    //   anchor.on("dragend", function () {
+    //     group.draggable(true);
+    //     layer.draw();
+    //   });
+    //   // add hover styling
+    //   anchor.on("mouseover", function () {
+    //     var layer = this.getLayer();
+    //     document.body.style.cursor = "pointer";
+    //     this.strokeWidth(4);
+    //     layer.draw();
+    //   });
+    //   anchor.on("mouseout", function () {
+    //     var layer = this.getLayer();
+    //     document.body.style.cursor = "default";
+    //     this.strokeWidth(2);
+    //     layer.draw();
+    //   });
+
+    //   group.add(anchor);
+    // }
+
+    // var stage = new Konva.Stage({
+    //   container: "container",
+    //   width: width,
+    //   height: height,
+    // });
+
+    // var layer = new Konva.Layer();
+    // stage.add(layer);
+
+    // //Image
+    // var darthVaderImg = new Konva.Image({
+    //   width: 200,
+    //   height: 137,
+    // });
+
+    // var darthVaderGroup = new Konva.Group({
+    //   x: 180,
+    //   y: 50,
+    //   draggable: true,
+    // });
+    // layer.add(darthVaderGroup);
+    // darthVaderGroup.add(darthVaderImg);
+    // addAnchor(darthVaderGroup, 0, 0, "topLeft");
+    // addAnchor(darthVaderGroup, 200, 0, "topRight");
+    // addAnchor(darthVaderGroup, 200, 138, "bottomRight");
+    // addAnchor(darthVaderGroup, 0, 138, "bottomLeft");
+
+    // var imageObj1 = new Image();
+    // imageObj1.onload = function () {
+    //   console.log("im here");
+    //   darthVaderImg.image(imageObj1);
+    //   layer.draw();
+    // };
+    // imageObj1.src = `${newImage.src}`;
   }
   if (elementTagName == "VIDEO") {
     container.appendChild(newVideo);
   }
   if (elementTagName == "AUDIO") {
     container.appendChild(newAudio);
-    alert(elementTagName);
+    // alert(elementTagName);
   }
 }
 // outputa output2a
@@ -189,28 +315,6 @@ function remove(e) {
 
     // Delete content
     closeId.parentNode.parentNode.parentNode.remove();
-  }
-}
-
-// Save text elements
-function saveText(e) {
-  // target save button id
-  let save = e.target.id;
-
-  // get value in input box
-  let input = document.getElementById("input").value;
-
-  // check if input is empty
-  if (input != "") {
-    if (save == "inner") {
-      saveId = document.getElementById(save);
-
-      // Append content
-      saveId.parentNode.parentNode.parentNode.innerHTML = `<p id='newContent-${i++}' class='newContent' onclick='editText(event)'>${input}</p>`;
-    }
-  } else {
-    document.getElementById("error").style.display = "block";
-    document.getElementById("error").style.color = "red";
   }
 }
 
@@ -373,4 +477,10 @@ function underlineText(e) {
       underlineId.style.border = "1px solid black";
     }
   }
+}
+
+document.getElementById('getDetails').addEventListener('click', getDetails)
+
+function getDetails() {
+  alert('Malik')
 }
