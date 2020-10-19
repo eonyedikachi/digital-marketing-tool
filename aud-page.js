@@ -158,8 +158,6 @@ function subscribeUser(e){
 
 
 function validate(user) {
-  console.log('I am a chosen one gettin here =====================>')
-
   const regExEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 if (!regExEmail.test(user.email)) {
   document.getElementById("error").innerHTML = "Enter a valid email address!";

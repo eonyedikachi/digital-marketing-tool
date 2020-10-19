@@ -240,7 +240,9 @@ top:0px;
 
 }
 
-h5{
+h6{
+  font-size: 20px;
+  font-weight: 400;
 position: relative;
 margin: 20px;
 top:-50px;
@@ -291,7 +293,7 @@ margin-bottom: 20px;
 border-radius: none;
 position: absolute;
 display: block;
-margin-top: -50px;
+margin-top: 40px;
 left: 15.5rem;
 
 }
@@ -308,11 +310,11 @@ h3{
   top: -38px;
   
 }
-h5{
+/* h5{
   font-size: 25px;
   left: 32%;
   top: -100px;
-}
+} */
 
 
 /* Manage Contact */
