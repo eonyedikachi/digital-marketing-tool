@@ -72,7 +72,7 @@ function boldd() {
         replies = [];
         replies.push(info);
       localStorage.setItem('replies',JSON.stringify(replies));
-      alert("successful")
+      alert("reply sent")
       }else{
         // suggestions = JSON.parse(localStorage.getItem("suggestions"))
         let infos = 
@@ -83,7 +83,7 @@ function boldd() {
       }
       replies.push(infos);
       localStorage.setItem('replies',JSON.stringify(replies));
-      alert("congratulation");
+      alert("reply sent");
       }
       }
       

@@ -106,7 +106,7 @@ if (suggestions == null) {
   suggestions = [];
   suggestions.push(info);
 localStorage.setItem('suggestions',JSON.stringify(suggestions));
-alert("successful")
+alert("Suggestion Sent")
 }else{
   // suggestions = JSON.parse(localStorage.getItem("suggestions"))
   let infos = 
@@ -118,7 +118,7 @@ alert("successful")
 }
 suggestions.push(infos);
 localStorage.setItem('suggestions',JSON.stringify(suggestions));
-alert("congratulation");
+alert("Suggestion Sent");
 }
 }
 
