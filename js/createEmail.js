@@ -92,24 +92,12 @@ function drop(e) {
                                 <option value="38px">38px</option>
                                 <option value="40px">40px</option>
                             </select>
-                            <button class="button" id="alignLeftButton" onclick="alignLeft(event)">
-                            <i class="fas fa-align-left" id="innerAlignLeft"></i>
-                            </button>
-                            <button class="button" id="alignCenterButton" onclick="alignCenter(event)">
-                            <i class="fas fa-align-center" id="innerAlignCenter"></i>
-                            </button>
-                            <button class="button" id="alignRightButton" onclick="alignRight(event)">
-                            <i class="fas fa-align-right" id="innerAlignRight"></i>
-                            </button>
-                            <button class="button" id="justifyButton" onclick="justify(event)">
-                            <i class="fas fa-align-justify" id="innerJustify"></i>
-                            </button>
                             <input type="color" name="text-element-color" id="textElementColor" onchange="changeTextElementColor()">
                             <button class="button" id="saveButton" onclick="saveText(event)">
                             <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
-                        <textarea rows="4" class="text" id='input'></textarea>
+                        <input type="text" class="text" id='input'>
                         <p style='display:none' id='error'>Put input or delete input box</p>`;
 
     // Append div to drop target
@@ -185,7 +173,6 @@ function saveText(e) {
   let input = document.getElementById("input").value;
   let fontSize = document.getElementById("fontSize").value;
   let color = document.getElementById("input").style.color;
-  let align = document.getElementById("input").style.textAlign;
 
   // check if input is empty
   if (input != "") {
@@ -193,7 +180,7 @@ function saveText(e) {
       saveId = document.getElementById(save);
 
       // Append content
-      saveId.parentNode.parentNode.parentNode.innerHTML = `<p draggable="true" ondragstart="drag(event)" id='newContent-${i++}' class='newContent' style='font-size:${fontSize}; color:${color}; text-align:${align}' onclick='editText(event)'>${input}</p>`;
+      saveId.parentNode.parentNode.parentNode.innerHTML = `<p draggable="true" ondragstart="drag(event)" id='newContent-${i++}' class='newContent' style='font-size:${fontSize}; color:${color}' onclick='editText(event)'>${input}</p>`;
     }
   } else {
     document.getElementById("error").style.display = "block";
@@ -228,8 +215,6 @@ function editText(e) {
   editId = document.getElementById(edit);
   color = editId.style.color;
   font = editId.style.fontSize;
-  align = editId.style.textAlign;
-  text = editId.textContent;
 
   // Append to content
   editId.parentNode.innerHTML = `<div class="settings">
@@ -261,24 +246,12 @@ function editText(e) {
                                 <option value="38px">38px</option>
                                 <option value="40px">40px</option>
                             </select>
-                            <button class="button" id="alignLeftButton" onclick="alignLeft(event)">
-                            <i class="fas fa-align-left" id="innerAlignLeft"></i>
-                            </button>
-                            <button class="button" id="alignCenterButton" onclick="alignCenter(event)">
-                            <i class="fas fa-align-center" id="innerAlignCenter"></i>
-                            </button>
-                            <button class="button" id="alignRightButton" onclick="alignRight(event)">
-                            <i class="fas fa-align-right" id="innerAlignRight"></i>
-                            </button>
-                            <button class="button" id="justifyButton" onclick="justify(event)">
-                            <i class="fas fa-align-justify" id="innerJustify"></i>
-                            </button>
                             <input type="color" name="text-element-color" id="textElementColor" onchange="changeTextElementColor()">
                             <button class="button" id="saveButton" onclick="saveText(event)">
                             <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
-                        <textarea rows="4" class="text" id='input' style='font-size:${font}; color:${color}; text-align:${align}'>${text}</textarea>
+                        <input type="text" class="text" id='input' style='font-size:${font}; color:${color}' value='${editId.textContent}'>
                         <p style='display:none' id='error'>Put input or delete input box</p>`;
 }
 
@@ -457,57 +430,5 @@ function underlineText(e) {
         "underline";
       underlineId.style.border = "1px solid black";
     }
-  }
-}
-
-// align left text
-function alignLeft(e) {
-  input = document.getElementById("input");
-  // target alignLeft button id
-  let alignLeft = e.target.id;
-  if (alignLeft == `innerAlignLeft`) {
-    alignLeftId = document.getElementById(alignLeft);
-
-    input.style.textAlign = "left";
-    alignLeftId.parentNode.parentNode.parentNode.style.textAlign = "left";
-  }
-}
-
-// align right text
-function alignRight(e) {
-  input = document.getElementById("input");
-  // target alignRight button id
-  let alignRight = e.target.id;
-  if (alignRight == `innerAlignRight`) {
-    alignRightId = document.getElementById(alignRight);
-
-    input.style.textAlign = "right";
-    alignRightId.parentNode.parentNode.parentNode.style.textAlign = "right";
-  }
-}
-
-// align center text
-function alignCenter(e) {
-  input = document.getElementById("input");
-  // target alignCenter button id
-  let alignCenter = e.target.id;
-  if (alignCenter == `innerAlignCenter`) {
-    alignCenterId = document.getElementById(alignCenter);
-
-    input.style.textAlign = "center";
-    alignCenterId.parentNode.parentNode.parentNode.style.textAlign = "center";
-  }
-}
-
-// justify text
-function justify(e) {
-  input = document.getElementById("input");
-  // target justify button id
-  let justify = e.target.id;
-  if (justify == `innerJustify`) {
-    justifyId = document.getElementById(justify);
-
-    input.style.textAlign = "justify";
-    justifyId.parentNode.parentNode.parentNode.style.textAlign = "justify";
   }
 }

@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <title>MartReach | Design</title>
-
+  <script src="https://unpkg.com/konva@4.0.18/konva.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="stylesheet" href="./styles/contact.css" />
@@ -198,23 +198,32 @@
 
       </li>
       <li>
-        <div class="btn-group dropup">
+        <div class="btn-group dropright">
           <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <a href="#"><i class="far fa-folder-open"></i>
               <h6>Folders</h6>
             </a>
           </button>
-          <div class="dropdown-menu">
+          <div class="dropdown-menu p-1">
             <!-- Dropdown menu links -->
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+
+            <a style="display: flex; flex-direction: row; cursor: pointer; background-color: #4eb1f5; justify-content: space-between; padding: 10px;">
+              <div>
+                <i class="fas fa-plus" style="font-size: 30px; padding: 5px; border: dotted 1px #4eb1f5; margin: 3px;"></i>
+              </div>
+              <div>
+                <span style="font-size: 13px;">Create Folder</span>
+                <span><i class="fas fa-crown" style="font-size: 13px;">Learn More</i></span>
+              </div>
+            </a>
 
           </div>
         </div>
 
       </li>
+       
+      
     </ul>
   </div>
   <div class="right-fixed" id="parent-container">
@@ -225,13 +234,14 @@
         </div>
         <div class="top-right">
         <input type="color" name="change-color" id="change-color" onblur="changeContainerColor()">
-         <i class="far fa-clone"></i>
+         <i class="far fa-clone" id="getDetails"></i>
          <i class="far fa-trash-alt" ondragover="droppable(event)"  ondrop="discard(event)"></i>
         </div>
       </div>
       <div class="page-bottom" id="container"
       ondragover="droppable(event)"
-      ondrop="drop(event)" ></div>
+      ondrop="drop(event)" >
+    </div>
     </div>
   </div>
 </main>
@@ -246,14 +256,24 @@
 </footer>
 
 <script src="js/createLanding.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="./js/nav.js"></script>
 <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+<script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  
 </body>
 
 </html>
