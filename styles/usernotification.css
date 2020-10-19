@@ -1,3 +1,31 @@
+#button{
+    flex: 1;
+    background: #fff;
+    color: #4eb1f5;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+#button:hover{
+    background-color: #4eb1f5;
+    color: #fff;
+    border: 1px #fff solid
+}
+#middle{
+    line-height: 2rem;
+    margin: 1rem 2rem;
+    background-color: #4eb1f5;
+    padding: 10px;
+    border-radius: 1rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.middle h2{
+    color: #4eb1f5;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
 
 *,
@@ -25,10 +53,6 @@ body {
 
 a {
   text-decoration: none;
-}
-#notify a i:hover{
-background-color: #4eb1f5;
-color: #fff;
 }
 
 /* Utilities */
@@ -166,14 +190,12 @@ color: #fff;
   border-radius: 5px;
 }
 
-
 .middle {
   height: 100%;
   width: 60%;
   background-color: transparent;
   border-right: 2px solid var(--secondary-color);
   border-left: 2px solid var(--secondary-color);
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
 }

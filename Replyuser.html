@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Reports | MartReach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | MartReach</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/suggestion.css" />
+    <link rel="stylesheet" href="./styles/replyuser.css" />
     <link rel="stylesheet" href="styles/createLanding.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -17,7 +17,6 @@
 
 <body>
 
-    <!-- Header Section -->
     <header class="navbar">
         <div class="container">
             <div class="logo">
@@ -33,7 +32,7 @@
             <nav>
                 <ul class="nav-list">
                     <li class="nav-items">
-                        <a href="dashboard.html">Home</a>
+                        <a href="./admin-dashboard.html">Home</a>
                     </li>
 
                     <li class="nav-items">
@@ -68,82 +67,83 @@
             </nav>
         </div>
     </header>
-    <main>
-        <!-- Suggestion heading -->
-        <h1 class="heading">Suggestions</h1>
 
-        <!-- images categories -->
-        <div class="img">
-            <div><a href=""><img src="./images/email-temp.jpg" alt="Email Templete"></a>
-                <h4>Email Template</h4>
+
+    <main class="main" style="height: 87vh; background-color: #f1f9fe">
+        <div class="left">
+            <div id="mart">
+                <h3>Mart Reach</h3>
             </div>
-            <div><a href=""><img src="./images/Langing page.jpg" alt="Landing page"></a>
-                <h4>Landing page</h4>
+            <div class="dash-list">
+                <ul>
+                    <li>
+                        <i class="fas fa-columns"></i>
+                        <a href="./admin-dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-user"></i>
+                        <a href="./user-management.html">User Management</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-comment-dots"></i>
+                        <a href="./feedbackpool.html">Feedback</a>
+
+                    </li>
+                </ul>
             </div>
-            <div><a href=""><img src="./images/Social Media.png" alt="Social Media"></a>
-                <h4>Social Media</h4>
+            <div class="dash-pro">
+                <h3><a href="#">Administrator</a></h3>
             </div>
         </div>
-
-        <!-- Select category -->
-        <div class="select-category">
-            <div class="selectcat">
-                <h2> Select Category</h2>
-                <select name="" id="catlist" class="categorylists">
-                    <option value="Email Template">Email Template
-                    </option>
-                    <option value="Landing Page">Landing Page
-                    </option>
-                    <option value="Social media"> Social media
-                    </option>
-                    <option value="Posters">Posters
-                    </option>
-                    <option value="Fliers">Fliers
-                    </option>
-                    <option value="Cards">Cards
-                    </option>
-                    <option value="Presentation">Presentation
-                    </option>
-                    <option value="Complains">Complains
-                    </option>
-                    <option value="Others">Others
-                    </option>
-                </select>
+        <div class="middle">
+            <h2 class="middleheading">
+                REPLY
+            </h2>
+            <fieldset>
+                <button onclick="boldd()" ><i class="fas fa-bold" id="innerBold"></i></button>
+                <button onclick="ittalize()"><i class="fas fa-italic" id="innerItalic"></i></button>
+                <button onclick="underline()"><i class="fas fa-underline" id="innerUnderline"></i></button>
+                <button onclick="tleft()"><i class="fas fa-align-left" id="innerAlignLeft"></i></button>
+                <button onclick="tcenter()"><i class="fas fa-align-center" id="innerAlignCenter"></i></button>
+                <button onclick="tright()"><i class="fas fa-align-right" id="innerAlignRight"></i></button>
+                <input type="number" name="" id="fontsize" onclick="fontsize()" value="16">
+            </fieldset>
+           <TExtarea id="comment"></TExtarea><br>
+           <button onclick="sendreply()" id="sendbutton">Send</button>
+        </div>
+        <div class="right">
+            <div class="user">
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span id="usersname111">Malik Mukhtar</span>
+                </a>
             </div>
-            </header>
-
-            <div class="mainsuggestion">
-                <h2>Suggestion</h2>
-                <fieldset>
-                    <button onclick="boldd()" ><i class="fas fa-bold" id="innerBold"></i></button>
-                    <button onclick="ittalize()"><i class="fas fa-italic" id="innerItalic"></i></button>
-                    <button onclick="underline()"><i class="fas fa-underline" id="innerUnderline"></i></button>
-                    <button onclick="tleft()"><i class="fas fa-align-left" id="innerAlignLeft"></i></button>
-                    <button onclick="tcenter()"><i class="fas fa-align-center" id="innerAlignCenter"></i></button>
-                    <button onclick="tright()"><i class="fas fa-align-right" id="innerAlignRight"></i></button>
-                    <input type="number" name="" id="fontsize" onclick="fontsize()" value="16">
-                </fieldset>
-                <form data-netlify="true" method="post" name="suggestion" id="form">
-                    <textarea id="comment" name="comment" placeholder="Enter your suggestion"></textarea>
-                    </textarea>
-                    <br>
-                    <button type="button" onclick="sendsuggest()" >Send</button>
-
-                </form>
+            <div class="tool">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fas fa-sticky-note"></i> <span>Sticky Notes</span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li><i class="fas fa-poll"></i> <span>Survey</span></li>
+                    </a>
+                </ul>
             </div>
         </div>
     </main>
-    
 
-    <!-- Footer Section -->
     <footer>
         <div class="container">
             <div class="back-footer">
                 <i class="fas fa-chevron-left"></i>
-                <input type="button" onclick="location.assign('./dashboard.html')" value="Back" class="back-button">
+                <input type="button" onclick="location.assign('./admin-dashboard.html')" value="Back"
+                    class="back-button">
             </div>
         </div>
     </footer>
+    
 
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -154,7 +154,8 @@
         crossorigin="anonymous"></script>
 
     <script src="./js/nav.js"></script>
-    <script src="./js/suggestion.js"></script>
+    <script src="./js/replyuser.js"></script>
+    <script src="js/dashboard.js"></script>
     <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
 </body>
 
