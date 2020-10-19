@@ -8,6 +8,8 @@ if (users == null) {
   users = [];
 }
 
+var src;
+
 // Click event to add more users
 document.querySelector(".addBtn").addEventListener("click", () => {
   // Radio buttons
@@ -31,7 +33,7 @@ document.querySelector(".addBtn").addEventListener("click", () => {
     userName: document.getElementById("username").value,
     password: document.getElementById("password").value,
     role: userRole,
-    pics: document.getElementById("pics").value.split("\\")[2],
+    pics: src,
   };
 
   // Check if all inputs are filled
@@ -107,7 +109,7 @@ function display() {
     cont += `
             <div class="profile"> 
             <div class="item">               
-            <img src= "${users[i].pics}" style= "max-height: 100px"><br>
+            <img src= "${users[i].pics}" style= "height: 100px; width: 100px"><br>
             </div>
             <div class="item">
             <strong>First Name</strong> : ${users[i].firstName}<br>
@@ -144,16 +146,29 @@ function del(id) {
     (element) => element.userName == users[id].userName
   );
 
-  con = confirm(`Are you sure you want to delete ${users[id].userName}?`);
-  if (con == true) {
-    originalUsers.splice(originalIndex, 1);
+  swal({
+    title: `Are you sure you want to delete ${users[id].userName}?`,
+    text: "Once deleted, you will not be able to recover this user!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((willDelete) => {
+    if (willDelete) {
+      originalUsers.splice(originalIndex, 1);
 
-    users = originalUsers;
-    localStorage.setItem("database", JSON.stringify(originalUsers));
-    display();
+      users = originalUsers;
+      localStorage.setItem("database", JSON.stringify(originalUsers));
+      display();
 
-    empty();
-  }
+      empty();
+
+      swal("User has been deleted!", {
+        icon: "success",
+      });
+    } else {
+      swal("Delete cancelled", "", "error");
+    }
+  });
 }
 
 // Function to Edit
@@ -167,7 +182,7 @@ function edit(id) {
   document.getElementById("email").value = editUser.email;
   document.getElementById("username").value = editUser.userName;
   document.getElementById("password").value = editUser.password;
-  document.getElementById("pics").value.split("\\")[2] = editUser.pics;
+  src = editUser.pics;
   document.getElementById("index").value = originalIndex;
 }
 
@@ -192,7 +207,7 @@ function update() {
     userName: document.getElementById("username").value,
     password: document.getElementById("password").value,
     role: userRole,
-    pics: document.getElementById("pics").value.split("\\")[2],
+    pics: src,
   };
 
   if (
@@ -273,5 +288,15 @@ function empty() {
   document.getElementById("email").value = "";
   document.getElementById("username").value = "";
   document.getElementById("password").value = "";
-  document.getElementById("pics").value.split("\\")[2] = "";
+  src = "";
+}
+
+// Upload Image
+function uploadImage(e) {
+  // Upload image
+  var reader = new FileReader();
+  reader.onload = function () {
+    src = reader.result;
+  };
+  reader.readAsDataURL(e.target.files[0]);
 }
