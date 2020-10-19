@@ -26,6 +26,10 @@ body {
 a {
   text-decoration: none;
 }
+#notify a i:hover{
+background-color: #4eb1f5;
+color: #fff;
+}
 
 /* Utilities */
 .container {
@@ -161,6 +165,7 @@ a {
   padding: 5px;
   border-radius: 5px;
 }
+
 
 .middle {
   height: 100%;

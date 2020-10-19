@@ -1,3 +1,29 @@
+// Local Storage
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+// fetches most recent logged in user
+i = currentUser.length - 1;
+
+let templates = JSON.parse(
+  localStorage.getItem(`${currentUser[i].userName}Templates`)
+);
+
+if (currentUser == null) {
+  currentUser = [];
+}
+
+if (templates == null) {
+  templates = [];
+}
+
+// if (templates.length > 1) {
+//   i = templates.length - 1;
+//   document.getElementById("container").innerHTML = templates[i].template;
+// } else {
+//   document.getElementById("container").innerHTML = templates[0].template;
+// }
+
+// Controls and Styles Tabs
 let controls = document.getElementById("controls");
 let styles = document.getElementById("styles");
 let controlMain = document.getElementById("controlMain");
@@ -261,7 +287,7 @@ function editImage(e) {
   let edit = e.target.id;
 
   editId = document.getElementById(edit);
-  width = output.style.width;
+  width = editId.clientWidth;
 
   // Append to content
   editId.parentNode.parentNode.innerHTML = `<div class="settings" id="settings">
@@ -282,7 +308,7 @@ function editImage(e) {
                             </button>
                         </div>
                         <div class="image-wrapper">
-                            <img id="output" draggable="true" ondragstart="drag(event)" style="width:${width}" src="${editId.src}">
+                            <img id="output" draggable="true" ondragstart="drag(event)" style="width:${width}px" src="${editId.src}">
                         </div>`;
 }
 
@@ -432,3 +458,143 @@ function underlineText(e) {
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+// align left text
+function alignLeft(e) {
+  input = document.getElementById("input");
+  // target alignLeft button id
+  let alignLeft = e.target.id;
+  if (alignLeft == `innerAlignLeft`) {
+    alignLeftId = document.getElementById(alignLeft);
+
+    input.style.textAlign = "left";
+    alignLeftId.parentNode.parentNode.parentNode.style.textAlign = "left";
+  }
+}
+
+// align right text
+function alignRight(e) {
+  input = document.getElementById("input");
+  // target alignRight button id
+  let alignRight = e.target.id;
+  if (alignRight == `innerAlignRight`) {
+    alignRightId = document.getElementById(alignRight);
+
+    input.style.textAlign = "right";
+    alignRightId.parentNode.parentNode.parentNode.style.textAlign = "right";
+  }
+}
+
+// align center text
+function alignCenter(e) {
+  input = document.getElementById("input");
+  // target alignCenter button id
+  let alignCenter = e.target.id;
+  if (alignCenter == `innerAlignCenter`) {
+    alignCenterId = document.getElementById(alignCenter);
+
+    input.style.textAlign = "center";
+    alignCenterId.parentNode.parentNode.parentNode.style.textAlign = "center";
+  }
+}
+
+// justify text
+function justify(e) {
+  input = document.getElementById("input");
+  // target justify button id
+  let justify = e.target.id;
+  if (justify == `innerJustify`) {
+    justifyId = document.getElementById(justify);
+
+    input.style.textAlign = "justify";
+    justifyId.parentNode.parentNode.parentNode.style.textAlign = "justify";
+  }
+}
+
+// Display Save
+function displaySave() {
+  let box = document.getElementById("confirmSave");
+  box.style.display = "flex";
+}
+
+// Cancel Save
+function cancelSave() {
+  let box = document.getElementById("confirmSave");
+  box.style.display = "none";
+  let error = document.getElementById("error");
+  error.innerHTML = "";
+}
+
+// Save Email Template
+function saveTemplate() {
+  // Get date
+  var d = new Date();
+
+  let month = d.getMonth();
+  d.setMonth(month);
+  let date = d.getDate();
+  d.setDate(date);
+  let year = d.getFullYear();
+  d.setFullYear(year);
+  let hours = d.getHours();
+  d.setHours(hours);
+  let minutes = d.getMinutes();
+  d.setMinutes(minutes);
+
+  var months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let newTemplate = document.getElementById("container").innerHTML;
+  let name = document.getElementById("saveInput").value;
+  if (name == "" || name == null || name == undefined) {
+    let error = document.getElementById("error");
+    error.innerHTML = "Please enter name for template";
+    error.style.color = "red";
+  } else {
+    // fetches most current user
+    i = currentUser.length - 1;
+
+    // New email template object
+    let emailTemplate = {
+      name: name,
+      template: newTemplate,
+      user: currentUser[i].userName,
+      date: `${
+        months[d.getMonth()]
+      } ${d.getDate()}, ${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`,
+    };
+
+    // Checks if name exists already
+    let isName = templates.find(
+      (element) => element.name == emailTemplate.name
+    );
+
+    if (isName) {
+      error.innerHTML = "Name has been taken!";
+      error.style.color = "red";
+    } else {
+      templates.push(emailTemplate);
+
+      localStorage.setItem(
+        `${currentUser[i].userName}Templates`,
+        JSON.stringify(templates)
+      );
+      location.assign("./email_templates.html");
+    }
+  }
+}
+>>>>>>> 854219d93de17cf8a07c6d88b8cee508b4d79f56

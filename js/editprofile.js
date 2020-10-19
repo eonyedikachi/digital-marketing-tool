@@ -1,8 +1,10 @@
 // fetches most recent logged in user
 i = currentUser.length - 1;
+let database = JSON.parse(localStorage.getItem("database"));
 
 document.getElementById("website").value = "";
 
+alert (database);
 editUser = currentUser[i];
 document.getElementById("firstName").value = editUser.firstName;
 document.getElementById("lastName").value = editUser.lastName;
@@ -19,6 +21,7 @@ if (editUser.image == null || editUser.image == undefined) {
   document.querySelector(".profile img").setAttribute("src", editUser.image);
 }
 
+document.getElementById("website").value = "";
 function update() {
   let edited = {
     firstName: document.getElementById("firstName").value,
