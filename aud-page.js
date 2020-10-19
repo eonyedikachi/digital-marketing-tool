@@ -52,9 +52,9 @@ function toggleClass(elem,className){
   }
   
   function handleTitleChange(e){
-    const result = document.getElementById('result');
+    // const result = document.getElementById('result');
   
-    result.innerHTML = 'The result is: ' + e.target.textContent;
+    // result.innerHTML = 'The result is: ' + e.target.textContent;
   }
   
   //get elements
@@ -77,6 +77,7 @@ function AddSubscriber(){
   document.querySelector('#addASubscriber').style.display = "block"; 
   document.querySelector('#importContact').style.display = "none"; 
   document.querySelector('#manageContact').style.display = "none"; 
+  document.querySelector('#organizeContact').style.display = "none";
   
 }
 
@@ -87,7 +88,10 @@ function importContact(){
   document.querySelector('#importContact').style.display = "block";
   document.querySelector('#manageContact').style.display = "none";
   document.querySelector('#addASubscriber').style.display = "none";
+  document.querySelector('#organizeContact').style.display = "none";
 }
+
+
 
 // OPEN MANAGECONTACT
 function manageContact(){
@@ -95,8 +99,19 @@ function manageContact(){
   bottomContainer.classList.add("hidden");
   document.querySelector('#manageContact').style.display = "block";
   document.querySelector('#importContact').style.display = "none";
-  document.querySelector('#addASubscriber').style.display = "nonr";
+  document.querySelector('#addASubscriber').style.display = "none";
+  document.querySelector('#organizeContact').style.display = "none";
 }
+
+function organizeContact(){
+  var bottomContainer = document.getElementById('bottom-container');
+  bottomContainer.classList.add("hidden");
+  document.querySelector('#organizeContact').style.display = "block";
+  document.querySelector('#manageContact').style.display = "none";
+  document.querySelector('#importContact').style.display = "none";
+  document.querySelector('#addASubscriber').style.display = "none";
+}
+
 
 
 
@@ -108,9 +123,9 @@ if (subscibers == null) {
   subscibers = [];
 }
 
-const subscribeUser = (e) => {
+function subscribeUser(e){
   //to prevent form from default submit
-  e.preventDefault();
+  e.prevenDefult();
   newSubscibers = {
     email: document.getElementById("email").value,
     firstName: document.getElementById("firstName").value,
@@ -128,16 +143,23 @@ const subscribeUser = (e) => {
     updateuserr: document.getElementById("updateuserr").value,
     role: "user",
   };
-
+  
   //Storing inside the array
   validate(newSubscibers);
-};
 
-let subscribeButton = document.getElementById("subscribe");
-subscribeButton.addEventListener("click", subscribeUser);
+  subscibers.push(newSubscibers);
+
+  // updating local storage
+  localStorage.setItem("subscibers", JSON.stringify(subscibers))
+  // redirect user to dashboard
+  location.assign("../aud-page.html");
+
+};
 
 
 function validate(user) {
+  console.log('I am a chosen one gettin here =====================>')
+
   const regExEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 if (!regExEmail.test(user.email)) {
   document.getElementById("error").innerHTML = "Enter a valid email address!";
@@ -152,24 +174,48 @@ if (!regExEmail.test(user.email)) {
       "lastName must be be greater than 2 character";
     return false;
 } else {
-    checkDuplicateUser(user.email);
+  return  checkDuplicateUser(user.email);
   }
 }
 
 // Function to check username and email already taken!
 function checkDuplicateUser(email) {
-  let isEmail = subscibers.find((element) => element.email == email);
+   const isEmail = subscibers.find((element) => element.email == email);
 
- 
-  } if (isEmail) {
+  if (isEmail) {
     document.getElementById("error").innerHTML = "Email has been taken!";
   } else {
-    subscibers.push(newSubscibers);
-
-    // updating local storage
-    localStorage.setItem("subscibers", JSON.stringify(subscibers))
-    // redirect user to dashboard
-    location.assign("../aud-page.html");
+    return null;
   }
 
-
+// Upload javascript
+  function continueUpload(){
+    var x = document.querySelector(".uploadimg");
+    var txt = "";
+    if (files in x) {
+      if (x.files.length == 0) {
+        txt = "Select one or more files.";
+      } else {
+        for (var i = 0; i < x.files.length; i++) {
+          txt += "<br><strong>" + (i+1) + ". file</strong><br>";
+          var file = x.files[i];
+          if ('name' in file) {
+            txt += "name: " + file.name + "<br>";
+          }
+          if ('size' in file) {
+            txt += "size: " + file.size + " bytes <br>";
+          }
+        }
+      }
+    } 
+    else {
+      if (x.value == "") {
+        txt += "Select one or more files.";
+      } else {
+        txt += "The files property is not supported by your browser!";
+        txt  += "<br>The path of the selected file: " + x.value; // If the browser does not support the files property, it will return the path of the selected file instead. 
+      }
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
+}

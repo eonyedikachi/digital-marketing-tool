@@ -373,24 +373,24 @@
    <input type="phone" name="phone" id="phone"  />
    <div class="birth-date">
    <label for="birth-date" >Birthday</label>
-   <input type="text" name="Month" id="month" placeholder="MM"  /> <h1>/</h1>
+   <input type="text" name="Month" id="month" placeholder="MM"  /> <h2>/</h2>
    <input type="text" name="Day" id="day" placeholder="DD" />
   </div>
 
   <input type="checkbox" id="newuserr" name="newuser" value="newuser">
-  <label for="newuser"> <h5>This person gave me permission to email them</h5>
+  <label for="newuser"> <h6>This person gave me permission to email them</h6>
     <p>This person will not receive a confirmation email from MartReach. <br>Since you're adding this recipient manually,<br> they won't have an opt-in IP address or date in your records,<br> so be extra sure you have permission first. Learn more</address></p></label><br>
   <input type="checkbox" id="updateuserr" name="updateuser" value="updateuser">
-  <label for="updateuser"> <h5>If this person is already in my audience, update their profile</h5></label>
+  <label for="updateuser"> <h6>If this person is already in my audience, update their profile</h6></label>
 
- <button type="submit" id="subscribe" value="subscribe" onclick="subscribeUser()">Subscribe</button>
+ <button id="subscribe" value="subscribe" onclick="subscribeUser()">Subscribe</button>
   </form>
 </div>
 </sectio>
     </div>
 
     <section id="importContact">
-    <h1>How would you like to import your contacts?</h1>
+    <h2>How would you like to import your contacts?</h2>
     <p>Not sure how to format your file? <a href="#">Learn how</p></a>
     <div class="containerr">
       <div class="roundd">
@@ -400,19 +400,21 @@
       <input type="radio" id="female" name="gender" value="female">
       <label for="female"><h4>Copy and paste</h4></label><br>
      <h5>Copy and paste contacts from a spreadsheet.</h5>
-     <a href="#organizeContact"><button type="submit" class="upload" value="Submit">Continue to Upload</button></a>
+     <button type="submit" class="upload" value="Submit"  onclick="organizeContact()">Continue to Upload</button>
     </div>
     </div>
     </section>
 
     <!-- Continue to Organize Page -->
     <section id="organizeContact"> 
-      <h2>Upload your contacts</h2>
+      <h3>Upload your contacts</h3>
       <div class="organizeCont">
-        <a href="#"><img src="./images/upload.png" class="uploadimg"></a>
-        <a href="#"><h5>Browse files</h5></a>
+        <img src="./images/upload.png" class="uploadimg">
+      <input type="file">
+        <h5>Browse files</h5>
+      </input>
         <div class="localUpload">
-          <button type="submit" class="organize" value="Submit">Continue to Upload</button>
+          <button type="submit" class="organize" value="Submit" onclick="continueUpload()">Continue to Upload</button>
        
         </div>
       </div>

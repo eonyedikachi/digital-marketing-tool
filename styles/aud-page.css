@@ -192,7 +192,7 @@ display: block;
   padding: 20px;
   margin: 10px;
 }
-h1 h2 h5 p{
+h2 h2 h6 p{
   display: block;
   width: 100px;
   padding: 20px;
@@ -226,7 +226,7 @@ input[type="radio"] {
   -webkit-transform: scale(2.5); 
   transform: scale(2.5);
 }
-#importContact h1 p{
+#importContact h2 p{
 position: relative;
 padding: 50px;
 margin: 5opx;
@@ -268,6 +268,7 @@ display: block;
   height: 98vh;
   padding:100px;
   margin: 100px;
+  display: none;
   
 }
 .organizeCont{
@@ -294,7 +295,7 @@ margin-top: -50px;
 left: 15.5rem;
 
 }
-h2{
+h3{
   padding: 25px;
   margin: 25px;
 }
@@ -324,13 +325,14 @@ height: 98vh;
 display: none;
 padding: 50px;
 margin: 50px;
+margin-bottom: 100px;
 
 }
 
 .mgContainer{
 margin-bottom: 50px;
 position: relative;
-margin-bottom: 50px;
+margin-bottom: 30px;
 padding-bottom: 50px;
 
 
