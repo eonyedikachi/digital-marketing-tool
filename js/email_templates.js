@@ -36,8 +36,8 @@ function display() {
                                     alt="">
                             </div>
                             <div class="info">
-                                <a href="#">${templates[i].name}</a>
-                                <p><span>Last edited</span> on Oct 15, 2020 6:47am</p>
+                                <a href="../createEmail.html">${templates[i].name}</a>
+                                <p><span>Last edited</span> on ${templates[i].date}</p>
                                 <p>${templates[i].user}</p>
                             </div>
                         </div>
@@ -99,6 +99,15 @@ function search() {
     document.getElementById("search").value == ""
   ) {
     swal("No Result!", "No Record Found!", "error");
+
+    // Get from local storage
+    templates = JSON.parse(
+      localStorage.getItem(`${currentUser[recent].userName}Templates`)
+    );
+
+    originalTemplates = JSON.parse(
+      localStorage.getItem(`${currentUser[recent].userName}Templates`)
+    );
   } else {
     document.getElementById("cancelBtn").style.display = "unset";
 

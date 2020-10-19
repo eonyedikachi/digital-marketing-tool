@@ -54,7 +54,7 @@ body {
 }
 
 #cancelBtn {
-  background: rgb(109, 15, 15);
+  background: red;
   display: none;
 }
 
