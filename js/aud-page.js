@@ -74,6 +74,7 @@ function AddSubscriber() {
   document.querySelector("#importContact").style.display = "none";
   document.querySelector("#manageContact").style.display = "none";
   document.querySelector("#organizeContact").style.display = "none";
+  document.querySelector(".contactSection").style.display = "none";
 }
 
 // OPEN ImportContact
@@ -84,6 +85,7 @@ function importContact() {
   document.querySelector("#manageContact").style.display = "none";
   document.querySelector("#addASubscriber").style.display = "none";
   document.querySelector("#organizeContact").style.display = "none";
+  document.querySelector(".contactSection").style.display = "none";
 }
 
 // OPEN MANAGECONTACT
@@ -94,8 +96,9 @@ function manageContact() {
   document.querySelector("#importContact").style.display = "none";
   document.querySelector("#addASubscriber").style.display = "none";
   document.querySelector("#organizeContact").style.display = "none";
+  document.querySelector(".contactSection").style.display = "none";
 }
-
+// OPEN ORGANIZECONTACT
 function organizeContact() {
   var bottomContainer = document.getElementById("bottom-container");
   bottomContainer.classList.add("hidden");
@@ -103,7 +106,23 @@ function organizeContact() {
   document.querySelector("#manageContact").style.display = "none";
   document.querySelector("#importContact").style.display = "none";
   document.querySelector("#addASubscriber").style.display = "none";
+  document.querySelector(".contactSection").style.display = "none";
 }
+
+// OPEN VIEWCONTACT
+function viewContact(){
+  var bottomContainer = document.getElementById("bottom-container");
+  bottomContainer.classList.add("hidden");
+  document.querySelector(".contactSection").style.display = "block";
+  document.querySelector("#organizeContact").style.display = "none";
+  document.querySelector("#manageContact").style.display = "none";
+  document.querySelector("#importContact").style.display = "none";
+  document.querySelector("#addASubscriber").style.display = "none";
+}
+
+
+
+
 
 // SUBMIT A SUBSCRIBER
 //Creating Local Storage
@@ -116,6 +135,7 @@ if (subscibers == null) {
 // update contacts and subscribers count
 document.getElementById("contacts").innerHTML = subscibers.length;
 document.getElementById("subscribers").innerHTML = subscibers.length;
+
 
 function subscribeUser() {
   newSubscibers = {
