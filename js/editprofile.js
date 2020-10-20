@@ -30,7 +30,8 @@ function update() {
     website: document.getElementById("website").value,
   };
   currentUser[i] = edited;
-  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  localStorage.setItem("database", JSON.stringify(currentUser));
+  localStorage.setItem( "currentUser", JSON.stringify(currentUser));
   // display();
 }
 
