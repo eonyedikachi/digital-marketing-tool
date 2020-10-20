@@ -52,14 +52,23 @@ for (let i = 0; i < uEmail.length; i++) {
 
 //Contact Name Display
 var mContactName = currentUser[i].contactName;
+if (mContactName == undefined) {
+  mContactName = "";
+}
 var uContactName = document.querySelectorAll(".contact-name");
 for (let i = 0; i < uContactName.length; i++) {
   uContactName[i].innerHTML = mContactName;
 }
+// if (mContactName == undefined) {
+//   mContactName = "";
+// }
 
 //Company Name Display
 document.querySelectorAll(".company-name").value = "";
 var mCompanyName = currentUser[i].companyName;
+if (mCompanyName == undefined) {
+  mCompanyName = "";
+}
 var uCompanyName = document.querySelectorAll(".company-name");
 for (let i = 0; i < uCompanyName.length; i++) {
   uCompanyName[i].innerHTML = mCompanyName;
