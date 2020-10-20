@@ -95,12 +95,14 @@ body {
   margin: 0 1rem;
 }
 
-.template_list .temp .description .info a {
+.template_list .temp .description .info .template-name {
   font-size: 2rem;
   color: var(--secondary-color);
+  border: none;
+  background: none;
 }
 
-.template_list .temp .description .info a:hover {
+.template_list .temp .description .info .template-name:hover {
   color: rgb(59, 59, 238);
 }
 

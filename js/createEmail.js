@@ -619,12 +619,12 @@ function saveTemplate() {
       if (con) {
         alert("overwritten");
 
-        // templates[0] = emailTemplate;
+        templates[0] = emailTemplate;
 
-        // localStorage.setItem(
-        //   `${currentUser[i].userName}Templates`,
-        //   JSON.stringify(templates)
-        // );
+        localStorage.setItem(
+          `${currentUser[i].userName}Templates`,
+          JSON.stringify(templates)
+        );
 
         location.assign("./email_templates.html");
       }
@@ -640,4 +640,4 @@ function saveTemplate() {
   }
 }
 
-document.getElementById("emailContent").innerHTML = templates[1].template;
+document.getElementById("emailContent").innerHTML = templates[0].template;
