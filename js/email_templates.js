@@ -42,7 +42,7 @@ function display() {
                             </div>
                         </div>
                         <div class="edit">
-                            <button onclick="location.assign('../createEmail.html')">Edit</button>
+                            <button onclick="editEmail()">Edit</button>
                             <button onclick="deleteTemp(${i})">Delete</button>
                         </div>
                 </div>`;
@@ -133,4 +133,9 @@ function cancel() {
 
   // Empty search box
   document.getElementById("search").value = "";
+}
+
+// Edit Email Template
+function editEmail() {
+  location.assign("../createEmail.html");
 }

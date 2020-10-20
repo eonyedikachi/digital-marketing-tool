@@ -118,12 +118,24 @@ function drop(e) {
                                 <option value="38px">38px</option>
                                 <option value="40px">40px</option>
                             </select>
+                            <button class="button" id="alignLeftButton" onclick="alignLeft(event)">
+                            <i class="fas fa-align-left" id="innerAlignLeft"></i>
+                            </button>
+                            <button class="button" id="alignCenterButton" onclick="alignCenter(event)">
+                            <i class="fas fa-align-center" id="innerAlignCenter"></i>
+                            </button>
+                            <button class="button" id="alignRightButton" onclick="alignRight(event)">
+                            <i class="fas fa-align-right" id="innerAlignRight"></i>
+                            </button>
+                            <button class="button" id="justifyButton" onclick="justify(event)">
+                            <i class="fas fa-align-justify" id="innerJustify"></i>
+                            </button>
                             <input type="color" name="text-element-color" id="textElementColor" onchange="changeTextElementColor()">
                             <button class="button" id="saveButton" onclick="saveText(event)">
                             <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
-                        <input type="text" class="text" id='input'>
+                        <textarea rows="4" class="text" id='input'></textarea>
                         <p style='display:none' id='error'>Put input or delete input box</p>`;
 
     // Append div to drop target
@@ -199,6 +211,7 @@ function saveText(e) {
   let input = document.getElementById("input").value;
   let fontSize = document.getElementById("fontSize").value;
   let color = document.getElementById("input").style.color;
+  let align = document.getElementById("input").style.textAlign;
 
   // check if input is empty
   if (input != "") {
@@ -206,7 +219,7 @@ function saveText(e) {
       saveId = document.getElementById(save);
 
       // Append content
-      saveId.parentNode.parentNode.parentNode.innerHTML = `<p draggable="true" ondragstart="drag(event)" id='newContent-${i++}' class='newContent' style='font-size:${fontSize}; color:${color}' onclick='editText(event)'>${input}</p>`;
+      saveId.parentNode.parentNode.parentNode.innerHTML = `<p draggable="true" ondragstart="drag(event)" id='newContent-${i++}' class='newContent' style='font-size:${fontSize}; color:${color}; text-align:${align}' onclick='editText(event)'>${input}</p>`;
     }
   } else {
     document.getElementById("error").style.display = "block";
@@ -241,6 +254,8 @@ function editText(e) {
   editId = document.getElementById(edit);
   color = editId.style.color;
   font = editId.style.fontSize;
+  align = editId.style.textAlign;
+  text = editId.textContent;
 
   // Append to content
   editId.parentNode.innerHTML = `<div class="settings">
@@ -272,12 +287,24 @@ function editText(e) {
                                 <option value="38px">38px</option>
                                 <option value="40px">40px</option>
                             </select>
+                            <button class="button" id="alignLeftButton" onclick="alignLeft(event)">
+                            <i class="fas fa-align-left" id="innerAlignLeft"></i>
+                            </button>
+                            <button class="button" id="alignCenterButton" onclick="alignCenter(event)">
+                            <i class="fas fa-align-center" id="innerAlignCenter"></i>
+                            </button>
+                            <button class="button" id="alignRightButton" onclick="alignRight(event)">
+                            <i class="fas fa-align-right" id="innerAlignRight"></i>
+                            </button>
+                            <button class="button" id="justifyButton" onclick="justify(event)">
+                            <i class="fas fa-align-justify" id="innerJustify"></i>
+                            </button>
                             <input type="color" name="text-element-color" id="textElementColor" onchange="changeTextElementColor()">
                             <button class="button" id="saveButton" onclick="saveText(event)">
                             <i class="fas fa-save" id="inner"></i>
                             </button>
                         </div>
-                        <input type="text" class="text" id='input' style='font-size:${font}; color:${color}' value='${editId.textContent}'>
+                        <textarea rows="4" class="text" id='input' style='font-size:${font}; color:${color}; text-align:${align}'>${text}</textarea>
                         <p style='display:none' id='error'>Put input or delete input box</p>`;
 }
 
@@ -353,10 +380,16 @@ function upload(e) {
 
 //upload picture or video from device
 let loadFile = function (e) {
+  // Upload image
+  var reader = new FileReader();
+  reader.onload = function () {
+    var image = document.getElementById("output");
+    image.src = reader.result;
+  };
+  reader.readAsDataURL(e.target.files[0]);
+
   let upload = document.getElementById("upload");
   let settings = document.getElementById("settings");
-  let image = document.getElementById("output");
-  image.src = URL.createObjectURL(e.target.files[0]);
   upload.remove();
   settings.style.display = "flex";
 };
@@ -458,8 +491,6 @@ function underlineText(e) {
     }
   }
 }
-<<<<<<< HEAD
-=======
 
 // align left text
 function alignLeft(e) {
@@ -558,7 +589,7 @@ function saveTemplate() {
     "December",
   ];
 
-  let newTemplate = document.getElementById("container").innerHTML;
+  let newTemplate = document.getElementById("emailContent").innerHTML;
   let name = document.getElementById("saveInput").value;
   if (name == "" || name == null || name == undefined) {
     let error = document.getElementById("error");
@@ -584,8 +615,19 @@ function saveTemplate() {
     );
 
     if (isName) {
-      error.innerHTML = "Name has been taken!";
-      error.style.color = "red";
+      con = confirm("Name already exists, do you want to overwrite it?");
+      if (con) {
+        alert("overwritten");
+
+        // templates[0] = emailTemplate;
+
+        // localStorage.setItem(
+        //   `${currentUser[i].userName}Templates`,
+        //   JSON.stringify(templates)
+        // );
+
+        location.assign("./email_templates.html");
+      }
     } else {
       templates.push(emailTemplate);
 
@@ -597,4 +639,5 @@ function saveTemplate() {
     }
   }
 }
->>>>>>> 854219d93de17cf8a07c6d88b8cee508b4d79f56
+
+document.getElementById("emailContent").innerHTML = templates[1].template;
