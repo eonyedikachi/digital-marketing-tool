@@ -1,10 +1,9 @@
 // fetches most recent logged in user
 i = currentUser.length - 1;
-let database = JSON.parse(localStorage.getItem("database"));
+// let database = JSON.parse(localStorage.getItem("database"));
 
 document.getElementById("website").value = "";
 
-alert (database);
 editUser = currentUser[i];
 document.getElementById("firstName").value = editUser.firstName;
 document.getElementById("lastName").value = editUser.lastName;
