@@ -13,6 +13,7 @@ function openSetting(evt, settingName) {
   evt.currentTarget.className += " active";
 }
 
+
 // fetches most recent logged in user
 i = currentUser.length - 1;
 //First Name Display
@@ -42,7 +43,6 @@ var uWebsite = document.querySelectorAll(".website");
 for (let i = 0; i < uWebsite.length; i++) {
   uWebsite[i].innerHTML = mWebsite;
 }
-
 //Email Display
 var mEmail = currentUser[i].email;
 var uEmail = document.querySelectorAll(".email-address");
@@ -58,6 +58,7 @@ for (let i = 0; i < uContactName.length; i++) {
 }
 
 //Company Name Display
+document.querySelectorAll(".company-name").value = "";
 var mCompanyName = currentUser[i].companyName;
 var uCompanyName = document.querySelectorAll(".company-name");
 for (let i = 0; i < uCompanyName.length; i++) {
@@ -65,6 +66,7 @@ for (let i = 0; i < uCompanyName.length; i++) {
 }
 
 //Billing Address Display
+document.querySelectorAll(".billing-address").value = "";
 var BillingAddress = currentUser[i].billingAddress;
 var uBillingAddress = document.querySelectorAll(".billing-address");
 for (let i = 0; i < uBillingAddress.length; i++) {
