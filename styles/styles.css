@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+header {
+  border-bottom: 1px solid black;
+}
+
 /* Navbar */
 .navbar {
   font-weight: 700;
