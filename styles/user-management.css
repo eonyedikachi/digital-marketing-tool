@@ -89,7 +89,7 @@ main .middle button {
 
 .addBtn {
   background: green;
-  color: white;
+  color: #fff;
   margin-left: 0.5rem;
 }
 
@@ -99,7 +99,7 @@ main .middle button {
 
 .delBtn {
   background: red;
-  color: white;
+  color: #fff;
 }
 
 .delBtn:hover {
@@ -108,7 +108,7 @@ main .middle button {
 
 .editBtn {
   background: var(--secondary-color);
-  color: white;
+  color: #fff;
 }
 
 .editBtn:hover {
@@ -117,7 +117,7 @@ main .middle button {
 
 .updateBtn {
   background: var(--secondary-color);
-  color: white;
+  color: #fff;
 }
 
 .updateBtn:hover {

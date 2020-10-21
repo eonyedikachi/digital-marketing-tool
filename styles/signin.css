@@ -6,36 +6,29 @@ body {
   background: linear-gradient(120deg, #4eb1f5, #4eb1f5);
 }
 
-.nav-list .nav-items .nav6 {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-  border-radius: 5px;
-}
-
 main {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#error{
+#error {
   color: red;
   text-align: center;
 }
 
-.txt_field .fa{
-position: absolute;
-top: 50%;
-right: 8%;
-display: none;
+.txt_field .fa {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  display: none;
 }
-.fa.times{
+.fa.times {
   color: red;
 }
-.fa-check{
+.fa-check {
   color: green;
 }
-
 
 .center-form {
   width: 400px;
