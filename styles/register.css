@@ -10,6 +10,14 @@ main .register {
   width: 70%;
 }
 
+main .register h1 span {
+  color: #8c30f5;
+}
+
+main .register .signin a {
+  color: #8c30f5;
+}
+
 .register .input-field input {
   border: none;
   outline: none;
