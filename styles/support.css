@@ -2,17 +2,22 @@
   --primary-color: #fff;
   --secondary-color: #4eb1f5;
 }
+
+h2 {
+  font-weight: 600;
+}
+
 /* Support Section */
 section.support {
-  background: var(--secondary-color);
-  color: var(--primary-color);
   padding: 2rem;
-  padding-top: 3rem;
   text-align: center;
+  background: #0b0d17;
+  color: white;
 }
 
 .support .container h1 {
   font-size: 35px;
+  color: #8c30f5;
 }
 
 .support .container p {
@@ -20,6 +25,15 @@ section.support {
 }
 
 /* Articles Section */
+.article-support a {
+  color: #000;
+  text-decoration: none;
+}
+
+.article-support a:hover {
+  color: #8c30f5;
+}
+
 .article-container {
   display: flex;
   margin: 1rem 0;
@@ -46,12 +60,8 @@ section.support {
   border-bottom: 1px solid gray;
 }
 
-.article-container .articles ul li a {
-  color: black;
-}
-
-.article-container .articles a {
-  color: var(--secondary-color);
+.article-container .articles > a {
+  color: #8c30f5;
 }
 
 .article-container .contact {
@@ -68,8 +78,8 @@ section.support {
 
 .article-container .contact a {
   display: block;
-  background: var(--secondary-color);
-  color: var(--primary-color);
+  background: #8c30f5;
+  color: #fff;
   margin-top: 1rem;
   border-radius: 8px;
   padding: 0.5rem;
@@ -77,40 +87,42 @@ section.support {
 }
 
 .article-container .contact a:hover {
-  background: rgb(0, 121, 202);
+  color: #8c30f5;
+  background: #000;
   transition: all ease 300ms;
 }
 
 /* Pricing Section */
 .pricing {
-  background: var(--secondary-color);
-}
-.pricing .pricing-container {
-  display: flex;
+  background: #0b0d17;
+  color: #fff;
   padding: 1rem;
-  color: var(--primary-color);
 }
 
-.pricing .pricing-container .pricing-img {
-  width: 50%;
+.pricing .pricing-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 .pricing .pricing-container .pricing-img img {
-  width: 80%;
+  width: 100%;
   height: 100%;
+  -webkit-filter: hue-rotate(48deg);
+  filter: hue-rotate(48deg);
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .pricing .pricing-container .pricing-info {
-  width: 50%;
+  margin-left: 3rem;
   text-align: center;
 }
 
 .pricing .pricing-container .pricing-info a {
   display: inline-block;
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  background: #8c30f5;
+  color: #fff;
   margin-top: 1rem;
   border-radius: 8px;
   padding: 0.5rem;
@@ -118,8 +130,12 @@ section.support {
 }
 
 .pricing .pricing-container .pricing-info a:hover {
-  color: var(--primary-color);
-  background: rgb(0, 121, 202);
+  color: #8c30f5;
+  background: #f1e4ff;
+}
+
+.pricing .pricing-container .pricing-info h2 {
+  color: #8c30f5;
 }
 
 /* Socials */
@@ -136,24 +152,24 @@ section.support {
 }
 
 .socials-media .socials-account .account {
-  background: var(--secondary-color);
   margin: 1rem;
   width: 200px;
   height: 100px;
   border-radius: 5px;
+  background: #000;
   box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
 }
 
 .socials-media .socials-account .account a {
   display: block;
   font-size: 60px;
-  color: var(--primary-color);
+  color: #8c30f5;
   border-radius: 5px;
   transition: all ease 300ms;
 }
 
 .socials-media .socials-account .account a:hover {
-  background: #000;
+  background: #8c30f5;
   color: #fff;
   transition: all ease 300ms;
 }
@@ -162,7 +178,7 @@ section.support {
   vertical-align: middle;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .article-container {
     flex-direction: column;
   }
@@ -197,6 +213,9 @@ section.support {
   }
 
   .pricing .pricing-container .pricing-info {
+    margin-left: 0;
+    margin-top: 2rem;
     width: 100%;
+    text-align: center;
   }
 }

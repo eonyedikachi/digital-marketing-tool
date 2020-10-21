@@ -79,12 +79,8 @@ footer .container {
   max-width: 1400px;
 }
 
-footer .container .footer-content .socials a {
+footer a {
   color: #fff;
-}
-
-footer .container .footer-content .socials a:hover {
-  color: #007bff;
 }
 
 footer .container .footer-content .company-info h1 {
@@ -99,15 +95,23 @@ footer ul a {
   color: #fff;
 }
 
-.company {
+footer a:hover {
+  color: #8c30f5;
+}
+
+footer .container .footer-content .links p {
+  color: #8c30f5;
+}
+
+footer .container .footer-content .company {
   width: 100%;
 }
 
-.support {
+footer .container .footer-content .support {
   width: 100%;
 }
 
-.newsletter {
+footer .container .footer-content .newsletter {
   width: 100%;
 }
 
@@ -174,15 +178,15 @@ footer .container .footer-content .newsletter .subscribe button {
     text-align: center;
   }
 
-  .company {
+  footer .container .footer-content .company {
     margin-bottom: 2rem;
   }
 
-  .support {
+  footer .container .footer-content .support {
     margin-bottom: 2rem;
   }
 
-  .links {
+  footer .container .footer-content .links {
     flex-direction: column;
   }
 
