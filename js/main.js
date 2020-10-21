@@ -35,7 +35,7 @@ document.querySelector(".header").innerHTML = `
 // Footer
 document.querySelector(".footer").innerHTML = `
 <div class="container">
-    <div class="footer-content d-flex justify-content-between">
+    <div class="footer-content d-flex justify-content-around">
       <div class="company-info d-flex flex-column my-5">
         <div class="footer-logo mb-4">
           <h1 class="font-weight-bold">MartReach</h1>
@@ -87,7 +87,7 @@ document.querySelector(".footer").innerHTML = `
         <p style="font-size:20px" class="font-weight-bold">Stay up to date</p>
         <form class="subscribe" name="subscribe" method="POST" data-netlify="true">
           <input type="email" name="email" id="email" placeholder="Enter Email Address" required />
-          <input type="submit" value="Subscribe" />
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
         </form>
         </div>        
         </div>

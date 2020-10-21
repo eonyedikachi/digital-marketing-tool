@@ -144,9 +144,17 @@ footer .container .footer-content .newsletter .subscribe {
   background: #474a57;
   border-radius: 8px;
   padding: 0.5rem;
+  display: flex;
 }
 
 footer .container .footer-content .newsletter .subscribe input {
+  background: none;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+footer .container .footer-content .newsletter .subscribe button {
   background: none;
   color: #fff;
   outline: none;
