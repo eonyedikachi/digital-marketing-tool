@@ -479,8 +479,12 @@ function underlineText(e) {
   }
 }
 
-document.getElementById('getDetails').addEventListener('click', getDetails)
+document.getElementById("getDetails").addEventListener("click", getDetails);
 
 function getDetails() {
-  alert('Malik')
+  container = document.getElementById("container");
+  containerChildren = container.childNodes;
+  // containerChildren.map((x) => console.log(x));
+  console.log(containerChildren);
+  // alert(container);
 }

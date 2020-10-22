@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
 *,
 ::before,
@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 a {
@@ -136,8 +136,8 @@ footer .container .footer-content .newsletter .subscribe button {
   border: none;
 }
 
-.newsletter .subscribe input[type="email"]:focus,
-.newsletter .subscribe input[type="email"]:active {
+.newsletter .subscribe input[type='email']:focus,
+.newsletter .subscribe input[type='email']:active {
   background: none;
   color: #fff;
   outline: none;
