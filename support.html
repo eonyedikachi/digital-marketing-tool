@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <title>Sign Up | MartReach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/support.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,34 +18,36 @@
 <body>
 
     <!-- Header Section -->
-    <header class="navbar header"></header>
+    <header class="header"></header>
 
     <!-- Support Section -->
     <section class="support">
         <div class="container">
-            <h1>Looking for support? You are at the right place</h1>
+            <h1 class="font-weight-bold">Looking for support? You are at the right place</h1>
             <p>MartReach is a widely used digital marketing platform for helping business grow from scratch. If you are
                 looking for more information, or have a question about our services, contact us below.</p>
         </div>
     </section>
 
     <!-- Articles Section -->
-    <section class="container">
-        <div class="article-container">
-            <div class="articles">
-                <h2>Articles</h2>
-                <ul>
-                    <li><a href="">I can't remember my login or password</a></li>
-                    <li><a href="">I want to report a security issue</a></li>
-                    <li><a href="">I have a question concerning billing</a></li>
-                    <li><a href="">Can't find what you're looking for? Check out our FAQ</a></li>
-                </ul>
-                <a href="">See more help articles</a>
-            </div>
-            <div class="contact">
-                <h2>Need Support?</h2>
-                <img src="./images/support.png" alt="support">
-                <a href="./contact.html">Contact Us</a>
+    <section class="article-support py-2">
+        <div class="container">
+            <div class="article-container">
+                <div class="articles">
+                    <h2>Articles</h2>
+                    <ul>
+                        <li><a href="">I can't remember my login or password</a></li>
+                        <li><a href="">I want to report a security issue</a></li>
+                        <li><a href="">I have a question concerning billing</a></li>
+                        <li><a href="">Can't find what you're looking for? Check out our FAQ</a></li>
+                    </ul>
+                    <a href="">See more help articles</a>
+                </div>
+                <div class="contact">
+                    <h2>Need Support?</h2>
+                    <img src="./images/support.png" alt="support">
+                    <a href="./contact.html">Contact Us</a>
+                </div>
             </div>
         </div>
     </section>
@@ -61,16 +67,26 @@
 
     <!-- Socials Section -->
     <section class="socials-media">
-        <h2>Our Social Accounts</h2>
-        <div class="socials-account">
-            <div class="account"><a href=""><i class="fab fa-twitter"></i></a></div>
-            <div class="account"><a href=""><i class="fab fa-instagram"></i></a></div>
-            <div class="account"><a href=""><i class="fab fa-facebook-f"></i></a></div>
+        <div class="container">
+            <h2>Our Social Accounts</h2>
+            <div class="socials-account">
+                <div class="account"><a href=""><i class="fab fa-twitter"></i></a></div>
+                <div class="account"><a href=""><i class="fab fa-instagram"></i></a></div>
+                <div class="account"><a href=""><i class="fab fa-facebook-f"></i></a></div>
+            </div>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer"></footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 
     <script src="./js/main.js"></script>
     <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>

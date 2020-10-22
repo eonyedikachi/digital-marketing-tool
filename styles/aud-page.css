@@ -34,7 +34,21 @@ section .container .audience-btn {
   font-size: 18px;
 }
 
+/* ViewContact */
+.containerCo {
+  padding: 2rem 0rem;
+}
 
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+input[type="checkbox"]{
+  height: 7rem;
+  width: 7rem;
+}
+.contactSection{
+  display: none;
+}
 
 /* Dropdown CSS */
 .hide {
@@ -221,7 +235,7 @@ position: relative;
 }
 
 
-input[type="radio"] {
+input[type="radio"]{
   -ms-transform: scale(2.5); 
   -webkit-transform: scale(2.5); 
   transform: scale(2.5);
@@ -520,4 +534,6 @@ input[type=checkbox]  {
 
   }
 }
+
+
 

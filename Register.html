@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <title>Sign Up | MartReach</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="stylesheet" href="./styles/register.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,66 +18,79 @@
 <body>
 
   <!-- Header Section -->
-  <header class="navbar header"></header>
+  <header class="header"></header>
 
   <!-- Register Section -->
-  <section>
-    <div class="register">
-      <div class="left"></div>
-      <div class="right">
-        <div class="signin">
-          <p>Already have an account?</p>
-          <a href="./signin.html">Sign In</a>
+  <main>
+    <div class="container d-flex justify-content-center .align-items-center">
+      <div class="register d-flex flex-column .align-items-center p-4">
+        <div class="signin d-flex justify-content-end align-items-center my-3">
+          Already have an account?
+          <a class="ml-2" href="./signin.html">Sign In</a>
         </div>
-        <p>Welcome to MartReach!</p>
-        <p>Register your account</p>
+        <h1 class="font-weight-bold">Welcome to <span>MartReach!</span></h1 class="font-wi">
+        <h5>Register your account</h5>
 
 
-        <form onsubmit=" validate() ">
-          <form onsubmit=" validate()">
+        <form class="d-flex flex-column" onsubmit="validate()">
+          <p id="error"></p>
+          <div class="input-field my-4">
+            <input class="d-block w-100" type="text" name="firstName" id="firstName" placeholder="First Name" />
+          </div>
 
-            <p id="error"></p>
-            <label for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName" placeholder="First Name" />
+          <div class="input-field my-4">
+            <input class="d-block w-100" type="text" name="lastName" id="lastName" placeholder="Last Name" />
+          </div>
 
-            <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+          <div class="input-field my-4">
+            <input class="d-block w-100" type="text" name="username" id="userName" placeholder="Username" />
+          </div>
 
-            <label for="username">Username</label>
+          <div class="input-field my-4">
+            <input class="d-block w-100" type="email" name="email" id="email" placeholder="example@email.com" />
+          </div>
 
-            <input type="text" name="username" id="userName" placeholder="Username" />
-
-
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="example@email.com" />
-
-            <label for="password">Password</label>
+          <div class="input-field my-4">
             <span>
-              <input type="password" name="password" id="password" placeholder="Password" />
+              <input class="d-block w-100" type="password" name="password" id="password" placeholder="Password" />
               <i class="far fa-eye" id="togglePassword"></i>
             </span>
-            <label for="password">Confirm Password</label>
+          </div>
+
+          <div class="input-field my-4">
             <span>
-              <input type="password" name="Confirm password" id="cpassword" placeholder="Confirm Password" />
+              <input class="d-block w-100" type="password" name="Confirm password" id="cpassword"
+                placeholder="Confirm Password" />
               <i class="far fa-eye" id="togglePassword2"></i>
             </span>
-
-            <input type="submit" id="register" value="Register" />
-          </form>
-
-          <div class="create">
-            <p>Create account with :</p>
-            <a href=""><i class="fab fa-google"></i></a>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
           </div>
+
+          <input class="btn my-3" type="submit" id="register" value="Register" />
+        </form>
+
+        <div class="create d-flex align-items-center mt-4">
+          Create account with:
+          <div class="socials d-flex align-items-center">
+            <a class="mx-3" href="#"><i class="fab fa-google"></i></a>
+            <a class="mx-3" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="mx-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="mx-3" href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
   <!-- Footer Section -->
   <footer class="footer"></footer>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 
   <script src="./js/main.js"></script>
   <script src="js/register.js"></script>

@@ -36,13 +36,13 @@ function display() {
                                     alt="">
                             </div>
                             <div class="info">
-                                <a href="../createEmail.html">${templates[i].name}</a>
+                                <button id="templateName" class="template-name" onclick="editEmail()">${templates[i].name}</button>
                                 <p><span>Last edited</span> on ${templates[i].date}</p>
                                 <p>${templates[i].user}</p>
                             </div>
                         </div>
                         <div class="edit">
-                            <button onclick="location.assign('../createEmail.html')">Edit</button>
+                            <button id="editBtn" onclick="editEmail()">Edit</button>
                             <button onclick="deleteTemp(${i})">Delete</button>
                         </div>
                 </div>`;
@@ -133,4 +133,9 @@ function cancel() {
 
   // Empty search box
   document.getElementById("search").value = "";
+}
+
+// Edit Email Template
+function editEmail() {
+  location.assign("../createEmail.html");
 }

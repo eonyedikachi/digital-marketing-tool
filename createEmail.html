@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Create Email Template | MartReach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -22,7 +23,7 @@
         <div class="container">
             <div class="logo">
                 <p>MartReach</p>
-                <button  type="button" class="hamburger" aria-label="Toggle Navigation">
+                <button type="button" class="hamburger" aria-label="Toggle Navigation">
                     <span class="hamburger-box">
                         <span class="hamburger-list hamburger-list1"></span>
                         <span class="hamburger-list hamburger-list2"></span>
@@ -73,33 +74,8 @@
     <main>
         <!-- Email Template Area -->
         <div class="email-area">
-            <div class="wrapper">
-                <div class="template" id="container" ondragover="droppable(event)" ondrop="drop(event)">
-                    <!-- <div class="img-content">
-                        <div class="image-wrapper newContent" id="newImgContent-1" onclick="editImage(event)">
-                            <img id="imgOutput-1" draggable="true" ondragstart="drag(event)" style="width:454px"
-                                src="./images/widowmaker_under_the_spotlight_by_zombieresorthq-dbg8lnx_3.jpg">
-                        </div>
-                    </div>
-                    <div class="text-content">
-                        <p draggable="true" ondragstart="drag(event)" id="newContent-3" class="newContent"
-                            style="font-size:16px;" onclick="editText(event)">This is the first
-                            email I've made and it's
-                            a template for you to use and edit</p>
-                    </div>
-                    <div class="text-content">
-                        <p draggable="true" ondragstart="drag(event)" id="newContent-4" class="newContent"
-                            style="font-size:16px;" onclick="editText(event)">Each line is a
-                            paragraph that should be
-                            edited separately and should work as intended </p>
-                    </div>
-                    <div class="img-content">
-                        <div class="image-wrapper newContent" id="newImgContent-5" onclick="editImage(event)">
-                            <img id="imgOutput-5" draggable="true" ondragstart="drag(event)" style="width:392px"
-                                src="./images/wolf_silhouette_hills_130119_1920x1080.jpg">
-                        </div>
-                    </div> -->
-                </div>
+            <div id="emailContent" class="wrapper">
+                <div class="template" id="container" ondragover="droppable(event)" ondrop="drop(event)"></div>
             </div>
         </div>
 
