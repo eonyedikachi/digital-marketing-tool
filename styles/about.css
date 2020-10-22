@@ -1,36 +1,88 @@
-.nav4 {
-  color: rgba(0, 0, 0, 0.9) !important;
+body{
+  display: flex;
+  flex-direction: column;
 }
-
+.about{
+width: 85vw;
+border-radius: 0px;
+/* background-color:#8C30F5; */
+background-color: #F1E4FF;
+align-self: center;
+display: flex;
+flex-direction: column;
+/* margin-top: 30px; */
+/* color: white; */
+}
+.who-we-are{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+border-bottom: 1px solid black;
+}
 .card {
   padding: 40px;
+width: 350px;
+left: 0px;
+top: 0px;
+flex-wrap: wrap;
+border-radius: 10px;
   margin: 50px 70px;
-  box-shadow: 0px 1px 0px 3px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: black;
 }
-
-.card h3 {
-  color: #4eb1f5;
+h2{
+font-family: Manrope;
+font-size: 48px;
+font-style: normal;
+font-weight: 800;
+line-height: 64px;
+letter-spacing: 0em;
+text-align: center;
+padding-top: 60px;
 }
 
 .margin-bottom {
   margin-bottom: 30px !important;
 }
 
-.card img {
-  width: 100%;
-  max-width: 30vw;
-  height: auto;
+.image img{
+  width: 200px;
+  height: 200px;
   align-self: center;
-  flex: 1;
   margin: 30px;
+  object-fit: cover;
+  border-radius: 30%;
 }
+.name{
+font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: center;
 
-h1 {
-  margin: 40px;
-  text-decoration: underline;
-  -webkit-text-decoration: 1px solid black;
-  text-decoration: 1px solid black;
-  text-align: center;
+}
+.name-description{
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+h5 {
+font-family: Manrope;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: center;
+
 }
 .imagediv {
   display: flex;
@@ -41,29 +93,22 @@ h1 {
   padding-left: 20px;
 }
 
-.image {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.image img {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-}
-
 .carddiv {
   display: flex;
   align-content: center;
 }
 .p {
-  align-self: center;
-  flex: 1;
-  text-align: center;
-  margin: 30px;
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
   .card {
     padding: 20px;
     margin: 20px;
@@ -76,4 +121,4 @@ h1 {
     flex-direction: column;
     margin-bottom: 40px;
   }
-}
+} */
