@@ -458,8 +458,6 @@ function underlineText(e) {
     }
   }
 }
-<<<<<<< HEAD
-=======
 
 // align left text
 function alignLeft(e) {
@@ -597,4 +595,3 @@ function saveTemplate() {
     }
   }
 }
->>>>>>> 854219d93de17cf8a07c6d88b8cee508b4d79f56
