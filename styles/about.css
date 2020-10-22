@@ -1,52 +1,50 @@
-body{
+body {
   display: flex;
   flex-direction: column;
 }
-.about{
-width: 85vw;
-border-radius: 0px;
-/* background-color:#8C30F5; */
-background-color: #F1E4FF;
-align-self: center;
-display: flex;
-flex-direction: column;
-/* margin-top: 30px; */
-/* color: white; */
+.about {
+  width: 85vw;
+  border-radius: 0px;
+  /* background-color:#8C30F5; */
+  background-color: #f1e4ff;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 30px; */
+  /* color: white; */
 }
-.who-we-are{
+.who-we-are {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .card {
-  padding: 40px;
-width: 350px;
-left: 0px;
-top: 0px;
-flex-wrap: wrap;
-border-radius: 10px;
-  margin: 50px 70px;
+  padding: 5%;
+  min-width: 200px;
+  /* flex-wrap: wrap; */
+  border-radius: 10px;
+  margin: 20px 50px;
   background-color: white;
   color: black;
 }
-h2{
-font-family: Manrope;
-font-size: 48px;
-font-style: normal;
-font-weight: 800;
-line-height: 64px;
-letter-spacing: 0em;
-text-align: center;
-padding-top: 60px;
+h2 {
+  font-family: Manrope;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding-top: 60px;
 }
 
 .margin-bottom {
   margin-bottom: 30px !important;
 }
 
-.image img{
+.image img {
   width: 200px;
   height: 200px;
   align-self: center;
@@ -54,35 +52,32 @@ padding-top: 60px;
   object-fit: cover;
   border-radius: 30%;
 }
-.name{
-font-family: Manrope;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: 28px;
-letter-spacing: 0em;
-text-align: center;
-
+.name {
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
 }
-.name-description{
-font-family: Manrope;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: center;
-
+.name-description {
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 h5 {
-font-family: Manrope;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 32px;
-letter-spacing: 0em;
-text-align: center;
-
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 .imagediv {
   display: flex;
@@ -92,20 +87,14 @@ text-align: center;
   padding-right: 20px;
   padding-left: 20px;
 }
-
-.carddiv {
-  display: flex;
-  align-content: center;
-}
 .p {
-font-family: Manrope;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: center;
-
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 /* @media screen and (max-width: 700px) {
