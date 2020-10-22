@@ -232,16 +232,12 @@ function checkDuplicateUser(email) {
 
 
 // POPULATING THE VIEWCONTACT PAGE
-
-
 function displayContacts(){
   let subscibers = JSON.parse(localStorage.getItem("subscibers"));
-  console.log('I am a chosen one ', subscibers);
   contactCount = '';
   for(i = 0; i <subscibers.length; i++){
     var xTable=document.getElementById('contactTable');
-
-    console.log('I am a chosen one ', subscibers);
+  
     var tr=document.createElement('tr');
     tr.innerHTML =`
     <td>
@@ -264,32 +260,8 @@ function displayContacts(){
     <td> </td>`
     
     xTable.appendChild(tr);
-    // document.querySelector('.table').appendChild(tr);
+    
     }
 
-
-
-  // for(i = 0; i <subscibers.length; i++){
-  //   contactCount += `
-  //   <div class = "newSubsciber">
-  //   <div class="form-field">
-  //   email : ${subscibers[i].email}<br>
-  //       address2 : ${subscibers[i].address2}<br>
-  //       country : ${subscibers[i].country}<br>
-  //       phone : ${subscibers[i].phone}<br>
-  //       month : ${subscibers[i].month}<br>
-  //       d 
-  //       newuserr : ${subscibers[i].newuserr}<br>
-  //       updateuserr : ${subscibers[i].updateuserr}<br>
-        
-        
-  //       <class="onclick-btn">
-  //       <button onClick="subscribeUser(${i})" id="subscribe">Subscribe</button>  
-        
-  //       </div>
-  //       </div>
-  //       </div> `
-       
-  //   }
-    document.getElementById("subscibers").innerHTML = contactCount
+ document.getElementById("subscibers").innerHTML = contactCount
 }

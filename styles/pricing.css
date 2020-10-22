@@ -1,7 +1,5 @@
-.nav-list .nav-items .nav3 {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-  border-radius: 5px;
+.nav3 {
+  color: rgba(0, 0, 0, 0.9) !important;
 }
 
 * {

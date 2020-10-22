@@ -49,18 +49,18 @@ html {
 }
 .faqsidebox ul {
   list-style-type: none;
-  color: white;
+  color: #fff;
 }
 .faqsidebox ul li {
   margin-bottom: 1rem;
 }
 .faqsidebox ul a {
-  color: white;
+  color: #fff;
 }
 
 .faqmainarea {
   margin-top: 5rem;
-  color: white;
+  color: #fff;
 }
 .faqmainarea div {
   height: 10rem;

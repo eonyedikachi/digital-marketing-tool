@@ -8,6 +8,10 @@
   <title>MartReach | Design</title>
   <script src="https://unpkg.com/konva@4.0.18/konva.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="stylesheet" href="./styles/contact.css" />
   <link rel="stylesheet" href="styles/createLanding.css" />
@@ -72,32 +76,34 @@
   <div class="left-fixed">
     <ul>
       <li>
-        <div class="btn-group dropright" >
-          <button type="button"  class="landing-button" id="photos-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <div class="btn-group dropright">
+          <button type="button" class="landing-button" id="photos-button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <a href="#"><i class="fas fa-image"></i>
               <h6>Photos</h6>
             </a>
           </button>
-          <div class="dropdown-menu row"  style="margin-top: -10px;">
-            <!-- Dropdown menu links -->     
+          <div class="dropdown-menu row" style="margin-top: -10px;">
+            <!-- Dropdown menu links -->
             <div id="photos" style=" display: grid;grid-template-columns: auto auto;">
 
-            </div>      
-           
+            </div>
+
           </div>
         </div>
-        
+
       </li>
-      <li>       
-        <div class="btn-group dropright" >
-          <button type="button"  class="landing-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+      <li>
+        <div class="btn-group dropright">
+          <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <a href="#"><i class="fas fa-columns"></i>
               <h6>Templates</h6>
             </a>
           </button>
           <div class="dropdown-menu">
             <!-- Dropdown menu links -->
-            <img src="images/avatar1.png" class="img-fluid" alt="Responsive image" >
+            <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
             <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
             <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
 
@@ -114,16 +120,19 @@
           </button>
           <div class="dropdown-menu" style=" width: 220px; ">
             <!-- Dropdown menu links -->
-            <button class="btn btn-primary"><p><label for="file" style="cursor: pointer;">Upload Image </label></p></button>
-            <p><input type="file"  accept="image" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-            <p><img id="output" width="100"  draggable="true" ondragstart="drag(event)" /></p>
-            
+            <button class="btn btn-primary">
+              <p><label for="file" style="cursor: pointer;">Upload Image </label></p>
+            </button>
+            <p><input type="file" accept="image" name="image" id="file" onchange="loadFile(event)"
+                style="display: none;"></p>
+            <p><img id="output" width="100" draggable="true" ondragstart="drag(event)" /></p>
+
 
           </div>
         </div>
 
       </li>
-      
+
       <li>
         <div class="btn-group dropright">
           <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
@@ -154,8 +163,8 @@
             <!-- Dropdown menu links -->
             <div class="control-box text" id="text" draggable="true" ondragstart="drag(event)">
               <img src="./images/text.png" alt="text" draggable="false">
-              
-          </div>
+
+            </div>
 
           </div>
         </div>
@@ -171,9 +180,13 @@
           </button>
           <div class="dropdown-menu">
             <!-- Dropdown menu links -->
-            <button class="btn btn-primary"><p><label for="file" style="cursor: pointer;">Upload Music </label></p></button>
-            <p><input type="file"  accept="audio/*" name="mp3" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-            <p style="z-index: 999;" draggable="true" ondragstart="drag(event)"><audio controls id="output3" width="100"  draggable="true" ondragstart="drag(event)"></audio></p>
+            <button class="btn btn-primary">
+              <p><label for="file" style="cursor: pointer;">Upload Music </label></p>
+            </button>
+            <p><input type="file" accept="audio/*" name="mp3" id="file" onchange="loadFile(event)"
+                style="display: none;"></p>
+            <p style="z-index: 999;" draggable="true" ondragstart="drag(event)"><audio controls id="output3" width="100"
+                draggable="true" ondragstart="drag(event)"></audio></p>
 
           </div>
         </div>
@@ -189,9 +202,12 @@
           </button>
           <div class="dropdown-menu">
             <!-- Dropdown menu links -->
-            <button class="btn btn-primary"><p><label for="file" style="cursor: pointer;">Upload Video </label></p></button>
-            <p><input type="file"  accept="video" name="video" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-            <p><video id="output2" width="100"  draggable="true" ondragstart="drag(event)"></video></p>
+            <button class="btn btn-primary">
+              <p><label for="file" style="cursor: pointer;">Upload Video </label></p>
+            </button>
+            <p><input type="file" accept="video" name="video" id="file" onchange="loadFile(event)"
+                style="display: none;"></p>
+            <p><video id="output2" width="100" draggable="true" ondragstart="drag(event)"></video></p>
 
           </div>
         </div>
@@ -208,9 +224,11 @@
           <div class="dropdown-menu p-1">
             <!-- Dropdown menu links -->
 
-            <a style="display: flex; flex-direction: row; cursor: pointer; background-color: #4eb1f5; justify-content: space-between; padding: 10px;">
+            <a
+              style="display: flex; flex-direction: row; cursor: pointer; background-color: #4eb1f5; justify-content: space-between; padding: 10px;">
               <div>
-                <i class="fas fa-plus" style="font-size: 30px; padding: 5px; border: dotted 1px #4eb1f5; margin: 3px;"></i>
+                <i class="fas fa-plus"
+                  style="font-size: 30px; padding: 5px; border: dotted 1px #4eb1f5; margin: 3px;"></i>
               </div>
               <div>
                 <span style="font-size: 13px;">Create Folder</span>
@@ -222,8 +240,8 @@
         </div>
 
       </li>
-       
-      
+
+
     </ul>
   </div>
   <div class="right-fixed" id="parent-container">
@@ -233,15 +251,13 @@
           <h6>Add page title</h6>
         </div>
         <div class="top-right">
-        <input type="color" name="change-color" id="change-color" onblur="changeContainerColor()">
-         <i class="far fa-clone" id="getDetails"></i>
-         <i class="far fa-trash-alt" ondragover="droppable(event)"  ondrop="discard(event)"></i>
+          <input type="color" name="change-color" id="change-color" onblur="changeContainerColor()">
+          <i class="far fa-clone" id="getDetails"></i>
+          <i class="far fa-trash-alt" ondragover="droppable(event)" ondrop="discard(event)"></i>
         </div>
       </div>
-      <div class="page-bottom" id="container"
-      ondragover="droppable(event)"
-      ondrop="drop(event)" >
-    </div>
+      <div class="page-bottom" id="container" ondragover="droppable(event)" ondrop="drop(event)">
+      </div>
     </div>
   </div>
 </main>
@@ -258,22 +274,13 @@
 <script src="js/createLanding.js"></script>
 <script src="./js/nav.js"></script>
 <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
-<script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-  
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

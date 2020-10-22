@@ -1,7 +1,5 @@
-.nav-list .nav-items .nav2 {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-  border-radius: 5px;
+.nav2 {
+  color: rgba(0, 0, 0, 0.9) !important;
 }
 .services-section {
   width: 100%;
@@ -96,7 +94,7 @@ s-box p {
   border-radius: 0px 0px 10px 10px;
   display: none;
   -webkit-animation: s-bar 0.5s;
-          animation: s-bar 0.5s;
+  animation: s-bar 0.5s;
 }
 .s-box:hover .s-bar {
   display: block;

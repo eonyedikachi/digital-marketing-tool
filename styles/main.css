@@ -1,7 +1,5 @@
-.nav-list .nav-items .nav1 {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-  border-radius: 5px;
+.nav1 {
+  color: rgba(0, 0, 0, 0.9) !important;
 }
 
 /* Main Div */
@@ -159,7 +157,7 @@
 }
 
 .box:hover {
-  background-color: white;
+  background-color: #fff;
 }
 
 .audience {
@@ -266,7 +264,7 @@
     margin: 3px;
   }
   .box:hover {
-    background-color: white;
+    background-color: #fff;
     color: var(--secondary-color);
     border-radius: 10px;
   }

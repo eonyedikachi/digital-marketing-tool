@@ -203,7 +203,7 @@ h6 {
   -webkit-text-decoration-color: transparent;
           text-decoration-color: transparent;
   font-weight: 100;
-  color: darkred;
+  /* color: var(--secondary-color); */
 }
 @media only screen and (max-width: 700px) {
   section {

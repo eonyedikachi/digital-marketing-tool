@@ -18,8 +18,8 @@ input {
 
 .search {
   background: linear-gradient(
-    20deg,
-    var(--secondary-color) 40%,
+    160deg,
+    var(--secondary-color) -11%,
     var(--primary-color) 90%
   );
   min-height: calc(100vh - 291.4px);
