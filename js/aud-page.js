@@ -118,6 +118,8 @@ function viewContact(){
   document.querySelector("#manageContact").style.display = "none";
   document.querySelector("#importContact").style.display = "none";
   document.querySelector("#addASubscriber").style.display = "none";
+
+  displayContacts()
 }
 
 
@@ -224,4 +226,70 @@ function checkDuplicateUser(email) {
     }
     document.getElementById("demo").innerHTML = txt;
   }
+}
+
+
+
+
+// POPULATING THE VIEWCONTACT PAGE
+
+
+function displayContacts(){
+  let subscibers = JSON.parse(localStorage.getItem("subscibers"));
+  console.log('I am a chosen one ', subscibers);
+  contactCount = '';
+  for(i = 0; i <subscibers.length; i++){
+    var xTable=document.getElementById('contactTable');
+
+    console.log('I am a chosen one ', subscibers);
+    var tr=document.createElement('tr');
+    tr.innerHTML =`
+    <td>
+    <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="customCheck3">
+    <label class="custom-control-label" for="customCheck3">${i+1}</label>
+    </div>
+    </td>
+    <td>${subscibers[i].email}</td>
+    <td>${subscibers[i].firstName}</td>
+    <td>${subscibers[i].lastName}</td>
+
+    <td>${subscibers[i].address1} <br>: ${subscibers[i].address2}</td>
+    <td>${subscibers[i].phone}</td>
+    <td>${subscibers[i].month} / ${subscibers[i].day}</td> 
+    <td>subscribed</td>
+    <td>${subscibers[i].country}</td>
+   
+ 
+    <td> </td>`
+    
+    xTable.appendChild(tr);
+    // document.querySelector('.table').appendChild(tr);
+    }
+
+
+
+  // for(i = 0; i <subscibers.length; i++){
+  //   contactCount += `
+  //   <div class = "newSubsciber">
+  //   <div class="form-field">
+  //   email : ${subscibers[i].email}<br>
+  //       address2 : ${subscibers[i].address2}<br>
+  //       country : ${subscibers[i].country}<br>
+  //       phone : ${subscibers[i].phone}<br>
+  //       month : ${subscibers[i].month}<br>
+  //       d 
+  //       newuserr : ${subscibers[i].newuserr}<br>
+  //       updateuserr : ${subscibers[i].updateuserr}<br>
+        
+        
+  //       <class="onclick-btn">
+  //       <button onClick="subscribeUser(${i})" id="subscribe">Subscribe</button>  
+        
+  //       </div>
+  //       </div>
+  //       </div> `
+       
+  //   }
+    document.getElementById("subscibers").innerHTML = contactCount
 }
