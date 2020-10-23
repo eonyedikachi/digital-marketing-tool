@@ -55,13 +55,13 @@
 }
 
 .main .right button {
-  color: var(--secondary-color);
+  color: #8c30f5;
   background: var(--primary-color);
   margin-top: 20px;
   padding: 10px;
   border: none;
   border-radius: 15px;
-  font-family: "Baloo Tamma 2";
+  font-family: 'Baloo Tamma 2';
   cursor: pointer;
   opacity: 0;
   transition: all ease 0.5s;
@@ -82,7 +82,7 @@
 }
 
 .main .right button:hover {
-  background: var(--secondary-color);
+  background: #8c30f5;
   color: var(--primary-color);
   transition: all ease 0.5s;
 }
@@ -92,7 +92,7 @@
 }
 
 .main .left {
-  background-color: var(--secondary-color);
+  background-color: #8c30f5;
   height: 70vh;
   width: 70vh;
   margin: 5px 0 0 0;
@@ -101,7 +101,7 @@
 }
 
 .main .left .cover {
-  background-image: url("../images/marketing-2.jpg");
+  background-image: url('../images/marketing-2.jpg');
   background-size: cover;
   height: 250px;
   width: 400px;
@@ -166,7 +166,7 @@
   justify-content: space-evenly;
 }
 .audience .right {
-  background-image: url("../images/audience.png");
+  background-image: url('../images/audience.png');
   background-size: cover;
   height: 350px;
   width: 400px;
@@ -180,12 +180,44 @@
 
 .audience .left a {
   text-decoration: underline;
-  color: var(--secondary-color);
+  color: #8c30f5;
 }
 
 @media screen and (max-width: 600px) {
   .main {
     height: 70vh;
+  }
+  .main-hero .main-img {
+    display: none;
+  }
+  .container2 {
+    width: 100%;
+    height: 60vh;
+    /* background-color: red; */
+  }
+
+  .container2 .main-text h3 {
+    font-size: 30px;
+    width: 100%;
+  }
+  .container2 .main-text p {
+    font-size: 30px;
+    width: 100%;
+    /* background-color: red; */
+    margin-bottom: 70px;
+  }
+
+  .container2 .yellow-circle {
+    position: absolute;
+    left: 182px;
+    top: 383px;
+  }
+  .container2 .turquoise-circle {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: 42px;
+    top: 30px;
   }
   .main .right {
     width: 100%;
@@ -221,7 +253,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    background-color: var(--secondary-color);
+    background-color: #8c30f5;
     margin: 0px 10px 0px 10px;
     width: 95%;
     height: unset;
@@ -265,7 +297,7 @@
   }
   .box:hover {
     background-color: #fff;
-    color: var(--secondary-color);
+    color: #8c30f5;
     border-radius: 10px;
   }
 
@@ -284,9 +316,142 @@
     font-size: 30px;
     font-weight: bold;
     line-height: 1.6;
-    color: var(--secondary-color);
+    color: #8c30f5;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+}
+
+.container2 {
+  position: relative;
+  width: 100%;
+  height: 115vh;
+  background: #ffffff;
+}
+
+.yellow-circle {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  left: 562px;
+  top: 383px;
+  /* Brand / Orange 800 */
+  background: #ffc278;
+  border-radius: 50%;
+}
+.turquoise-circle {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  left: 842px;
+  top: 589px;
+  /* Brand / Turquoise 800 */
+  border-radius: 50%;
+  background: #75e3ea;
+}
+
+.get-started {
+  position: static;
+  width: 196px;
+  height: 62px;
+  left: 0px;
+  top: 308px;
+
+  /* Brand / Purple */
+
+  background: #8c30f5;
+  border-radius: 8px;
+  color: #fff;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  align-self: flex-start;
+  flex-grow: 0;
+  margin: 0px 32px;
+}
+.text-first {
+  position: static;
+  width: 540px;
+  height: 196px;
+  left: 0px;
+  top: 0px;
+
+  /* Heading / H1 */
+
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 98px;
+  /* or 136% */
+
+  font-feature-settings: 'liga' off;
+
+  /* Text / Gray 900 */
+
+  color: #18191f;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  align-self: flex-start;
+  flex-grow: 0;
+  margin: 0px 16px;
+}
+
+.text-second {
+  position: static;
+  width: 540px;
+  height: 64px;
+  left: 0px;
+  top: 212px;
+
+  /* Lead / Lead 1 */
+
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  /* or 178% */
+
+  font-feature-settings: 'liga' off;
+
+  /* Text / Gray 900 */
+
+  color: #18191f;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  align-self: flex-start;
+  flex-grow: 0;
+  margin: 0px 16px;
+}
+/* .main-img {
+  position: absolute;
+  left: 52.02%;
+  right: 11.97%;
+  top: 32.53%;
+  bottom: 22.76%;
+
+  background: url(.jpg);
+  Header Image Shadow
+
+  box-shadow: 48px 24px 48px rgba(24, 37, 56, 0.12);
+  border-radius: 8px;
+  transform: rotate(-7deg);
+} */
+.main-hero {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 11.97%;
+  top: 12.53%;
+  bottom: 22.76%;
 }

@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="./styles/signin.css" />
+  <link rel="stylesheet" href="./styles/register.css">
+  <link rel="stylesheet" href="./styles/signin.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -20,36 +21,43 @@
 
   <main>
     <div class="center-form" onsubmit=" return validate() ">
-      <p id="error"></p>
-      <h1>Login</h1>
-      <form>
-        <div class="txt_field">
-          <input type="text" id="use" />
-          <i class="fa fa-times u_times"></i>
-          <i class="fa fa-check u_check"></i>
-          <span></span>
-          <label>Username</label>
+      <div class="container d-flex justify-content-center .align-items-center">
+        <div class="register d-flex flex-column .align-items-center p-4">
+          <div class="signin d-flex justify-content-end align-items-center my-3">
+            Don't have an account yet?
+            <a class="ml-2" href="./register.html">Sign Up</a>
+          </div>
+          <h1 class="font-weight-bold">Welcome back to <span>MartReach!</span></h1 class="font-wi">
+          <h5>Login</h5>
+          <form class="d-flex flex-column" onsubmit="validate()">
+            <p id="error"></p>
+        <div class="input-field my-4"><span>
+          <input placeholder="Username" class="d-block w-100" type="text" id="use" />
+          <!-- <i class="fa fa-times u_times"></i> -->
+          <!-- <i class="fa fa-check u_check"></i> -->
+          </span>
         </div>
-        <div class="txt_field">
-          <input type="password" id="pass" />
-          <i class="fa fa-times p_times"></i>
-          <i class="fa fa-check p_check"></i>
-          <span></span>
-          <label>Password</label>
+        <div class="input-field my-4"><span>
+          <input placeholder="Password" class="d-block w-100" type="password" id="pass" />
+          <!-- <i class="fa fa-times p_times"></i> -->
+          <!-- <i class="fa fa-check p_check"></i> -->
+          </span>
         </div>
         <div class="pass">
           <a href="forgotpassword.html"> Forgot Password?</a>
         </div>
-        <input type="submit" value="Login" id="Login" />
+        <input class="btn my-3" type="submit" id="Login" value="Login" />
         <div class="signup_link">
           Not a member? <a href="./register.html">Signup</a>
 
-          <div class="social-icons1">
-            <h3>Sign in with</h3>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
+          <div class="create d-flex align-items-center mt-4">
+            Sign in with:
+            <div class="socials d-flex align-items-center">
+              <a class="mx-3" href="#"><i class="fab fa-google"></i></a>
+              <a class="mx-3" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="mx-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a class="mx-3" href="#"><i class="fab fa-twitter"></i></a>
+            </div>
           </div>
         </div>
       </form>

@@ -1,5 +1,5 @@
 // Local Storage
-let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 // fetches most recent logged in user
 i = currentUser.length - 1;
@@ -24,35 +24,35 @@ if (templates == null) {
 // }
 
 // Controls and Styles Tabs
-let controls = document.getElementById('controls');
-let styles = document.getElementById('styles');
-let controlMain = document.getElementById('controlMain');
-let stylesMain = document.getElementById('stylesMain');
+let controls = document.getElementById("controls");
+let styles = document.getElementById("styles");
+let controlMain = document.getElementById("controlMain");
+let stylesMain = document.getElementById("stylesMain");
 
 // Button to show controls
-controls.addEventListener('click', () => {
-  controls.classList.add('active');
-  styles.classList.remove('active');
-  controlMain.classList.remove('hide');
-  stylesMain.classList.remove('show');
+controls.addEventListener("click", () => {
+  controls.classList.add("active");
+  styles.classList.remove("active");
+  controlMain.classList.remove("hide");
+  stylesMain.classList.remove("show");
 });
 
 // Button to show styles
-styles.addEventListener('click', () => {
-  controls.classList.remove('active');
-  styles.classList.add('active');
-  stylesMain.classList.add('show');
-  controlMain.classList.add('hide');
+styles.addEventListener("click", () => {
+  controls.classList.remove("active");
+  styles.classList.add("active");
+  stylesMain.classList.add("show");
+  controlMain.classList.add("hide");
 });
 
 // Show page styles
-document.getElementById('page').addEventListener('click', () => {
-  document.getElementById('pageStyle').classList.toggle('show');
+document.getElementById("page").addEventListener("click", () => {
+  document.getElementById("pageStyle").classList.toggle("show");
 });
 
 // Show text styles
-document.getElementById('styleText').addEventListener('click', () => {
-  document.getElementById('textStyle').classList.toggle('show');
+document.getElementById("styleText").addEventListener("click", () => {
+  document.getElementById("textStyle").classList.toggle("show");
 });
 
 // Used to change id of each element
@@ -69,25 +69,25 @@ function drag(e) {
   let elementId = e.target.id;
 
   // set data for ID
-  e.dataTransfer.setData('id', elementId);
+  e.dataTransfer.setData("id", elementId);
 }
 // Drop Area
 function drop(e) {
   e.preventDefault();
 
   // get data
-  let data = e.dataTransfer.getData('id');
+  let data = e.dataTransfer.getData("id");
 
   // get element to be dragged by ID
   let element = document.getElementById(data);
 
   // create copy of element
-  let newElement = document.createElement('div');
+  let newElement = document.createElement("div");
 
   // check if data dragged is text id
-  if (data == 'text') {
+  if (data == "text") {
     // set class in div
-    newElement.setAttribute('class', 'text-content');
+    newElement.setAttribute("class", "text-content");
 
     // append into created div
     newElement.innerHTML = `<div class="settings">
@@ -142,13 +142,13 @@ function drop(e) {
     e.target.appendChild(newElement);
 
     // check if data dragged is image id
-  } else if (data == 'image') {
+  } else if (data == "image") {
     // set class in div
-    newElement.setAttribute('class', 'img-content');
+    newElement.setAttribute("class", "img-content");
 
     // append into created div
     newElement.innerHTML = `<div id="upload">
-                            <button class="btn btn-primary">
+                            <button class="btn">
                                 <p><label for="file" style="cursor: pointer;">Upload image or video</label></p>
                             </button>
                             <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
@@ -179,7 +179,7 @@ function drop(e) {
     e.target.appendChild(newElement);
   }
   // check if data dragged is imgOutput id
-  else if (data.includes('imgOutput')) {
+  else if (data.includes("imgOutput")) {
     element.parentNode.parentNode.parentNode.appendChild(
       element.parentNode.parentNode
     );
@@ -208,22 +208,22 @@ function saveText(e) {
   let save = e.target.id;
 
   // get values in input box
-  let input = document.getElementById('input').value;
-  let fontSize = document.getElementById('fontSize').value;
-  let color = document.getElementById('input').style.color;
-  let align = document.getElementById('input').style.textAlign;
+  let input = document.getElementById("input").value;
+  let fontSize = document.getElementById("fontSize").value;
+  let color = document.getElementById("input").style.color;
+  let align = document.getElementById("input").style.textAlign;
 
   // check if input is empty
-  if (input != '') {
-    if (save == 'inner') {
+  if (input != "") {
+    if (save == "inner") {
       saveId = document.getElementById(save);
 
       // Append content
       saveId.parentNode.parentNode.parentNode.innerHTML = `<p draggable="true" ondragstart="drag(event)" id='newContent-${i++}' class='newContent' style='font-size:${fontSize}; color:${color}; text-align:${align}' onclick='editText(event)'>${input}</p>`;
     }
   } else {
-    document.getElementById('error').style.display = 'block';
-    document.getElementById('error').style.color = 'red';
+    document.getElementById("error").style.display = "block";
+    document.getElementById("error").style.color = "red";
   }
 }
 
@@ -232,10 +232,10 @@ function saveImage(e) {
   // target save button id
   let save = e.target.id;
 
-  output = document.getElementById('output');
+  output = document.getElementById("output");
   width = output.style.width;
 
-  if (save == 'inner') {
+  if (save == "inner") {
     saveId = document.getElementById(save);
 
     // Append content
@@ -349,7 +349,7 @@ function upload(e) {
 
     // Append content
     uploadId.parentNode.parentNode.parentNode.innerHTML = `<div id="upload">
-                            <button class="btn btn-primary">
+                            <button class="btn">
                                 <p><label for="file" style="cursor: pointer;">Upload image or video</label></p>
                             </button>
                             <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
@@ -383,93 +383,93 @@ let loadFile = function (e) {
   // Upload image
   var reader = new FileReader();
   reader.onload = function () {
-    var image = document.getElementById('output');
+    var image = document.getElementById("output");
     image.src = reader.result;
   };
   reader.readAsDataURL(e.target.files[0]);
 
-  let upload = document.getElementById('upload');
-  let settings = document.getElementById('settings');
+  let upload = document.getElementById("upload");
+  let settings = document.getElementById("settings");
   upload.remove();
-  settings.style.display = 'flex';
+  settings.style.display = "flex";
 };
 
 // Zoom image in
 function zoomIn() {
-  let img = document.getElementById('output');
+  let img = document.getElementById("output");
   let currentWidth = img.clientWidth;
-  img.style.width = currentWidth + 50 + 'px';
+  img.style.width = currentWidth + 50 + "px";
 }
 
 // Zoom image out
 function zoomOut() {
-  let img = document.getElementById('output');
+  let img = document.getElementById("output");
   let currentWidth = img.clientWidth;
-  img.style.width = currentWidth - 50 + 'px';
+  img.style.width = currentWidth - 50 + "px";
 }
 
 // Change page color
 function changePageColor() {
-  pageColor = document.getElementById('pageColor').value;
-  templateArea = document.getElementById('container');
+  pageColor = document.getElementById("pageColor").value;
+  templateArea = document.getElementById("container");
   templateArea.style.backgroundColor = pageColor;
 }
 
 function changeTextColor() {
-  textColor = document.getElementById('textColor').value;
-  templateArea = document.getElementById('container');
+  textColor = document.getElementById("textColor").value;
+  templateArea = document.getElementById("container");
   templateArea.style.color = textColor;
 }
 
 function changeTextElementColor() {
-  textColor = document.getElementById('textElementColor').value;
-  input = document.getElementById('input');
+  textColor = document.getElementById("textElementColor").value;
+  input = document.getElementById("input");
   input.style.color = textColor;
 }
 
 // Bold text
 function boldText(e) {
-  input = document.getElementById('input');
+  input = document.getElementById("input");
   // target bold button id
   let bold = e.target.id;
   if (bold == `innerBold`) {
     let boldId = document.getElementById(bold);
 
-    if (boldId.parentNode.parentNode.parentNode.style.fontWeight == 'bold') {
-      input.style.fontWeight = 'normal';
-      boldId.parentNode.parentNode.parentNode.style.fontWeight = 'normal';
-      boldId.style.border = 'unset';
+    if (boldId.parentNode.parentNode.parentNode.style.fontWeight == "bold") {
+      input.style.fontWeight = "normal";
+      boldId.parentNode.parentNode.parentNode.style.fontWeight = "normal";
+      boldId.style.border = "unset";
     } else {
-      input.style.fontWeight = 'bold';
-      boldId.parentNode.parentNode.parentNode.style.fontWeight = 'bold';
-      boldId.style.border = '1px solid black';
+      input.style.fontWeight = "bold";
+      boldId.parentNode.parentNode.parentNode.style.fontWeight = "bold";
+      boldId.style.border = "1px solid black";
     }
   }
 }
 
 // italic text
 function italicText(e) {
-  input = document.getElementById('input');
+  input = document.getElementById("input");
   // target italic button id
   let italic = e.target.id;
   if (italic == `innerItalic`) {
     italicId = document.getElementById(italic);
 
-    if (italicId.parentNode.parentNode.parentNode.style.fontStyle == 'italic') {
-      input.style.fontStyle = 'normal';
-      italicId.parentNode.parentNode.parentNode.style.fontStyle = 'normal';
-      italicId.style.border = 'unset';
+    if (italicId.parentNode.parentNode.parentNode.style.fontStyle == "italic") {
+      input.style.fontStyle = "normal";
+      italicId.parentNode.parentNode.parentNode.style.fontStyle = "normal";
+      italicId.style.border = "unset";
     } else {
-      input.style.fontStyle = 'italic';
-      italicId.parentNode.parentNode.parentNode.style.fontStyle = 'italic';
-      italicId.style.border = '1px solid black';
+      input.style.fontStyle = "italic";
+      italicId.parentNode.parentNode.parentNode.style.fontStyle = "italic";
+      italicId.style.border = "1px solid black";
     }
   }
 }
 
 // underline text
 function underlineText(e) {
-  input = document.getElementById('input');
+  input = document.getElementById("input");
   // target underline button id
   let underline = e.target.id;
   if (underline == `innerUnderline`) {
@@ -477,85 +477,85 @@ function underlineText(e) {
 
     if (
       underlineId.parentNode.parentNode.parentNode.style.textDecoration ==
-      'underline'
+      "underline"
     ) {
-      input.style.textDecoration = 'none';
+      input.style.textDecoration = "none";
       underlineId.parentNode.parentNode.parentNode.style.textDecoration =
-        'none';
-      underlineId.style.border = 'unset';
+        "none";
+      underlineId.style.border = "unset";
     } else {
-      input.style.textDecoration = 'underline';
+      input.style.textDecoration = "underline";
       underlineId.parentNode.parentNode.parentNode.style.textDecoration =
-        'underline';
-      underlineId.style.border = '1px solid black';
+        "underline";
+      underlineId.style.border = "1px solid black";
     }
   }
 }
 
 // align left text
 function alignLeft(e) {
-  input = document.getElementById('input');
+  input = document.getElementById("input");
   // target alignLeft button id
   let alignLeft = e.target.id;
   if (alignLeft == `innerAlignLeft`) {
     alignLeftId = document.getElementById(alignLeft);
 
-    input.style.textAlign = 'left';
-    alignLeftId.parentNode.parentNode.parentNode.style.textAlign = 'left';
+    input.style.textAlign = "left";
+    alignLeftId.parentNode.parentNode.parentNode.style.textAlign = "left";
   }
 }
 
 // align right text
 function alignRight(e) {
-  input = document.getElementById('input');
+  input = document.getElementById("input");
   // target alignRight button id
   let alignRight = e.target.id;
   if (alignRight == `innerAlignRight`) {
     alignRightId = document.getElementById(alignRight);
 
-    input.style.textAlign = 'right';
-    alignRightId.parentNode.parentNode.parentNode.style.textAlign = 'right';
+    input.style.textAlign = "right";
+    alignRightId.parentNode.parentNode.parentNode.style.textAlign = "right";
   }
 }
 
 // align center text
 function alignCenter(e) {
-  input = document.getElementById('input');
+  input = document.getElementById("input");
   // target alignCenter button id
   let alignCenter = e.target.id;
   if (alignCenter == `innerAlignCenter`) {
     alignCenterId = document.getElementById(alignCenter);
 
-    input.style.textAlign = 'center';
-    alignCenterId.parentNode.parentNode.parentNode.style.textAlign = 'center';
+    input.style.textAlign = "center";
+    alignCenterId.parentNode.parentNode.parentNode.style.textAlign = "center";
   }
 }
 
 // justify text
 function justify(e) {
-  input = document.getElementById('input');
+  input = document.getElementById("input");
   // target justify button id
   let justify = e.target.id;
   if (justify == `innerJustify`) {
     justifyId = document.getElementById(justify);
 
-    input.style.textAlign = 'justify';
-    justifyId.parentNode.parentNode.parentNode.style.textAlign = 'justify';
+    input.style.textAlign = "justify";
+    justifyId.parentNode.parentNode.parentNode.style.textAlign = "justify";
   }
 }
 
 // Display Save
 function displaySave() {
-  let box = document.getElementById('confirmSave');
-  box.style.display = 'flex';
+  let box = document.getElementById("confirmSave");
+  box.style.display = "flex";
 }
 
 // Cancel Save
 function cancelSave() {
-  let box = document.getElementById('confirmSave');
-  box.style.display = 'none';
-  let error = document.getElementById('error');
-  error.innerHTML = '';
+  let box = document.getElementById("confirmSave");
+  box.style.display = "none";
+  let error = document.getElementById("error");
+  error.innerHTML = "";
 }
 
 // Save Email Template
@@ -575,26 +575,26 @@ function saveTemplate() {
   d.setMinutes(minutes);
 
   var months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
-  let newTemplate = document.getElementById('emailContent').innerHTML;
-  let name = document.getElementById('saveInput').value;
-  if (name == '' || name == null || name == undefined) {
-    let error = document.getElementById('error');
-    error.innerHTML = 'Please enter name for template';
-    error.style.color = 'red';
+  let newTemplate = document.getElementById("emailContent").innerHTML;
+  let name = document.getElementById("saveInput").value;
+  if (name == "" || name == null || name == undefined) {
+    let error = document.getElementById("error");
+    error.innerHTML = "Please enter name for template";
+    error.style.color = "red";
   } else {
     // fetches most current user
     i = currentUser.length - 1;
@@ -615,9 +615,9 @@ function saveTemplate() {
     );
 
     if (isName) {
-      con = confirm('Name already exists, do you want to overwrite it?');
+      con = confirm("Name already exists, do you want to overwrite it?");
       if (con) {
-        alert('overwritten');
+        alert("overwritten");
 
         templates[0] = emailTemplate;
 
@@ -626,7 +626,7 @@ function saveTemplate() {
           JSON.stringify(templates)
         );
 
-        location.assign('./email_templates.html');
+        location.assign("./email_templates.html");
       }
     } else {
       templates.push(emailTemplate);
@@ -635,7 +635,7 @@ function saveTemplate() {
         `${currentUser[i].userName}Templates`,
         JSON.stringify(templates)
       );
-      location.assign('./email_templates.html');
+      location.assign("./email_templates.html");
     }
   }
 }
