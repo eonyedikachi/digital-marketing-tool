@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 
 *,
 ::before,
@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 a {
@@ -55,7 +55,7 @@ header {
 }
 
 .right-nav .btn:first-child:hover {
-  background: #8c30f5;
+  background: #c0a7db;
   color: #fff;
 }
 
@@ -65,8 +65,7 @@ header {
 }
 
 .right-nav .btn:last-child:hover {
-  background: #f1e4ff;
-  color: #8c30f5;
+  background: #5f1eaa;
 }
 
 /* Footer */
@@ -136,8 +135,8 @@ footer .container .footer-content .newsletter .subscribe button {
   border: none;
 }
 
-.newsletter .subscribe input[type='email']:focus,
-.newsletter .subscribe input[type='email']:active {
+.newsletter .subscribe input[type="email"]:focus,
+.newsletter .subscribe input[type="email"]:active {
   background: none;
   color: #fff;
   outline: none;
@@ -147,7 +146,11 @@ footer .container .footer-content .newsletter .subscribe button {
 /* Back Button Footer */
 .back-footer {
   height: 70px;
-  color: var(--primary-color);
+  color: #fff;
+}
+
+.back-footer i {
+  color: #fff;
 }
 
 .back-footer .back-button {
@@ -156,7 +159,7 @@ footer .container .footer-content .newsletter .subscribe button {
   border: none;
   outline: none;
   font-size: 1.3rem;
-  color: var(--primary-color);
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
