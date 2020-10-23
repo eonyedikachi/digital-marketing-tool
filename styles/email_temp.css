@@ -10,7 +10,7 @@
 
 .container .select a {
   float: right;
-  color: var(--secondary-color);
+  color: #8c30f5;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border: 1px solid #dee2e6;
@@ -20,7 +20,7 @@
 }
 
 .container .select a:hover {
-  color: rgb(0, 123, 255);
+  color: #5f1eaa;
 }
 
 /* Layout */
@@ -30,8 +30,17 @@
   padding: 1rem;
 }
 
+h1 {
+  font-weight: 600;
+  color: #8c30f5;
+}
+
 h2 {
   margin-top: 1rem;
+}
+
+.nav-link {
+  color: #8c30f5;
 }
 
 /* Featured */
@@ -52,7 +61,7 @@ h2 {
 }
 
 .featured .feature-box img:hover {
-  border: 1px solid var(--secondary-color);
+  border: 1px solid #8c30f5;
   border-radius: 5px;
 }
 
@@ -118,11 +127,11 @@ button {
 }
 
 .nav-tabs .nav-item a {
-  color: var(--secondary-color);
+  color: #8c30f5;
 }
 
 .nav-tabs .nav-item a:hover {
-  color: rgb(0, 123, 255);
+  color: #5f1eaa;
 }
 
 .navbar {

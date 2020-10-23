@@ -13,7 +13,7 @@ body {
 /* Main */
 .emailTemp {
   padding: 1rem;
-  min-height: calc(100vh - 138.7778px);
+  min-height: calc(100vh - 70px);
 }
 
 /* Templates */
@@ -23,12 +23,21 @@ body {
   justify-content: space-between;
 }
 
+.templates h1 {
+  color: #8c30f5;
+  font-weight: 700;
+}
+
 .templates a {
-  background: var(--secondary-color);
-  color: var(--primary-color);
+  background: #8c30f5;
+  color: #fff;
   padding: 0.7rem;
   width: 150px;
   text-align: center;
+}
+
+.templates a:hover {
+  background: #5f1eaa;
 }
 
 .email_temp .search {
@@ -51,6 +60,7 @@ body {
   width: 9%;
   border: 1px solid grey;
   background: none;
+  background: white;
 }
 
 #cancelBtn {
@@ -97,13 +107,13 @@ body {
 
 .template_list .temp .description .info .template-name {
   font-size: 2rem;
-  color: var(--secondary-color);
+  color: #8c30f5;
   border: none;
   background: none;
 }
 
 .template_list .temp .description .info .template-name:hover {
-  color: rgb(59, 59, 238);
+  color: #5f1eaa;
 }
 
 .template_list .temp .description .info p {
@@ -131,7 +141,7 @@ body {
 }
 
 .template_list .temp .edit button:last-child:hover {
-  background: rgb(224, 7, 7);
+  background: rgb(136, 7, 7);
 }
 
 /* Mobile */
@@ -182,7 +192,7 @@ button {
 }
 
 .nav-tabs .nav-item a {
-  color: var(--secondary-color);
+  color: #8c30f5;
 }
 
 .nav-tabs .nav-item a:hover {

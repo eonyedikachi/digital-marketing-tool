@@ -59,11 +59,11 @@ button {
 }
 
 .nav-tabs .nav-item a {
-  color: var(--secondary-color);
+  color: #8c30f5;
 }
 
 .nav-tabs .nav-item a:hover {
-  color: rgb(0, 123, 255);
+  color: #5f1eaa;
 }
 
 .navbar {

@@ -2,6 +2,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.nav4 {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
 .about {
   width: 85vw;
   border-radius: 0px;
@@ -49,7 +54,8 @@ h2 {
   height: 200px;
   align-self: center;
   margin: 30px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 30%;
 }
 .name {
