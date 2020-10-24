@@ -89,5 +89,7 @@
     padding: 3% 10% 2%;
     background-color: white;
   }
-  
+  .containeri h1{
+    font-size: 1.5rem;
+  }
 }
