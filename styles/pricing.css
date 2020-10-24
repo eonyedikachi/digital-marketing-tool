@@ -10,8 +10,32 @@
 }
 .card-header {
   text-align: center;
+  background: #8c30f5;
 }
-.h-one {
+.btn{
+  background: #8c30f5;
+  border-color: #8c30f5;
+}
+.btn:hover{
+  background:white;
+  border-color: #8c30f5;
+  color: #8c30f5;
+}
+
+.btn-one {
+  border-color:  #8c30f5;
+ background: white;
+  
+}
+.btn-one:hover {
+  background-color: #8c30f5;
+  border-color: #8c30f5;
+  color: white;
+}
+.fas{
+  color: #8c30f5;
+}
+/* .h-one {
   background: #adff2f;
 }
 .h-two {
@@ -22,11 +46,11 @@
 }
 .h-four {
   background: violet;
-}
+}*/
 .card-body h3 {
   text-align: center;
-}
-.b-one i {
+} 
+/* .b-one i {
   color: #adff2f;
 }
 .btn-one {
@@ -36,12 +60,15 @@
 .btn-one:hover {
   background-color: #adff2f;
   outline: #adff2f;
-}
-.btn-one a {
+} */
+ .btn-one a {
   text-decoration: none;
-  color: black;
+  color: #8c30f5;
 }
-.b-two i {
+.btn-one a:hover{
+  color:white;
+}
+/*.b-two i {
   color: #ff7f50;
 }
 .btn-two {
@@ -76,11 +103,14 @@
   background-color: white;
   color: black;
   border-color: violet;
-}
+} */
 .containeri {
-  background-color: #8c30f5;
+  background-color:#f1e4ff;
   text-align: center;
   padding: 3% 10% 5%;
+}
+.containeri h1{
+  color: #8c30f5;
 }
 .row {
   margin-right: 0;
@@ -89,17 +119,10 @@
 @media screen and (max-width: 767px) {
   .containeri {
     padding: 3% 10% 2%;
-    background-color: white;
+    background-color: #f1e4ff;
   }
   .containeri h1 {
     font-size: 1.7rem;
     line-height: 1.5;
   }
-<<<<<<< HEAD
-  .row{
-    margin: 0 2rem;
-  }
 }
-=======
-}
->>>>>>> 5104c26297d45ebcd25b75b0c16ca330897e1789
