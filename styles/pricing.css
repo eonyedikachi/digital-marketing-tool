@@ -8,6 +8,10 @@
 .box {
   padding: 0rem 1rem 5rem;
 }
+.card{
+  padding: 1.5rem;
+  background-color: #f1e4ff;
+}
 .card-header {
   text-align: center;
   background: #8c30f5;
@@ -28,39 +32,17 @@
   
 }
 .btn-one:hover {
-  background-color: #8c30f5;
+  background: #8c30f5;
   border-color: #8c30f5;
-  color: white;
+ color: white;
 }
 .fas{
   color: #8c30f5;
 }
-/* .h-one {
-  background: #adff2f;
-}
-.h-two {
-  background: #ff7f50;
-}
-.h-three {
-  background: #87cefa;
-}
-.h-four {
-  background: violet;
-}*/
+
 .card-body h3 {
   text-align: center;
 } 
-/* .b-one i {
-  color: #adff2f;
-}
-.btn-one {
-  border-color: #adff2f;
-  outline: #adff2f;
-}
-.btn-one:hover {
-  background-color: #adff2f;
-  outline: #adff2f;
-} */
  .btn-one a {
   text-decoration: none;
   color: #8c30f5;
@@ -68,42 +50,7 @@
 .btn-one a:hover{
   color:white;
 }
-/*.b-two i {
-  color: #ff7f50;
-}
-.btn-two {
-  background-color: #ff7f50;
-  border-color: #ff7f50;
-}
-.btn-two:hover {
-  background-color: white;
-  color: black;
-  border-color: #ff7f50;
-}
-.b-three i {
-  color: #87cefa;
-}
-.btn-three {
-  background-color: #87cefa;
-  border-color: #87cefa;
-}
-.btn-three:hover {
-  background-color: white;
-  color: black;
-  border-color: #87cefa;
-}
-.b-four i {
-  color: violet;
-}
-.btn-four {
-  background-color: violet;
-  border-color: violet;
-}
-.btn-four:hover {
-  background-color: white;
-  color: black;
-  border-color: violet;
-} */
+
 .containeri {
   background-color:#f1e4ff;
   text-align: center;
