@@ -5,91 +5,93 @@
 * {
   box-sizing: border-box;
 }
-.box{
+.box {
   padding: 0rem 1rem 5rem;
 }
-.card-header{
+.card-header {
   text-align: center;
 }
-.h-one{
-
- background: #ADFF2F; 
+.h-one {
+  background: #adff2f;
 }
-.h-two{
-  background: #FF7F50;
+.h-two {
+  background: #ff7f50;
 }
-.h-three{
-  background: #87CEFA;
+.h-three {
+  background: #87cefa;
 }
-.h-four{
-  background:violet;
-
+.h-four {
+  background: violet;
 }
-.card-body h3{
+.card-body h3 {
   text-align: center;
 }
-.b-one i{
-  color: #ADFF2F;
+.b-one i {
+  color: #adff2f;
 }
-.btn-one{
-  border-color: #ADFF2F;
-  outline: #ADFF2F;
+.btn-one {
+  border-color: #adff2f;
+  outline: #adff2f;
 }
-.btn-one:hover{
-  background-color: #ADFF2F;
-  outline: #ADFF2F;
+.btn-one:hover {
+  background-color: #adff2f;
+  outline: #adff2f;
 }
-.btn-one a{
+.btn-one a {
   text-decoration: none;
   color: black;
 }
-.b-two i{
-  color:  #FF7F50;;
+.b-two i {
+  color: #ff7f50;
 }
-.btn-two{
-  background-color: #FF7F50;
-  border-color:  #FF7F50;
+.btn-two {
+  background-color: #ff7f50;
+  border-color: #ff7f50;
 }
-.btn-two:hover{
+.btn-two:hover {
   background-color: white;
   color: black;
-  border-color:  #FF7F50;
+  border-color: #ff7f50;
 }
-.b-three i{
-  color:   #87CEFA;
+.b-three i {
+  color: #87cefa;
 }
-.btn-three{
-  background-color: #87CEFA;
-  border-color:   #87CEFA;
+.btn-three {
+  background-color: #87cefa;
+  border-color: #87cefa;
 }
-.btn-three:hover{
+.btn-three:hover {
   background-color: white;
   color: black;
-  border-color:   #87CEFA;
+  border-color: #87cefa;
 }
-.b-four i{
-  color:   violet;
+.b-four i {
+  color: violet;
 }
-.btn-four{
-  background-color:violet;
-  border-color:violet;
+.btn-four {
+  background-color: violet;
+  border-color: violet;
 }
-.btn-four:hover{
+.btn-four:hover {
   background-color: white;
   color: black;
-  border-color:   violet;
+  border-color: violet;
 }
-.containeri{
+.containeri {
   background-color: #8c30f5;
   text-align: center;
   padding: 3% 10% 5%;
 }
-@media screen and (max-width: 767px){
-  .containeri{
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+@media screen and (max-width: 767px) {
+  .containeri {
     padding: 3% 10% 2%;
     background-color: white;
   }
-  .containeri h1{
+  .containeri h1 {
     font-size: 1.7rem;
     line-height: 1.5;
   }
