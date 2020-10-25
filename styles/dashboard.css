@@ -22,6 +22,10 @@ body {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
 #notify a i:hover {
   background-color: #4eb1f5;
   color: #fff;
