@@ -33,6 +33,7 @@
 }
 .s-box img {
   height: 75px;
+  border-radius: 10px;
 }
 .s-box img :nth-child(1) {
   width: 50px;
