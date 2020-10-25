@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #4eb1f5;
+  background:  #1d2031;
 }
 .contact .content-contact {
   max-width: 800px;
@@ -71,7 +71,7 @@
 }
 .container-contact .contactInfo .box-contact .text h3 {
   font-weight: 500;
-  color: #010b1f;
+  color: #8C30F5;
 }
 
 .contactForm {
@@ -120,7 +120,7 @@
 }
 .contactForm .inputBox input[type="submit"] {
   width: 100px;
-  background: #4eb1f5;
+  background:  #8C30F5;
   color: #fff;
   border: none;
   cursor: pointer;
