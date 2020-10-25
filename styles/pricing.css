@@ -5,78 +5,71 @@
 * {
   box-sizing: border-box;
 }
-.allprice {
-  display: flex;
+.box {
+  padding: 0rem 1rem 5rem;
 }
-.allprice .price {
-  width: 15rem;
-  border: var(--secondary-color) 0.7rem solid;
-  border-radius: 20px;
-  flex: 1;
-  margin: 1rem;
+.card{
+  padding: 1.5rem;
+  background-color: #f1e4ff;
 }
-.allprice .price .plan {
-  color: var(--secondary-color);
-  font-size: 1.4rem;
-  border-bottom: var(--secondary-color) 5px solid;
-}
-.plan h2 {
+.card-header {
   text-align: center;
-  padding: 1rem;
+  background: #8c30f5;
 }
-.pricing h3 {
-  font-size: 2rem;
-  margin-top: 2rem;
-  text-align: center;
+.btn{
+  background: #8c30f5;
+  border-color: #8c30f5;
 }
-.pricing p {
-  margin: 10px;
-  color: var(--secondary-color);
-  text-align: center;
+.btn:hover{
+  background:white;
+  border-color: #8c30f5;
+  color: #8c30f5;
 }
-.topfeatures {
-  margin: 1rem;
-}
-.topfeatures i {
-  color: var(--secondary-color);
-}
-.topfeatures h3 {
-  text-align: center;
-}
-.topfeatures button {
-  display: block;
-  color: black;
-  background: var(--secondary-color);
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  margin: auto;
-  margin-top: 2rem;
-}
-#pricing h1 {
-  text-align: center;
-  margin: 2rem 0;
-  letter-spacing: 5px;
-  font-size: 2.5rem;
-  color: var(--secondary-color);
-}
-/* footer modification */
-.support ul li a:hover {
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .allprice {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .allprice .price {
-    width: 80%;
-  }
+.btn-one {
+  border-color:  #8c30f5;
+ background: white;
+  
+}
+.btn-one:hover {
+  background: #8c30f5;
+  border-color: #8c30f5;
+ color: white;
+}
+.fas{
+  color: #8c30f5;
+}
 
-  #pricing h1 {
-    margin: 1rem 0;
-    font-size: 2rem;
-    color: var(--secondary-color);
+.card-body h3 {
+  text-align: center;
+} 
+ .btn-one a {
+  text-decoration: none;
+  color: #8c30f5;
+}
+.btn-one a:hover{
+  color:white;
+}
+
+.containeri {
+  background-color:#f1e4ff;
+  text-align: center;
+  padding: 3% 10% 5%;
+}
+.containeri h1{
+  color: #8c30f5;
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+@media screen and (max-width: 767px) {
+  .containeri {
+    padding: 3% 10% 2%;
+    background-color: #f1e4ff;
+  }
+  .containeri h1 {
+    font-size: 1.7rem;
+    line-height: 1.5;
   }
 }

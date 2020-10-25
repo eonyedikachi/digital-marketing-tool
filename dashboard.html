@@ -1,181 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Dashboard | MartReach</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <link rel="stylesheet" href="styles/createLanding.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <title>Dashboard | MartReach</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="./styles/styles.css" />
-  <link rel="stylesheet" href="./styles/dashboard.css" />
-  <link rel="stylesheet" href="styles/createLanding.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
-
-<body>
-
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">
-        <p>MartReach</p>
-        <button type="button" class="hamburger" aria-label="Toggle Navigation">
-          <span class="hamburger-box">
-            <span class="hamburger-list hamburger-list1"></span>
-            <span class="hamburger-list hamburger-list2"></span>
-            <span class="hamburger-list hamburger-list3"></span>
-          </span>
-        </button>
-      </div>
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-items">
-            <a href="dashboard.html">Home</a>
-          </li>
-
-          <li class="nav-items">
-            <div class="dropdown">
-              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="far fa-file-powerpoint"></i> Present
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#"><i class="far fa-file-powerpoint"></i> Present</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-video"></i> Present and record
-                </a>
-                <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as video</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-cloud-upload-alt"></i> Save on
-                  cloud</a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-items">
-            <a href="#">Share</a>
-          </li>
-          <li class="nav-items">
-            <a href="#"><i class="fas fa-download"></i></a>
-          </li>
-          <li class="nav-items">
-            <a href="./pricing.html">Try MartReach Pro <i class="fas fa-crown"></i></a>
-          </li>
-          <li class="nav-items">
-            <a href="./signin.html" onclick="signOut()">Sign Out</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-
-  <main class="main" style="height: 87vh; background-color: #f1f9fe">
-    <div class="left">
-      <div id="mart">
-        <h3>Mart Reach</h3>
-      </div>
-      <div class="dash-list">
-        <ul>
-          <li>
-            <i class="fas fa-columns"></i>
-            <a href="./dashboard.html">Dashboard</a>
-          </li>
-
-          <li>
-            <i class="fas fa-home"></i>
-            <a href="createLanding.html">Landing page</a>
-          </li>
-          <li>
-            <i class="fas fa-envelope-open-text"></i>
-            <a href="email_templates.html">Email Template</a>
-          </li>
-          <li>
-            <i class="fas fa-id-card-alt"></i>
-            <a href="aud-page.html">Create Audience</a>
-          </li>
-          <li>
-            <i class="fas fa-bullhorn"></i>
-            <a href="suggestion.html">Suggestions</a>
-          </li>
-          <li>
-            <i class="fas fa-chart-bar"></i>
-            <a href="reports.html">Reports</a>
-          </li>
-          <li>
-            <i class="fas fa-sliders-h"></i>
-            <a href="setting.html">Settings</a>
-          </li>
-        </ul>
-      </div>
-      <div class="dash-pro">
-        <h3><a href="#">Try Mart Reach Pro</a></h3>
-      </div>
-    </div>
-    <div class="middle">
-      <div class="search-notify">
-        <div class="search">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="search" />
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">
+          <p>MartReach</p>
+          <button
+            type="button"
+            class="hamburger"
+            aria-label="Toggle Navigation"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-list hamburger-list1"></span>
+              <span class="hamburger-list hamburger-list2"></span>
+              <span class="hamburger-list hamburger-list3"></span>
+            </span>
+          </button>
         </div>
-        <div class="notify" id="notify">
-          <a href="./usernotification.html">
-            <i class="fas fa-bell"></i>
-          </a>
-        </div>
-      </div>
-      <div class="chart">
-        <img src="images/SEO.jpg" alt="" />
-        <img src="images/SEO.jpg" alt="" />
-        <img src="images/SEO.jpg" alt="" />
-        <img src="images/SEO.jpg" alt="" />
-      </div>
-    </div>
-    <div class="right">
-      <div class="user">
-        <a href="#">
-          <i class="fas fa-user"></i>
-          <span id="usersname111">Malik Mukhtar</span>
-        </a>
-      </div>
-      <div class="tool">
-        <ul>
-          <a href="#">
-            <li>
-              <i class="fas fa-sticky-note"></i> <span>Sticky Notes</span>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-items">
+              <a href="dashboard.html">Home</a>
             </li>
-          </a>
-          <a href="#">
-            <li><i class="fas fa-poll"></i> <span>Survey</span></li>
-          </a>
-        </ul>
-      </div>
-    </div>
-  </main>
 
-  <footer>
+            <li class="nav-items">
+              <div class="dropdown">
+                <button
+                  class="btn btn-info dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="far fa-file-powerpoint"></i> Present
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#"
+                    ><i class="far fa-file-powerpoint"></i> Present</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-video"></i> Present and record
+                  </a>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-youtube"></i> Download as video</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-cloud-upload-alt"></i> Save on cloud</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="nav-items">
+              <a href="#">Share</a>
+            </li>
+            <li class="nav-items">
+              <a href="#"><i class="fas fa-download"></i></a>
+            </li>
+            <li class="nav-items">
+              <a href="./pricing.html"
+                >Try MartReach Pro <i class="fas fa-crown"></i
+              ></a>
+            </li>
+            <li class="nav-items">
+              <a href="./signin.html" onclick="signOut()">Sign Out</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <div class="container">
-      <div class="back-footer">
-        <i class="fas fa-chevron-left"></i>
-        <input type="button" onclick="location.assign('./dashboard.html')" value="Back" class="back-button">
+      <div class="row">
+        <div class="col" style="background-color: #01081e;">
+          <ul class="nav flex-column">
+            <li class="nav-item flex ">
+              <a class="nav-link active" href="#">
+                <i class="fas fa-columns"></i>
+                <a href="./dashboard.html" class="active">Dashboard</a>
+              </a>
+            </li>
+            <li class="nav-item flex">
+              <a class="nav-link" href="#">
+                <i class="fas fa-home"></i>
+                <a href="createLanding.html">Landing page</a>
+              </a>
+            </li>
+            <li class="nav-item flex" >
+              <a class="nav-link" href="#" >
+                <i class="fas fa-envelope-open-text"></i>
+                <a href="email_templates.html">Email Template</a>
+              </a>
+            </li>
+            <li class="nav-item flex">
+              <a class="nav-link" href="#">
+                <i class="fas fa-id-card-alt"></i>
+                <a href="aud-page.html">Create Audience</a>
+              </a>
+            </li>
+            <li class="nav-item flex">
+              <a class="nav-link" href="#">
+                <i class="fas fa-sliders-h"></i>
+                <a href="setting.html">Settings</a>
+              </a>
+            </li>
+            <li class="nav-item flex">
+              <a class="nav-link" href="#"
+                ><h5><a href="#">Try Mart Reach Pro</a></h5></a
+              >
+            </li>
+           
+          </ul>
+        </div>
+        <div class="col-7" style="background-color: #151c31;">
+          <div class="row">
+            <div class="col">
+              <h3 class="active">Dashboard</h3>
+            </div>
+            <div class="col" id="date" style="font-size: 12px; margin: 10px;" >
+             
+            </div>
+          </div>
+          <div class="row" >
+            <div class="col">     
+              <h6>Total Contact</h6>  
+              <canvas id="pie-chart" style="display: block; width: 55px; height: 45px;"></canvas>         
+          </div>
+          <div class="col" >            
+            <h6>Audience Reached</h6>
+              <canvas id="pie-chart2" style="display: block; width: 55px; height: 45px;" ></canvas>
+            </div>
+            <div class="col" >             
+              <h6>Total Design</h6>
+              <canvas id="pie-chart3" style="display: block; width: 55px; height: 45px;"></canvas>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">              
+            <canvas id="chart" width="455" height="245" class="chartjs-render-monitor" style="display: block; width: 455px; height: 245px;"></canvas>
+            </div>
+            </div>
+        </div>
+        <div class="col" style="background-color: #01081e;">
+          <div class="container">
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;">
+            <img src="images/caricature1.svg" alt="image" height="100" width="100" style="border-radius: 50%;">
+            <h3 id="usersname111">Malik Mukhtar</h3>
+            <h2>Designer</h2>
+          </div>
+          <div style="display: flex;justify-content: space-evenly; padding: 10px;">
+            <h5>Messages</h5>
+            <i class="far fa-comment-alt"></i>
+          </div>
+          <div style="display: flex; margin: 5px;">
+            <div>
+              <img src="images/avatar2.png" alt="image" height="50" width="50" style="border-radius: 50%;">
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <h6>Carol Ferdina</h6>
+              <p style="font-size: 12px;">Have you planned for the next template...</p>
+            </div>
+          </div>
+          <div style="display: flex; margin: 5px;">
+            <div>
+              <img src="images/avatar3.png" alt="image" height="50" width="50" style="border-radius: 50%; ">
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <h6>Glory Osaiteh</h6>
+              <p style="font-size: 12px;">Tips on how to reach more audience...</p>
+            </div>
+          </div>
+          <div>
+            
+          </div>
+        </div>
+      </div>
       </div>
     </div>
-  </footer>
 
-  <!-- jQuery and Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
+    <footer>
+      <div class="container">
+        <div class="back-footer">
+          <i class="fas fa-chevron-left"></i>
+          <input
+            type="button"
+            onclick="location.assign('./dashboard.html')"
+            value="Back"
+            class="back-button"
+          />
+        </div>
+      </div>
+    </footer>
 
-  <script src="./js/nav.js"></script>
-  <script src="js/dashboard.js"></script>
-  <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
-</body>
+    <!-- jQuery and Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
 
+    <script src="./js/nav.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0b544dd14e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+      var ctx = document.getElementById('chart').getContext('2d');
+      var ctx1 = document.getElementById('pie-chart').getContext('2d');
+      var ctx2 = document.getElementById('pie-chart2').getContext('2d');
+      var ctx3 = document.getElementById('pie-chart3').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Report',
+            backgroundColor: 'rgb(055, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+var pieChart = new Chart(ctx1, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'Total Contacts',
+            backgroundColor: '#D6B1FF',
+            borderColor: '#D6B1FF',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+var pieChart2 = new Chart(ctx2, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February','March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Audience Reached',
+            backgroundColor: '#75E3EA',
+            borderColor: '#75E3EA',
+            data: [20, 80,50,100,250]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+var pieChart3 = new Chart(ctx3, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        // labels: ['January', 'February'],
+        datasets: [{
+            label: 'Total Design',
+            backgroundColor: '#FE9A22',
+            borderColor: 'none',
+            data: [ 80]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+var d = new Date();
+document.getElementById("date").innerHTML = d;
+document.getElementById("date").className = 'active';
+
+
+    </script>
+  </body>
 </html>
