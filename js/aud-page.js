@@ -118,8 +118,6 @@ function viewContact(){
   document.querySelector("#manageContact").style.display = "none";
   document.querySelector("#importContact").style.display = "none";
   document.querySelector("#addASubscriber").style.display = "none";
-
-  displayContacts()
 }
 
 
@@ -166,7 +164,7 @@ function subscribeUser() {
   // updating local storage
   localStorage.setItem("subscibers", JSON.stringify(subscibers));
   // redirect user to dashboard
-  location.assign("../aud-page.html");
+  location.assign(".audience-btn");
 }
 
 function validate(user) {
@@ -232,6 +230,7 @@ function checkDuplicateUser(email) {
 
 
 // POPULATING THE VIEWCONTACT PAGE
+
 function displayContacts(){
   let subscibers = JSON.parse(localStorage.getItem("subscibers"));
   contactCount = '';
@@ -255,6 +254,7 @@ function displayContacts(){
     <td>${subscibers[i].month} / ${subscibers[i].day}</td> 
     <td>subscribed</td>
     <td>${subscibers[i].country}</td>
+    <td></td>
    
  
     <td> </td>`
@@ -264,4 +264,6 @@ function displayContacts(){
     }
 
  document.getElementById("subscibers").innerHTML = contactCount
+ 
 }
+displayContacts()
