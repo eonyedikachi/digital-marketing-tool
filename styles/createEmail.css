@@ -5,7 +5,7 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 label {
@@ -13,7 +13,7 @@ label {
 }
 
 main {
-  min-height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
   display: flex;
 }
 
@@ -90,6 +90,7 @@ main .email-area .wrapper .template .img-content img {
 .img-content .btn {
   background: #8c30f5;
   color: #fff;
+  padding-bottom: 0rem;
 }
 
 .img-content .btn:hover {
@@ -107,16 +108,21 @@ main .email-area .wrapper .template .img-content img {
 
 /* Controls */
 main .controls {
+  position: -webkit-sticky;
+  position: sticky;
   width: 35%;
-  min-height: calc(100vh - 70px);
+  top: 0;
+  right: 0;
+  height: calc(100vh - 70px);
   border-left: 1px solid gray;
+  background: #151c31;
+  color: #fff;
 }
 
 main .controls .control-bar {
   height: 40px;
   display: flex;
   align-items: center;
-  border: 1px solid grey;
 }
 
 main .controls .control-bar button {
@@ -127,11 +133,8 @@ main .controls .control-bar button {
   border: none;
   background: none;
   text-align: center;
-  background: #f1e4ff;
-}
-
-main .controls .control-bar button:first-child {
-  border-right: 1px solid grey;
+  background: #01081e;
+  color: #fff;
 }
 
 main .controls .control-bar button:hover {
@@ -139,13 +142,11 @@ main .controls .control-bar button:hover {
 }
 
 main .controls .control-bar button.active {
-  background: #0b0d17;
-  color: #8c30f5;
+  background: #151c31;
 }
 
 main .controls .control-main {
   height: calc(100% - 40px);
-  overflow: auto;
 }
 
 main .controls .control-main.hide {
@@ -160,7 +161,7 @@ main .controls .control-main .control-wrapper {
 main .controls .control-main .control-wrapper .control-box {
   width: 148px;
   height: 154px;
-  border: 1px solid rgba(0, 0, 0, 0.247);
+  border: 1px solid rgba(255, 255, 255, 0.082);
   border-radius: 6px;
   margin: 1rem;
   text-align: center;
@@ -168,7 +169,7 @@ main .controls .control-main .control-wrapper .control-box {
 }
 
 main .controls .control-main .control-wrapper .control-box:hover {
-  box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.5);
 }
 
 main .controls .control-main .control-wrapper .control-box p {
@@ -178,6 +179,13 @@ main .controls .control-main .control-wrapper .control-box p {
 main .controls .control-main .control-wrapper .control-box img {
   width: 100px;
   height: 100px;
+}
+
+main .controls .control-main .control-wrapper .control-box i {
+  width: 100px;
+  height: 100px;
+  padding-top: 32px;
+  font-size: 45px;
 }
 
 main .controls .control-style {
@@ -202,6 +210,10 @@ main .controls .control-style .control-wrapper .box {
   padding: 0.5rem;
   font-size: 1.5rem;
   border: 1px solid rgba(128, 128, 128, 0.274);
+}
+
+main .controls .control-style .control-wrapper .box:first-child {
+  border-top: none;
 }
 
 main .controls .control-style .control-wrapper .box:hover {
@@ -263,7 +275,8 @@ main .controls .control-style .control-wrapper .text-style.show {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: white;
+  background: #151c31;
+  color: #fff;
   height: 300px;
   width: 500px;
   border-radius: 10px;

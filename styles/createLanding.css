@@ -10,42 +10,6 @@
   color: var(--secondary-color);
 }
 
-/* Bootstrap unset */
-a,
-a:hover,
-a:focus,
-:active {
-  text-decoration: none;
-}
-
-ul,
-p {
-  margin-bottom: unset;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-button:focus,
-button:active {
-  cursor: unset;
-  border: none;
-  outline: none;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  margin: unset;
-  font-family: unset;
-  font-size: unset;
-  line-height: unset;
-}
-
 .grid {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -158,6 +122,99 @@ button {
   background-color: #dcdcdc;
   width: 100%;
 }
+
+/* dashboard nav */
+/* Nav Bar */
+.navbar {
+  padding: 0.4rem 0.8rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .container > nav > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .container > nav > ul > li > a {
+  padding: 0.3rem;
+  margin: 0 0.25rem;
+  color: var(--primary-color);
+  transition: all 0.5s ease;
+}
+
+.navbar .container > nav > ul > li > a:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.navbar .container .logo p {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.nav-list .nav-items .current {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 30px;
+  float: right;
+  outline: none;
+  border: none;
+  background: var(--secondary-color);
+  margin-right: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 3px 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger-box .hamburger-list {
+  display: inline-block;
+  height: 5px;
+  background: var(--primary-color);
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger-box.open .hamburger-list1 {
+  transform: rotate(45deg) translate(3px, 7px);
+}
+
+.hamburger-box.open .hamburger-list2 {
+  transform: translate(-50px);
+  background: transparent;
+}
+
+.hamburger-box.open .hamburger-list3 {
+  transform: rotate(-45deg) translate(6px, -10px);
+}
+
 @media screen and (max-width: 600px) {
   .main-landing {
     height: 75vh;

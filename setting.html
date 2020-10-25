@@ -14,119 +14,18 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="stylesheet" href="./styles/setting.css" />
-  <link rel="stylesheet" href="styles/createLanding.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
 
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">
-        <p>MartReach</p>
-        <button type="button" class="hamburger" aria-label="Toggle Navigation">
-          <span class="hamburger-box">
-            <span class="hamburger-list hamburger-list1"></span>
-            <span class="hamburger-list hamburger-list2"></span>
-            <span class="hamburger-list hamburger-list3"></span>
-          </span>
-        </button>
-      </div>
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-items">
-            <a href="dashboard.html">Home</a>
-          </li>
-
-          <li class="nav-items">
-            <div class="dropdown">
-              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="far fa-file-powerpoint"></i> Present
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#"><i class="far fa-file-powerpoint"></i> Present</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-video"></i> Present and record
-                </a>
-                <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as video</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-cloud-upload-alt"></i> Save on
-                  cloud</a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-items">
-            <a href="#">Share</a>
-          </li>
-          <li class="nav-items">
-            <a href="#"><i class="fas fa-download"></i></a>
-          </li>
-          <li class="nav-items">
-            <a href="./pricing.html">Try MartReach Pro <i class="fas fa-crown"></i></a>
-          </li>
-          <li class="nav-items">
-            <a href="./signin.html" onclick="signOut()">Sign Out</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
 
-
-  <main class="main" style="height: 87vh; background-color: #f1f9fe">
-    <div class="left">
-      <div id="mart">
-        <h3>Mart Reach</h3>
-      </div>
-      <div class="dash-list">
-        <ul>
-          <li>
-            <i class="fas fa-columns"></i>
-            <a href="./dashboard.html">Dashboard</a>
-          </li>
-
-          <li>
-            <i class="fas fa-home"></i>
-            <a href="createLanding.html">Landing page</a>
-          </li>
-          <li>
-            <i class="fas fa-envelope-open-text"></i>
-            <a href="email_templates.html">Email Template</a>
-          </li>
-          <li>
-            <i class="fas fa-id-card-alt"></i>
-            <a href="aud-page.html">Create Audience</a>
-          </li>
-          <li>
-            <i class="fas fa-bullhorn"></i>
-            <a href="suggestion.html">Suggestions</a>
-          </li>
-          <li>
-            <i class="fas fa-chart-bar"></i>
-            <a href="reports.html">Reports</a>
-          </li>
-          <li>
-            <i class="fas fa-sliders-h"></i>
-            <a href="setting.html">Settings</a>
-          </li>
-        </ul>
-      </div>
-      <div class="dash-pro">
-        <h3><a href="#">Try Mart Reach Pro</a></h3>
-      </div>
-    </div>
-    <div class="middle">
-      <div class="search-notify">
-        <div class="search">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="search" />
-        </div>
-        <div class="notify">
-          <a href="#">
-            <i class="fas fa-bell"></i>
-          </a>
-        </div>
+  <main class="main">
+    <div class="border"></div>
+      <div class="headerr">
+        <h1> Account Settings</h1>
       </div>
 
 
@@ -138,31 +37,13 @@
         <button class="tablinks" onclick="openSetting(event, 'Manage my Account')">Manage my Account</button>
       </div>
 
-      <!-- SECURITY TAB -->
-      <div id="Security" class="tabcontent">
-        <h2>Account Security</h2>
-        <h3>Two-Factor Authentication</h3>
-        <p>Two-factor authentication is a security process that requires two forms of user ID to log in to MartReach. It
-          helps keep your account safe.There are two ways to do this: use an authenticator app, or enable SMS account
-          verification.</p>
-        <h5>Use an authenticator app for two factor authentication</h5>
-        <p>MartReach integrates with mobile apps for two-factor authentication.</p>
-        <button class="button">Enable</button>
-        <h3>Account verification</h3>
-        <p>If we see patterns that seem unusual for your account, we'll need to verify your identity.</p>
-        <h5>Verify identity via SMS</h5>
-        <button class="button">Enable</button>
-        <h5>Verify identity with security questions</h5>
-        <button class="button">Enable</button>
-      </div>
-
       <!-- CONTACT INFORMATION TAB  -->
       <div id="Contact Information" class="tabcontent">
         <h2>Contact Information</h2>
 
         <h3>Profile</h3>
         <p>
-          This is the information we have associated with your Mailchimp profile, which you can use to access multiple
+          &nbsp; &nbsp; This is the information we have associated with your Mailchimp profile, which you can use to access multiple
           Mailchimp accounts. If you need to reset your username or password, or verify account changes, we'll send the
           link to your profile email address.
           <br>
@@ -183,7 +64,7 @@
           <h6>Email Address:</h6>
           &nbsp; <span class="unique email-address"></span>
         </div>
-        <button class="button" onclick="window.location.href='./editprofile.html'">Edit Profile Information</button>
+        <button class="btn my-3 button" onclick="window.location.href='./editprofile.html'">Edit Profile Information</button>
 
 
         <h3>Primary Account Contact</h3>
@@ -210,7 +91,7 @@
           <h6>Email</h6>
           &nbsp; <span class="unique email-address"></span>
         </div>
-        <button class="button" onclick="window.location.href='./editprimaryaccountcontact.html'">Edit Contact
+        <button class="btn my-3 button" onclick="window.location.href='./editprimaryaccountcontact.html'">Edit Contact
           Information</button>
 
         <h3>Billing Info</h3>
@@ -240,7 +121,7 @@
           <h6>Email:</h6>
           &nbsp; <span class="unique billing-email-address"></span>
         </div>
-        <button class="button" onclick="window.location.href='./editbillinginfo.html'">Edit Billing Information</button>
+        <button class="btn my-3 button" onclick="window.location.href='./editbillinginfo.html'">Edit Billing Information</button>
 
 
         <h3>Audiences in this Account</h3>
@@ -278,10 +159,28 @@
           <p>“You are receiving this email because you opted in via our website.”</p>
         </div>
 
-        <button>
+        <button class="btn my-3 button">
           Edit Audience Information
-        </button class="button">
+        </button>
       </div>
+
+ <!-- SECURITY TAB -->
+ <div id="Security" class="tabcontent">
+  <h2>Account Security</h2>
+  <h3>Two-Factor Authentication</h3>
+  <p>Two-factor authentication is a security process that requires two forms of user ID to log in to MartReach. It
+    helps keep your account safe.There are two ways to do this: use an authenticator app, or enable SMS account
+    verification.</p>
+  <h5>Use an authenticator app for two factor authentication</h5>
+  <p>MartReach integrates with mobile apps for two-factor authentication.</p>
+  <button class="btn my-3 button">Enable</button>
+  <h3>Account verification</h3>
+  <p>If we see patterns that seem unusual for your account, we'll need to verify your identity.</p>
+  <h5>Verify identity via SMS</h5>
+  <button class="btn my-3 button">Enable</button>
+  <h5>Verify identity with security questions</h5>
+  <button class="btn my-3 button">Enable</button>
+</div>
 
 
       <!-- DOMAINS TAB  -->
@@ -294,7 +193,7 @@
           authenticate the domain to improve deliverability.
 
           Have questions? Read how to verify your email domain.</p>
-        <button class="button"> Verify Email Domain</button>
+        <button class="button btn my-3 "> Verify Email Domain</button>
         <h3>
           Connect Your Domain
         </h3>
@@ -303,14 +202,14 @@
 
           Have questions? Read how to connect your domain or subdomain to MartReach.
         </p>
-        <button> Connect Domain</button>
+        <button class="btn my-3 button"> Connect Domain</button>
         <h3>Purchase a New Domain</h3>
         <p>
           Find a custom domain name to help visitors remember your brand and drive traffic to your website.
 
           Have questions? Read how to purchase a domain with MartReach.
         </p>
-        <button class="button"> Find Domains</button>
+        <button class="btn my-3 button"> Find Domains</button>
       </div>
 
       <!-- MANAGE MY ACCOUNT TAB  -->
@@ -371,7 +270,7 @@
 
           <section>
             <div class="days">
-              <input type="radio" id="control_01" name="select" value="1" checked>
+              <input type="radio" id="control_01" name="select" value="1" >
               <label for="control_01">
                 <h6>Last 30 days</h6>
                 <p>Export data in the last 30 days.</p>
@@ -399,7 +298,7 @@
               </label>
             </div>
           </section>
-          <button class="button"> Export</button>
+          <button class="btn my-3 button"> Export</button>
           </p>
         </div>
 
@@ -411,28 +310,7 @@
 
     </div>
 
-
-
-    <div class="right">
-      <div class="user">
-        <a href="#">
-          <i class="fas fa-user"></i>
-          <span id="usersname111">Malik Mukhtar</span>
-        </a>
-      </div>
-      <div class="tool">
-        <ul>
-          <a href="#">
-            <li>
-              <i class="fas fa-sticky-note"></i> <span>Sticky Notes</span>
-            </li>
-          </a>
-          <a href="#">
-            <li><i class="fas fa-poll"></i> <span>Survey</span></li>
-          </a>
-        </ul>
-      </div>
-    </div>
+    <div class="border"></div>
   </main>
 
   <footer>
@@ -452,7 +330,7 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
 
-  <script src="./js/nav.js"></script>
+
   <script src="js/dashboard.js"></script>
   <script src="js/setting.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
