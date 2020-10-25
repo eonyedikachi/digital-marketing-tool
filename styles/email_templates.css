@@ -12,8 +12,38 @@ body {
 
 /* Main */
 .emailTemp {
-  padding: 1rem;
-  min-height: calc(100vh - 70px);
+  display: flex;
+  color: #fff;
+  background: #151c31;
+}
+
+.active {
+  color: #fff;
+}
+
+.sidebar {
+  background: #01081e;
+  padding-top: 200px;
+  width: 300px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nav-item {
+  margin: 1rem;
+}
+
+.nav-link {
+  padding: 1rem 1rem;
+  display: inline;
+}
+
+.temp-main {
+  width: calc(100% - 300px);
 }
 
 /* Templates */
@@ -21,10 +51,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 .templates h1 {
-  color: #8c30f5;
   font-weight: 700;
 }
 
@@ -38,6 +68,10 @@ body {
 
 .templates a:hover {
   background: #5f1eaa;
+}
+
+.email_temp {
+  padding: 1rem;
 }
 
 .email_temp .search {
@@ -107,7 +141,8 @@ body {
 
 .template_list .temp .description .info .template-name {
   font-size: 2rem;
-  color: #8c30f5;
+  color: #fff;
+  font-weight: 600;
   border: none;
   background: none;
 }
@@ -149,62 +184,4 @@ body {
   .nav-link {
     padding: 0.5rem 0.5rem;
   }
-}
-
-/* Bootstrap unset */
-a,
-a:hover,
-a:focus,
-:active {
-  text-decoration: none;
-}
-
-ul,
-p {
-  margin-bottom: unset;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-button:focus,
-button:active {
-  cursor: unset;
-  border: none;
-  outline: none;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  margin: unset;
-  font-family: unset;
-  font-size: unset;
-  line-height: unset;
-}
-
-button {
-  border-radius: unset;
-}
-
-.nav-tabs .nav-item a {
-  color: #8c30f5;
-}
-
-.nav-tabs .nav-item a:hover {
-  color: rgb(0, 123, 255);
-}
-
-.navbar {
-  display: block;
-  padding: 0.65rem 0.8rem;
-}
-
-.container {
-  padding-right: unset;
-  padding-left: unset;
 }

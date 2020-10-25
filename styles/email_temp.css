@@ -6,11 +6,13 @@
 /* Main */
 .emailTemp {
   padding: 1rem;
+  background: #151c31;
+  color: #fff;
 }
 
 .container .select a {
   float: right;
-  color: #8c30f5;
+  color: #fff;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border: 1px solid #dee2e6;
@@ -32,7 +34,6 @@
 
 h1 {
   font-weight: 600;
-  color: #8c30f5;
 }
 
 h2 {
@@ -40,6 +41,10 @@ h2 {
 }
 
 .nav-link {
+  color: #fff;
+}
+
+.nav-link:hover {
   color: #8c30f5;
 }
 
@@ -58,6 +63,7 @@ h2 {
 .featured .feature-box img {
   width: 100%;
   border: 1px solid rgb(238, 232, 232);
+  background: #fff;
 }
 
 .featured .feature-box img:hover {
@@ -84,62 +90,4 @@ h2 {
   .nav-link {
     padding: 0.5rem 0.5rem;
   }
-}
-
-/* Bootstrap unset */
-a,
-a:hover,
-a:focus,
-:active {
-  text-decoration: none;
-}
-
-ul,
-p {
-  margin-bottom: unset;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-button:focus,
-button:active {
-  cursor: unset;
-  border: none;
-  outline: none;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  margin: unset;
-  font-family: unset;
-  font-size: unset;
-  line-height: unset;
-}
-
-button {
-  border-radius: unset;
-}
-
-.nav-tabs .nav-item a {
-  color: #8c30f5;
-}
-
-.nav-tabs .nav-item a:hover {
-  color: #5f1eaa;
-}
-
-.navbar {
-  display: block;
-  padding: 0.65rem 0.8rem;
-}
-
-.container {
-  padding-right: unset;
-  padding-left: unset;
 }
