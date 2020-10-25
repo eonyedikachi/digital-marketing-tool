@@ -12,7 +12,7 @@ function openSetting(evt, settingName) {
   document.getElementById(settingName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
+document.getElementById("Contact Information").style.display = "block";
 
 // fetches most recent logged in user
 i = currentUser.length - 1;
