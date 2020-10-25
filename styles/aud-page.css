@@ -160,7 +160,7 @@ transform: rotate(90deg);
 .heading p{
   font-size: 15px;
   margin-top: 8px;
-  background-color: rgb(34, 174, 230);
+  background-color: #8C30F5;
   width: 60%;
   text-align: center;
   justify-content: center;
@@ -266,7 +266,7 @@ padding: 20px;
 .upload {
 width: 12rem;
 height: 3rem;
-background-color: #3885d1;
+background-color: #8C30F5;
 color: #fff;
 cursor: pointer;
 font-size: 16px;
@@ -299,7 +299,7 @@ display: block;
 position: relative;
 width: 15rem;
 height: 3rem;
-background-color: #3885d1;
+background-color: #8C30F5;
 color: #fff;
 cursor: pointer;
 font-size: 16px;
@@ -398,7 +398,7 @@ font-size: 100px;
 .import-contact .import-cont-btn {
   width: 14rem;
   height: 3rem;
-  background-color: #4eb1f5;
+  background-color: #8C30F5;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
@@ -424,7 +424,7 @@ font-size: 100px;
   background-color: #fdfbfb;
 }
 h3 {
-  color: #4eb1f5;
+  color: #8C30F5;
 }
 .connect-col img {
   width: 75px;
