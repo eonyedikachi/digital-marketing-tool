@@ -294,3 +294,40 @@ justify-content: center;
     align-self: center;
   }
 }
+.main .modally #output{
+  width: 100px;
+  height: 100px;
+
+}
+.btn-div{
+  display: flex;
+}
+.btn-label{
+  align-self: center;
+  margin-bottom: 0px;
+}
+.edit input {
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 2px solid gray;
+  transition: all 0.5s ease-in-out;
+}
+
+.edit input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #8c30f5;
+  transition: all 0.5s ease-in-out;
+}
+.profile_form{
+  display: flex;
+  flex-direction: column;
+}
+.modal-header, .modal-footer{
+  background-color: black;
+  color: #fff;
+}
+.close{
+  color:var(--primary-color)
+}
