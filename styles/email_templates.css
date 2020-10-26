@@ -23,7 +23,6 @@ body {
 
 .sidebar {
   background: #01081e;
-  padding-top: 200px;
   width: 300px;
   position: -webkit-sticky;
   position: sticky;
