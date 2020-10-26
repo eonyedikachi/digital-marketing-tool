@@ -25,6 +25,13 @@ section.support {
 }
 
 /* Articles Section */
+.article-support {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .article-support a {
   color: #000;
   text-decoration: none;
@@ -44,12 +51,17 @@ section.support {
   padding: 1rem;
 }
 
+.article-container .articles h2 {
+  margin-bottom: 4rem;
+}
+
 .article-container .articles ul {
   list-style: none;
 }
 
 .article-container .articles ul li {
   padding: 10px;
+  font-family: "Rubik", sans-serif;
 }
 
 .article-container .articles ul li::after {
@@ -72,23 +84,29 @@ section.support {
   padding: 1rem;
 }
 
+.article-container .contact h2 {
+  font-size: 16px;
+  margin-bottom: 4rem;
+  font-family: "Rubik", sans-serif;
+}
+
 .article-container .contact img {
-  width: 60%;
+  width: 80%;
 }
 
 .article-container .contact a {
   display: block;
   background: #8c30f5;
   color: #fff;
-  margin-top: 1rem;
+  margin-top: 5rem;
   border-radius: 8px;
   padding: 0.5rem;
+  font-weight: bold;
   transition: all ease 300ms;
 }
 
 .article-container .contact a:hover {
-  color: #8c30f5;
-  background: #000;
+  background: #5f18b1;
   transition: all ease 300ms;
 }
 
