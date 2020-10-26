@@ -1,6 +1,7 @@
 /* body */
 body {
   background-attachment: #6a7277;
+  background: #151c31;
 }
 
 .select-category {
@@ -12,7 +13,7 @@ body {
 
 .heading {
   text-align: center;
-  color: #4eb1f5;
+  color:white;
   margin-top: 1rem;
   font-size: 2rem;
 }
@@ -30,7 +31,7 @@ body {
   max-height: 100px;
 }
 .img div h4 {
-  color: #4eb1f5;
+  color: white;
   text-align: center;
 }
 /* Select category */
@@ -40,20 +41,20 @@ body {
   margin: 2rem 0;
 }
 .selectcat h2 {
-  color: #4eb1f5;
+  color: white;
   margin-top: 1rem;
   letter-spacing: 1px;
 }
 .selectcat select {
   width: 60%;
-  color: #4eb1f5;
+  color: white;
   padding: 0.4rem;
   border: #4eb1f5 solid;
   border-radius: 7px;
   font-size: 1rem;
 }
 .selectcat select option {
-  color: #4eb1f5;
+  color: white;
   padding: 1rem;
 }
 .categorylists option {
@@ -66,7 +67,7 @@ body {
   margin: 2rem 0;
 }
 .mainsuggestion h2 {
-  color: #4eb1f5;
+  color:white;
   letter-spacing: 1px;
 }
 .mainsuggestion textarea {
@@ -99,7 +100,7 @@ fieldset input{
 }
 .mainsuggestion button:hover {
   background-color: #fff;
-  color: #4eb1f5;
+  color: white;
 }
 /* Mobile view */
 @media screen and (max-width: 768px) {
