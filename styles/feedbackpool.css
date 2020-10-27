@@ -243,19 +243,19 @@ a {
 #responds button {
   flex: 1;
   background: #fff;
-  color: #4eb1f5;
+  color:#8c30f5;
   border-radius: 5px;
   padding: 5px;
   justify-content: space-around;
 }
 #responds button:hover {
-  background-color: #4eb1f5;
+  background-color:#8c30f5;
   color: #fff;
   border: 1px #fff solid;
 }
 /* reply textarea */
 input {
-  background-color: #4eb1f5;
+  background-color: #8c30f5;
   color: #fff;
   border-radius: 1rem;
   padding: 10px;

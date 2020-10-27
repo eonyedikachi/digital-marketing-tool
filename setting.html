@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./styles/setting.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="icon" href="./images/MartReach icon.png">
 </head>
 
 <body>
@@ -24,466 +25,475 @@
 
   <main class="main">
     <div class="border"></div>
-      <div class="headerr">
-        <h1> Account Settings</h1>
+    <div class="headerr">
+      <h1> Account Settings</h1>
+    </div>
+
+
+    <!-- SETTINGS BAR -->
+    <div class="tab">
+      <button class="tablinks active" onclick="openSetting(event, 'Contact Information')">Contact Information</button>
+      <button class="tablinks" onclick="openSetting(event, 'Security')">Security</button>
+      <button class="tablinks" onclick="openSetting(event, 'Domains')">Domains</button>
+      <button class="tablinks" onclick="openSetting(event, 'Manage my Account')">Manage my Account</button>
+    </div>
+
+    <!-- CONTACT INFORMATION TAB  -->
+    <div id="Contact Information" class="active tabcontent">
+      <h2>Contact Information</h2>
+
+      <h3>Profile</h3>
+      <p>
+        &nbsp; &nbsp; This is the information we have associated with your MartReach profile, which you can use to
+        access multiple
+        MartReach accounts. If you need to reset your username or password, or verify account changes, we'll send the
+        link to your profile email address.
+        <br>
+        All contact information is kept strictly confidential. View our <a href="">privacy policy</a>
+      </p>
+      <div class="profile-content">
+        <h6>Username: </h6> &nbsp; <span class="unique user-name"></span>
+      </div>
+      <div class="profile-content">
+        <h6>First Name:</h6>
+        &nbsp; <span class="unique first-name"></span>
+      </div>
+      <div class="profile-content">
+        <h6>Last Name:</h6>
+        &nbsp; <span class="unique last-name"></span>
+      </div>
+      <div class="profile-content">
+        <h6>Email Address:</h6>
+        &nbsp; <span class="unique email-address"></span>
+      </div>
+      <button class="btn my-3 button" data-toggle="modal" data-target="#editProfile">Edit Profile Information</button>
+
+
+
+
+      <h3>Primary Account Contact</h3>
+      <p>Information about this account, such as campaign send notifications, will be sent to the email address listed
+        here.</p>
+      <div class="profile-content">
+        <h6>Contact Name: </h6>
+        &nbsp; <span class="unique all-names"></span>
+
+      </div>
+      <div class="profile-content">
+        <h6>Company / Organization</h6>
+        &nbsp; <span class="unique company-name"></span>
+      </div>
+      <div class="profile-content">
+        <h6>Address</h6>
+        <p>abdulmalikmuhktar@somewhere in Abuja</p>
+      </div>
+      <div class="profile-content">
+        <h6>Phone</h6>
+        &nbsp; <span class="unique phone"></span>
+      </div>
+      <div class="profile-content">
+        <h6>Email</h6>
+        &nbsp; <span class="unique email-address"></span>
+      </div>
+      <button class="btn my-3 button" data-toggle="modal" data-target="#editContactInformation">Edit Contact
+        Information</button>
+
+      <h3>Billing Info</h3>
+      <p>
+        This is the information we have associated with your payment method.
+      </p>
+      <div class="profile-content">
+        <h6>Contact name</h6>
+        &nbsp; <span class="unique contact-name"></span>
       </div>
 
-
-      <!-- SETTINGS BAR -->
-      <div class="tab">
-        <button class="tablinks active" onclick="openSetting(event, 'Contact Information')">Contact Information</button>
-        <button class="tablinks" onclick="openSetting(event, 'Security')">Security</button>
-        <button class="tablinks" onclick="openSetting(event, 'Domains')">Domains</button>
-        <button class="tablinks" onclick="openSetting(event, 'Manage my Account')">Manage my Account</button>
+      <div class="profile-content">
+        <h6>Company / Organization</h6>
+        &nbsp; <span class="unique company-name"></span>
       </div>
 
-      <!-- CONTACT INFORMATION TAB  -->
-      <div id="Contact Information" class="active tabcontent">
-        <h2>Contact Information</h2>
+      <div class="profile-content">
+        <h6>Address</h6>
+        &nbsp; <span class="unique billing-address"></span>
+      </div>
 
-        <h3>Profile</h3>
-        <p>
-          &nbsp; &nbsp; This is the information we have associated with your MartReach profile, which you can use to access multiple
-          MartReach accounts. If you need to reset your username or password, or verify account changes, we'll send the
-          link to your profile email address.
-          <br>
-          All contact information is kept strictly confidential. View our <a href="">privacy policy</a>
+      <div class="profile-content">
+        <h6>Phone</h6>
+        &nbsp; <span class="unique billing-phone-number"></span>
+      </div>
+      <div class="profile-content">
+        <h6>Email:</h6>
+        &nbsp; <span class="unique billing-email-address"></span>
+      </div>
+      <button class="btn my-3 button" data-toggle="modal" data-target="#editBillingInformation">Edit Billing
+        Information</button>
+
+
+      <h3>Audiences in this Account</h3>
+      <div class="profile-content">
+        <h6>Audience name</h6>
+        <p>MartReach</p>
+      </div>
+
+      <div class="profile-content">
+        <h6>Contact name</h6>
+        <p>MartReach</p>
+      </div>
+      <div class="profile-content">
+        <h6>Company / Organization</h6>
+        <p>MartReach and Fellows.</p>
+      </div>
+
+      <div class="profile-content">
+        <h6>Address</h6>
+        <p>6, MartReach@Lugbe Big house</p>
+      </div>
+
+      <div class="profile-content">
+        <h6>Phone</h6>
+        <p>08000MartReach</p>
+      </div>
+
+      <div class="profile-content">
+        <h6>Email</h6>
+        <p>aminubenitachineduekesoglorymalik@gmail.com</p>
+      </div>
+
+      <div class="profile-content">
+        <h6>Permission Reminder</h6>
+        <p>“You are receiving this email because you opted in via our website.”</p>
+      </div>
+
+      <button class="btn my-3 button" data-toggle="modal" data-target="#editudienceInformation">
+        Edit Audience Information
+      </button>
+    </div>
+
+    <!-- SECURITY TAB -->
+    <div id="Security" class="tabcontent">
+      <h2>Account Security</h2>
+      <h3>Two-Factor Authentication</h3>
+      <p>Two-factor authentication is a security process that requires two forms of user ID to log in to MartReach. It
+        helps keep your account safe.There are two ways to do this: use an authenticator app, or enable SMS account
+        verification.</p>
+      <h5>Use an authenticator app for two factor authentication</h5>
+      <p>MartReach integrates with mobile apps for two-factor authentication.</p>
+      <button class="btn my-3 button">Enable</button>
+      <h3>Account verification</h3>
+      <p>If we see patterns that seem unusual for your account, we'll need to verify your identity.</p>
+      <h5>Verify identity via SMS</h5>
+      <button class="btn my-3 button">Enable</button>
+      <h5>Verify identity with security questions</h5>
+      <button class="btn my-3 button">Enable</button>
+    </div>
+
+
+    <!-- DOMAINS TAB  -->
+    <div id="Domains" class="tabcontent">
+      <h2>Domains</h2>
+      <h3>
+        Verify Your Email Domain
+      </h3>
+      <p>Verify your email domain to use as a “from” address when you send emails and automations. You can also
+        authenticate the domain to improve deliverability.
+
+        Have questions? Read how to verify your email domain.</p>
+      <button class="button btn my-3 "> Verify Email Domain</button>
+      <h3>
+        Connect Your Domain
+      </h3>
+      <p>
+        Have a domain you already own? Connect it to give your landing pages and website a more professional look.
+
+        Have questions? Read how to connect your domain or subdomain to MartReach.
+      </p>
+      <button class="btn my-3 button" data-toggle="modal" data-target="#connectDomain"> Connect Domain</button>
+      <h3>Purchase a New Domain</h3>
+      <p>
+        Find a custom domain name to help visitors remember your brand and drive traffic to your website.
+
+        Have questions? Read how to purchase a domain with MartReach.
+      </p>
+      <button class="btn my-3 button"> Find Domains</button>
+    </div>
+
+    <!-- MANAGE MY ACCOUNT TAB  -->
+    <div id="Manage my Account" class="tabcontent">
+      <h2>Manage my Data</h2>
+      <h3>Export Data</h3>
+      <p>
+        You can export most of your account data into CSV files. We’ll bundle everything together in a single Zip file
+        and send an email to <span class="unique email-address"></span> when it’s done. <br>
+
+        We have a limit of one export in a 24-hour period. <br>
+
+        You can download your most recent completed export. <br>
+      <div>
+        Choose which data you'd like to export:
+        <label class="radio radio-before">
+          <span class="radio__input">
+            <input type="checkbox" name="radio">
+            <span class="radio__control"></span>
+          </span>
+          <span class="radio__label">Campaigns</span>
+        </label>
+        <label class="radio radio-before">
+          <span class="radio__input">
+            <input type="checkbox" name="radio">
+            <span class="radio__control"></span>
+          </span>
+          <span class="radio__label">Audiences</span>
+        </label>
+        <label class="radio radio-before">
+          <span class="radio__input">
+            <input type="checkbox" name="radio">
+            <span class="radio__control"></span>
+          </span>
+          <span class="radio__label">Reports</span>
+        </label>
+        <label class="radio radio-before">
+          <span class="radio__input">
+            <input type="checkbox" name="radio">
+            <span class="radio__control"></span>
+          </span>
+          <span class="radio__label">Templates</span>
+        </label>
+        <label class="radio radio-before">
+          <span class="radio__input">
+            <input type="checkbox" name="radio">
+            <span class="radio__control"></span>
+          </span>
+          <span class="radio__label">Gallery</span>
+        </label>
+        <label class="radio radio-before">
+          <span class="radio__input">
+            <input type="checkbox" name="radio">
+            <span class="radio__control"></span>
+          </span>
+          <span class="radio__label">Events</span>
+        </label>
+
+        <section>
+          <div class="days">
+            <input type="radio" id="control_01" name="select" value="1">
+            <label for="control_01">
+              <h6>Last 30 days</h6>
+              <p>Export data in the last 30 days.</p>
+            </label>
+          </div>
+          <div class="days">
+            <input type="radio" id="control_02" name="select" value="2">
+            <label for="control_02">
+              <h6>Last 60 days</h6>
+              <p>Export data in the last 60 days.</p>
+            </label>
+          </div>
+          <div class="days">
+            <input type="radio" id="control_03" name="select" value="3">
+            <label for="control_03">
+              <h6>Last 90 days</h6>
+              <p>Export data in the last 90 days.</p>
+            </label>
+          </div>
+          <div class="days">
+            <input type="radio" id="control_04" name="select" value="4">
+            <label for="control_04">
+              <h6>All data</h6>
+              <p>Export all data for the account. (This may take a while)</p>
+            </label>
+          </div>
+        </section>
+        <button class="btn my-3 button"> Export</button>
         </p>
-        <div class="profile-content">
-          <h6>Username: </h6> &nbsp; <span class="unique user-name"></span>
-        </div>
-        <div class="profile-content">
-          <h6>First Name:</h6>
-          &nbsp; <span class="unique first-name"></span>
-        </div>
-        <div class="profile-content">
-          <h6>Last Name:</h6>
-          &nbsp; <span class="unique last-name"></span>
-        </div>
-        <div class="profile-content">
-          <h6>Email Address:</h6>
-          &nbsp; <span class="unique email-address"></span>
-        </div>
-        <button class="btn my-3 button" data-toggle="modal" data-target="#editProfile">Edit Profile Information</button>
-
-
-        
-
-<h3>Primary Account Contact</h3>
-        <p>Information about this account, such as campaign send notifications, will be sent to the email address listed
-          here.</p>
-        <div class="profile-content">
-          <h6>Contact Name: </h6>
-          &nbsp; <span class="unique all-names"></span>
-
-        </div>
-        <div class="profile-content">
-          <h6>Company / Organization</h6>
-          &nbsp; <span class="unique company-name"></span>
-        </div>
-        <div class="profile-content">
-          <h6>Address</h6>
-          <p>abdulmalikmuhktar@somewhere in Abuja</p>
-        </div>
-        <div class="profile-content">
-          <h6>Phone</h6>
-          &nbsp; <span class="unique phone"></span>
-        </div>
-        <div class="profile-content">
-          <h6>Email</h6>
-          &nbsp; <span class="unique email-address"></span>
-        </div>
-        <button class="btn my-3 button" data-toggle="modal" data-target="#editContactInformation">Edit Contact
-          Information</button>
-
-        <h3>Billing Info</h3>
-        <p>
-          This is the information we have associated with your payment method.
-        </p>
-        <div class="profile-content">
-          <h6>Contact name</h6>
-          &nbsp; <span class="unique contact-name"></span>
-        </div>
-
-        <div class="profile-content">
-          <h6>Company / Organization</h6>
-          &nbsp; <span class="unique company-name"></span>
-        </div>
-
-        <div class="profile-content">
-          <h6>Address</h6>
-          &nbsp; <span class="unique billing-address"></span>
-        </div>
-
-        <div class="profile-content">
-          <h6>Phone</h6>
-          &nbsp; <span class="unique billing-phone-number"></span>
-        </div>
-        <div class="profile-content">
-          <h6>Email:</h6>
-          &nbsp; <span class="unique billing-email-address"></span>
-        </div>
-        <button class="btn my-3 button" data-toggle="modal" data-target="#editBillingInformation">Edit Billing Information</button>
-
-
-        <h3>Audiences in this Account</h3>
-        <div class="profile-content">
-          <h6>Audience name</h6>
-          <p>MartReach</p>
-        </div>
-
-        <div class="profile-content">
-          <h6>Contact name</h6>
-          <p>MartReach</p>
-        </div>
-        <div class="profile-content">
-          <h6>Company / Organization</h6>
-          <p>MartReach and Fellows.</p>
-        </div>
-
-        <div class="profile-content">
-          <h6>Address</h6>
-          <p>6, MartReach@Lugbe Big house</p>
-        </div>
-
-        <div class="profile-content">
-          <h6>Phone</h6>
-          <p>08000MartReach</p>
-        </div>
-
-        <div class="profile-content">
-          <h6>Email</h6>
-          <p>aminubenitachineduekesoglorymalik@gmail.com</p>
-        </div>
-
-        <div class="profile-content">
-          <h6>Permission Reminder</h6>
-          <p>“You are receiving this email because you opted in via our website.”</p>
-        </div>
-
-        <button class="btn my-3 button" data-toggle="modal" data-target="#editudienceInformation">
-          Edit Audience Information
-        </button>
       </div>
 
- <!-- SECURITY TAB -->
- <div id="Security" class="tabcontent">
-  <h2>Account Security</h2>
-  <h3>Two-Factor Authentication</h3>
-  <p>Two-factor authentication is a security process that requires two forms of user ID to log in to MartReach. It
-    helps keep your account safe.There are two ways to do this: use an authenticator app, or enable SMS account
-    verification.</p>
-  <h5>Use an authenticator app for two factor authentication</h5>
-  <p>MartReach integrates with mobile apps for two-factor authentication.</p>
-  <button class="btn my-3 button">Enable</button>
-  <h3>Account verification</h3>
-  <p>If we see patterns that seem unusual for your account, we'll need to verify your identity.</p>
-  <h5>Verify identity via SMS</h5>
-  <button class="btn my-3 button">Enable</button>
-  <h5>Verify identity with security questions</h5>
-  <button class="btn my-3 button">Enable</button>
-</div>
 
+      <!-- SETTINGS TAB END -->
 
-      <!-- DOMAINS TAB  -->
-      <div id="Domains" class="tabcontent">
-        <h2>Domains</h2>
-        <h3>
-          Verify Your Email Domain
-        </h3>
-        <p>Verify your email domain to use as a “from” address when you send emails and automations. You can also
-          authenticate the domain to improve deliverability.
-
-          Have questions? Read how to verify your email domain.</p>
-        <button class="button btn my-3 "> Verify Email Domain</button>
-        <h3>
-          Connect Your Domain
-        </h3>
-        <p>
-          Have a domain you already own? Connect it to give your landing pages and website a more professional look.
-
-          Have questions? Read how to connect your domain or subdomain to MartReach.
-        </p>
-        <button class="btn my-3 button" data-toggle="modal" data-target="#connectDomain"> Connect Domain</button>
-        <h3>Purchase a New Domain</h3>
-        <p>
-          Find a custom domain name to help visitors remember your brand and drive traffic to your website.
-
-          Have questions? Read how to purchase a domain with MartReach.
-        </p>
-        <button class="btn my-3 button"> Find Domains</button>
-      </div>
-
-      <!-- MANAGE MY ACCOUNT TAB  -->
-      <div id="Manage my Account" class="tabcontent">
-        <h2>Manage my Data</h2>
-        <h3>Export Data</h3>
-        <p>
-          You can export most of your account data into CSV files. We’ll bundle everything together in a single Zip file
-          and send an email to <span class="unique email-address"></span> when it’s done. <br>
-
-          We have a limit of one export in a 24-hour period. <br>
-
-          You can download your most recent completed export. <br>
-        <div>
-          Choose which data you'd like to export:
-          <label class="radio radio-before">
-            <span class="radio__input">
-              <input type="checkbox" name="radio">
-              <span class="radio__control"></span>
-            </span>
-            <span class="radio__label">Campaigns</span>
-          </label>
-          <label class="radio radio-before">
-            <span class="radio__input">
-              <input type="checkbox" name="radio">
-              <span class="radio__control"></span>
-            </span>
-            <span class="radio__label">Audiences</span>
-          </label>
-          <label class="radio radio-before">
-            <span class="radio__input">
-              <input type="checkbox" name="radio">
-              <span class="radio__control"></span>
-            </span>
-            <span class="radio__label">Reports</span>
-          </label>
-          <label class="radio radio-before">
-            <span class="radio__input">
-              <input type="checkbox" name="radio">
-              <span class="radio__control"></span>
-            </span>
-            <span class="radio__label">Templates</span>
-          </label>
-          <label class="radio radio-before">
-            <span class="radio__input">
-              <input type="checkbox" name="radio">
-              <span class="radio__control"></span>
-            </span>
-            <span class="radio__label">Gallery</span>
-          </label>
-          <label class="radio radio-before">
-            <span class="radio__input">
-              <input type="checkbox" name="radio">
-              <span class="radio__control"></span>
-            </span>
-            <span class="radio__label">Events</span>
-          </label>
-
-          <section>
-            <div class="days">
-              <input type="radio" id="control_01" name="select" value="1" >
-              <label for="control_01">
-                <h6>Last 30 days</h6>
-                <p>Export data in the last 30 days.</p>
-              </label>
-            </div>
-            <div class="days">
-              <input type="radio" id="control_02" name="select" value="2">
-              <label for="control_02">
-                <h6>Last 60 days</h6>
-                <p>Export data in the last 60 days.</p>
-              </label>
-            </div>
-            <div class="days">
-              <input type="radio" id="control_03" name="select" value="3">
-              <label for="control_03">
-                <h6>Last 90 days</h6>
-                <p>Export data in the last 90 days.</p>
-              </label>
-            </div>
-            <div class="days">
-              <input type="radio" id="control_04" name="select" value="4">
-              <label for="control_04">
-                <h6>All data</h6>
-                <p>Export all data for the account. (This may take a while)</p>
-              </label>
-            </div>
-          </section>
-          <button class="btn my-3 button"> Export</button>
-          </p>
-        </div>
-
-
-        <!-- SETTINGS TAB END -->
-
-
-      </div>
 
     </div>
-<div class="modally">
 
-<!-- Vertically centered scrollable modal -->
-<!-- PROFILE  -->
-<div class="modal fade" id="editProfile" data-backdrop="static" tabindex="-1" aria-labelledby="editProfile" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="editProfile">Edit Profile</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">    
-        <div id="Details">
-          <h2>Details</h2>
-          <h3>Profile Photo</h3>
-          <div class="profile">
-            <img id="output" src="images/avatar1.png" alt="Avatar" class="avatar">
-            <div class="profile_texts_and_buttons">
-              <h4>Upload your Photo</h4>
-              <p>Photo should be at least 300px x 300px</p>
-              <div class="btn-div">
-                <button class="btn my-3 button">
-                  <p class="btn-label"><label  for="file" style="cursor: pointer;">Upload Image </label></p>
-                </button>
-                <p><input type="file" accept="image" name="image" id="file" onchange="loadFile(event)"
-                    style="display: none;"></p>
-                <button class="btn  my-3 button">&nbsp; <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-camera" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M15 12V6a1 1 0 0 0-1-1h-1.172a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 9.173 3H6.828a1 1 0 0 0-.707.293l-.828.828A3 3 0 0 1 3.172 5H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
-                  <path fill-rule="evenodd" d="M8 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                  <path d="M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-                </svg>&nbsp;</button>
+    </div>
+    <div class="modally">
+
+      <!-- Vertically centered scrollable modal -->
+      <!-- PROFILE  -->
+      <div class="modal fade" id="editProfile" data-backdrop="static" tabindex="-1" aria-labelledby="editProfile"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="editProfile">Edit Profile</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="Details">
+                <h2>Details</h2>
+                <h3>Profile Photo</h3>
+                <div class="profile">
+                  <img id="output" src="images/avatar1.png" alt="Avatar" class="avatar">
+                  <div class="profile_texts_and_buttons">
+                    <h4>Upload your Photo</h4>
+                    <p>Photo should be at least 300px x 300px</p>
+                    <div class="btn-div">
+                      <button class="btn my-3 button">
+                        <p class="btn-label"><label for="file" style="cursor: pointer;">Upload Image </label></p>
+                      </button>
+                      <p><input type="file" accept="image" name="image" id="file" onchange="loadFile(event)"
+                          style="display: none;"></p>
+                      <button class="btn  my-3 button">&nbsp; <svg width="2em" height="2em" viewBox="0 0 16 16"
+                          class="bi bi-camera" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                            d="M15 12V6a1 1 0 0 0-1-1h-1.172a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 9.173 3H6.828a1 1 0 0 0-.707.293l-.828.828A3 3 0 0 1 3.172 5H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z" />
+                          <path fill-rule="evenodd"
+                            d="M8 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                          <path d="M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                        </svg>&nbsp;</button>
+                    </div>
+                  </div>
+                </div>
+                <h3>
+                  Edit Basic Information
+                </h3>
+                <form class="profile_form edit" action="">
+                  <label for="name">Username:</label> <br>
+                  <input type="name" id="userName"> <br>
+                  <label for="name">First name:</label> <br>
+                  <input type="name" id="firstName"> <br>
+                  <label for="name">Last name:</label> <br>
+                  <input type="name" id="lastName"> <br>
+                  <label for="name">Email Address:</label> <br>
+                  <input type="name" id="emailAddress"> <br>
+                  <label for="name">Website:</label> <br>
+                  <input type="name" id="website"> <br>
+                </form>
               </div>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn my-3 button btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn my-3 button" onclick="update()" class="btn btn-primary">Update</button>
+            </div>
           </div>
-          <h3>
-            Edit Basic Information
-          </h3>
-          <form class="profile_form edit" action="">
-            <label for="name">Username:</label> <br>
-            <input type="name" id="userName"> <br>
-            <label for="name">First name:</label> <br>
-            <input type="name" id="firstName"> <br>
-            <label for="name">Last name:</label> <br>
-            <input type="name" id="lastName"> <br>
-            <label for="name">Email Address:</label> <br>
-            <input type="name" id="emailAddress"> <br>
-            <label for="name">Website:</label> <br>
-            <input type="name" id="website"> <br>
-            </form>
         </div>
+      </div>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn my-3 button btn-secondary" data-dismiss="modal">Close</button>
-      <button type="button" class="btn my-3 button" onclick="update()" class="btn btn-primary">Update</button>
+
+    <!-- PRIMARY ACCOUNT CONTACT  -->
+    <div class="modal fade" id="editContactInformation" data-backdrop="static" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Edit Primary Account Contact Information</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+
+            <div id="contactDetails">
+
+              <form class="profile_form edit" action="">
+                <label for="name">Contact Name:</label> <br>
+                <input type="name" id="contactContactName"> <br>
+                <label for="name">Company / Organization:</label> <br>
+                <input type="name" id="contactCompanyName"> <br>
+                <label for="name">Address:</label> <br>
+                <input type="name" id="contactAddress"> <br>
+                <label for="name">Phone Number:</label> <br>
+                <input type="name" id="contactPhoneNumber"> <br>
+                <label for="name">Email:</label> <br>
+                <input type="name" id="contactEmailAddress">
+              </form>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary my-3 button" onclick="update()">Update</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
-</div>
+    </div>
 
-<!-- PRIMARY ACCOUNT CONTACT  -->
-<div class="modal fade" id="editContactInformation" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Edit Primary Account Contact Information</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+    <!-- BILLING INFORMATION  -->
+    <div class="modal fade" id="editBillingInformation" data-backdrop="static" tabindex="-1"
+      aria-labelledby="editBillingInformation" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="editBillingInformation">Edit Billing Information</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
 
 
 
-        <div id="contactDetails">
-          
-          <form class="profile_form edit" action="">
-            <label for="name">Contact Name:</label> <br>
-            <input type="name" id="contactContactName"> <br>
-            <label for="name">Company / Organization:</label> <br>
-            <input type="name" id="contactCompanyName"> <br>
-            <label for="name">Address:</label> <br>
-            <input type="name" id="contactAddress"> <br>
-            <label for="name">Phone Number:</label> <br>
-            <input type="name" id="contactPhoneNumber"> <br>
-            <label for="name">Email:</label> <br>
-            <input type="name" id="contactEmailAddress">
-          </form>
+            <div id="billingDetails">
+
+              <form class="profile_form edit" action="">
+                <label for="name">Contact Name:</label> <br>
+                <input type="name" id="billingContactName"> <br>
+                <label for="name">Company / Organization:</label> <br>
+                <input type="name" id="billingCompanyName"> <br>
+                <label for="name">Address:</label> <br>
+                <input type="name" id="billingAddress"> <br>
+                <label for="name">Phone Number:</label> <br>
+                <input type="name" id="billingPhoneNumber"> <br>
+                <label for="name">Email:</label> <br>
+                <input type="name" id="billingEmailAddress">
+              </form>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn my-3 button" onclick="update()">Update</button>
+          </div>
         </div>
-
-        
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-  <button type="button" class="btn btn-primary my-3 button" onclick="update()">Update</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- BILLING INFORMATION  -->
-<div class="modal fade" id="editBillingInformation" data-backdrop="static" tabindex="-1" aria-labelledby="editBillingInformation" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="editBillingInformation">Edit Billing Information</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
-      <div class="modal-body">
+    </div>
+    </div>
+
+    <!-- AUDIENCWS IN THIS ACCOUNT  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" data-backdrop="static" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
 
 
 
-        <div id="billingDetails">
-          
-          <form class="profile_form edit" action="">
-            <label for="name">Contact Name:</label> <br>
-            <input type="name" id="billingContactName"> <br>
-            <label for="name">Company / Organization:</label> <br>
-            <input type="name" id="billingCompanyName"> <br>
-            <label for="name">Address:</label> <br>
-            <input type="name" id="billingAddress"> <br>
-            <label for="name">Phone Number:</label> <br>
-            <input type="name" id="billingPhoneNumber"> <br>
-            <label for="name">Email:</label> <br>
-            <input type="name" id="billingEmailAddress">
-          </form>
+
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary my-3 button">Send message</button>
+          </div>
         </div>
-
-        
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-  <button type="button" class="btn my-3 button" onclick="update()">Update</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- AUDIENCWS IN THIS ACCOUNT  -->
-<div class="modal fade" id="exampleModal" tabindex="-1" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
-      <div class="modal-body">
-
-
-
-
-
-
-        
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-  <button type="button" class="btn btn-primary my-3 button">Send message</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
+    </div>
+    </div>
+    </div>
+  </main>
 
   <footer>
     <div class="container">

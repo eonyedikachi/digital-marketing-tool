@@ -4,10 +4,14 @@
 }
 main {
   background: #8c30f51a;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
 }
 
 main .register {
   width: 70%;
+  border-radius: 10px;
+  background: #ffffff;
 }
 
 main .register h1 span {

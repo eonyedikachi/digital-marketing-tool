@@ -1,9 +1,15 @@
 //Creating Local Storage
-let database = JSON.parse(localStorage.getItem("database"));
+database = JSON.parse(localStorage.getItem("database"));
+currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 if (database == null) {
   database = [];
 }
+
+if (currentUser == null) {
+  currentUser = [];
+}
+
 // Registering User
 
 const registerUser = (e) => {
@@ -97,10 +103,12 @@ function checkDuplicateUser(username, email) {
     document.getElementById("error").innerHTML = "Email has been taken!";
   } else {
     database.push(newUser);
+    currentUser.push(newUser);
 
     // updating local storage
     localStorage.setItem("database", JSON.stringify(database));
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
     // redirect user to dashboard
-    location.assign("../signin.html");
+    location.assign("../dashboard.html");
   }
 }
