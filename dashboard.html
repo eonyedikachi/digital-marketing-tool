@@ -23,15 +23,15 @@
 <body>
   <div>
     <div class="row">
-      <div class="col" style="background-color: #01081e;">
+      <div class="col" style="background-color: white;">
         <ul class="nav flex-column">
           <li class="nav-item flex ">
             <a class="nav-link active" href="#">
               <i class="fas fa-columns"></i>
-              <a href="./dashboard.html" class="active">Dashboard</a>
             </a>
+            <a href="./dashboard.html" class="active">Dashboard</a>
           </li>
-          <li class="nav-item flex">
+          <li class="nav-item flex" >
             <a class="nav-link" href="#">
               <i class="fas fa-home"></i>
               <a href="createLanding.html">Landing page</a>
@@ -69,7 +69,7 @@
 
         </ul>
       </div>
-      <div class="col-8" style="background-color: #151c31;">
+      <div class="col-8" style="background-color: #F4F5F7;">
         <div class="row">
           <div class="col">
             <h3 class="active">Dashboard</h3>
@@ -79,42 +79,42 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col card">
             <h6>Total Contact</h6>
             <canvas id="pie-chart" style="display: block; width: 50px; height: 40px;"></canvas>
           </div>
-          <div class="col">
+          <div class="col card">
             <h6>Audience Reached</h6>
             <canvas id="pie-chart2" style="display: block; width: 50px; height: 40px;"></canvas>
           </div>
-          <div class="col">
+          <div class="col card">
             <h6>Total Design</h6>
             <canvas id="pie-chart3" style="display: block; width: 50px; height: 40px;"></canvas>
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col card">
             <canvas id="chart" style="display: block; width: 455px; height: 205px;"></canvas>
           </div>
         </div>
       </div>
-      <div class="col" style="background-color: #01081e;">
+      <div class="col" style="background-color: #fff;">
         <div class="container">
           <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
             <a href="./index.html" class="active" onclick="signOut()"
-              style="border: 1px solid #fff; border-radius: 4px; padding: 3px;">Sign Out</a>
+              style="border: 1px solid #01081e; border-radius: 4px; padding: 3px;">Sign Out</a>
 
           </div>
-          <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;">
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; color: #c4c4c4;">
             <img src="images/caricature1.svg" alt="image" height="100" width="100" style="border-radius: 50%;">
             <h3 id="usersname111">Malik Mukhtar</h3>
 
           </div>
-          <div style="display: flex;justify-content: space-evenly; padding: 10px;">
+          <div style="display: flex;justify-content: space-evenly; padding: 10px; color: #c4c4c4;">
             <h5>Messages</h5>
             <i class="far fa-comment-alt"></i>
           </div>
-          <div style="display: flex; margin: 5px;">
+          <div style="display: flex; margin: 5px; color: #c4c4c4;">
             <div>
               <img src="images/avatar2.png" alt="image" height="50" width="50" style="border-radius: 50%;">
             </div>
@@ -123,7 +123,7 @@
               <p style="font-size: 12px;">Have you planned for the next template...</p>
             </div>
           </div>
-          <div style="display: flex; margin: 5px;">
+          <div style="display: flex; margin: 5px; color: #c4c4c4;">
             <div>
               <img src="images/avatar3.png" alt="image" height="50" width="50" style="border-radius: 50%; ">
             </div>
@@ -232,7 +232,9 @@
     });
 
     var d = new Date();
-    document.getElementById("date").innerHTML = d;
+    console.log(d)
+    // console.log(JSON.stringify(d).split('T').reverse())
+    document.getElementById("date").innerHTML = `${d.getDate()} / ${d.getMonth() + 1} / ${d.getFullYear()}`;
     document.getElementById("date").className = 'active';
 
 
