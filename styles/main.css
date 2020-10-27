@@ -61,7 +61,7 @@
   padding: 10px;
   border: none;
   border-radius: 15px;
-  font-family: "Baloo Tamma 2";
+  font-family: 'Baloo Tamma 2';
   cursor: pointer;
   opacity: 0;
   transition: all ease 0.5s;
@@ -101,7 +101,7 @@
 }
 
 .main .left .cover {
-  background-image: url("../images/marketing-2.jpg");
+  background-image: url('../images/marketing-2.jpg');
   background-size: cover;
   height: 250px;
   width: 400px;
@@ -116,7 +116,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fdfdfd;
+  margin-top: -10px;
 }
 
 .growth .top {
@@ -150,6 +150,9 @@
   padding: 10px;
   margin: 3px;
   text-align: justify;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
 .box i {
@@ -166,10 +169,12 @@
   justify-content: space-evenly;
 }
 .audience .right {
-  background-image: url("../images/audience.png");
+  background-image: url('../images/audience.png');
   background-size: cover;
   height: 350px;
   width: 400px;
+  margin: 10px;
+  border-radius: 50px;
 }
 
 .audience .left p:nth-child(1) {
@@ -394,7 +399,7 @@
   line-height: 98px;
   /* or 136% */
 
-  font-feature-settings: "liga" off;
+  font-feature-settings: 'liga' off;
 
   /* Text / Gray 900 */
 
@@ -425,7 +430,7 @@
   line-height: 32px;
   /* or 178% */
 
-  font-feature-settings: "liga" off;
+  font-feature-settings: 'liga' off;
 
   /* Text / Gray 900 */
 
