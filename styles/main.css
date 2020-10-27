@@ -116,7 +116,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fdfdfd;
+  margin-top: -10px;
 }
 
 .growth .top {
@@ -150,6 +150,9 @@
   padding: 10px;
   margin: 3px;
   text-align: justify;
+  border-radius: 50px;
+  background: #ffffff;
+  /* box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; */
 }
 
 .box i {
@@ -170,6 +173,8 @@
   background-size: cover;
   height: 350px;
   width: 400px;
+  margin: 10px;
+  border-radius: 50px;
 }
 
 .audience .left p:nth-child(1) {
@@ -372,6 +377,12 @@
   flex-grow: 0;
   margin: 0px 32px;
 }
+
+.get-started:hover {
+  background: #5f1eaa;
+  color: #fff;
+}
+
 .text-first {
   position: static;
   width: 540px;
