@@ -3,16 +3,22 @@
   --secondary-color: #4eb1f5;
 }
 
+h1 {
+  font-weight: 600;
+  color: #8c30f5;
+}
+
 /* Main */
 .emailTemp {
   padding: 1rem;
-  background: #151c31;
-  color: #fff;
+  background: #f9f9f9;
+  color: #000;
+  min-height: 100vh;
 }
 
 .container .select a {
   float: right;
-  color: #fff;
+  color: #8c30f5;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border: 1px solid #dee2e6;
@@ -33,7 +39,7 @@
 }
 
 h1 {
-  font-weight: 600;
+  margin: 3rem 0;
 }
 
 h2 {
@@ -41,11 +47,11 @@ h2 {
 }
 
 .nav-link {
-  color: #fff;
+  color: #8c30f5;
 }
 
 .nav-link:hover {
-  color: #8c30f5;
+  color: #6920bd;
 }
 
 /* Featured */

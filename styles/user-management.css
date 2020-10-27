@@ -4,22 +4,27 @@
 }
 
 h1 {
-  color: var(--secondary-color);
+  color: #fff;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 h2 {
-  color: var(--secondary-color);
+  color: #fff;
 }
 
-main .middle {
+.user-management {
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: unset;
   flex-direction: column;
   margin: auto;
-  overflow: auto;
+}
+
+.row {
+  margin-left: unset;
+  margin-right: unset;
 }
 
 img {
@@ -27,7 +32,7 @@ img {
 }
 
 /* Form Styling */
-main .middle .form {
+.form {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -35,42 +40,38 @@ main .middle .form {
   align-items: center;
   border-radius: 1rem;
   padding: 2rem;
-  background: rgba(245, 245, 245, 0.7);
+  background: #01081e;
   box-shadow: black 1px 1px 55px -20px;
 }
 
-main .middle .form .form-input {
+.form .form-input {
   width: 100%;
 }
 
-main .middle .form .form-input:nth-of-type(9) {
+.form .form-input:nth-of-type(9) {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-main .middle .form .form-input input {
+.form .form-input input {
   padding: 0.3rem;
   margin: 1rem 0;
   border-radius: 5px;
   width: 100%;
-  border: solid 1px var(--secondary-color);
+  border: solid 1px #fff;
 }
 
-main .middle .form .form-input:nth-of-type(10) {
+.form .form-input:nth-of-type(10) {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-main .middle .form .form-input button {
+.form .form-input button {
   width: 20%;
   margin: 1rem auto;
   padding: 0.8rem;
-}
-
-.middle {
-  overflow: auto;
 }
 
 .form-input.radio input {
@@ -78,7 +79,7 @@ main .middle .form .form-input button {
 }
 
 /* Button Styling */
-main .middle button {
+button {
   border: none;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -148,7 +149,7 @@ main .middle button {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  background: rgba(245, 245, 245, 0.7);
+  background: #01081e;
   padding: 2rem 0;
   border-bottom: 1px solid rgb(0, 54, 134);
   margin-bottom: 1rem;
@@ -171,7 +172,7 @@ main .middle button {
 
 /* Media queries */
 @media screen and (max-width: 768px) {
-  main .middle .form {
+  .form {
     width: 70%;
   }
 
@@ -179,7 +180,7 @@ main .middle button {
     width: 70%;
   }
 
-  .main .middle {
+  .user-management {
     justify-content: unset;
     width: 100%;
   }
@@ -189,7 +190,7 @@ main .middle button {
       font-size: 1.75rem;
     }
 
-    main .middle .form {
+    .form {
       width: 90%;
     }
 
@@ -205,7 +206,7 @@ main .middle button {
       width: 100%;
     }
 
-    main .middle .form .form-input button {
+    .form .form-input button {
       width: 40%;
       margin: 1rem auto;
       padding: 0.8rem;

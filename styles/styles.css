@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 *,
 ::before,
@@ -17,15 +18,50 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
+header {
+  background: #fff;
+}
+
+button {
+  border-radius: 5px;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 header {
   border-bottom: 1px solid black;
 }
 
+/* Modal Styles */
+.modal-header {
+  background: #0b0d17;
+  color: #fff;
+}
+
+.modal-header h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bolder;
+}
+
+.modal-header button,
+.modal-header button:hover {
+  color: #fff;
+}
+
 /* Navbar */
+.logo-nav {
+  width: 138px;
+}
+
 .navbar {
   font-weight: 700;
 }
@@ -47,6 +83,7 @@ header {
 .right-nav .btn {
   font-size: 14px;
   border-radius: 8px;
+  width: 74px;
 }
 
 .right-nav .btn:first-child {
@@ -92,6 +129,7 @@ footer ul {
 
 footer ul a {
   color: #fff;
+  font-family: "Rubik", sans-serif;
 }
 
 footer a:hover {
@@ -100,6 +138,7 @@ footer a:hover {
 
 footer .container .footer-content .links p {
   color: #8c30f5;
+  font-size: 20px;
 }
 
 footer .container .footer-content .company {
@@ -162,12 +201,62 @@ footer .container .footer-content .newsletter .subscribe button {
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
+/* Sign In */
+#error {
+  color: red;
+  text-align: center;
+}
+
+.txt_field .fa {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  display: none;
+}
+.fa.times {
+  color: red;
+}
+.fa-check {
+  color: green;
+}
+
+.signup_link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.login-btn {
+  background: #8c30f5 !important;
+  color: #fff !important;
+}
+
+.login-btn:hover {
+  background: #5f1eaa !important;
+  color: #fff !important;
+}
+
+.login-title span {
+  color: #8c30f5;
+}
+
+.center-form a {
+  color: #8c30f5;
+  text-decoration: none;
+}
+.center-form a:hover {
+  text-decoration: underline;
+  color: #8c30f5;
+}
+.center-form a::after {
+  color: #8c30f5;
+}
+
+@media screen and (max-width: 767px) {
   /* Navbar */
   .right-nav {
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 1rem;
   }
 
   .right-nav .btn {
@@ -200,5 +289,11 @@ footer .container .footer-content .newsletter .subscribe button {
   footer .container .footer-content .footer-logo > p {
     padding: 0.2rem;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .register {
+    padding: 0 !important;
   }
 }

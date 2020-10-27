@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./styles/register.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="icon" href="./images/MartReach icon.png">
 </head>
 
 <body>
@@ -23,10 +24,10 @@
   <!-- Register Section -->
   <main>
     <div class="container d-flex justify-content-center .align-items-center">
-      <div class="register d-flex flex-column .align-items-center p-4">
+      <div class="register d-flex flex-column .align-items-center p-5">
         <div class="signin d-flex justify-content-end align-items-center my-3">
           Already have an account?
-          <a class="ml-2" href="./signin.html">Sign In</a>
+          <a class="ml-2" data-toggle="modal" data-target="#signIn">Sign In</a>
         </div>
         <h1 class="font-weight-bold">Welcome to <span>MartReach!</span></h1 class="font-wi">
         <h5>Register your account</h5>
@@ -93,6 +94,9 @@
     crossorigin="anonymous"></script>
 
   <script src="./js/main.js"></script>
+  <script src="./js/sigin.js"></script>
+  <!-- Sweet Alert CDN -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/register.js"></script>
   <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
   <script>

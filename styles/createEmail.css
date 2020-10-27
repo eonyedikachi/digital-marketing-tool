@@ -115,14 +115,15 @@ main .controls {
   right: 0;
   height: calc(100vh - 70px);
   border-left: 1px solid gray;
-  background: #151c31;
-  color: #fff;
+  background: #f9f9f9;
 }
 
 main .controls .control-bar {
   height: 40px;
   display: flex;
+  background: #f9f9f9;
   align-items: center;
+  border: 1px solid gray;
 }
 
 main .controls .control-bar button {
@@ -130,19 +131,25 @@ main .controls .control-bar button {
   height: 100%;
   outline: none;
   font-size: 1.3rem;
+  font-weight: normal;
+  border-radius: 0;
   border: none;
+  color: #000;
   background: none;
   text-align: center;
-  background: #01081e;
-  color: #fff;
+}
+
+main .controls .control-bar button:first-child {
+  border-right: solid 1px gray;
 }
 
 main .controls .control-bar button:hover {
-  color: #8c30f5;
+  background: #e7e7e7;
 }
 
 main .controls .control-bar button.active {
-  background: #151c31;
+  background: #171218;
+  color: #fff;
 }
 
 main .controls .control-main {
@@ -161,8 +168,9 @@ main .controls .control-main .control-wrapper {
 main .controls .control-main .control-wrapper .control-box {
   width: 148px;
   height: 154px;
-  border: 1px solid rgba(255, 255, 255, 0.082);
   border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.1);
   margin: 1rem;
   text-align: center;
   cursor: pointer;
@@ -179,13 +187,6 @@ main .controls .control-main .control-wrapper .control-box p {
 main .controls .control-main .control-wrapper .control-box img {
   width: 100px;
   height: 100px;
-}
-
-main .controls .control-main .control-wrapper .control-box i {
-  width: 100px;
-  height: 100px;
-  padding-top: 32px;
-  font-size: 45px;
 }
 
 main .controls .control-style {
@@ -275,8 +276,8 @@ main .controls .control-style .control-wrapper .text-style.show {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #151c31;
-  color: #fff;
+  background: #f9f9f9;
+  color: #000;
   height: 300px;
   width: 500px;
   border-radius: 10px;

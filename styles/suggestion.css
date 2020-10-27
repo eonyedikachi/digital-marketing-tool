@@ -1,6 +1,7 @@
 /* body */
 body {
   background-attachment: #6a7277;
+  background: #151c31;
 }
 
 .select-category {
@@ -12,7 +13,7 @@ body {
 
 .heading {
   text-align: center;
-  color: #4eb1f5;
+  color:white;
   margin-top: 1rem;
   font-size: 2rem;
 }
@@ -30,7 +31,7 @@ body {
   max-height: 100px;
 }
 .img div h4 {
-  color: #4eb1f5;
+  color: white;
   text-align: center;
 }
 /* Select category */
@@ -40,20 +41,20 @@ body {
   margin: 2rem 0;
 }
 .selectcat h2 {
-  color: #4eb1f5;
+  color: white;
   margin-top: 1rem;
   letter-spacing: 1px;
 }
 .selectcat select {
   width: 60%;
-  color: #4eb1f5;
+  color:  #8c30f5;
   padding: 0.4rem;
-  border: #4eb1f5 solid;
+  border: #8c30f5 solid;
   border-radius: 7px;
   font-size: 1rem;
 }
 .selectcat select option {
-  color: #4eb1f5;
+  color: white;
   padding: 1rem;
 }
 .categorylists option {
@@ -66,13 +67,13 @@ body {
   margin: 2rem 0;
 }
 .mainsuggestion h2 {
-  color: #4eb1f5;
+  color:white;
   letter-spacing: 1px;
 }
 .mainsuggestion textarea {
   width: 60%;
   height: 10rem;
-  border: #4eb1f5 solid;
+  border:  #8c30f5 solid;
   border-radius: 7px;
   padding: 0.5rem;
   font-size: 1.2rem;
@@ -80,7 +81,7 @@ body {
 fieldset input{
   width: 2.5rem;
   height: 3rem;
-  background-color: #4eb1f5;
+  background-color:  #8c30f5;
   border-radius: 5px;
   text-align: center;
   padding: 0.1rem;
@@ -91,7 +92,7 @@ fieldset input{
   padding: 10px;
   width: 100px;
   margin: 10px;
-  background: #4eb1f5;
+  background:  #8c30f5;
   border-radius: 5px;
   font-size: 1rem;
   color: #fff;
@@ -99,7 +100,7 @@ fieldset input{
 }
 .mainsuggestion button:hover {
   background-color: #fff;
-  color: #4eb1f5;
+  color:#8c30f5;
 }
 /* Mobile view */
 @media screen and (max-width: 768px) {
