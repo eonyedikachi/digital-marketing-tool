@@ -291,3 +291,9 @@ footer .container .footer-content .newsletter .subscribe button {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 376px) {
+  .register {
+    padding: 0 !important;
+  }
+}
