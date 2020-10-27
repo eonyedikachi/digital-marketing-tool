@@ -246,3 +246,23 @@ section.support {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 376px) {
+  section.support {
+    padding: 2rem;
+  }
+
+  .support .container h1 {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .article-support {
+    margin: 2rem 0;
+  }
+
+  .pricing .pricing-container .pricing-img {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
