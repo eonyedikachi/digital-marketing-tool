@@ -26,7 +26,7 @@ document.querySelector(".header").innerHTML = `
         </li>
       </ul>
       <div class="right-nav">
-        <a href="../signin.html" class="btn mr-4">Login</a>
+        <a class="btn mr-4" data-toggle="modal" data-target="#signIn">Login</a>
         <a href="../Register.html" class="btn">Sign up</a>
       </div>
     </div>
@@ -87,7 +87,7 @@ document.querySelector(".footer").innerHTML = `
         <div class="newsletter">
         <p class="font-weight-bold">Stay up to date</p>
         <form class="subscribe" name="subscribe" method="POST" data-netlify="true">
-          <input type="email" name="email" id="email" placeholder="Enter Email Address" required />
+          <input type="email" name="email" id="footerEmail" placeholder="Enter Email Address" required />
           <button type="submit"><i class="fas fa-paper-plane"></i></button>
         </form>
         </div>        
@@ -95,18 +95,67 @@ document.querySelector(".footer").innerHTML = `
       </div>      
     </div>`;
 
-// Hamburger Menu
-// const hamburger = document.querySelector(".hamburger-box");
-// const nav = document.querySelector(".nav-list");
-// let menuOpen = false;
-// hamburger.addEventListener("click", () => {
-//   if (!menuOpen) {
-//     hamburger.classList.add("open");
-//     nav.classList.add("show");
-//     menuOpen = true;
-//   } else {
-//     hamburger.classList.remove("open");
-//     nav.classList.remove("show");
-//     menuOpen = false;
-//   }
-// });
+// Sign in Modal
+let modal = document.createElement("div");
+modal.setAttribute("class", "modal");
+modal.setAttribute("id", "signIn");
+modal.setAttribute("tabindex", "-1");
+modal.setAttribute("aria-labelledby", "signInLabel");
+modal.setAttribute("aria-hidden", "true");
+modal.classList.add("fade");
+
+modal.innerHTML = `<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="login-modal-header modal-header">
+          <h5 class="modal-title">Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="center-form" onsubmit=" return validate() ">
+      <div class="container d-flex justify-content-center .align-items-center">
+        <div class="register d-flex flex-column .align-items-center p-4">
+          <div class="signin d-flex justify-content-end align-items-center my-3">
+            Don't have an account yet?
+            <a class="ml-2" href="./register.html">Sign Up</a>
+          </div>
+          <h1 class="login-title font-weight-bold">Welcome back to <span>MartReach!</span></h1>
+          <form class="d-flex flex-column" onsubmit="validate()">
+            <p id="error"></p>
+            <div class="input-field my-4"><span>
+                <input placeholder="Username" class="d-block w-100" type="text" id="use" />
+                <!-- <i class="fa fa-times u_times"></i> -->
+                <!-- <i class="fa fa-check u_check"></i> -->
+              </span>
+            </div>
+            <div class="input-field my-4"><span>
+                <input placeholder="Password" class="d-block w-100" type="password" id="pass" />
+                <!-- <i class="fa fa-times p_times"></i> -->
+                <!-- <i class="fa fa-check p_check"></i> -->
+              </span>
+            </div>
+            <div class="pass">
+              <a href="forgotpassword.html"> Forgot Password?</a>
+            </div>
+            <input class="login-btn btn my-3" type="submit" id="Login" value="Login" />
+            <div class="signup_link">
+              Not a member? <a href="./register.html">Signup</a>
+
+              <div class="create d-flex align-items-center mt-4">
+                Sign in with:
+                <div class="socials d-flex align-items-center">
+                  <a class="mx-3" href="#"><i class="fab fa-google"></i></a>
+                  <a class="mx-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="mx-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a class="mx-3" href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>`;
+
+document.body.appendChild(modal);
