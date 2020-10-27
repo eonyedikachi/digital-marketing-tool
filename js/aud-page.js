@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 function toggleClass(elem, className) {
   if (elem.className.indexOf(className) !== -1) {
     elem.className = elem.className.replace(className, "");
