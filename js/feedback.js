@@ -12,14 +12,10 @@ function displaysuggest(){
         <div id="responds">
                     <button onclick="replysuggest()" class="reply"> Reply</button>
                     <button onclick="deletesuggest(${i})">Delete</button>
-                </div>
-       <div id="index"> ${i} </div> 
+                </div> 
     </div>`
      }
     document.getElementById("allsuggestion").innerHTML = suggest
-}
-function user(i){
-    alert(feedback[i])
 }
 displaysuggest()
     // delete function

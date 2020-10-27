@@ -72,6 +72,8 @@ function boldd() {
         replies = [];
         replies.push(info);
       localStorage.setItem('replies',JSON.stringify(replies));
+      localStorage.setItem("notificationnumb", replies);
+      alert("reply sent");
       alert("reply sent")
       }else{
         // suggestions = JSON.parse(localStorage.getItem("suggestions"))
@@ -83,7 +85,16 @@ function boldd() {
       }
       replies.push(infos);
       localStorage.setItem('replies',JSON.stringify(replies));
+      localStorage.setItem("notificationnumb",JSON.stringify(replies));
       alert("reply sent");
       }
       }
+      // alert notification
+    //   function notification(){
+    //     displaynotif = JSON.parse(localStorage.getItem("notificationnumb"));
+    //     l= displaynotif.length;
+        
+    //    document.getElementById("notif").innerHTML=l
+    //    alert("done")
+    // }
       

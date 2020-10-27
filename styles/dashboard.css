@@ -290,6 +290,18 @@ a:hover {
 .right .user {
   margin-top: 5px;
 }
+.notify{
+  position: absolute;
+  content: 1;
+  /* content:'1'; */
+  /* right: -3px; */
+  right: 10%;
+  font-weight: bold;
+  color: #fff;
+  padding: 2px 5px;
+  background-color: red;
+  border-radius: 50%;
+}
 
 /* Footer */
 footer {
