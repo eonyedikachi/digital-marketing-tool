@@ -21,7 +21,7 @@
 
     <div style="height: 100vh; overflow: hidden;">
         <div class="row" style="height: 100%;">
-            <div class="col" style="background-color: #01081e;">
+            <div class="col" style="background-color: #fff;">
                 <ul class="nav flex-column">
                     <li class="nav-item flex ">
                         <a class="nav-link active" href="#">
@@ -49,7 +49,7 @@
 
                 </ul>
             </div>
-            <div class="col-7" style="background-color: #151c31;">
+            <div class="col-7 p-5" style="background-color: #F4F5F7;">
                 <div class="row">
                     <div class="col">
                         <h3 class="active">Admin Dashboard</h3>
@@ -62,60 +62,46 @@
                     <div class="col">
                         <div class="stats">
                             <div class="stat-name">
-                                <p class="text-center">Registered Users</p>
-                                <h1 id="registeredUsers">1</h1>
+                                <div class="users"><img src="./images/users.svg" alt="users"></div>
+                                <h1 class="ml-2 mt-2" id="registeredUsers">1</h1>
+                                <p class="ml-2">Registered Users</p>
                             </div>
                             <div class="stat-chart">
-                                <svg class="progress-ring" width="120" height="120">
-                                    <circle class="progress-ring__circle" stroke="pink" stroke-width="4"
-                                        fill="transparent" r="52" cx="60" cy="60" />
-                                </svg>
-                                <input style="display: none;" value="35" type="number" step="5" min="0" max="100"
-                                    placeholder="progress">
+                                <img src="./images/wave.svg" alt="wave">
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="stats">
                             <div class="stat-name">
-                                <p class="text-center">Page Visits</p>
-                                <h1 id="pageVisits">1</h1>
+                                <div class="visits"><img src="./images/website.svg" alt="visits"></div>
+                                <h1 class="ml-2 mt-2" id="pageVisits">1</h1>
+                                <p class="ml-2">Page Visits</p>
                             </div>
                             <div class="stat-chart">
-                                <svg class="progress-ring" width="120" height="120">
-                                    <circle class="progress-ring__circle" stroke="cyan" stroke-width="4"
-                                        fill="transparent" r="52" cx="60" cy="60" />
-                                </svg>
-
-                                <input style="display: none;" value="35" type="number" step="5" min="0" max="100"
-                                    placeholder="progress">
+                                <img src="./images/wave2.svg" alt="wave2">
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="stats">
                             <div class="stat-name">
-                                <p class="text-center">Disabled Users</p>
-                                <h1 id="disabledUsers">1</h1>
+                                <div class="disabled"><img src="./images/breaking.svg" alt="disabledUsers"></div>
+                                <h1 class="ml-2 mt-2" id="disabledUsers">1</h1>
+                                <p class="ml-2">Disabled Users</p>
                             </div>
                             <div class="stat-chart">
-                                <svg class="progress-ring" width="120" height="120">
-                                    <circle class="progress-ring__circle" stroke="orange" stroke-width="4"
-                                        fill="transparent" r="52" cx="60" cy="60" />
-                                </svg>
-
-                                <input style="display: none;" value="35" type="number" step="5" min="0" max="100"
-                                    placeholder="progress">
+                                <img src="./images/wave3.svg" alt="wave3">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col" style="background-color: #01081e;">
+            <div class="col" style="background-color: #fff;">
                 <div class="container">
                     <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
                         <a href="./index.html" class="active" onclick="signOut()"
-                            style="border: 1px solid #fff; border-radius: 4px; padding: 3px;">Sign Out</a>
+                            style="border: 1px solid #01081e; border-radius: 4px; padding: 3px;">Sign Out</a>
 
                     </div>
                     <div
@@ -176,29 +162,6 @@
         document.getElementById("date").className = 'active';
 
         document.getElementById('registeredUsers').innerHTML = database.length
-
-        var circle = document.querySelector('circle');
-        var radius = circle.r.baseVal.value;
-        var circumference = radius * 2 * Math.PI;
-
-        circle.style.strokeDasharray = `${circumference} ${circumference}`;
-        circle.style.strokeDashoffset = `${circumference}`;
-
-        function setProgress(percent) {
-            const offset = circumference - percent / 100 * circumference;
-            circle.style.strokeDashoffset = offset;
-        }
-
-        const input = document.querySelector('input');
-        setProgress(input.value);
-
-        input.addEventListener('change', function (e) {
-            if (input.value < 101 && input.value > -1) {
-                setProgress(input.value);
-            }
-        })
-
-
     </script>
 </body>
 
