@@ -87,52 +87,28 @@ let message = document.getElementById("comment").value;
 let category = document.getElementById("catlist").value;
 
 //  putting all info into object
+suggestions = JSON.parse(localStorage.getItem("suggestions"));
+suggestionnumb = [];
+
 function sendsuggest() {
-  const message = document.getElementById("comment").value;
-  const category = document.getElementById("catlist").value;
-  const info = {
-    fullname: `${namme}`,
-    category: category,
-    message: message,
-  };
-  suggestions = JSON.parse(localStorage.getItem("suggestions"));
   if (suggestions == null) {
     suggestions = [];
-    suggestions.push(info);
-    localStorage.setItem("suggestions", JSON.stringify(suggestions));
-    swal("Suggestion Sent", {
-      icon: "success",
-    });
-    document.getElementById("comment").value = "";
-  } else {
-    // suggestions = JSON.parse(localStorage.getItem("suggestions"))
-    let infos = {
-      fullname: `${namme}`,
-      category: category,
-      message: message,
-    };
-    suggestions.push(infos);
-    localStorage.setItem("suggestions", JSON.stringify(suggestions));
-    swal("Suggestion Sent", {
-      icon: "success",
-    });
-    document.getElementById("comment").value = "";
   }
-}
+  const message = document.getElementById("comment").value;
+  const infos = 
+  {
+       fullname: `${namme}`,
+         category: category,
+         message: message,
+       };
+  suggestions.push(infos);
+  suggestionnumb.push(infos);
+  localStorage.setItem("suggestions", JSON.stringify(suggestions));
+  localStorage.setItem("notificationnumba", JSON.stringify(suggestionnumb));
 
-// unbold= text.style.cssText="Font-weight:100";
-//     if(text.style.cssText !=unbold){
-//         text.style.cssText=bold
-//     }
-//            else if( text.style.cssText=bold){
-//             text.style.cssText=unbold
-//            }
-//         }
-// setting Itallic
-// function itallic(){
-//     itallicc= text.style.cssText="font-style: italic;"
-//     initallicc= text.style.cssText="font-style: normal";
-//     if( text.style.cssText != itallicc){
-//         text.style.cssText=itallicc
-//     }
-// }
+  swal("Reply Sent", {
+    icon: "success",
+  });
+
+  document.getElementById("comment").value = "";
+}
