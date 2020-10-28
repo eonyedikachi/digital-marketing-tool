@@ -11,7 +11,6 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/dashboard.css" />
-    <link rel="stylesheet" href="styles/createLanding.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="./images/MartReach icon.png">
@@ -20,13 +19,13 @@
 <body>
 
     <div style="height: 100vh;">
-        <div class="row" style="height: 100%;">
-            <div class="col" style="background-color: #fff;">
+        <div class="d-flex" style="height: 100%;">
+            <div class="position-fixed" style="background-color: white;height: 100vh; width: 20%;">
                 <ul class="nav flex-column">
                     <li class="nav-item flex ">
                         <a class="nav-link active" href="#">
                             <i class="fas fa-columns"></i>
-                            <a href="./dashboard.html" class="active">Dashboard</a>
+                            <a href="./admin-dashboard.html" class="active">Dashboard</a>
                         </a>
                     </li>
                     <li class="nav-item flex">
@@ -49,7 +48,7 @@
 
                 </ul>
             </div>
-            <div class="col-7 p-5" style="background-color: #F4F5F7;">
+            <div class="p-4" style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
                 <div class="row">
                     <div class="col">
                         <h3 class="active">Admin Dashboard</h3>
@@ -97,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col" style="background-color: #fff;">
+            <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
                 <div class="container">
                     <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
                         <a href="./index.html" class="active" onclick="signOut()"

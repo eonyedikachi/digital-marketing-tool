@@ -10,7 +10,6 @@ h1 {
 
 /* Main */
 .emailTemp {
-  padding: 1rem;
   background: #f9f9f9;
   color: #000;
   min-height: 100vh;
@@ -39,7 +38,7 @@ h1 {
 }
 
 h1 {
-  margin: 3rem 0;
+  margin: 1rem 0;
 }
 
 h2 {
