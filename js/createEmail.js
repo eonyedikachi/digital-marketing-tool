@@ -12,30 +12,89 @@ if (currentUser == null) {
   currentUser = [];
 }
 
-if (templates == null) {
+if (templates == null || templates == undefined || templates.length == 0) {
   templates = [];
+
+  // Initializ unplayer
+  unlayer.init({
+    id: "editor",
+    displayMode: "email",
+    projectId: 6973,
+    templateId: "19064",
+  });
+} else {
+  unlayer.init({
+    id: "editor",
+    displayMode: "email",
+  });
+
+  // Load saved template
+  var design = templates[templates.length - 1].template;
+  console.log(design);
+  unlayer.loadDesign(design);
 }
 
-unlayer.init({
-  id: "editor",
-  displayMode: "email",
-  // projectId: 6973,
-  // templateId: "19064",
-});
+// Get date
+var d = new Date();
 
-var design = templates[templates.length - 1];
-console.log(design);
-unlayer.loadDesign(design);
+let month = d.getMonth();
+d.setMonth(month);
+let date = d.getDate();
+d.setDate(date);
+let year = d.getFullYear();
+d.setFullYear(year);
+let hours = d.getHours();
+d.setHours(hours);
+let minutes = d.getMinutes();
+d.setMinutes(minutes);
 
+var months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+months[month];
+
+// Save Template
 document.getElementById("save").addEventListener("click", () => {
   unlayer.saveDesign(function (design) {
-    templates.push(design);
+    let name = document.getElementById("templateName").value;
+    if (name == "" || name == null || name == undefined) {
+      let error = document.getElementById("error");
+      error.innerHTML = "Please enter name for template";
+      error.style.color = "red";
+    } else {
+      templates.push({
+        name: name,
+        user: currentUser[i].userName,
+        template: design,
+        date: `${
+          months[d.getMonth()]
+        } ${d.getDate()}, ${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`,
+      });
 
-    localStorage.setItem(
-      `${currentUser[i].userName}Templates`,
-      JSON.stringify(templates)
-    );
+      localStorage.setItem(
+        `${currentUser[i].userName}Templates`,
+        JSON.stringify(templates)
+      );
 
-    alert("document saved");
+      swal("Template saved", {
+        icon: "success",
+      });
+
+      setTimeout(() => {
+        location.assign("../email_templates.html");
+      }, 2000);
+    }
   });
 });

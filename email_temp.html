@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="./images/MartReach icon.png">
-
-    <!-- Unlayer -->
-    <script src="//editor.unlayer.com/embed.js"></script>
 </head>
 
 <body>
@@ -35,7 +32,7 @@
                     <div class="featured">
                         <div class="feature-box 1">
                             <a href="./createEmail.html">
-                                <img src="./images/emailTemp.png" alt="">
+                                <img src="./images/emailTemp1.png" alt="">
                             </a>
                             <p>Theme 1</p>
                         </div>
@@ -47,13 +44,13 @@
                         </div>
                         <div class="feature-box 3">
                             <a href="./createEmail.html">
-                                <img src="./images/emailTemp.png" alt="">
+                                <img src="./images/emailTemp2.png" alt="">
                             </a>
                             <p>Theme 3</p>
                         </div>
                         <div class="feature-box 4">
                             <a href="./createEmail.html">
-                                <img src="./images/emailTemp.png" alt="">
+                                <img src="./images/email_template.png" alt="">
                             </a>
                             <p>Theme 4</p>
                         </div>
@@ -84,71 +81,6 @@
 
 
     <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
-
-    <script>
-        // Local Storage
-        let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-
-        // fetches most recent logged in user
-        i = currentUser.length - 1;
-
-        let templates = JSON.parse(
-            localStorage.getItem(`${currentUser[i].userName} Templates`)
-        );
-
-        if (currentUser == null) {
-            currentUser = [];
-        }
-
-        if (templates == null) {
-            templates = [];
-        }
-
-        unlayer.init({
-            id: "editor",
-            displayMode: "email",
-            // projectId: 6973,
-            // templateId: "19064",
-        });
-
-        // var design = templates[templates.length - 1];
-        // console.log(design);
-        // unlayer.loadDesign(design);
-
-        document.getElementById("save").addEventListener("click", () => {
-            unlayer.saveDesign(function (design) {
-                templates.push(design);
-
-                localStorage.setItem(
-                    `${currentUser[i].userName} Templates`,
-                    JSON.stringify(templates)
-                );
-            });
-
-            alert("document saved");
-        });
-
-        function loadTemplate(id) {
-            if (id == 1) {
-                unlayer.loadDesign({
-                    /* design json here */
-                });
-            }
-
-            if (id == 2) {
-                unlayer.loadDesign({
-                    /* design json here */
-                });
-            }
-
-            if (id == 3) {
-                unlayer.loadDesign({
-                    /* design json here */
-                });
-            }
-        }
-
-    </script>
 </body>
 
 </html>
