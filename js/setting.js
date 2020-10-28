@@ -15,6 +15,7 @@ function openSetting(evt, settingName) {
 document.getElementById("Contact Information").style.display = "block";
 
 // fetches most recent logged in user
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 i = currentUser.length - 1;
 //First Name Display
 var mFirstName = currentUser[i].firstName;
