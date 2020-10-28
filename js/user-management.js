@@ -131,7 +131,7 @@ function display() {
             </div>
             <div class="item">
             <button class = "delBtn" onclick="del(${i})">Delete</button>
-            <button class = "editBtn" onclick="edit(${i})">Edit</button>
+            <button class = "editBtn" data-toggle="modal" data-target="#exampleModal" onclick="edit(${i})">Edit</button>
             </div>
          </div>`;
   }

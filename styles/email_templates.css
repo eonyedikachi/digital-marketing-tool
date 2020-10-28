@@ -21,8 +21,12 @@ h1 {
   display: flex;
 }
 
+.flex a {
+  color: #c4c4c4;
+}
+
 .active {
-  color: #8c30f5;
+  color: #000 !important;
 }
 
 .sidebar {
@@ -34,15 +38,14 @@ h1 {
   left: 0;
   height: 100vh;
   overflow: hidden;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .nav-item {
-  margin: 1rem;
-}
-
-.nav-link {
-  padding: 1rem 1rem;
-  display: inline;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .temp-main {

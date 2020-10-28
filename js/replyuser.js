@@ -59,42 +59,24 @@ function boldd() {
     p.style.fontSize= `${size}px`
     }
 
-    // setting Reply to local Storage
-    function sendreply(){
-      const message= document.getElementById("comment").value;
-      const info =
-      {
-                  "message": message
-                 
-      };
-      replies = JSON.parse(localStorage.getItem("replies"));
-      if (replies == null) {
-        replies = [];
-        replies.push(info);
-      localStorage.setItem('replies',JSON.stringify(replies));
-      localStorage.setItem("notificationnumb", replies);
-      alert("reply sent");
-      alert("reply sent")
-      }else{
-        // suggestions = JSON.parse(localStorage.getItem("suggestions"))
-        let infos = 
-        {
-         
-           "message": message
-          
-      }
-      replies.push(infos);
-      localStorage.setItem('replies',JSON.stringify(replies));
-      localStorage.setItem("notificationnumb",JSON.stringify(replies));
-      alert("reply sent");
-      }
-      }
-      // alert notification
-    //   function notification(){
-    //     displaynotif = JSON.parse(localStorage.getItem("notificationnumb"));
-    //     l= displaynotif.length;
-        
-    //    document.getElementById("notif").innerHTML=l
-    //    alert("done")
-    // }
-      
+   // setting Reply to local Storage
+   replies = JSON.parse(localStorage.getItem("replies"));
+   numb=[];
+
+   function sendreply(){
+
+    if (replies == null) {
+      replies = [];
+    }
+    const message= document.getElementById("comment").value;
+    const info =
+    {
+                "message": message
+               
+    };
+    replies.push(info)
+    numb.push(info)
+    localStorage.setItem('replies',JSON.stringify(replies));
+    localStorage.setItem("notificationnumb",JSON.stringify(numb));
+    alert("reply sent");
+    }

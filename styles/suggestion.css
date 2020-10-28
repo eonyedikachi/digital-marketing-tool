@@ -1,7 +1,7 @@
 /* body */
 body {
   background-attachment: #6a7277;
-  background: #151c31;
+  background:#F4F5F7;
 }
 
 .select-category {
@@ -13,9 +13,10 @@ body {
 
 .heading {
   text-align: center;
-  color:white;
+  color:black;
   margin-top: 1rem;
   font-size: 2rem;
+  font-weight: bolder;
 }
 /* images categories */
 .img {
@@ -31,7 +32,7 @@ body {
   max-height: 100px;
 }
 .img div h4 {
-  color: white;
+  color: black;
   text-align: center;
 }
 /* Select category */
@@ -41,7 +42,7 @@ body {
   margin: 2rem 0;
 }
 .selectcat h2 {
-  color: white;
+  color: black;
   margin-top: 1rem;
   letter-spacing: 1px;
 }
@@ -54,7 +55,7 @@ body {
   font-size: 1rem;
 }
 .selectcat select option {
-  color: white;
+  color: #8c30f5;
   padding: 1rem;
 }
 .categorylists option {
@@ -67,7 +68,7 @@ body {
   margin: 2rem 0;
 }
 .mainsuggestion h2 {
-  color:white;
+  color:black;
   letter-spacing: 1px;
 }
 .mainsuggestion textarea {

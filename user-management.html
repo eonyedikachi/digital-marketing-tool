@@ -21,7 +21,7 @@
 
     <div style="height: 100vh;">
         <div class="row" style="height: 100%;">
-            <div class="col" style="background-color: #01081e;">
+            <div class="col" style="background-color: #fff;">
                 <ul class="nav flex-column">
                     <li class="nav-item flex ">
                         <a class="nav-link" href="./admin-dashboard.html">
@@ -49,64 +49,86 @@
 
                 </ul>
             </div>
-            <div class="user-management col-7 d-flex flex-column align-items-center"
-                style="background-color: #151c31;overflow: auto;">
-                <h1>Welcome to the Users Page</h1>
-                <div class="form">
-                    <h2>Add and Update Users</h2>
-                    <p id="error" class="error"></p>
-                    <div class="form-input">
-                        <input type="hidden" id="index" placeholder="Index">
-                    </div>
-                    <div class="form-input">
-                        <input type="text" id="firstName" placeholder="Enter First Name" required>
-                        <p id="firstNameError" class="error"></p>
-                    </div>
-                    <div class="form-input">
-                        <input type="text" id="lastName" placeholder="Enter Last Name" required>
-                        <p id="lastNameError" class="error"></p>
-                    </div>
-                    <div class="form-input">
-                        <input type="text" id="email" placeholder="Enter Email Address" required>
-                        <p id="emailError" class="error"></p>
-                    </div>
-                    <div class="form-input">
-                        <input type="text" id="username" placeholder="Username" required>
-                        <p id="userNameError" class="error"></p>
-                    </div>
-                    <div class="form-input">
-                        <input type="text" id="password" placeholder="Password" required>
-                        <p id="passwordError" class="error"></p>
-                    </div>
-                    <div class="form-input radio">
-                        <input type="radio" name="role" id="user-radio" value="user">
-                        <label for="">User</label>
-                        <input type="radio" name="role" id="admin-radio" value="admin">
-                        <label for="">Admin</label>
-                        <p id="roleError" class="error"></p>
-                    </div>
-                    <div class="form-input">
-                        <input type="file" accept="image/*" name="image" id="pics" onchange="uploadImage(event)">
-                        <p id="picsError" class="error"></p>
-                    </div>
-                    <div class="form-input">
-                        <button class="addBtn">Add User</button>
-                        <button class="updateBtn" onclick="update()">Update</button>
-                    </div>
-                    <div class="form-input">
-                        <input type="text" id="search" placeholder="Search by Username">
-                        <button class="searchBtn" onclick="search()">Search</button>
-                        <button class="searchBtn cancel" onclick="cancelSearch()">Cancel</button>
-                    </div>
-                    <p id="searchResult"></p>
-                </div>
 
-                <h1 style="margin-top: 1.5rem;">Users</h1>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add and Update Users</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form">
+                                <p id="error" class="error"></p>
+                                <div class="form-input">
+                                    <input type="hidden" id="index" placeholder="Index">
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" id="firstName" placeholder="Enter First Name" required>
+                                    <p id="firstNameError" class="error"></p>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" id="lastName" placeholder="Enter Last Name" required>
+                                    <p id="lastNameError" class="error"></p>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" id="email" placeholder="Enter Email Address" required>
+                                    <p id="emailError" class="error"></p>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" id="username" placeholder="Username" required>
+                                    <p id="userNameError" class="error"></p>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" id="password" placeholder="Password" required>
+                                    <p id="passwordError" class="error"></p>
+                                </div>
+                                <div class="form-input radio">
+                                    <input type="radio" name="role" id="user-radio" value="user">
+                                    <label for="">User</label>
+                                    <input type="radio" name="role" id="admin-radio" value="admin">
+                                    <label for="">Admin</label>
+                                    <p id="roleError" class="error"></p>
+                                </div>
+                                <div class="form-input">
+                                    <input type="file" accept="image/*" name="image" id="pics"
+                                        onchange="uploadImage(event)">
+                                    <p id="picsError" class="error"></p>
+                                </div>
+                                <div class="form-input">
+                                    <button class="addBtn">Add User</button>
+                                    <button class="updateBtn" onclick="update()">Update</button>
+                                </div>
+                                <p id="searchResult"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-management col-7 d-flex flex-column align-items-center"
+                style="background-color: #F4F5F7;overflow: auto;">
+                <div class="user-title">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Add User
+                    </button>
+                </div>
+                <div class="search">
+                    <input type="text" id="search" placeholder="Search by Username">
+                    <button class="searchBtn" onclick="search()">Search</button>
+                    <button class="searchBtn cancel" onclick="cancelSearch()">Cancel</button>
+                </div>
                 <div id="main">
                     Where content is appended
                 </div>
             </div>
-            <div class="col" style="background-color: #01081e;">
+            <div class="col" style="background-color: #fff;">
                 <div class="container">
                     <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
                         <a href="./dashboard.html" class="active" onclick="signOut()"
