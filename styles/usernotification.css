@@ -1,51 +1,46 @@
-#button{
-    flex: 1;
-    background: #fff;
-    color: #4eb1f5;
-    border-radius: 5px;
-    padding: 5px;
-    
+#button {
+  flex: 1;
+  background: #fff;
+  color: #4eb1f5;
+  border-radius: 5px;
+  padding: 5px;
 }
-#button:hover{
-    background-color: #4eb1f5;
-    color: #fff;
-    border: 1px #fff solid
-}
-#middle{
-    line-height: 2rem;
-    margin: 1rem 2rem;
-    background-color: #4eb1f5;
-    padding: 10px;
-    border-radius: 1rem;
-    color: #fff;
-    letter-spacing: 1px;
-}
-.middle h2{
-    color: #4eb1f5;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-top: 1.5rem;
-}
-.fas{
+#button:hover {
+  background-color: #4eb1f5;
   color: #fff;
+  border: 1px #fff solid;
 }
-#middle{
+#middle {
+  line-height: 2rem;
+  margin: 1rem 2rem;
+  background-color: #4eb1f5;
+  padding: 10px;
+  border-radius: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.middle h2 {
+  color: #000;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+#middle {
   background-color: white;
-  color: #007bff;;
+  color: #000;
 }
-.middle h2{
-  color: white;
+.middle h2 {
   margin: 1rem 0;
   font-size: 2rem;
 }
-#button{
+#button {
   margin-left: 25%;
   width: 50%;
   height: 1%;
   border-radius: 25px;
-  color: #007bff;;
+  color: #8c30f5;
 }
-#button:hover{
-  background-color: #007bff;;
+#button:hover {
+  background-color: #8c30f5;
   color: #fff;
 }

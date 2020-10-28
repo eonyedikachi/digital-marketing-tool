@@ -14,69 +14,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="./images/MartReach icon.png">
+    <!-- Unlayer -->
+    <script src="//editor.unlayer.com/embed.js"></script>
 </head>
 
 <body>
-
-    <!-- Main Section -->
-    <main>
-        <!-- Email Template Area -->
-        <div class="email-area">
-            <div id="emailContent" class="wrapper">
-                <div class="template" id="container" ondragover="droppable(event)" ondrop="drop(event)"></div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <div class="controls">
-            <div class="control-bar">
-                <button id="controls">Controls</button>
-                <button id="styles">Styles</button>
-            </div>
-            <div class="control-main" id="controlMain">
-                <div class='control-wrapper'>
-                    <div class="control-box text" id="text" draggable="true" ondragstart="drag(event)">
-                        <img src="./images/text.png" alt="text" draggable="false">
-                        <p>Text</p>
-                    </div>
-                    <div class="control-box image" id="image" draggable="true" ondragstart="drag(event)">
-                        <img src="./images/image.png" alt="text" draggable="false">
-                        <p>Images</p>
-                    </div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                </div>
-            </div>
-
-            <!-- Styles -->
-            <div class="control-style" id="stylesMain">
-                <div class='control-wrapper'>
-                    <div class="box page" id="page">Page <i class="fas fa-angle-right"></i></div>
-                    <div class="page-style" id="pageStyle">
-                        <div class="color">
-                            <p>Background Color:</p>
-                            <input type="color" name="page-color" id="pageColor" onchange="changePageColor()">
-                        </div>
-                    </div>
-                    <div class="box text" id="styleText">Text <i class="fas fa-angle-right"></i></div>
-                    <div class="text-style" id="textStyle">
-                        <div class="color">
-                            <div class="color">
-                                <p>Text Color:</p>
-                                <input type="color" name="text-color" id="textColor" onchange="changeTextColor()">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
+    <div class="container" style="height: calc(100% - 70px);" id="editor"></div>
 
     <!-- Save Box -->
     <div class="save-confirm" id="confirmSave">
@@ -85,7 +28,7 @@
             <form>
                 <input type="text" name="save" id="saveInput" placeholder="Enter Name for Template" required>
                 <div class="buttons">
-                    <button id="save" type="button" onclick="saveTemplate()">Save</button>
+                    <button type="button">Save</button>
                     <button type="button" onclick="cancelSave()">Cancel</button>
                     <p id="error"></p>
                 </div>
@@ -105,7 +48,7 @@
                 </div>
 
                 <div class="save">
-                    <input type="button" value="Save & Exit" onclick="displaySave()" class="button">
+                    <input type="button" value="Save & Exit" id="save" class="button">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
@@ -121,8 +64,11 @@
         crossorigin="anonymous"></script>
 
 
-    <script src="./js/createEmail.js"></script>
+    <!-- <script src="./js/createEmail.js"></script> -->
     <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+
+    <!-- Unlayer -->
+    <script src="./js/createEmail.js"></script>
 </body>
 
 </html>

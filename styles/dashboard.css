@@ -48,10 +48,15 @@ a:hover {
   margin-right: unset;
 }
 
+.user-profile {
+  top: 0;
+  right: 0;
+}
+
 .stats {
   height: 250px;
-  width: 350px;
-  margin: 1rem;
+  width: 320px;
+  margin: 2rem auto;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -120,6 +125,7 @@ a:hover {
 
 #usersname111 {
   color: #8c30f5;
+  text-align: center;
 }
 
 /* Utilities */
@@ -251,15 +257,19 @@ a:hover {
 .right .user {
   margin-top: 5px;
 }
-.notify{
+.notify {
   position: absolute;
-  content: 1;
-  /* content:'1'; */
-  /* right: -3px; */
-  right: 10%;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  right: 17%;
+  justify-content: center;
+  top: -15%;
   font-weight: bold;
   color: #fff;
-  padding: 2px 5px;
+  font-size: 12px;
+  padding: 10px;
   background-color: red;
   border-radius: 50%;
 }
