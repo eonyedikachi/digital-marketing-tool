@@ -186,6 +186,8 @@ footer .container .footer-content .newsletter .subscribe button {
 .back-footer {
   height: 70px;
   color: #fff;
+  width: 70%;
+  margin: auto;
 }
 
 .back-footer i {

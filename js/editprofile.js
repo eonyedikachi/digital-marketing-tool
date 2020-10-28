@@ -2,7 +2,15 @@
 i = currentUser.length - 1;
 // let database = JSON.parse(localStorage.getItem("database"));
 
-document.getElementById("website").value = "";
+var source;
+
+if (
+  document.getElementById("website").value == "" ||
+  document.getElementById("website").value == null ||
+  document.getElementById("website").value == undefined
+) {
+  document.getElementById("website").value = "";
+}
 
 editUser = currentUser[i];
 document.getElementById("firstName").value = editUser.firstName;
@@ -14,31 +22,40 @@ document.getElementById("website").value = editUser.website;
 var randomNumber = Math.floor(Math.random() * 9) + 1;
 var randomAvatar = "avatar" + randomNumber + ".png";
 var randomImageSource = "images/" + randomAvatar;
-if (editUser.image == null || editUser.image == undefined) {
+if (editUser.pics == null || editUser.pics == undefined) {
   document.querySelector(".profile img").setAttribute("src", randomImageSource);
 } else {
-  document.querySelector(".profile img").setAttribute("src", editUser.image);
+  document.querySelector(".profile img").setAttribute("src", editUser.pics);
 }
 
-document.getElementById("website").value = "";
 function update() {
   let edited = {
     firstName: document.getElementById("firstName").value,
     lastName: document.getElementById("lastName").value,
     userName: document.getElementById("userName").value,
     email: document.getElementById("emailAddress").value,
+    password: editUser.password,
+    role: editUser.role,
+    pics: editUser.pics,
     website: document.getElementById("website").value,
   };
   currentUser[i] = edited;
   localStorage.setItem("database", JSON.stringify(currentUser));
-  localStorage.setItem( "currentUser", JSON.stringify(currentUser));
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
   // display();
 }
 
 //upload picture or video from device
-var loadFile = function (event) {
+var loadFile = function (e) {
+  // Upload image
   var image = document.getElementById("output");
-  image.src = URL.createObjectURL(event.target.files[0]);
-  editUser.image = image.src;
+
+  var reader = new FileReader();
+  reader.onload = function () {
+    editUser.pics = reader.result;
+    image.src = editUser.pics;
+  };
+  reader.readAsDataURL(e.target.files[0]);
+
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
 };

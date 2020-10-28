@@ -383,12 +383,12 @@ font-size: 100px;
 }
 .import-contact .import-cont-heading {
   text-align: center;
-  width: 100%;
+  width: 10%;
   padding: 1rem;
 }
 .import-contact h1 {
   font-weight: 400;
-  font-size: 51px;
+  font-size: 30px;
 }
 .import-contact p {
   font-size: 19px;
@@ -405,10 +405,11 @@ font-size: 100px;
   margin: 3rem 1rem;
   border-radius: none;
 }
-.Wrapper-audience {
+/* .Wrapper-audience {
   padding: 5px;
-  width: 95%;
+  width: 10%;
   margin: 20px auto;
+  
 }
 .connect-links {
   display: flex;
@@ -430,7 +431,7 @@ h3 {
   width: 75px;
   justify-content: center;
   padding: 10px;
-}
+} */
 
 @media screen and (max-width: 960px) {
   section .container {

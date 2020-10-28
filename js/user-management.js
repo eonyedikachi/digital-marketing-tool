@@ -165,8 +165,6 @@ function del(id) {
       swal("User has been deleted!", {
         icon: "success",
       });
-    } else {
-      swal("Delete cancelled", "", "error");
     }
   });
 }
