@@ -90,38 +90,29 @@ let message= document.getElementById("comment").value;
 //  feching selected category
  let category= document.getElementById("catlist").value;
 
-//  putting all info into object
+//  getting suggetions from localstorage
+suggestions = JSON.parse(localStorage.getItem("suggestions"));
+
+// adding new suggestion to local storage
 function sendsuggest(){
 const message= document.getElementById("comment").value;
 const category= document.getElementById("catlist").value;
-const info =
+
+
+if (suggestions == null) {
+  suggestions = [];
+}
+const suggest =
 {
            "fullname":`${namme}`,
            "category":category,
             "message": message
            
 };
-suggestions = JSON.parse(localStorage.getItem("suggestions"));
-if (suggestions == null) {
-  suggestions = [];
-  suggestions.push(info);
+  suggestions.push(suggest);
 localStorage.setItem('suggestions',JSON.stringify(suggestions));
 alert("Suggestion Sent")
-}else{
-  // suggestions = JSON.parse(localStorage.getItem("suggestions"))
-  let infos = 
-  {
-    "fullname":`${namme}`,
-    "category":category,
-     "message": message
-    
 }
-suggestions.push(infos);
-localStorage.setItem('suggestions',JSON.stringify(suggestions));
-alert("Suggestion Sent");
-}
-}
-
  
 
 

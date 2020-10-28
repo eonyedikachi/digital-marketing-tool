@@ -24,6 +24,7 @@ function deletesuggest(id)
     if(confirm(`Are you sure you want to delete ${feedback[id].fullname}'s Suggestion `))
     {
   feedback.splice(id,1)
+  localStorage.setItem("suggestions",JSON.stringify(feedback));
   displaysuggest()
 }
 }

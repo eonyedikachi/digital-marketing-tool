@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
 
 /* middle heading */
-.middleheading{
+.middleheading {
     text-align: center;
-    color: white;
+    color: black;
     margin: 2% 0;
 }
 /* styling reply box */
@@ -16,7 +16,7 @@
     height:14rem;
     margin-left: 5rem;
     margin-top: 1rem;
-    border-color: #8c30f5;
+    border-color: #3e3549;
 }
 /* whiziwig */
 fieldset{
@@ -72,7 +72,7 @@ fieldset input{
   }
   /* icons */
   .nav-item i{
-    color: #fff;
+    color: #c4c4c4;
   }
 
 

@@ -17,6 +17,10 @@
   letter-spacing: 1px;
   color: #8c30f5;
 }
+/* correctiog icons colors */
+.nav-link i{
+  color: #c4c4c4;
+}
 /* #index {
   display: none;
 } */
