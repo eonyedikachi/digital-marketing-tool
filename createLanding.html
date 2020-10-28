@@ -8,7 +8,7 @@
   <title>MartReach | Design</title>
   <script src="https://unpkg.com/konva@4.0.18/konva.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <script src="https://editor.unlayer.com/embed.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 
 
 
-<header class="navbar">
+<header class="navbar" >
   <div class="container">
     <div class="logo">
       <p>MartReach</p>
@@ -34,8 +34,8 @@
         </span>
       </button>
     </div>
-    <nav>
-      <ul class="nav-list">
+    <nav >
+      <ul class="nav-list" >
         <li class="nav-items">
           <a href="dashboard.html">Home</a>
         </li>
@@ -66,7 +66,7 @@
           <a href="./pricing.html">Try MartReach Pro <i class="fas fa-crown"></i></a>
         </li>
         <li class="nav-items">
-          <a href="./dashboard.html" onclick="signOut()">Sign Out</a>
+          <a href="./signin.html" onclick="signOut()">Sign Out</a>
         </li>
       </ul>
     </nav>
@@ -74,193 +74,9 @@
 </header>
 
 <main class="main-landing" style="height: 87vh">
-  <div class="left-fixed">
-    <ul>
-      <li>
-        <div class="btn-group dropright">
-          <button type="button" class="landing-button" id="photos-button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <a href="#"><i class="fas fa-image"></i>
-              <h6>Photos</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu row" style="margin-top: -10px;">
-            <!-- Dropdown menu links -->
-            <div id="photos" style=" display: grid;grid-template-columns: auto auto;">
-
-            </div>
-
-          </div>
-        </div>
-
-      </li>
-      <li>
-        <div class="btn-group dropright">
-          <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <a href="#"><i class="fas fa-columns"></i>
-              <h6>Templates</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu">
-            <!-- Dropdown menu links -->
-            <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
-            <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
-            <img src="images/avatar1.png" class="img-fluid" alt="Responsive image">
-
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="btn-group dropright">
-          <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <a href="#"><i class="fas fa-cloud-upload-alt"></i>
-              <h6>Uploads</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu" style=" width: 220px; ">
-            <!-- Dropdown menu links -->
-            <button class="btn btn-primary">
-              <p><label for="file" style="cursor: pointer;">Upload Image </label></p>
-            </button>
-            <p><input type="file" accept="image" name="image" id="file" onchange="loadFile(event)"
-                style="display: none;"></p>
-            <p><img id="output" width="100" draggable="true" ondragstart="drag(event)" /></p>
-
-
-          </div>
-        </div>
-
-      </li>
-
-      <li>
-        <div class="btn-group dropright">
-          <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <a href="#"><i class="fas fa-shapes"></i>
-              <h6>Elements</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu">
-            <!-- Dropdown menu links -->
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-
-          </div>
-        </div>
-
-      </li>
-      <li>
-        <div class="btn-group dropright">
-          <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <a href="#"><i class="fas fa-text-height"></i>
-              <h6>Text</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu">
-            <!-- Dropdown menu links -->
-            <div class="control-box text" id="text" draggable="true" ondragstart="drag(event)">
-              <img src="./images/text.png" alt="text" draggable="false">
-
-            </div>
-
-          </div>
-        </div>
-
-      </li>
-      <li>
-        <div class="btn-group dropright">
-          <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <a href="#"><i class="fas fa-music"></i>
-              <h6>Music</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu">
-            <!-- Dropdown menu links -->
-            <button class="btn btn-primary">
-              <p><label for="file" style="cursor: pointer;">Upload Music </label></p>
-            </button>
-            <p><input type="file" accept="audio/*" name="mp3" id="file" onchange="loadFile(event)"
-                style="display: none;"></p>
-            <p style="z-index: 999;" draggable="true" ondragstart="drag(event)"><audio controls id="output3" width="100"
-                draggable="true" ondragstart="drag(event)"></audio></p>
-
-          </div>
-        </div>
-
-      </li>
-      <li>
-        <div class="btn-group dropright">
-          <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <a href="#"><i class="fab fa-youtube"></i>
-              <h6>Videos</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu">
-            <!-- Dropdown menu links -->
-            <button class="btn btn-primary">
-              <p><label for="file" style="cursor: pointer;">Upload Video </label></p>
-            </button>
-            <p><input type="file" accept="video" name="video" id="file" onchange="loadFile(event)"
-                style="display: none;"></p>
-            <p><video id="output2" width="100" draggable="true" ondragstart="drag(event)"></video></p>
-
-          </div>
-        </div>
-
-      </li>
-      <li>
-        <div class="btn-group dropright">
-          <button type="button" class="landing-button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <a href="#"><i class="far fa-folder-open"></i>
-              <h6>Folders</h6>
-            </a>
-          </button>
-          <div class="dropdown-menu p-1">
-            <!-- Dropdown menu links -->
-
-            <a
-              style="display: flex; flex-direction: row; cursor: pointer; background-color: #4eb1f5; justify-content: space-between; padding: 10px;">
-              <div>
-                <i class="fas fa-plus"
-                  style="font-size: 30px; padding: 5px; border: dotted 1px #4eb1f5; margin: 3px;"></i>
-              </div>
-              <div>
-                <span style="font-size: 13px;">Create Folder</span>
-                <span><i class="fas fa-crown" style="font-size: 13px;">Learn More</i></span>
-              </div>
-            </a>
-
-          </div>
-        </div>
-
-      </li>
-
-
-    </ul>
-  </div>
-  <div class="right-fixed" id="parent-container">
-    <div class="first-page">
-      <div class="page-top">
-        <div class="top-left">
-          <h6>Add page title</h6>
-        </div>
-        <div class="top-right">
-          <input type="color" name="change-color" id="change-color" onblur="changeContainerColor()">
-          <i class="far fa-clone" id="getDetails"></i>
-          <i class="far fa-trash-alt" ondragover="droppable(event)" ondrop="discard(event)"></i>
-        </div>
-      </div>
-      <div class="page-bottom" id="container" ondragover="droppable(event)" ondrop="drop(event)">
-      </div>
-    </div>
-  </div>
+  
+<div id="editor" style="height: 100%; width: 100%;"></div>
+  
 </main>
 
 <footer>
@@ -273,7 +89,13 @@
 </footer>
 
 <script src="js/createLanding.js"></script>
-
+<script>
+  unlayer.init({
+    id: 'editor',
+    projectId: 6993,
+    // templateId: "[TEMPLATE-ID]"
+  })
+</script>
 <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
