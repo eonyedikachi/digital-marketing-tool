@@ -48,12 +48,36 @@
                 </div>
 
                 <div class="save">
-                    <input type="button" value="Save & Exit" id="save" class="button">
+                    <input type="button" value="Save & Exit" data-toggle="modal" data-target="#exampleModal"
+                        class="button">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Modal to save template -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Save Template</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form d-flex align-items-center justify-content-center flex-column p-3">
+                        <input class="p-3 w-100" type="text" id="templateName" placeholder="Enter Template Name"
+                            required>
+                        <p id="error" class="error"></p>
+                        <button class="save my-2 p-1" style="background-color: #8c30f5;width: 105px;height: 45px;"
+                            id="save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -62,6 +86,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+
+    <!-- Sweet Alert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 
     <!-- <script src="./js/createEmail.js"></script> -->

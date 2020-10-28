@@ -32,13 +32,13 @@ function display() {
     cont += `<div class="temp">
                         <div class="description">
                             <div class="image">
-                                <img src="../images/email_template.png"
+                                <img src="../images/emailTemp1.png"
                                     alt="">
                             </div>
                             <div class="info">
                                 <button id="templateName" class="template-name" onclick="editEmail()">${templates[i].name}</button>
                                 <p><span>Last edited</span> on ${templates[i].date}</p>
-                                <p>${templates[i].user}</p>
+                                <p>by <span>${templates[i].user}</span></p>
                             </div>
                         </div>
                         <div class="edit">

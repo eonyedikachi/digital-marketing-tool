@@ -43,7 +43,7 @@
                     <li class="nav-item flex">
                         <a class="nav-link" href="#">
                             <i class="fas fa-id-card-alt"></i>
-                            <a href="audience.html">Create Audience</a>
+                            <a href="aud-page.html">Create Audience</a>
                         </a>
                     </li>
                     <li class="nav-item flex">
@@ -79,7 +79,23 @@
                             <button id="cancelBtn" onclick="cancel()"><i class="fas fa-times"></i></button>
                         </div>
                         <div class="template_list" id="templateList">
-                            <h1 style="text-align: center;">Create a New Template</h1>
+                            <div class="temp">
+                                <div class="description">
+                                    <div class="image">
+                                        <img src="../images/emailTemp1.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <button id="templateName" class="template-name" onclick="editEmail()">Sample
+                                            Template</button>
+                                        <p><span>Last edited</span> today</p>
+                                        <p>by <span>MartReach</span></p>
+                                    </div>
+                                </div>
+                                <div class="edit">
+                                    <button id="editBtn" onclick="editEmail()">Edit</button>
+                                    <button onclick="this.remove()">Delete</button>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
