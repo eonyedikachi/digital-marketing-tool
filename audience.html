@@ -10,145 +10,138 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/styles.css" />
-  <link rel="stylesheet" href="./styles/email_templates.css" />
-  <link rel="stylesheet" href="./styles/audience.css" />
-  <link rel="stylesheet" href="./styles/email_temp.css" />
   <link rel="stylesheet" href="./styles/dashboard.css" />
+  <link rel="stylesheet" href="./styles/audience.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="icon" href="./images/MartReach icon.png">
 </head>
 
 <body>
-  <!--DSide-Menu Bar -->
 
-  <div style="height:100vh">
-  <div class="d-flex" style="height: 100%;">
+  <div style="height: 100vh;">
+    <div class="d-flex" style="height: 100%;">
       <div class="position-fixed" style="background-color: white;height: 100vh; width: 20%;">
-          <ul class="nav flex-column">
-              <li class="nav-item flex ">
-                  <a class="nav-link" href="#">
-                      <i class="fas fa-columns"></i>
-                  </a>
-                  <a href="./dashboard.html">Dashboard</a>
-              </li>
-              <li class="nav-item flex">
-                  <a class="nav-link" href="#">
-                      <i class="fas fa-home"></i>
-                      <a href="createLanding.html">Landing page</a>
-                  </a>
-              </li>
-              <li class="nav-item flex">
-                  <a class="nav-link active" href="#">
-                      <i class="fas fa-envelope-open-text"></i>
-                      <a href="email_templates.html" >Email Template</a>
-                  </a>
-              </li>
-              <li class="nav-item flex">
-                  <a class="nav-link" href="#">
-                      <i class="fas fa-id-card-alt"></i>
-                      <a class="active" href="audience.html">Create Audience</a>
-                  </a>
-              </li>
-              <li class="nav-item flex">
-                  <a class="nav-link" href="#">
-                      <i class="fas fa-question-circle"></i>
-                      <a href="suggestion.html">Suggestions</a>
-                  </a>
-              </li>
-              <li class="nav-item flex">
-                  <a class="nav-link" href="#">
-                      <i class="fas fa-sliders-h"></i>
-                      <a href="setting.html">Settings</a>
-                  </a>
-              </li>
-              <li class="nav-item flex">
-                  <a class="nav-link" href="#">
-                      <h6><a href="#">Try Mart Reach Pro</a></h6>
-                  </a>
-              </li>
+        <ul class="nav flex-column">
 
-          </ul>
+          <li class="nav-item flex ">
+            <a class="nav-link" href="./dashboard.html">
+              <i class="fas fa-columns"></i>
+              <a href="./dashboard.html">Dashboard</a>
+            </a>
+          </li>
+          <li class="nav-item flex">
+            <a class="nav-link" href="./createLanding.html">
+              <i class="fas fa-home"></i>
+              <a href="createLanding.html">Landing page</a>
+            </a>
+          </li>
+          <li class="nav-item flex">
+            <a class="nav-link" href="./email_templates.html">
+              <i class="fas fa-envelope-open-text"></i>
+              <a href="email_templates.html">Email Template</a>
+            </a>
+          </li>
+          <li class="nav-item flex">
+            <a class="nav-link" href="./audience.html">
+              <i class="fas fa-id-card-alt"></i>
+              <a href="audience.html">Create Audience</a>
+            </a>
+          </li>
+          <li class="nav-item flex">
+            <a class="nav-link" href="./audience.html">
+              <i class="fas fa-question-circle"></i>
+              <a href="./suggestion.html">Suggestion</a>
+            </a>
+          </li>
+          <li class="nav-item flex">
+            <a class="nav-link" href="./setting.html">
+              <i class="fas fa-sliders-h"></i>
+              <a href="setting.html">Settings</a>
+            </a>
+          </li>
+          <li class="nav-item flex">
+            <a class="nav-link" href="#">
+              <h5><a href="#">Try Mart Reach Pro</a></h5>
+            </a>
+          </li>
+
+        </ul>
       </div>
-      </div>
-  </div>
-  
-    
-  <!-- Audience Section -->
-   <main class="emailTemp">
-    <div class="container">
-        <div class="select">
+      <div class="p-4" style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
+        <!-- Audience Section -->
+        <main>
+          <div class="select">
             <h1>The Audience page</h1>
-            <a href="#">Cancel</a>
-        </div>
-        <section>
+          </div>
+          <section>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                        aria-controls="home" aria-selected="true">View Contact</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                        aria-controls="profile" aria-selected="false">Add A Subscriber</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                        aria-controls="contact" aria-selected="false">Import Contacts</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                      aria-controls="contact" aria-selected="false">Send Email</a>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true">View Contact</a>
               </li>
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                      aria-controls="contact" aria-selected="false">Manage Contact</a>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                  aria-controls="profile" aria-selected="false">Add A Subscriber</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">Import Contacts</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">Send Email</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">Manage Contact</a>
               </li>
             </ul>
-            
 
-  
-    <!-- Main body -->
-    <div class="IntegrationCont">
-      <h2>Choose your Campaign and stand out from your competitors</h2>
-      <div class="card">
-        <div class="imgBx" data-text="Create">
-          <img src="./images/grafix.jpg">
-          </div>
-          <div class="contSocial">
-            <div>
-              <h4>Create Ad</h4>
-              <p>Brand your business and stand out from others on social media advertisement</p>
-              <a href="#"> <button class="btn-tag">Create Ads</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="imgBx" data-text="Social"> 
-            <img src="./images/social.jpg">
-            </div>
-            <div class="contSocial">
-              <div>
-                <h4>Social Media Integration </h4>
-                <p>Connect with all your Social media Handles</p>
-                <a href="#"> <button class="btn-tag">Go Social</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="imgBx" data-text="SEO">
-              <img src="./images/seo-2.jpg">
-              </div>
-              <div class="contSocial">
-                <div>
-                  <h3>SEO Analytics</h3>
-                  <p>Analyse and track the Customer behavior on your site</p>
-                  <a href="#"> <button class="btn-tag">Analyse</button></a>
+
+
+            <!-- Main body -->
+            <div class="IntegrationCont">
+              <h2>Choose your Campaign and stand out from your competitors</h2>
+              <div class="card">
+                <div class="imgBx" data-text="Create">
+                  <img src="./images/grafix.jpg">
+                </div>
+                <div class="contSocial">
+                  <div>
+                    <h4>Create Ad</h4>
+                    <p>Brand your business and stand out from others on social media advertisement</p>
+                    <a href="#"> <button class="btn-tag">Create Ads</button></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="imgBx" data-text="host">
-                <img src="./images/hosting.png">
+              <div class="card">
+                <div class="imgBx" data-text="Social">
+                  <img src="./images/social.jpg">
+                </div>
+                <div class="contSocial">
+                  <div>
+                    <h4>Social Media Integration </h4>
+                    <p>Connect with all your Social media Handles</p>
+                    <a href="#"> <button class="btn-tag">Go Social</button></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="imgBx" data-text="SEO">
+                  <img src="./images/seo-2.jpg">
+                </div>
+                <div class="contSocial">
+                  <div>
+                    <h3>SEO Analytics</h3>
+                    <p>Analyse and track the Customer behavior on your site</p>
+                    <a href="#"> <button class="btn-tag">Analyse</button></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="imgBx" data-text="host">
+                  <img src="./images/hosting.png">
                 </div>
                 <div class="contSocial">
                   <div>
@@ -159,32 +152,53 @@
                 </div>
               </div>
             </div>
-    
-   
 
-  
+        </main>
+      </div>
+    </div>
+    <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
+      <div class="container">
+        <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
+          <a href="./index.html" onclick="signOut()"
+            style="border: 1px solid #01081e; border-radius: 4px; color: #8c30f5;padding: 3px;">Sign Out</a>
 
-<!-- jQuery and Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-          crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-          crossorigin="anonymous"></script>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;">
+          <img src="images/caricature1.svg" alt="image" height="100" width="100" style="border-radius: 50%;">
+          <h3 id="usersname111">Malik Mukhtar</h3>
 
-        <!-- Sweet Alert CDN -->
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        </div>
+
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!-- Sweet Alert CDN -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
-        <script src="./js/audience.js"></script>
-        <script src="./js/dashboard.js"></script>
-        <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
-        <script src="js/dashboard.js"></script>
-        <script src="./js/notif.js"></script>
-        <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-       
+  <script src="./js/audience.js"></script>
+  <script src="./js/dashboard.js"></script>
+  <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="./js/notif.js"></script>
+  <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 </body>
 
 </html>
