@@ -64,8 +64,8 @@ function fontsize() {
 // collecting suggestion content
 
 // collecting data from local storage
-let database = JSON.parse(localStorage.getItem("database"));
-let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+database = JSON.parse(localStorage.getItem("database"));
+currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 if (database == null) {
   database = [];
@@ -95,12 +95,11 @@ function sendsuggest() {
     suggestions = [];
   }
   const message = document.getElementById("comment").value;
-  const infos = 
-  {
-       fullname: `${namme}`,
-         category: category,
-         message: message,
-       };
+  const infos = {
+    fullname: `${namme}`,
+    category: category,
+    message: message,
+  };
   suggestions.push(infos);
   suggestionnumb.push(infos);
   localStorage.setItem("suggestions", JSON.stringify(suggestions));
