@@ -305,6 +305,9 @@ justify-content: center;
 .btn-div{
   display: flex;
 }
+.btn-div button{
+margin-right: 30px;
+}
 .btn-label{
   align-self: center;
   margin-bottom: 0px;
