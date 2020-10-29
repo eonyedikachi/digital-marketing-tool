@@ -1,6 +1,6 @@
 :root {
   --primary-color: #fff;
-  --secondary-color: #4eb1f5;
+  --secondary-color: #8c30f5;
 }
 
 html,
@@ -143,9 +143,10 @@ h1 {
 }
 
 .template_list .temp .description .info .template-name {
-  font-size: 2rem;
   color: #8c30f5;
-  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
   border: none;
   background: none;
 }
@@ -159,11 +160,11 @@ h1 {
 }
 
 .template_list .temp .edit button {
-  width: 100px;
+  width: 80px;
   padding: 0.5rem;
   border: none;
   margin: 0 0.5rem;
-  background: rgb(4, 172, 4);
+  background: #8c30f5;
   color: #fff;
 }
 
@@ -173,7 +174,7 @@ h1 {
 }
 
 .template_list .temp .edit button:first-child:hover {
-  background: rgb(7, 92, 7);
+  background: #5f1eaa;
 }
 
 .template_list .temp .edit button:last-child:hover {
