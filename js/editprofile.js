@@ -4,13 +4,7 @@ i = currentUser.length - 1;
 
 var source;
 
-if (
-  document.getElementById("website").value == "" ||
-  document.getElementById("website").value == null ||
-  document.getElementById("website").value == undefined
-) {
-  document.getElementById("website").value = "";
-}
+
 
 editUser = currentUser[i];
 document.getElementById("firstName").value = editUser.firstName;
@@ -19,6 +13,13 @@ document.getElementById("userName").value = editUser.userName;
 document.getElementById("emailAddress").value = editUser.email;
 document.getElementById("website").value = editUser.website;
 
+if (
+  document.getElementById("website").value == "" ||
+  document.getElementById("website").value == null ||
+  document.getElementById("website").value == undefined
+) {
+  document.getElementById("website").value = "";
+}
 var randomNumber = Math.floor(Math.random() * 9) + 1;
 var randomAvatar = "avatar" + randomNumber + ".png";
 var randomImageSource = "images/" + randomAvatar;
