@@ -6,10 +6,10 @@ if (displaysugestnotif == null) {
   displaysugestnotif = [];
 }
 len = displaysugestnotif.length;
-document.getElementById("notif").innerHTML = len;
+document.getElementById("notifi").innerHTML = len;
 
 if (len == 0) {
-  document.getElementById("notif").style.display = "none";
+  document.getElementById("notifi").style.display = "none";
 }
 //    removing notif
 function remove() {
