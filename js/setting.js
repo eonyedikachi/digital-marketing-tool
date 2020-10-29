@@ -77,23 +77,23 @@ for (let i = 0; i < uEmail.length; i++) {
 
 //Billing Contact Name Display
 document.querySelectorAll(".billing-contact-name").value = "";
-var BillingAddress = currentUser[i].billingContactName;
-var uBillingAddress = document.querySelectorAll(".billing--contact-name");
-for (let i = 0; i < uBillingAddress.length; i++) {
-  uBillingAddress[i].innerHTML = mBillingAddress;
+var mBillingContactName = currentUser[i].billingContactName;
+var uBillingContactName = document.querySelectorAll(".billing-contact-name");
+for (let i = 0; i < uBillingContactName.length; i++) {
+  uBillingContactName[i].innerHTML = mBillingContactName;
 }
 
 //Billing Company Name Display
-document.querySelectorAll(".billing-address").value = "";
-var BillingAddress = currentUser[i].billingAddress;
-var uBillingAddress = document.querySelectorAll(".billing-address");
-for (let i = 0; i < uBillingAddress.length; i++) {
-  uBillingAddress[i].innerHTML = mBillingAddress;
+document.querySelectorAll(".billing-company-name").value = "";
+var mBillingCompanyName = currentUser[i].billingCompanyName;
+var uBillingCompanyName = document.querySelectorAll(".billing-company-name");
+for (let i = 0; i < uBillingCompanyName.length; i++) {
+  uBillingCompanyName[i].innerHTML = mBillingCompanyName;
 }
 
 //Billing Address Display
 document.querySelectorAll(".billing-address").value = "";
-var BillingAddress = currentUser[i].billingAddress;
+var mBillingAddress = currentUser[i].billingAddress;
 var uBillingAddress = document.querySelectorAll(".billing-address");
 for (let i = 0; i < uBillingAddress.length; i++) {
   uBillingAddress[i].innerHTML = mBillingAddress;
