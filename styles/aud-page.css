@@ -37,6 +37,8 @@ section .container .audience-btn {
 /* ViewContact */
 .containerCo {
   padding: 2rem 0rem;
+  width: 10rem;
+  
 }
 
 h4 {
