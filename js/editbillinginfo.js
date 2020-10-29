@@ -47,5 +47,5 @@ function bUpdate() {
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
   // display();
 
-  alert(JSON.stringify(edited));
+  window.location.assign("../setting.html")
 }
