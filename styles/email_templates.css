@@ -29,17 +29,10 @@ h1 {
   color: #000 !important;
 }
 
-.sidebar {
-  background: #fff;
-  width: 300px;
-  position: -webkit-sticky;
-  position: sticky;
+/* Sidebar */
+.user-profile {
   top: 0;
-  left: 0;
-  height: 100vh;
-  overflow: hidden;
-  padding-right: 15px;
-  padding-left: 15px;
+  right: 0;
 }
 
 .nav-item {
@@ -49,7 +42,8 @@ h1 {
 }
 
 .temp-main {
-  width: calc(100% - 300px);
+  width: 100%;
+  padding: 1rem;
 }
 
 /* Templates */
@@ -158,10 +152,6 @@ h1 {
 
 .template_list .temp .description .info .template-name:hover {
   color: #5f1eaa;
-}
-
-.template_list .temp .description .info p {
-  font-size: 1.2rem;
 }
 
 .template_list .temp .description .info p span {

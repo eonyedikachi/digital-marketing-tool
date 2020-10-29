@@ -2,50 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Audience | MartReach</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>Audience | MartReach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="stylesheet" href="./styles/email_templates.css" />
   <link rel="stylesheet" href="./styles/audience.css" />
+  <link rel="stylesheet" href="./styles/email_temp.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="icon" href="./images/MartReach icon.png">
 </head>
 
 <body>
-  <!-- Templates Section -->
-  <main class="emailTemp">
-      <div class="sidebar">
+  <!--DSide-Menu Bar -->
+
+  <div style="height:100vh">
+  <div class="d-flex" style="height: 100%;">
+      <div class="position-fixed" style="background-color: white;height: 100vh; width: 20%;">
           <ul class="nav flex-column">
               <li class="nav-item flex ">
-                  <a class="nav-link" href="./dashboard.html">
+                  <a class="nav-link" href="#">
                       <i class="fas fa-columns"></i>
-                      <a href="./dashboard.html">Dashboard</a>
                   </a>
+                  <a href="./dashboard.html">Dashboard</a>
               </li>
               <li class="nav-item flex">
-                  <a class="nav-link" href="./createLanding.html">
+                  <a class="nav-link" href="#">
                       <i class="fas fa-home"></i>
                       <a href="createLanding.html">Landing page</a>
                   </a>
               </li>
               <li class="nav-item flex">
-                  <a class="nav-link active" href="./email_templates.html">
+                  <a class="nav-link active" href="#">
                       <i class="fas fa-envelope-open-text"></i>
-                      <a  href="email_templates.html">Email Template</a>
+                      <a href="email_templates.html" class="active">Email Template</a>
                   </a>
-                  
-                </li>
               </li>
               <li class="nav-item flex">
-                  <a class="nav-link" href="./aud-page.html">
+                  <a class="nav-link" href="#">
                       <i class="fas fa-id-card-alt"></i>
-                      <a class="active" href="audience.html" target="blank">Create Audience</a>
+                      <a href="aud-page.html">Create Audience</a>
                   </a>
               </li>
               <li class="nav-item flex">
@@ -55,7 +56,7 @@
                   </a>
               </li>
               <li class="nav-item flex">
-                  <a class="nav-link" href="./setting.html">
+                  <a class="nav-link" href="#">
                       <i class="fas fa-sliders-h"></i>
                       <a href="setting.html">Settings</a>
                   </a>
@@ -65,11 +66,14 @@
                       <h6><a href="#">Try Mart Reach Pro</a></h6>
                   </a>
               </li>
+
           </ul>
-      </div
-  </main>
-   
-  <!-- Email Templates Section -->
+      </div>
+      </div>
+  </div>
+  
+    
+  <!-- Audience Section -->
    <main class="emailTemp">
     <div class="container">
         <div class="select">
@@ -99,6 +103,7 @@
                       aria-controls="contact" aria-selected="false">Manage Contact</a>
               </li>
             </ul>
+            
 
   
     <!-- Main body -->
@@ -153,40 +158,31 @@
               </div>
             </div>
     
+   
+
   
 
+<!-- jQuery and Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+          crossorigin="anonymous"></script>
+
+        <!-- Sweet Alert CDN -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-
-    <!-- Sweet Alert CDN -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
-    
-    <script src="./js/audience.js"></script>
-    <script src="./js/aud-page.js"></script>
-    <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+        <script src="./js/audience.js"></script>
+        <script src="./js/dashboard.js"></script>
+        <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+        <script src="js/dashboard.js"></script>
+        <script src="./js/notif.js"></script>
+        <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+       
 </body>
 
 </html>

@@ -5,75 +5,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Admin Dashboard | MartReach</title>
+    <title>Feedback| MartReach</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="styles/email_templates.css" />
+    <link rel="stylesheet" href="styles/dashboard.css" />
     <link rel="stylesheet" href="./styles/replyuser.css" />
     <link rel="stylesheet" href="./styles/feedbackpool.css">
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="./images/MartReach icon.png">
 </head>
 
 <body>
-    <main class="emailTemp">
-        <div class="sidebar">
-            <ul class="nav flex-column">
-                <li class="nav-item flex ">
-                    <a class="nav-link" href="./dashboard.html">
-                        <i class="fas fa-columns"></i>
-                        <a href="./admin-dashboard.html">Dashboard</a>
-                    </a>
-                </li>
-                <li class="nav-item flex">
-                    <a class="nav-link" href="./createLanding.html">
-                        <i class="fas fa-user"></i>
-                        <a href="./user-management.html">User Management</a>
-                    </a>
-                </li>
-                <li class="nav-item flex">
-                    <a class="nav-link active" href="./email_templates.html">
-                        <i class="fas fa-comment-dots"></i>
-                            <a href="./feedbackpool.html">Feedback</a>
-                    </a>
-                </li>
-                <li class="nav-item flex">
-                    <a class="nav-link" href="#">
-                        <h5><a href="#">Administrator</a></h5>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="temp-main">
+    <div style="height: 100vh;">
+        <div class="d-flex" style="height: 100%;">
+            <div class="position-fixed" style="background-color: white;height: 100vh; width: 20%;">
+                <ul class="nav flex-column">
+                    <li class="nav-item flex ">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-columns"></i>
+                            <a href="./admin-dashboard.html">Dashboard</a>
+                        </a>
+                    </li>
+                    <li class="nav-item flex">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i>
+                            <a href="./user-management.html">User Management</a>
+                        </a>
+                    </li>
+                    <li class="nav-item flex">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-comment-dots"></i>
+                            <a href="./feedbackpool.html" class="active">Feedback</a>
+                        </a>
+                    </li>
+                    <li class="nav-item flex">
+                        <a class="nav-link" href="#">
+                            <h5><a href="#">Administrator</a></h5>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="p-4" style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
                 <div class="middle">
                     <h2 class="middleheading">
                         Suggestions from Registered Users
                     </h2>
                     <div id="allsuggestion">
-    
-    
+
+
                     </div>
+                </div>
             </div>
-    </main>
+            <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
+                <div class="container">
+                    <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
+                        <a href="./index.html" class="active" onclick="signOut()"
+                            style="border: 1px solid #01081e; border-radius: 4px; padding: 3px;">Sign Out</a>
 
-    
+                    </div>
+                    <div
+                        style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;">
+                        <img src="images/caricature1.svg" alt="image" height="100" width="100"
+                            style="border-radius: 50%;">
+                        <h3 id="usersname111">Malik Mukhtar</h3>
 
-    <footer>
-        <div class="container">
-            <div class="back-footer">
-                <i class="fas fa-chevron-left"></i>
-                <input type="button" onclick="location.assign('./admin-dashboard.html')" value="Back"
-                    class="back-button">
+                    </div>
+                    <div style="display: flex; margin: 5px;">
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
 
 
     <!-- jQuery and Bootstrap JS -->
@@ -84,6 +93,8 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
+    <!-- Sweet Alert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="./js/replyuser.js"></script>
     <script src="js/dashboard.js"></script>
@@ -108,9 +119,9 @@
                             <a href="./user-management.html">User Management</a>
                         </a>
                         <li class="nav-item flex">
-                            <a class="nav-link" href="./audience.html">
+                            <a class="nav-link" href="./aud-page.html">
                                 <i class="fas fa-user"></i>
-                                <a href="./audience.html">Audience</a>
+                                <a href="./aud-page.html">Audience</a>
                             </a>
                     </li>
                     <li class="nav-item flex">
@@ -182,4 +193,3 @@
             </div>
         </div>
     </div> -->
-

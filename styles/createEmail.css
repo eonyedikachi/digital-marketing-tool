@@ -321,7 +321,7 @@ main .controls .control-style .control-wrapper .text-style.show {
 
 .save {
   height: 70px;
-  color: var(--primary-color);
+  color: #fff;
 }
 
 .save .button {
@@ -330,5 +330,5 @@ main .controls .control-style .control-wrapper .text-style.show {
   border: none;
   outline: none;
   font-size: 1.3rem;
-  color: var(--primary-color);
+  color: #fff;
 }

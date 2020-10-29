@@ -14,69 +14,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="./images/MartReach icon.png">
+    <!-- Unlayer -->
+    <script src="//editor.unlayer.com/embed.js"></script>
 </head>
 
 <body>
-
-    <!-- Main Section -->
-    <main>
-        <!-- Email Template Area -->
-        <div class="email-area">
-            <div id="emailContent" class="wrapper">
-                <div class="template" id="container" ondragover="droppable(event)" ondrop="drop(event)"></div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <div class="controls">
-            <div class="control-bar">
-                <button id="controls">Controls</button>
-                <button id="styles">Styles</button>
-            </div>
-            <div class="control-main" id="controlMain">
-                <div class='control-wrapper'>
-                    <div class="control-box text" id="text" draggable="true" ondragstart="drag(event)">
-                        <img src="./images/text.png" alt="text" draggable="false">
-                        <p>Text</p>
-                    </div>
-                    <div class="control-box image" id="image" draggable="true" ondragstart="drag(event)">
-                        <img src="./images/image.png" alt="text" draggable="false">
-                        <p>Images</p>
-                    </div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                    <div class="control-box button"></div>
-                </div>
-            </div>
-
-            <!-- Styles -->
-            <div class="control-style" id="stylesMain">
-                <div class='control-wrapper'>
-                    <div class="box page" id="page">Page <i class="fas fa-angle-right"></i></div>
-                    <div class="page-style" id="pageStyle">
-                        <div class="color">
-                            <p>Background Color:</p>
-                            <input type="color" name="page-color" id="pageColor" onchange="changePageColor()">
-                        </div>
-                    </div>
-                    <div class="box text" id="styleText">Text <i class="fas fa-angle-right"></i></div>
-                    <div class="text-style" id="textStyle">
-                        <div class="color">
-                            <div class="color">
-                                <p>Text Color:</p>
-                                <input type="color" name="text-color" id="textColor" onchange="changeTextColor()">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
+    <div class="container" style="height: calc(100% - 70px);" id="editor"></div>
 
     <!-- Save Box -->
     <div class="save-confirm" id="confirmSave">
@@ -85,7 +28,7 @@
             <form>
                 <input type="text" name="save" id="saveInput" placeholder="Enter Name for Template" required>
                 <div class="buttons">
-                    <button id="save" type="button" onclick="saveTemplate()">Save</button>
+                    <button type="button">Save</button>
                     <button type="button" onclick="cancelSave()">Cancel</button>
                     <p id="error"></p>
                 </div>
@@ -105,12 +48,36 @@
                 </div>
 
                 <div class="save">
-                    <input type="button" value="Save & Exit" onclick="displaySave()" class="button">
+                    <input type="button" value="Save & Exit" data-toggle="modal" data-target="#exampleModal"
+                        class="button">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Modal to save template -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Save Template</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form d-flex align-items-center justify-content-center flex-column p-3">
+                        <input class="p-3 w-100" type="text" id="templateName" placeholder="Enter Template Name"
+                            required>
+                        <p id="error" class="error"></p>
+                        <button class="save my-2 p-1" style="background-color: #8c30f5;width: 105px;height: 45px;"
+                            id="save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -120,9 +87,16 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
+    <!-- Sweet Alert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <script src="./js/createEmail.js"></script>
+
+
+    <!-- <script src="./js/createEmail.js"></script> -->
     <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+
+    <!-- Unlayer -->
+    <script src="./js/createEmail.js"></script>
 </body>
 
 </html>

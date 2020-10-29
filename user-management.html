@@ -20,8 +20,8 @@
 <body>
 
     <div style="height: 100vh;">
-        <div class="row" style="height: 100%;">
-            <div class="col" style="background-color: #fff;">
+        <div class="d-flex" style="height: 100%;">
+            <div class="position-fixed" style="background-color: white;height: 100vh; width: 20%;">
                 <ul class="nav flex-column">
                     <li class="nav-item flex ">
                         <a class="nav-link" href="./admin-dashboard.html">
@@ -49,69 +49,8 @@
 
                 </ul>
             </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add and Update Users</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form">
-                                <p id="error" class="error"></p>
-                                <div class="form-input">
-                                    <input type="hidden" id="index" placeholder="Index">
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" id="firstName" placeholder="Enter First Name" required>
-                                    <p id="firstNameError" class="error"></p>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" id="lastName" placeholder="Enter Last Name" required>
-                                    <p id="lastNameError" class="error"></p>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" id="email" placeholder="Enter Email Address" required>
-                                    <p id="emailError" class="error"></p>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" id="username" placeholder="Username" required>
-                                    <p id="userNameError" class="error"></p>
-                                </div>
-                                <div class="form-input">
-                                    <input type="text" id="password" placeholder="Password" required>
-                                    <p id="passwordError" class="error"></p>
-                                </div>
-                                <div class="form-input radio">
-                                    <input type="radio" name="role" id="user-radio" value="user">
-                                    <label for="">User</label>
-                                    <input type="radio" name="role" id="admin-radio" value="admin">
-                                    <label for="">Admin</label>
-                                    <p id="roleError" class="error"></p>
-                                </div>
-                                <div class="form-input">
-                                    <input type="file" accept="image/*" name="image" id="pics"
-                                        onchange="uploadImage(event)">
-                                    <p id="picsError" class="error"></p>
-                                </div>
-                                <div class="form-input">
-                                    <button class="addBtn">Add User</button>
-                                    <button class="updateBtn" onclick="update()">Update</button>
-                                </div>
-                                <p id="searchResult"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="user-management col-7 d-flex flex-column align-items-center"
-                style="background-color: #F4F5F7;overflow: auto;">
+            <div class="user-management p-2"
+                style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
                 <div class="user-title">
 
                     <!-- Button trigger modal -->
@@ -128,11 +67,11 @@
                     Where content is appended
                 </div>
             </div>
-            <div class="col" style="background-color: #fff;">
+            <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
                 <div class="container">
                     <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
-                        <a href="./dashboard.html" class="active" onclick="signOut()"
-                            style="border: 1px solid #fff; border-radius: 4px; padding: 3px;">Sign Out</a>
+                        <a href="./index.html" class="active" onclick="signOut()"
+                            style="border: 1px solid #01081e; border-radius: 4px; padding: 3px;">Sign Out</a>
 
                     </div>
                     <div
@@ -141,33 +80,68 @@
                             style="border-radius: 50%;">
                         <h3 id="usersname111">Malik Mukhtar</h3>
 
-                    </div>
-                    <div style="display: flex;justify-content: space-evenly; padding: 10px;">
-                        <h5>Messages</h5>
-                        <i class="far fa-comment-alt"></i>
-                    </div>
-                    <div style="display: flex; margin: 5px;">
-                        <div>
-                            <img src="images/avatar2.png" alt="image" height="50" width="50"
-                                style="border-radius: 50%;">
-                        </div>
-                        <div style="display: flex; flex-direction: column;">
-                            <h6>Carol Ferdina</h6>
-                            <p style="font-size: 12px;">Have you planned for the next template...</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; margin: 5px;">
-                        <div>
-                            <img src="images/avatar3.png" alt="image" height="50" width="50"
-                                style="border-radius: 50%; ">
-                        </div>
-                        <div style="display: flex; flex-direction: column;">
-                            <h6>Glory Osaiteh</h6>
-                            <p style="font-size: 12px;">Tips on how to reach more audience...</p>
-                        </div>
+                    </div>d
                     </div>
                     <div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal to add and update user -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add and Update Users</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <p id="error" class="error"></p>
+                        <div class="form-input">
+                            <input type="hidden" id="index" placeholder="Index">
+                        </div>
+                        <div class="form-input">
+                            <input type="text" id="firstName" placeholder="Enter First Name" required>
+                            <p id="firstNameError" class="error"></p>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" id="lastName" placeholder="Enter Last Name" required>
+                            <p id="lastNameError" class="error"></p>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" id="email" placeholder="Enter Email Address" required>
+                            <p id="emailError" class="error"></p>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" id="username" placeholder="Username" required>
+                            <p id="userNameError" class="error"></p>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" id="password" placeholder="Password" required>
+                            <p id="passwordError" class="error"></p>
+                        </div>
+                        <div class="form-input radio">
+                            <input type="radio" name="role" id="user-radio" value="user">
+                            <label for="">User</label>
+                            <input type="radio" name="role" id="admin-radio" value="admin">
+                            <label for="">Admin</label>
+                            <p id="roleError" class="error"></p>
+                        </div>
+                        <div class="form-input">
+                            <input type="file" accept="image/*" name="image" id="pics" onchange="uploadImage(event)">
+                            <p id="picsError" class="error"></p>
+                        </div>
+                        <div class="form-input">
+                            <button class="addBtn">Add User</button>
+                            <button class="updateBtn" onclick="update()">Update</button>
+                        </div>
+                        <p id="searchResult"></p>
                     </div>
                 </div>
             </div>
