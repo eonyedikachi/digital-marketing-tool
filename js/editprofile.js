@@ -44,6 +44,8 @@ function update() {
   localStorage.setItem("database", JSON.stringify(currentUser));
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
   // display();
+  
+  window.location.assign("../setting.html")
 }
 
 //upload picture or video from device
