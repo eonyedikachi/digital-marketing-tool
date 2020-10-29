@@ -4,28 +4,32 @@
   --secondary-color: #8c30f5;
 }
 
-.main {
-  padding-right: 10vw;
-  padding-left: 10vw;
-  background-color: #f3eafe;
-}
 a {
   color: var(--secondary-color);
 }
-a:hover {
-  color: var(--secondary-color);
-  text-decoration: underline;
-}
+
 a::after {
   color: var(--secondary-color);
+}
+
+.nav-item a:hover {
+  color: initial;
+}
+
+.btn {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn:hover {
+  background: #5f1eaa;
+  color: #fff;
 }
 /* Style the tab */
 .main .tab {
   display: flex;
   align-items: stretch;
-  border: 1px solid var(--secondary-color);
-  border-top: none;
-  background-color: var(--primary-color);
+  background: #000;
   flex-wrap: wrap;
   margin-bottom: 0px;
   width: inherit;
@@ -73,6 +77,7 @@ a::after {
   border: none;
   outline: none;
   cursor: pointer;
+  color: #fff;
   padding: 14px 16px;
   transition: 0.3s;
   flex-grow: 1;
@@ -81,15 +86,14 @@ a::after {
 
 /* Change background color of buttons on hover */
 .main .tab button:hover {
-  background-color: #f3eafe;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* Create an active/current tablink class */
 .main .tab button.active {
-  display: flex;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  font-size: x-large;
   font-weight: 900;
   text-align: center;
 }
@@ -247,14 +251,13 @@ section > div {
   height: 100px;
   left: 0px;
   top: 0px;
-  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .headerr h1 {
-  color: white;
+  font-weight: 600;
 }
 /* .main{
   display: flex;
@@ -281,6 +284,8 @@ section > div {
 
 .avatar {
   border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
 
 @media screen and (max-width: 768px) {
