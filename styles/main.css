@@ -61,7 +61,7 @@
   padding: 10px;
   border: none;
   border-radius: 15px;
-  font-family: 'Baloo Tamma 2';
+  font-family: "Baloo Tamma 2";
   cursor: pointer;
   opacity: 0;
   transition: all ease 0.5s;
@@ -101,7 +101,7 @@
 }
 
 .main .left .cover {
-  background-image: url('../images/marketing-2.jpg');
+  background-image: url("../images/marketing-2.jpg");
   background-size: cover;
   height: 250px;
   width: 400px;
@@ -116,7 +116,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -10px;
+  margin-top: 1rem;
 }
 
 .growth .top {
@@ -138,7 +138,7 @@
 
 .growth .bottom {
   display: flex;
-  padding: 0 20px 0 20px;
+  padding: 2rem;
   height: 200px;
 }
 
@@ -167,9 +167,10 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin: 5rem;
 }
 .audience .right {
-  background-image: url('../images/audience.png');
+  background-image: url("../images/audience.png");
   background-size: cover;
   height: 350px;
   width: 400px;
@@ -291,6 +292,7 @@
     flex-direction: column;
     padding: 0 20px 0 20px;
     height: unset;
+    color: #8c30f5;
   }
 
   .box {
@@ -298,7 +300,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 3px;
+    margin: 1rem 0;
+    padding: 1rem;
   }
   .box:hover {
     background-color: #fff;
@@ -331,7 +334,7 @@
 .container2 {
   position: relative;
   width: 100%;
-  height: 115vh;
+  height: calc(100vh - 63px);
   background: #ffffff;
 }
 
@@ -399,7 +402,7 @@
   line-height: 98px;
   /* or 136% */
 
-  font-feature-settings: 'liga' off;
+  font-feature-settings: "liga" off;
 
   /* Text / Gray 900 */
 
@@ -430,7 +433,7 @@
   line-height: 32px;
   /* or 178% */
 
-  font-feature-settings: 'liga' off;
+  font-feature-settings: "liga" off;
 
   /* Text / Gray 900 */
 

@@ -1,23 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
 :root {
   --primary-color: #fff;
-  --secondary-color: #8C30F5;
+  --secondary-color: #8c30f5;
 }
 
-.main{
+.main {
   padding-right: 10vw;
   padding-left: 10vw;
-  background-color: #F3EAFE;
+  background-color: #f3eafe;
 }
-a{
+a {
   color: var(--secondary-color);
-
 }
-a:hover{
+a:hover {
   color: var(--secondary-color);
   text-decoration: underline;
 }
-a::after{
+a::after {
   color: var(--secondary-color);
 }
 /* Style the tab */
@@ -44,7 +43,8 @@ a::after{
   text-decoration: 1px solid;
   line-height: 2;
   font-weight: 900;
-  margin-top: 30px;color: var(--primary-color);
+  margin-top: 30px;
+  color: var(--primary-color);
   line-height: 2;
   text-align: center;
   width: inherit;
@@ -56,7 +56,6 @@ a::after{
   text-transform: uppercase;
   line-height: 3;
   text-decoration: unset;
-  
 }
 
 .main .tabcontent h5 {
@@ -77,11 +76,12 @@ a::after{
   padding: 14px 16px;
   transition: 0.3s;
   flex-grow: 1;
+  border-radius: 0;
 }
 
 /* Change background color of buttons on hover */
 .main .tab button:hover {
-  background-color: #F3EAFE;
+  background-color: #f3eafe;
 }
 
 /* Create an active/current tablink class */
@@ -89,6 +89,8 @@ a::after{
   display: flex;
   background-color: var(--secondary-color);
   color: var(--primary-color);
+  font-size: x-large;
+  font-weight: 900;
   text-align: center;
 }
 
@@ -194,7 +196,7 @@ section > div {
   color: hsla(215, 0%, 100%, 1);
   box-shadow: 0px 0px 20px var(--secondary-color);
 }
-.main input[type="radio"]:hover + label{
+.main input[type="radio"]:hover + label {
   background: var(--secondary-color);
   color: hsla(215, 0%, 100%, 1);
   /* box-shadow: 0px 0px 20px var(--secondary-color); */
@@ -224,14 +226,14 @@ section > div {
 .main h6 {
   text-decoration: underline;
   -webkit-text-decoration: 1px solid;
-          text-decoration: 1px solid;
+  text-decoration: 1px solid;
   font-weight: bold;
   display: inline;
 }
 .unique {
   text-decoration: underline;
   -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  text-decoration-color: transparent;
   font-weight: 100;
   color: var(--secondary-color);
 }
@@ -240,25 +242,25 @@ section > div {
     flex-direction: column;
   }
 }
-.headerr{
-width: inherit;
-height: 100px;
-left: 0px;
-top: 0px;
-background: var(--secondary-color);
-display: flex;
-align-items: center;
-justify-content: center;
+.headerr {
+  width: inherit;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.headerr h1{
+.headerr h1 {
   color: white;
 }
 /* .main{
   display: flex;
   flex-direction: row;
 } */
-.main .button{ 
+.main .button {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -271,10 +273,10 @@ justify-content: center;
   transition-duration: 0.4s;
   font-weight: 700;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-bottom: 40px;
 }
 .main .button:hover {
- background-color: #5f1eaa;
+  background-color: #5f1eaa;
 }
 
 .avatar {
@@ -282,7 +284,6 @@ justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
-  
   h3 {
     font-size: 25px;
   }
@@ -294,15 +295,17 @@ justify-content: center;
     align-self: center;
   }
 }
-.main .modally #output{
+.main .modally #output {
   width: 100px;
   height: 100px;
-
 }
-.btn-div{
+.btn-div {
   display: flex;
 }
-.btn-label{
+.btn-div button {
+  margin-right: 30px;
+}
+.btn-label {
   align-self: center;
   margin-bottom: 0px;
 }
@@ -320,14 +323,19 @@ justify-content: center;
   border-bottom: 2px solid #8c30f5;
   transition: all 0.5s ease-in-out;
 }
-.profile_form{
+.profile_form {
   display: flex;
   flex-direction: column;
 }
-.modal-header, .modal-footer{
+.modal-header,
+.modal-footer {
   background-color: black;
   color: #fff;
 }
-.close{
-  color:var(--primary-color)
+.close {
+  color: var(--primary-color);
+}
+.main hr.rule {
+  border-top: 1px solid rgb(165, 165, 165);
+  margin-bottom: 40px;
 }

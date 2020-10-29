@@ -7,7 +7,7 @@ var source;
 
 
 editUser = currentUser[i];
-document.getElementById("firstName").value = editUser.firstName;
+document.getElementById("contactContactName").value = editUser.firstName;
 document.getElementById("lastName").value = editUser.lastName;
 document.getElementById("userName").value = editUser.userName;
 document.getElementById("emailAddress").value = editUser.email;
@@ -29,7 +29,7 @@ if (editUser.pics == null || editUser.pics == undefined) {
   document.querySelector(".profile img").setAttribute("src", editUser.pics);
 }
 
-function update() {
+function cUpdate() {
   let edited = {
     firstName: document.getElementById("firstName").value,
     lastName: document.getElementById("lastName").value,

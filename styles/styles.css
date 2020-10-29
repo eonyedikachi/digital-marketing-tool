@@ -38,6 +38,11 @@ header {
   border-bottom: 1px solid black;
 }
 
+#usersname111 {
+  color: #8c30f5;
+  text-align: center;
+}
+
 /* Modal Styles */
 .modal-header {
   background: #0b0d17;
