@@ -26,7 +26,7 @@ if (editUser.billingEmailAddress == undefined) {
   document.getElementById("billingEmailAddress").value = "";
 }
 
-function update() {
+function bUpdate() {
   let edited = {
     billingContactName: document.getElementById("billingContactName").value,
     billingCompanyName: document.getElementById("billingCompanyName").value,
