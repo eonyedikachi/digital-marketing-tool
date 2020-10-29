@@ -63,7 +63,7 @@
   }
   
   /* Featured */
-  .featured {
+  /* .featured {
     display: flex;
     flex-wrap: wrap;
   }
@@ -94,7 +94,7 @@
   .featured .feature-box p:first-of-type {
     font-weight: 800;
     margin-top: 1rem;
-  }
+  } */
   
   /* Mobile */
   @media screen and (max-width: 768px) {
@@ -123,6 +123,9 @@ body{
     background: rgb(240, 239, 239);
     min-height: 100vh;
     
+   
+    
+    
     
 }
 .IntegrationCont{
@@ -131,8 +134,8 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 20px;
-    padding-left: 100px;
+    margin: 8rem;
+    padding-left: 10rem;
 }
 
 .IntegrationCont .card{
