@@ -9,7 +9,7 @@
   text-align: center;
 }
 .s-heading h1 {
-  color: #4eb1f5;
+  color: #8c30f5;
   font-size: 3rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -63,7 +63,7 @@ s-box p {
   width: 140px;
   height: 40px;
   border-radius: 20px;
-  border: 1px solid rgba(74, 144, 226, 0.5);
+  border: 1px solid #8c30f5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,8 +75,8 @@ s-box p {
   transition: all ease 0.3s;
 }
 .service-btn:hover {
-  background-color: #4eb1f5;
-  border: 1px solid #4eb1f5;
+  background-color: #8c30f5;
+  border: 1px solid #8c30f5;
   color: #ffffff;
   transition: all ease 0.3s;
 }
@@ -87,7 +87,7 @@ s-box p {
   left: 50%;
   top: 0px;
   transform: translateX(-50%);
-  background-color: #4eb1f5;
+  background-color: #8c30f5;
   border-radius: 0px 0px 10px 10px;
   display: none;
   -webkit-animation: s-bar 0.5s;
