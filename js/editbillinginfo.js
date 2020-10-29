@@ -29,6 +29,14 @@ if (editUser.billingEmailAddress == undefined) {
 
 function update() {
   let edited = {
+  firstName: editUser.firstName,
+  lastName: editUser.lastName,
+  userName: editUser.userName,
+  email: editUser.emailAddress,
+  password: editUser.password,
+  role: editUser.role,
+  pics: editUser.pics,
+  website: editUser.website,
     contactName: document.getElementById("contactName").value,
     companyName: document.getElementById("companyName").value,
     billingAddress: document.getElementById("billingAddress").value,
