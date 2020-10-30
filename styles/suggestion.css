@@ -1,7 +1,7 @@
 /* body */
 body {
   background-attachment: #6a7277;
-  background:#F4F5F7;
+  background: #f4f5f7;
 }
 
 .select-category {
@@ -13,7 +13,7 @@ body {
 
 .heading {
   text-align: center;
-  color:black;
+  color: black;
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: bolder;
@@ -43,12 +43,13 @@ body {
 }
 .selectcat h2 {
   color: black;
+  font-size: 1.5rem;
   margin-top: 1rem;
   letter-spacing: 1px;
 }
 .selectcat select {
   width: 60%;
-  color:  #8c30f5;
+  color: #8c30f5;
   padding: 0.4rem;
   border: #8c30f5 solid;
   border-radius: 7px;
@@ -68,40 +69,53 @@ body {
   margin: 2rem 0;
 }
 .mainsuggestion h2 {
-  color:black;
+  color: black;
+  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 .mainsuggestion textarea {
   width: 60%;
   height: 10rem;
-  border:  #8c30f5 solid;
+  border: #8c30f5 solid;
   border-radius: 7px;
   padding: 0.5rem;
   font-size: 1.2rem;
 }
-fieldset input{
+
+fieldset {
+  margin: 1rem;
+}
+
+fieldset input {
   width: 2.5rem;
-  height: 3rem;
-  background-color:  #8c30f5;
+  height: 2.5rem;
+  background-color: #8c30f5;
+  color: #fff;
   border-radius: 5px;
   text-align: center;
-  padding: 0.1rem;
   font-weight: bold;
 }
 /* Send button */
 .mainsuggestion button {
-  padding: 10px;
-  width: 100px;
+  width: 2.5rem;
+  height: 2.5rem;
   margin: 10px;
-  background:  #8c30f5;
+  background: #8c30f5;
   border-radius: 5px;
   font-size: 1rem;
   color: #fff;
   font-weight: 600;
 }
+
+.mainsuggestion button[type="button"] {
+  width: 120px;
+  height: 40px;
+  padding: 0.5rem;
+}
+
 .mainsuggestion button:hover {
   background-color: #fff;
-  color:#8c30f5;
+  color: #8c30f5;
 }
 /* Mobile view */
 @media screen and (max-width: 768px) {

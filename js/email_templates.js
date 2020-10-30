@@ -1,13 +1,13 @@
-let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 // fetches most recent logged in user
 recent = currentUser.length - 1;
 
-let templates = JSON.parse(
+templates = JSON.parse(
   localStorage.getItem(`${currentUser[recent].userName}Templates`)
 );
 
-let originalTemplates = JSON.parse(
+originalTemplates = JSON.parse(
   localStorage.getItem(`${currentUser[recent].userName}Templates`)
 );
 

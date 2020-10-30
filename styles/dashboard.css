@@ -39,7 +39,7 @@ a:hover {
 .flex a {
   color: #c4c4c4;
 }
-.active {
+.nav-item .active {
   color: #18191f !important;
 }
 
@@ -146,7 +146,6 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
 }
 
 .navbar .container > nav > ul {
@@ -161,7 +160,6 @@ a:hover {
   margin: 0 0.25rem;
   color: var(--primary-color);
   transition: all 0.5s ease;
-  
 }
 
 .navbar .container > nav > ul > li > a:hover {
@@ -271,7 +269,7 @@ a:hover {
   background-color: red;
   border-radius: 50%;
 }
-#notif{
+#notif {
   position: absolute;
   /* content: 1; */
   /* content:'1'; */
