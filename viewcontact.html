@@ -58,7 +58,7 @@
             </ul>
 
 
-            <!-- Modal -->
+            <!-- Add A Subscriber Modal -->
   <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -112,6 +112,60 @@
     </div>
   </div>
 
+            <!-- Edit Modal -->
+            <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle " style="background-color: #6920bd; width: 15rem; color: #fff; border-radius: 30px; text-align: center; font-size: 18px; font-weight: 600;">Edit an existing Subscriber</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group" style="width: 57vw;">
+                              <label for="exampleInputEmail1">Email Address</label>
+                              <input type="email" class="form-control" id="" placeholder="Enter email">
+                             </div>
+                             <div class="form-group" style="width: 57vw;">
+                                <label for="exampleInputEmail1">First Name</label>
+                                <input type="text" class="form-control" id="" placeholder="Enter Firstname">
+                               </div>
+                               <div class="form-group" style="width: 57vw;">
+                                <label for="exampleInputEmail1">Last Name</label>
+                                <input type="text" class="form-control" id="" placeholder="Enter Lastname">
+                               </div>
+                               <div class="form-group" style="width: 57vw;">
+                                <label for="exampleInputEmail1">Phone No:</label>
+                                <input type="text" class="form-control" id="" placeholder="Enter Phone no">
+                               </div>
+                               <div class="form-group" style="width: 57vw;">
+                                <label for="exampleInputEmail1">Country</label>
+                                <input type="text" class="form-control" id="e" placeholder="Enter Country">
+                               </div>
+                               <div class="form-group" style="width: 57vw;">
+                                <label for="exampleInputEmail1">State</label>
+                                <input type="text" class="form-control" id="" placeholder="Enter State">
+                               </div>
+                               <div class="form-group" style="width: 57vw;">
+                                <label for="exampleInputEmail1">City</label>
+                                <input type="text" class="form-control" id="" placeholder="Enter City">
+                               </div>
+                               <div class="form-group" style="width: 57vw;">
+                                <label for="exampleInputEmail1">Birth Day</label>
+                                <input type="text" class="form-control" id="" placeholder="Enter Birthday">
+                               </div>
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" style="background-color: #6920bd;">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 
 
 
@@ -159,10 +213,10 @@
   <td>Dallas</td>
   <td>08/9</td>
   <td class="text-right">
-    <button class="btn btn-primary badge-pill" style="width: 80px; background: #6920bd;">Edit</button>
+    <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit" style="width: 80px; background: #6920bd;">Edit</button>
   </td>
   <td class="text-right">
-    <button class="btn btn-danger badge-pill" style="width: 80px;">Delete</button>
+    <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"  style="width: 80px;">Delete</button>
   </td>
 </tr>
 <tr>
