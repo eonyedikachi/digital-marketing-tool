@@ -256,62 +256,6 @@ main .controls .control-style .control-wrapper .text-style.show {
   display: block;
 }
 
-/* Save Box */
-.save-confirm {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  z-index: 99;
-}
-
-.confirm-save {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #f9f9f9;
-  color: #000;
-  height: 300px;
-  width: 500px;
-  border-radius: 10px;
-}
-
-.confirm-save form {
-  text-align: center;
-  width: 70%;
-}
-
-.confirm-save .buttons {
-  margin-top: 1rem;
-}
-
-.confirm-save input {
-  padding: 0.4rem;
-  margin: 1rem 0;
-  width: 100%;
-}
-
-.confirm-save button {
-  padding: 0.4rem;
-  margin: 0 0.6rem;
-  border: none;
-  width: 90px;
-  background: #8c30f5;
-  color: #fff;
-  cursor: pointer;
-}
-
-.confirm-save button:hover {
-  background: #5f1eaa;
-}
-
 /* Back Button Footer */
 .footer {
   display: flex;
