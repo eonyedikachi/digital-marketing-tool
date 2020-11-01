@@ -102,3 +102,42 @@ document.getElementById("save").addEventListener("click", () => {
     }
   });
 });
+
+// EmailJS init
+(function () {
+  emailjs.init("user_9mn3lUdujQ27p4aPrr188");
+})();
+
+// Send test email
+document.getElementById("send").addEventListener("click", () => {
+  unlayer.exportHtml(function (data) {
+    var html = data.html; // final html
+
+    var params = {
+      sender_name: document.getElementById("senderName").value,
+      to_email: document.getElementById("toEmail").value,
+      my_html: html,
+    };
+
+    document.getElementById(
+      "send"
+    ).innerHTML = `<img src="./images/ajax-loader.gif" alt="loader">`;
+
+    emailjs.send("martreach", "martreach", params).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        swal("Email Sent Successfully", {
+          icon: "success",
+        });
+        document.getElementById("send").innerHTML = "Send";
+      },
+      function (error) {
+        console.log("FAILED...", error);
+        swal(error.text, {
+          icon: "error",
+        });
+        document.getElementById("send").innerHTML = "Send";
+      }
+    );
+  });
+});
