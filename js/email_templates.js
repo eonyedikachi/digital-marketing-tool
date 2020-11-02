@@ -72,11 +72,11 @@ function deleteTemp(id) {
         JSON.stringify(originalTemplates)
       );
 
-      display();
-
       swal("Your template has been deleted!", {
         icon: "success",
       });
+
+      display();
     } else {
       swal("Delete cancelled", "", "error");
     }

@@ -41,7 +41,7 @@ document.querySelector(".footer").innerHTML = `
         <div class="footer-logo mb-4">
           <img style="width:300px" class ="logo-nav mb-4" src="../images/MartReach logo dark.png">
           <p style="font-family:'Rubik', sans-serif;">
-            We help small and large business to grow their audience reach.
+            We help small and medium business to grow their audience reach.
           </p>
         </div>
         <div class="copyright mb-3">

@@ -15,7 +15,7 @@ if (currentUser == null) {
 if (templates == null || templates == undefined || templates.length == 0) {
   templates = [];
 
-  // Initializ unplayer
+  // Initialize unplayer
   unlayer.init({
     id: "editor",
     displayMode: "email",
@@ -29,7 +29,7 @@ if (templates == null || templates == undefined || templates.length == 0) {
   });
 
   // Load saved template
-  var design = templates[templates.length - 1].template;
+  var design = templates[templates.length - 1].json;
   console.log(design);
   unlayer.loadDesign(design);
 }
@@ -67,8 +67,11 @@ months[month];
 
 // Save Template
 document.getElementById("save").addEventListener("click", () => {
-  unlayer.saveDesign(function (design) {
-    let name = document.getElementById("templateName").value;
+  unlayer.exportHtml(function (data) {
+    var json = data.design; // design json
+    var html = data.html; // final html
+
+    let name = document.getElementById("templateName").value; //Template name
     if (name == "" || name == null || name == undefined) {
       let error = document.getElementById("error");
       error.innerHTML = "Please enter name for template";
@@ -77,7 +80,8 @@ document.getElementById("save").addEventListener("click", () => {
       templates.push({
         name: name,
         user: currentUser[i].userName,
-        template: design,
+        json: json,
+        html: html,
         date: `${
           months[d.getMonth()]
         } ${d.getDate()}, ${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`,
@@ -96,5 +100,44 @@ document.getElementById("save").addEventListener("click", () => {
         location.assign("../email_templates.html");
       }, 2000);
     }
+  });
+});
+
+// EmailJS init
+(function () {
+  emailjs.init("user_9mn3lUdujQ27p4aPrr188");
+})();
+
+// Send test email
+document.getElementById("send").addEventListener("click", () => {
+  unlayer.exportHtml(function (data) {
+    var html = data.html; // final html
+
+    var params = {
+      sender_name: document.getElementById("senderName").value,
+      to_email: document.getElementById("toEmail").value,
+      my_html: html,
+    };
+
+    document.getElementById(
+      "send"
+    ).innerHTML = `<img src="./images/ajax-loader.gif" alt="loader">`;
+
+    emailjs.send("martreach", "martreach", params).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        swal("Email Sent Successfully", {
+          icon: "success",
+        });
+        document.getElementById("send").innerHTML = "Send";
+      },
+      function (error) {
+        console.log("FAILED...", error);
+        swal(error.text, {
+          icon: "error",
+        });
+        document.getElementById("send").innerHTML = "Send";
+      }
+    );
   });
 });

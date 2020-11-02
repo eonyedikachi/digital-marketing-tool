@@ -14,27 +14,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="./images/MartReach icon.png">
+    <!-- Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <!-- Unlayer -->
     <script src="//editor.unlayer.com/embed.js"></script>
 </head>
 
 <body>
-    <div class="container" style="height: calc(100% - 70px);" id="editor"></div>
-
-    <!-- Save Box -->
-    <div class="save-confirm" id="confirmSave">
-        <div class="confirm-save">
-            <h1>Save Template</h1>
-            <form>
-                <input type="text" name="save" id="saveInput" placeholder="Enter Name for Template" required>
-                <div class="buttons">
-                    <button type="button">Save</button>
-                    <button type="button" onclick="cancelSave()">Cancel</button>
-                    <p id="error"></p>
-                </div>
-            </form>
-        </div>
+    <div class="test container p-3">
+        <input type="submit" class="btn" value="Test Email Template" data-toggle="modal" data-target="#testEmailModal">
     </div>
+    <div class="container" style="height: calc(100% - 70px);" id="editor"></div>
 
 
     <!-- Footer Section -->
@@ -79,6 +69,31 @@
         </div>
     </div>
 
+    <!-- Modal to Send test email -->
+    <div class="modal fade" id="testEmailModal" tabindex="-1" aria-labelledby="testEmailLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="testEmailLabel">Test Email</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form d-flex align-items-center justify-content-center flex-column p-3">
+                        <input class="p-3 my-2 w-100" type="text" id="senderName" placeholder="Sender's Name" required>
+                        <input class="p-3 my-2 w-100" type="email" id="toEmail" placeholder="Recipient's Email"
+                            required>
+                        <textarea id="message" hidden="true"></textarea>
+                        <p id="error" class="error"></p>
+                        <button class="save my-2 p-1" style="background-color: #8c30f5;width: 105px;height: 45px;"
+                            id="send">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -96,7 +111,7 @@
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
 
-    <!-- Unlayer -->
+
     <script src="./js/createEmail.js"></script>
 </body>
 
