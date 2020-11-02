@@ -107,10 +107,18 @@
                     </div>
                     <div
                         style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;">
-                        <img src="images/caricature1.svg" alt="image" height="100" width="100"
+                        <img src="images/caricature1.svg" id="profilePic" alt="image" height="100" width="100"
                             style="border-radius: 50%;">
                         <h3 id="usersname111">Malik Mukhtar</h3>
 
+                    </div>
+                    <div class="w-100 my-4" style="height: 30px;">
+                        <img src="./images/post-it.svg" class="float-right mr-4"
+                            style="width: 30px; height: 100%; cursor: pointer;" alt="post-it" onclick="openNote()">
+                    </div>
+                    <!-- Sticky Note -->
+                    <div class="sticky-note p-2 m-auto overflow-auto" id="stickyNote" style="display:none"
+                        contenteditable="true" onkeyup="saveNote()">
                     </div>
                 </div>
                 <div>

@@ -4,8 +4,6 @@ i = currentUser.length - 1;
 
 var source;
 
-
-
 editUser = currentUser[i];
 document.getElementById("firstName").value = editUser.firstName;
 document.getElementById("lastName").value = editUser.lastName;
@@ -44,8 +42,8 @@ function update() {
   localStorage.setItem("database", JSON.stringify(currentUser));
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
   // display();
-  
-  window.location.assign("../setting.html")
+
+  window.location.assign("../setting.html");
 }
 
 //upload picture or video from device

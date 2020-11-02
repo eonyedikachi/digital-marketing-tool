@@ -62,6 +62,14 @@ h5 {
   color: #fff;
 }
 
+/* Sticky Note */
+.sticky-note {
+  height: 350px;
+  width: 350px;
+  background: #8c30f5;
+  color: #fff;
+}
+
 /* Navbar */
 .logo-nav {
   width: 138px;

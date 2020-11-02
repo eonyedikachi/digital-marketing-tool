@@ -125,14 +125,10 @@ modal.innerHTML = `<div class="modal-dialog">
             <p id="error"></p>
             <div class="input-field my-4"><span>
                 <input placeholder="Username" class="d-block w-100" type="text" id="use" />
-                <!-- <i class="fa fa-times u_times"></i> -->
-                <!-- <i class="fa fa-check u_check"></i> -->
               </span>
             </div>
             <div class="input-field my-4"><span>
                 <input placeholder="Password" class="d-block w-100" type="password" id="pass" />
-                <!-- <i class="fa fa-times p_times"></i> -->
-                <!-- <i class="fa fa-check p_check"></i> -->
               </span>
             </div>
             <div class="pass">
