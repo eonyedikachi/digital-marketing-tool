@@ -37,8 +37,23 @@ function subscribeUser() {
   displayContacts();
 }
 
+// delete function
+function empty() {
+   document.getElementById("firstname").value = "",
+   document.getElementById("lastname").value = "",
+   document.getElementById("email").value = "",
+   document.getElementById("phone").value = "",
+   document.getElementById("country").value = "",
+   document.getElementById("state").value = "",
+  document.getElementById("city").value = "",
+  document.getElementById("bday").value = "",
+  src = "";
+}
+
+
+// sweet alert delete functon
 function Delete(i){
-  $("#delete").click(function () {
+ 
     swal({
       title: "Are you sure?",
       text: "Once deleted, you will not be able to recover this!",
@@ -47,24 +62,20 @@ function Delete(i){
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        swal("Your file has been successfully deleted!", {
-          icon: "success",
-        });
-      } else {
-        swal("Your file is safe!");
-      }
-    });
-  });
-  subscibers.splice(i, 1)
+        subscibers.splice(i, 1);
+        users = subscibers;
         localStorage.setItem("subscibers", JSON.stringify(subscibers))
         displayContacts();
-}
-
-
-
-
-
-
+        empty();
+       
+        swal("Your file has been  deleted!", {
+         icon: "success"
+        });
+      
+      }
+    });
+  }
+        
 // POPULATING THE VIEWCONTACT PAGE
 displayContacts();
 
@@ -90,7 +101,7 @@ function displayContacts() {
 
 
   <td class="text-right">
-    <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"  style="width: 80px;" id="delete">Delete</button>
+    <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"  style="width: 80px;" id="delete" onclick="Delete()">Delete</button>
   </td>
 </tr>`;
   }
@@ -99,3 +110,4 @@ function displayContacts() {
 }
 
 displayContacts();
+  
