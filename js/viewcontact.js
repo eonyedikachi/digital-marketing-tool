@@ -10,47 +10,41 @@ if (subscibers == null) {
 // document.getElementById(".subscibe").innerHTML = subscibers.length;
 // document.getElementById("subscribers").innerHTML = subscibers.length;
 
- // New user object
- function subscribeUser() {
+// New user object
+function subscribeUser() {
   newSubscibers = {
     firstName: document.getElementById("firstname").value,
     lastName: document.getElementById("lastname").value,
     email: document.getElementById("email").value,
     phone: document.getElementById("phone").value,
-   country: document.getElementById("country").value,
-   state: document.getElementById("state").value,
+    country: document.getElementById("country").value,
+    state: document.getElementById("state").value,
     city: document.getElementById("city").value,
     bday: document.getElementById("bday").value,
     role: "user",
- 
   };
-    //Storing inside the array
-    // validate(newSubscibers);
+  //Storing inside the array
+  // validate(newSubscibers);
 
-    subscibers.push(newSubscibers);
-  
-    // updating local storage
-    localStorage.setItem("subscibers", JSON.stringify(subscibers));
-    // redirect user to dashboard
-    location.assign("#add");
- }
- 
+  subscibers.push(newSubscibers);
 
+  // updating local storage
+  localStorage.setItem("subscibers", JSON.stringify(subscibers));
 
+  swal("Done!", "Subscriber Added Successfully!", "success");
 
+  // display contacts
+  displayContacts();
+}
 
-
-
-
-$('#delete').click(function(){
-    swal({
-        title: "Are you sure?",
-        text: "Once deleted, you will not be able to recover this!",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-  })
-  .then((willDelete) => {
+$("#delete").click(function () {
+  swal({
+    title: "Are you sure?",
+    text: "Once deleted, you will not be able to recover this!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((willDelete) => {
     if (willDelete) {
       swal("Your file has been successfully deleted!", {
         icon: "success",
@@ -59,21 +53,19 @@ $('#delete').click(function(){
       swal("Your file is safe!");
     }
   });
-})
+});
 
 // POPULATING THE VIEWCONTACT PAGE
-displayContacts()
+displayContacts();
 
-function displayContacts(){
-    
-    contactCount = '';
-    for(i = 0; i <subscibers.length; i++){
-      var xTable=document.getElementById('contactTable');
-    
-     
-     contactCount += `
+function displayContacts() {
+  contactCount = "";
+  for (i = 0; i < subscibers.length; i++) {
+    var xTable = document.getElementById("contactTable");
+
+    contactCount += `
      <tr>
-  <td>${i+1}</td>
+  <td>${i + 1}</td>
   <td>${subscibers[i].email}</td>
   <td>${subscibers[i].firstName}</td>
   <td>${subscibers[i].lastName}</td>
@@ -90,10 +82,10 @@ function displayContacts(){
   <td class="text-right">
     <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"  style="width: 80px;" id="delete">Delete</button>
   </td>
-</tr>`
+</tr>`;
+  }
+
+  xTable.innerHTML = contactCount;
 }
 
-xTable.innerHTML=contactCount;  
-}
-
-displayContacts()
+displayContacts();
