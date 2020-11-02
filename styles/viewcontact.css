@@ -88,3 +88,10 @@ input[type=checkbox]  {
 
   }
 }
+
+/* @media screen and (max-width: 450px){
+  .container .Jumbotron .card .card-body .row .col-md-12{
+    width: 100%;
+    display: block;
+  }
+} */
