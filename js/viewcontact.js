@@ -37,23 +37,33 @@ function subscribeUser() {
   displayContacts();
 }
 
-$("#delete").click(function () {
-  swal({
-    title: "Are you sure?",
-    text: "Once deleted, you will not be able to recover this!",
-    icon: "warning",
-    buttons: true,
-    dangerMode: true,
-  }).then((willDelete) => {
-    if (willDelete) {
-      swal("Your file has been successfully deleted!", {
-        icon: "success",
-      });
-    } else {
-      swal("Your file is safe!");
-    }
+function Delete(i){
+  $("#delete").click(function () {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal("Your file has been successfully deleted!", {
+          icon: "success",
+        });
+      } else {
+        swal("Your file is safe!");
+      }
+    });
   });
-});
+  subscibers.splice(i, 1)
+        localStorage.setItem("subscibers", JSON.stringify(subscibers))
+        displayContacts();
+}
+
+
+
+
+
 
 // POPULATING THE VIEWCONTACT PAGE
 displayContacts();
