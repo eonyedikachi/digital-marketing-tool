@@ -28,7 +28,7 @@
 
   <div style="height: 100vh;">
     <div class="d-flex" style="height: 100%;">
-      <div class="position-fixed" style="background-color: white;height: 100vh; width: 20%;">
+      <div class="position-fixed" style="background-color: white;height: 100vh; width: 15%;">
         <ul class="nav flex-column">
 
           <li class="nav-item flex ">
@@ -75,7 +75,7 @@
 
         </ul>
       </div>
-      <div class="p-4" style="width:65%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
+      <div class="p-4" style="width:70%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
         <!-- Audience Section -->
         <main>
           <div class="select">
@@ -84,98 +84,341 @@
           <section>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
+
                 <a class="nav-link active" id="home-tab" data-toggle="tab" target="blank" href="./viewcontact.html" role="tab" aria-controls="home"
                   aria-selected="true">View Contact</a>
+
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true">Home</a>
+
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                  aria-controls="profile" aria-selected="false">Add A Subscriber</a>
+                <a class="nav-link" id="view-contact-tab" data-toggle="tab" href="#viewContact" role="tab"
+                  aria-controls="view-contact" aria-selected="false">View Contact</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                  aria-controls="contact" aria-selected="false">Import Contacts</a>
+                <a class="nav-link" id="import-tab" data-toggle="tab" href="#import" role="tab" aria-controls="import"
+                  aria-selected="false">Import Contacts</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                  aria-controls="contact" aria-selected="false">Send Email</a>
+                <a class="nav-link" id="send-email-tab" data-toggle="tab" href="#sendEmail" role="tab"
+                  aria-controls="send-email" aria-selected="false">Send Email</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                  aria-controls="contact" aria-selected="false">Manage Contact</a>
+                <a class="nav-link" id="manage-tab" data-toggle="tab" href="#manage" role="tab" aria-controls="manage"
+                  aria-selected="false">Manage Contacts</a>
               </li>
             </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- Grid-boxes -->
-            <div class="IntegrationCont">
-              <h2>Choose your Campaign and stand out from your competitors</h2>
-              <div class="card">
-                <div class="imgBx" data-text="Create">
-                  <img src="./images/grafix.jpg">
-                </div>
-                <div class="contSocial">
-                  <div>
-                    <h4>Create Ad</h4>
-                    <p>Brand your business and stand out from others on social media advertisement</p>
-                    <a href="./createLanding.html" target="blank"> <button class="btn-tag">Create Ads</button></a>
+            <div class="tab-content" id="nav-tabContent">
+              <!-- Home -->
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <!-- Grid-boxes -->
+                <div class="IntegrationCont">
+                  <h2>Choose your Campaign and stand out from your competitors</h2>
+                  <div class="card">
+                    <div class="imgBx" data-text="Create">
+                      <img src="./images/grafix.jpg">
+                    </div>
+                    <div class="contSocial">
+                      <div>
+                        <h4>Create Ad</h4>
+                        <p>Brand your business and stand out from others on social media advertisement</p>
+                        <a href="./createLanding.html" target="blank"> <button class="btn-tag">Create Ads</button></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="imgBx" data-text="Social">
+                      <img src="./images/social.jpg">
+                    </div>
+                    <div class="contSocial">
+                      <div>
+                        <h4>Social Media Integration </h4>
+                        <p>Connect with all your Social media Handles</p>
+                        <a href="#"> <button class="btn-tag">Go Social</button></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="imgBx" data-text="SEO">
+                      <img src="./images/seo-2.jpg">
+                    </div>
+                    <div class="contSocial">
+                      <div>
+                        <h3>SEO Analytics</h3>
+                        <p>Analyse and track the Customer behavior on your site</p>
+                        <a href="#"> <button class="btn-tag">Analyse</button></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="imgBx" data-text="host">
+                      <img src="./images/hosting.png">
+                    </div>
+                    <div class="contSocial">
+                      <div>
+                        <h3>Host website</h3>
+                        <p>Get the link to the best web hosting sites</p>
+                        <a href="#"> <button class="btn-tag">Check it out</button></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="imgBx" data-text="Social">
-                  <img src="./images/social.jpg">
+              <!-- View Contact -->
+              <div class="tab-pane fade" id="viewContact" role="tabpanel" aria-labelledby="nav-view-contact-tab">
+                <!-- Add A Subscriber Modal -->
+                <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                  aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="add "
+                          style="color: #fff; border-radius: 30px; font-size: 18px; font-weight: 600;">
+                          Add a Subscriber</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">First Name</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="Enter Firstname">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Last Name</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Enter Lastname">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Phone No:</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Enter Phone no">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Country</label>
+                            <input type="text" class="form-control" id="country" placeholder="Enter Country">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="Enter State">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter City">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Birth Day</label>
+                            <input type="text" class="form-control" id="bday" placeholder="Enter Birthday">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" id='save' class="btn btn-primary" style="background-color: #6920bd;"
+                          onclick="subscribeUser()">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="contSocial">
-                  <div>
-                    <h4>Social Media Integration </h4>
-                    <p>Connect with all your Social media Handles</p>
-                    <a href="#"> <button class="btn-tag">Go Social</button></a>
+
+                <!-- Edit Modal -->
+                <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                  aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle "
+                          style="background-color: #6920bd; width: 15rem; color: #fff; border-radius: 30px; text-align: center; font-size: 18px; font-weight: 600;">
+                          Edit an existing Subscriber</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="form-group" style="width: 57vw;">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="" placeholder="Enter email">
+                          </div>
+                          <div class="form-group" style="width: 57vw;">
+                            <label for="exampleInputEmail1">First Name</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Firstname">
+                          </div>
+                          <div class="form-group" style="width: 57vw;">
+                            <label for="exampleInputEmail1">Last Name</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Lastname">
+                          </div>
+                          <div class="form-group" style="width: 57vw;">
+                            <label for="exampleInputEmail1">Phone No:</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Phone no">
+                          </div>
+                          <div class="form-group" style="width: 57vw;">
+                            <label for="exampleInputEmail1">Country</label>
+                            <input type="text" class="form-control" id="e" placeholder="Enter Country">
+                          </div>
+                          <div class="form-group" style="width: 57vw;">
+                            <label for="exampleInputEmail1">State</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter State">
+                          </div>
+                          <div class="form-group" style="width: 57vw;">
+                            <label for="exampleInputEmail1">City</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter City">
+                          </div>
+                          <div class="form-group" style="width: 57vw;">
+                            <label for="exampleInputEmail1">Birth Day</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Birthday">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" style="background-color: #6920bd;"
+                          onclick="subscribeUser()">Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <!-- View Contact Table -->
+                <div class="container" id="" style="background-color: #F4F5F7;">
+                  <div class="Jumbotron">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Display View Contact</h5>
+                        <div class="row">
+                          <div class="col-md-12 text-right">
+                            <button class="btn btn-primary  badge-pill" data-toggle="modal" data-target="#add"
+                              style="background: #6920bd; width: 10rem;">Add a Subscriber</button>
+                          </div>
+                        </div>
+                        <br>
+
+                        <table class="table table-dark table-bordered" style="background-color: #fff; color:#222;">
+                          <thead>
+                            <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">FName</th>
+                              <th scope="col">LName</th>
+                              <th scope="col">Phone No</th>
+                              <th scope="col">Country</th>
+                              <th scope="col">State</th>
+                              <th scope="col">City</th>
+                              <th scope="col">BDay</th>
+                              <th class="text-right">Edit</th>
+                              <th class="text-right">Delete</th>
+                            </tr>
+                          </thead>
+                          <tbody id="contactTable">
+                            <tr>
+                              <td>1</td>
+                              <td>dunfrank@gmail.com</th>
+                              <td>Otto</td>
+                              <td>Joe</td>
+                              <td>08135398131</td>
+                              <td>USA</td>
+                              <td>Texas</td>
+                              <td>Dallas</td>
+                              <td>08/9</td>
+                              <td class="text-right">
+                                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit"
+                                  style="width: 80px; background: #6920bd;">Edit</button>
+                              </td>
+                              <td class="text-right">
+                                <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"
+                                  style="width: 80px;" id="delete">Delete</button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>1</th>
+                              <th>dunfrank@gmail.com</th>
+                              <th>Otto</th>
+                              <td>Joe</td>
+                              <td>08135398131</td>
+                              <td>USA</td>
+                              <td>Texas</td>
+                              <td>Dallas</td>
+                              <td>08/9</td>
+                              <td class="text-right">
+                                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit"
+                                  style="width: 80px; background: #6920bd;">Edit</button>
+                              </td>
+                              <td class="text-right">
+                                <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"
+                                  style="width: 80px;" id="delete">Delete</button>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th>1</th>
+                              <th>dunfrank@gmail.com</th>
+                              <th>Otto</th>
+                              <td>Joe</td>
+                              <td>08135398131</td>
+                              <td>USA</td>
+                              <td>Texas</td>
+                              <td>Dallas</td>
+                              <td>08/9</td>
+                              <td class="text-right">
+                                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit"
+                                  style="width: 80px; background: #6920bd;">Edit</button>
+                              </td>
+                              <td class="text-right">
+                                <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"
+                                  style="width: 80px;" id="delete">Delete</button>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th>1</th>
+                              <th>dunfrank@gmail.com</th>
+                              <th>Otto</th>
+                              <td>Joe</td>
+                              <td>08135398131</td>
+                              <td>USA</td>
+                              <td>Texas</td>
+                              <td>Dallas</td>
+                              <td>08/9</td>
+                              <td class="text-right">
+                                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit"
+                                  style="width: 80px; background: #6920bd;">Edit</button>
+                              </td>
+                              <td class="text-right">
+                                <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"
+                                  style="width: 80px;" id="delete">Delete</button>
+                              </td>
+                            </tr>
+
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="imgBx" data-text="SEO">
-                  <img src="./images/seo-2.jpg">
-                </div>
-                <div class="contSocial">
-                  <div>
-                    <h3>SEO Analytics</h3>
-                    <p>Analyse and track the Customer behavior on your site</p>
-                    <a href="#"> <button class="btn-tag">Analyse</button></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="imgBx" data-text="host">
-                  <img src="./images/hosting.png">
-                </div>
-                <div class="contSocial">
-                  <div>
-                    <h3>Host website</h3>
-                    <p>Get the link to the best web hosting sites</p>
-                    <a href="#"> <button class="btn-tag">Check it out</button></a>
-                  </div>
-                </div>
-              </div>
+              <!-- Import Contact -->
+              <div class="tab-pane fade" id="import" role="tabpanel" aria-labelledby="nav-import-tab">2...</div>
+              <!-- Send Email -->
+              <div class="tab-pane fade" id="sendEmail" role="tabpanel" aria-labelledby="nav-send-email-tab">3...</div>
+              <!-- Manage Contacts -->
+              <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="nav-manage-tab">4...</div>
             </div>
 
         </main>
       </div>
     </div>
 
-    
-    <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
+
+    <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 15%;">
       <div class="container">
         <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
           <a href="./index.html" onclick="signOut()"
@@ -186,7 +429,7 @@
           <img src="images/caricature1.svg" alt="image" height="100" width="100" style="border-radius: 50%;">
           <h3 id="usersname111">Malik Mukhtar</h3>
 
-         </div>
+        </div>
 
       </div>
       <div>
@@ -205,10 +448,10 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
 
-  
 
 
 
+<<<<<<< HEAD
   <script src="./js/audience.js"></script>
   
   <!-- Font Awesome CDN -->
@@ -224,6 +467,13 @@
 
  <!-- Font Awesome CDN -->
  <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+=======
+  <script src="./js/viewcontact.js"></script>
+  <!-- Sweet Alert CDN -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
+>>>>>>> 58e1ae117543d68812df4ae834484c522aed53f1
 </body>
 
 </html>
