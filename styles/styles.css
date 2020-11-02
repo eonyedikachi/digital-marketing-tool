@@ -65,7 +65,7 @@ h5 {
 /* Sticky Note */
 .sticky-note {
   height: 350px;
-  width: 350px;
+  width: 90%;
   background: #8c30f5;
   color: #fff;
 }
