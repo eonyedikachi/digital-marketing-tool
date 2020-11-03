@@ -35,9 +35,9 @@
                         </a>
                     </li>
                     <li class="nav-item flex">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link " href="#">
                             <i class="fas fa-envelope-open-text"></i>
-                            <a href="email_templates.html" class="active">Email Template</a>
+                            <a href="email_templates.html" >Email Template</a>
                         </a>
                     </li>
                     <li class="nav-item flex">
@@ -47,9 +47,9 @@
                         </a>
                     </li>
                     <li class="nav-item flex">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link active" href="#">
               <i class="fas fa-check-square"></i>
-                            <a href="subscription.html">Subscription Form</a>
+                            <a href="subscription.html" class="active">Subscription Form</a>
                         </a>
                     </li>
                     <li class="nav-item flex">
@@ -75,35 +75,35 @@
             <div style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
                 <div class="temp-main">
                     <div class="templates">
-                        <h1>Email Templates</h1>
-                        <a href="./email_temp.html">Create Template</a>
+                        <h1>Embedded Form</h1>                       
                     </div>
-                    <section class="email_temp">
-                        <div class="search">
-                            <input type="text" name="search" id="search" placeholder="Search saved templates">
-                            <button id="searchBtn" onclick="search()"><i class="fas fa-search"></i></button>
-                            <button id="cancelBtn" onclick="cancel()"><i class="fas fa-times"></i></button>
-                        </div>
-                        <div class="template_list" id="templateList">
-                            <div class="temp">
-                                <div class="description">
-                                    <div class="image">
-                                        <img src="../images/emailTemp1.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <button id="templateName" class="template-name" onclick="editEmail()">Sample
-                                            Template</button>
-                                        <p><span>Last edited</span> today</p>
-                                        <p>by <span>MartReach</span></p>
-                                    </div>
-                                </div>
-                                <div class="edit">
-                                    <button id="editBtn" onclick="editEmail()">Edit</button>
-                                    <button onclick="this.remove()">Delete</button>
-                                </div>
+                    <div>
+                        <h4>Preview</h4>
+                        <form action="">
+                            <div style=" height: 30vh; display: flex; flex-direction: column; align-items: center;">
+                                <span>Email Address <input type="text" size="40"></span><br>
+                                <span>First Name <input type="text" size="40"></span><br>
+                                <span>Last Name <input type="text" size="40"></span><br>
+                                <button type="submit">Subscribe</button>
                             </div>
+                        </form>
+                    </div>
+                    <div>
+                        <h4>Copy/paste onto your site</h4>
+                        <div style=" height: 30vh; display: flex; flex-direction: column; align-items: center;">
+                            <textarea name="embedded-code" id="embedded-code" cols="80" rows="30">
+                                <form action="">
+                                    <div style=" height: 30vh; display: flex; flex-direction: column; align-items: center;">
+                                        <span>Email Address <input type="text" size="40"></span><br>
+                                        <span>First Name <input type="text" size="40"></span><br>
+                                        <span>Last Name <input type="text" size="40"></span><br>
+                                        <button type="submit">Subscribe</button>
+                                    </div>
+                                </form>
+                            </textarea>
                         </div>
-                    </section>
+                    </div>
+                    
                 </div>
             </div>
             <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
