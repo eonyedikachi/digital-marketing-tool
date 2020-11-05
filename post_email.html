@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Suggestions | MartReach</title>
+    <title>Post-Email | MartReach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap CSS -->
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/suggestion.css" />
     <link rel="stylesheet" href="styles/createLanding.css" />
     <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/post_email.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="./images/MartReach icon.png">
@@ -56,15 +57,15 @@
                         </a>
                     </li>
                     <li class="nav-item flex">
-                        <a class="nav-link" href="./audience.html">
+                        <a class="nav-link active" href="./audience.html">
                             <i class="fas fa-envelope-open"></i>
-                            <a href="./post_email.html">Post-Email</a>
+                            <a href="./post_email.html" class="active">Post-Email</a>
                         </a>
                     </li>
                     <li class="nav-item flex">
-                        <a class="nav-link active" href="./audience.html">
+                        <a class="nav-link" href="./audience.html">
                             <i class="fas fa-question-circle"></i>
-                            <a href="./suggestion.html" class="active">Suggestion</a>
+                            <a href="./suggestion.html">Suggestion</a>
                         </a>
                     </li>
                     <li class="nav-item flex">
@@ -82,75 +83,25 @@
                 </ul>
             </div>
             <div class="p-4" style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
-                <main>
-                    <!-- Suggestion heading -->
-                    <h1 class="heading">Suggestions</h1>
-
-                    <!-- images categories -->
-                    <div class="img">
-                        <div><a href=""><img src="./images/email-temp.jpg" alt="Email Templete"></a>
-                            <h4>Email Template</h4>
-                        </div>
-                        <div><a href=""><img src="./images/Langing page.jpg" alt="Landing page"></a>
-                            <h4>Landing page</h4>
-                        </div>
-                        <div><a href=""><img src="./images/Social Media.png" alt="Social Media"></a>
-                            <h4>Social Media</h4>
-                        </div>
-                    </div>
-
-                    <!-- Select category -->
-                    <div class="select-category">
-                        <div class="selectcat">
-                            <h2> Select Category</h2>
-                            <select name="" id="catlist" class="categorylists">
-                                <option value="Email Template">Email Template
-                                </option>
-                                <option value="Landing Page">Landing Page
-                                </option>
-                                <option value="Social media"> Social media
-                                </option>
-                                <option value="Posters">Posters
-                                </option>
-                                <option value="Fliers">Fliers
-                                </option>
-                                <option value="Cards">Cards
-                                </option>
-                                <option value="Presentation">Presentation
-                                </option>
-                                <option value="Complains">Complains
-                                </option>
-                                <option value="Others">Others
-                                </option>
-                            </select>
-                        </div>
-                        </header>
-
-                        <div class="mainsuggestion">
-                            <h2>Suggestion</h2>
-                            <fieldset>
-                                <button onclick="boldd()"><i class="fas fa-bold" id="innerBold"></i></button>
-                                <button onclick="ittalize()"><i class="fas fa-italic" id="innerItalic"></i></button>
-                                <button onclick="underline()"><i class="fas fa-underline"
-                                        id="innerUnderline"></i></button>
-                                <button onclick="tleft()"><i class="fas fa-align-left" id="innerAlignLeft"></i></button>
-                                <button onclick="tcenter()"><i class="fas fa-align-center"
-                                        id="innerAlignCenter"></i></button>
-                                <button onclick="tright()"><i class="fas fa-align-right"
-                                        id="innerAlignRight"></i></button>
-                                <input type="number" name="" id="fontsize" onclick="fontsize()" value="16">
-                            </fieldset>
-                            <form data-netlify="true" method="post" name="suggestion" id="form">
-                                <textarea id="comment" name="comment" placeholder="Enter your suggestion"></textarea>
-                                </textarea>
-                                <br>
-                                <button type="button" onclick="sendsuggest()">Send</button>
-
-                            </form>
-                        </div>
-                    </div>
-                </main>
+                <h4><i class="fas fa-envelope-open-text"></i> Create an E-mail</h4>
+                <p>Promote a line of products,engage your subscribers by sharing your latest news,  or announcing an event and Keep your subscribers </p>
+               <br><br>
+               <h5>Select template</h5>
+               <div class="templatecon container" >
+                <div class="row" style="height: 50vh;">
+                   <div id="one" class="img col-lg-3 col-lg-3">
+                       <img src="./images/emailTemp.png" alt="">
+                   </div>
+                   <div id="two" class="img col-lg-3">
+                    <img src="./images/emailTemp1.png" alt="">
+                   </div>
+                   <div id="three" class="img col-lg-3">
+                    <img src="./images/emailTemp2.png" alt="">
+                   </div>
+                </div>
+               </div>
             </div>
+            <!-- create an Email main section -->
             <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
                 <div class="container">
                     <div style=" display: flex; justify-content: flex-end; padding: 10px; font-size: 10px;">
@@ -191,9 +142,9 @@
 
     <!-- Sweet Alert CDN -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <script src="./js/Post-Email.js"></script>
     <script src="./js/dashboard.js"></script>
-    <script src="./js/suggestion.js"></script>
+    
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/0b544dd14e.js" crossorigin="anonymous"></script>
 </body>
