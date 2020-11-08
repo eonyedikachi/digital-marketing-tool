@@ -34,37 +34,6 @@ if (templates == null || templates == undefined || templates.length == 0) {
   unlayer.loadDesign(design);
 }
 
-// Get date
-var d = new Date();
-
-let month = d.getMonth();
-d.setMonth(month);
-let date = d.getDate();
-d.setDate(date);
-let year = d.getFullYear();
-d.setFullYear(year);
-let hours = d.getHours();
-d.setHours(hours);
-let minutes = d.getMinutes();
-d.setMinutes(minutes);
-
-var months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-months[month];
-
 // Save Template
 document.getElementById("save").addEventListener("click", () => {
   unlayer.exportHtml(function (data) {
@@ -77,6 +46,37 @@ document.getElementById("save").addEventListener("click", () => {
       error.innerHTML = "Please enter name for template";
       error.style.color = "red";
     } else {
+      // Get date
+      var d = new Date();
+
+      let month = d.getMonth();
+      d.setMonth(month);
+      let date = d.getDate();
+      d.setDate(date);
+      let year = d.getFullYear();
+      d.setFullYear(year);
+      let hours = d.getHours();
+      d.setHours(hours);
+      let minutes = d.getMinutes();
+      d.setMinutes(minutes);
+
+      var months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      months[month];
+
       templates.push({
         name: name,
         user: currentUser[i].userName,
