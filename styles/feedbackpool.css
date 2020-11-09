@@ -1,9 +1,8 @@
-
 /* middle heading */
 .middleheading {
   text-align: center;
   margin-top: 2rem;
-  color:black;
+  color: black;
 }
 /* each suggest box */
 #suggest {
@@ -13,13 +12,9 @@
   border: 3px solid #8c30f5;
   padding: 1rem;
   border-radius: 1rem;
- background-color:white;
+  background-color: white;
   letter-spacing: 1px;
   color: #8c30f5;
-}
-/* correctiog icons colors */
-.nav-link i{
-  color: #c4c4c4;
 }
 /* #index {
   display: none;
@@ -31,13 +26,13 @@
 #responds button {
   flex: 1;
   background: #fff;
-  color:#8c30f5;
+  color: #8c30f5;
   border-radius: 5px;
   padding: 5px;
   justify-content: space-around;
 }
 #responds button:hover {
-  background-color:#8c30f5;
+  background-color: #8c30f5;
   color: #fff;
   border: 1px #fff solid;
 }
@@ -48,8 +43,6 @@ input {
   border-radius: 1rem;
   padding: 10px;
 }
-
-
 
 /* Footer */
 footer {

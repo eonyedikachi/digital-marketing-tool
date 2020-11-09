@@ -54,8 +54,8 @@ a:hover {
 }
 
 .stats {
-  height: 250px;
-  width: 320px;
+  height: 180px;
+  width: 250px;
   margin: 2rem auto;
   border-radius: 20px;
   display: flex;
@@ -63,10 +63,6 @@ a:hover {
   background: #fff;
   color: #000;
   box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.1);
-}
-
-.stats p {
-  font-size: 20px;
 }
 
 #registeredUsers {
@@ -85,14 +81,14 @@ a:hover {
 }
 
 .stats .stat-name {
-  padding: 2rem;
+  padding: 1rem;
   height: 70%;
 }
 
 .stats .stat-name div {
   background: #d5d1fb;
-  height: 62px;
-  width: 62px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
