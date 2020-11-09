@@ -6,6 +6,17 @@ userID = JSON.parse(localStorage.getItem("currentUserID"));
 
 var source;
 
+// edit Profile Pic
+image = document.getElementById("output");
+if (
+  currentUser[i].pics == undefined ||
+  currentUser[i].pics == null ||
+  !currentUser[i].pics ||
+  currentUser[i].pics == ""
+) {
+  image.src = "images/avatar1.png";
+}
+
 editUser = currentUser[i];
 document.getElementById("firstName").value = editUser.firstName;
 document.getElementById("lastName").value = editUser.lastName;
