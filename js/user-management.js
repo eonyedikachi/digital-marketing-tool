@@ -8,8 +8,6 @@ if (users == null) {
   users = [];
 }
 
-var src;
-
 // Click event to add more users
 document.querySelector(".addBtn").addEventListener("click", () => {
   // Radio buttons
@@ -33,7 +31,6 @@ document.querySelector(".addBtn").addEventListener("click", () => {
     userName: document.getElementById("username").value,
     password: document.getElementById("password").value,
     role: userRole,
-    pics: src,
   };
 
   // Check if all inputs are filled
@@ -43,8 +40,7 @@ document.querySelector(".addBtn").addEventListener("click", () => {
     newObj.email != "" &&
     newObj.userName != "" &&
     newObj.password != "" &&
-    newObj.role != "" &&
-    newObj.pics != null
+    newObj.role != ""
   ) {
     if (newObj.password.length < 8) {
       document.getElementById("passwordError").innerHTML =
@@ -85,6 +81,7 @@ document.querySelector(".addBtn").addEventListener("click", () => {
       } else {
         // Store user object in array
         users.push(newObj);
+        originalUsers = users;
 
         // Empty text boxes
         empty();
@@ -106,36 +103,22 @@ function display() {
   cont = "";
 
   for (i = 0; i < users.length; i++) {
-    cont += `
-            <div class="profile"> 
-            <div class="item">               
-            <img src= "${users[i].pics}" style= "height: 100px; width: 100px"><br>
-            </div>
-            <div class="item">
-            <strong>First Name</strong> : ${users[i].firstName}<br>
-            </div>
-            <div class="item">
-            <strong>Last Name</strong> : ${users[i].lastName}<br>
-            </div>
-            <div class="item">
-            <strong>Email</strong> : ${users[i].email}<br>
-            </div>
-            <div class="item">
-            <strong>Username</strong> : ${users[i].userName}<br>
-            </div>
-            <div class="item">
-            <strong>Password</strong> : ${users[i].password}<br>
-            </div>
-            <div class="item">
-            <strong>Role</strong> : ${users[i].role}<br>
-            </div>
-            <div class="item">
-            <button class = "delBtn" onclick="del(${i})">Delete</button>
-            <button class = "editBtn" data-toggle="modal" data-target="#exampleModal" onclick="edit(${i})">Edit</button>
-            </div>
-         </div>`;
+    cont += `<tr>
+                <td>${i + 1}</td>
+                <td>${users[i].firstName}</td>
+                <td>${users[i].lastName}</td>
+                <td>${users[i].userName}</td>
+                <td>${users[i].email}</td>
+                <td>${users[i].role}</td>
+                <td class="text-center">
+                  <button class = "editBtn" data-toggle="modal" data-target="#exampleModal" onclick="edit(${i})">Edit</button>
+                </td>
+                <td class="text-center">
+                  <button class = "delBtn" onclick="del(${i})"  style="width: 80px;">Delete</button>
+                </td>
+              </tr>`;
   }
-  document.getElementById("main").innerHTML = cont;
+  document.getElementById("userTable").innerHTML = cont;
 }
 
 display();
@@ -157,7 +140,9 @@ function del(id) {
       originalUsers.splice(originalIndex, 1);
 
       users = originalUsers;
-      localStorage.setItem("database", JSON.stringify(originalUsers));
+      console.log(users);
+      console.log(originalUsers);
+      localStorage.setItem("database", JSON.stringify(users));
       display();
 
       empty();
@@ -175,12 +160,16 @@ function edit(id) {
   originalIndex = originalUsers.findIndex(
     (x) => x.userName == editUser.userName
   );
+  console.log("id ", id);
+  console.log("original id ", originalIndex);
+  console.log("user at id ", editUser);
+  console.log("original users ", originalUsers);
+  console.log("users ", users);
   document.getElementById("firstName").value = editUser.firstName;
   document.getElementById("lastName").value = editUser.lastName;
   document.getElementById("email").value = editUser.email;
   document.getElementById("username").value = editUser.userName;
   document.getElementById("password").value = editUser.password;
-  src = editUser.pics;
   document.getElementById("index").value = originalIndex;
 }
 
@@ -205,7 +194,6 @@ function update() {
     userName: document.getElementById("username").value,
     password: document.getElementById("password").value,
     role: userRole,
-    pics: src,
   };
 
   if (
@@ -214,8 +202,7 @@ function update() {
     updatedRecord.email != "" &&
     updatedRecord.userName != "" &&
     updatedRecord.password != "" &&
-    updatedRecord.role != "" &&
-    updatedRecord.pics != null
+    updatedRecord.role != ""
   ) {
     originalUsers[i] = updatedRecord;
     users = originalUsers;
@@ -286,15 +273,4 @@ function empty() {
   document.getElementById("email").value = "";
   document.getElementById("username").value = "";
   document.getElementById("password").value = "";
-  src = "";
-}
-
-// Upload Image
-function uploadImage(e) {
-  // Upload image
-  var reader = new FileReader();
-  reader.onload = function () {
-    src = reader.result;
-  };
-  reader.readAsDataURL(e.target.files[0]);
 }

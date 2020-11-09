@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/dashboard.css" />
     <link rel="stylesheet" href="./styles/user-management.css" />
-    <link rel="stylesheet" href="styles/createLanding.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="./images/MartReach icon.png">
@@ -52,7 +51,7 @@
             <div class="user-management p-2"
                 style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
                 <div class="user-title">
-
+                    <h1>Users Management</h1>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Add User
@@ -63,8 +62,43 @@
                     <button class="searchBtn" onclick="search()">Search</button>
                     <button class="searchBtn cancel" onclick="cancelSearch()">Cancel</button>
                 </div>
-                <div id="main">
-                    Where content is appended
+                <div class="result mb-4">
+                    <p id="searchResult"></p>
+                </div>
+                <!-- Users View -->
+                <div class="user-view w-100 overflow-auto">
+                    <table class="table table-dark table-bordered" style="background-color: #fff; color:#222;">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTable">
+                            <tr>
+                                <td>1</td>
+                                <td>Otto</td>
+                                <td>Joe</td>
+                                <td>08135398131</td>
+                                <td>dunfrank@gmail.com</td>
+                                <td>admin</td>
+                                <td class="text-center">
+                                    <button class="btn" data-toggle="modal" data-target="#edit"
+                                        style="width: 80px; background: #6920bd;">Edit</button>
+                                </td>
+                                <td class="text-center">
+                                    <button class="btn" data-toggle="modal" data-target="#" style="width: 80px;"
+                                        id="delete" onclick="Delete()">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
@@ -142,15 +176,10 @@
                             <label for="">Admin</label>
                             <p id="roleError" class="error"></p>
                         </div>
-                        <div class="form-input">
-                            <input type="file" accept="image/*" name="image" id="pics" onchange="uploadImage(event)">
-                            <p id="picsError" class="error"></p>
-                        </div>
-                        <div class="form-input">
+                        <div class="form-input d-flex">
                             <button class="addBtn">Add User</button>
                             <button class="updateBtn" onclick="update()">Update</button>
                         </div>
-                        <p id="searchResult"></p>
                     </div>
                 </div>
             </div>

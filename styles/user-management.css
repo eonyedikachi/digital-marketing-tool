@@ -46,7 +46,7 @@ img {
 
 .search {
   width: 100%;
-  margin: 2rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +141,7 @@ button {
 }
 
 .editBtn:hover {
-  background: rgb(0, 102, 255);
+  background: #6122aa;
 }
 
 .updateBtn {
