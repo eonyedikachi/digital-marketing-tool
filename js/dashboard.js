@@ -28,9 +28,16 @@ let signOut = () => {
   localStorage.removeItem("currentUser");
 };
 
+console.log(currentUser[i].pics);
+
 // Profile Pic
 image = document.getElementById("profilePic");
-if (currentUser[i].pics == undefined) {
+if (
+  currentUser[i].pics == undefined ||
+  currentUser[i].pics == null ||
+  !currentUser[i].pics ||
+  currentUser[i].pics == ""
+) {
   image.src = "images/caricature1.svg";
 } else {
   image.src = currentUser[i].pics;
