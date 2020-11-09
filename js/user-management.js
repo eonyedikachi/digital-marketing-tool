@@ -31,6 +31,13 @@ document.querySelector(".addBtn").addEventListener("click", () => {
     userName: document.getElementById("username").value,
     password: document.getElementById("password").value,
     role: userRole,
+    billingContactName: "",
+    billingCompanyName: "",
+    billingAddress: "",
+    billingPhoneNumber: "",
+    billingEmailAddress: "",
+    pics: "",
+    website: "",
   };
 
   // Check if all inputs are filled
@@ -194,6 +201,13 @@ function update() {
     userName: document.getElementById("username").value,
     password: document.getElementById("password").value,
     role: userRole,
+    billingContactName: editUser.billingContactName,
+    billingCompanyName: editUser.billingCompanyName,
+    billingAddress: editUser.billingAddress,
+    billingPhoneNumber: editUser.billingPhoneNumber,
+    billingEmailAddress: editUser.billingEmailAddress,
+    pics: editUser.pics,
+    website: editUser.website,
   };
 
   if (
