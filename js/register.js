@@ -22,6 +22,12 @@ const registerUser = (e) => {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
     cpassword: document.getElementById("cpassword").value,
+    website: "",
+    billingContactName: "",
+    billingCompanyName: "",
+    billingAddress: "",
+    billingPhoneNumber: "",
+    billingEmailAddress: "",
     role: "user",
   };
 

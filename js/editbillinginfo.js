@@ -1,30 +1,21 @@
 // fetches most recent logged in user
 i = currentUser.length - 1;
 // let database = JSON.parse(localStorage.getItem("database"));
+
+// Get from local storage
+users = JSON.parse(localStorage.getItem("database"));
+userID = JSON.parse(localStorage.getItem("currentUserID"));
+
 editUser = currentUser[i];
-document.getElementById("billingContactName").value = editUser.billingContactName;
-document.getElementById("billingCompanyName").value = editUser.billingCompanyName;
+document.getElementById("billingContactName").value =
+  editUser.billingContactName;
+document.getElementById("billingCompanyName").value =
+  editUser.billingCompanyName;
 document.getElementById("billingAddress").value = editUser.billingAddress;
 document.getElementById("billingPhoneNumber").value =
   editUser.billingPhoneNumber;
 document.getElementById("billingEmailAddress").value =
   editUser.billingEmailAddress;
-
-if (editUser.contactName == undefined) {
-  document.getElementById("billingContactName").value = "";
-}
-if (editUser.companyName == undefined) {
-  document.getElementById("billingCompanyName").value = "";
-}
-if (editUser.billingAddress == undefined) {
-  document.getElementById("billingAddress").value = "";
-}
-if (editUser.billingPhoneNumber == undefined) {
-  document.getElementById("billingPhoneNumber").value = "";
-}
-if (editUser.billingEmailAddress == undefined) {
-  document.getElementById("billingEmailAddress").value = "";
-}
 
 function bUpdate() {
   let edited = {
@@ -36,16 +27,17 @@ function bUpdate() {
     firstName: editUser.firstName,
     lastName: editUser.lastName,
     userName: editUser.userName,
-    email: editUser.emailAddress,
+    email: editUser.email,
     password: editUser.password,
     role: editUser.role,
     pics: editUser.pics,
     website: editUser.website,
   };
+  users[userID] = edited;
   currentUser[i] = edited;
-  localStorage.setItem("database", JSON.stringify(currentUser));
-  localStorage.setItem("currentUser", JSON.stringify(currentUser));
-  // display();
 
-  window.location.assign("../setting.html")
+  localStorage.setItem("database", JSON.stringify(users));
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+  window.location.assign("../setting.html");
 }

@@ -1,6 +1,8 @@
 // fetches most recent logged in user
 i = currentUser.length - 1;
-// let database = JSON.parse(localStorage.getItem("database"));
+// Get from local storage
+users = JSON.parse(localStorage.getItem("database"));
+userID = JSON.parse(localStorage.getItem("currentUserID"));
 
 var source;
 
@@ -37,11 +39,17 @@ function update() {
     role: editUser.role,
     pics: editUser.pics,
     website: document.getElementById("website").value,
+    billingContactName: editUser.billingContactName,
+    billingCompanyName: editUser.billingCompanyName,
+    billingAddress: editUser.billingAddress,
+    billingPhoneNumber: editUser.billingPhoneNumber,
+    billingEmailAddress: editUser.billingEmailAddress,
   };
+  users[userID] = edited;
   currentUser[i] = edited;
-  localStorage.setItem("database", JSON.stringify(currentUser));
+
+  localStorage.setItem("database", JSON.stringify(users));
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
-  // display();
 
   window.location.assign("../setting.html");
 }

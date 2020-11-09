@@ -39,9 +39,13 @@ function validate(username, password) {
     let user = database.find(
       (element) => element.userName == username && element.password == password
     );
+    let userId = database.findIndex(
+      (element) => element.userName == username && element.password == password
+    );
     // Adds current user login to storage
     currentUser.push(user);
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    localStorage.setItem("currentUserID", userId);
 
     if (user == undefined) {
       swal("Invalid username or password!", "Enter correct details", "error");
