@@ -212,3 +212,36 @@ h2 {
 }
 
 
+/* ====ImportFile==== */
+#importcont #buttondiv{
+  margin: 0 auto;
+  width: 80%;
+  overflow: auto;
+}
+
+table.gridtable{
+  margin: 0 auto;
+  width: 95%;
+  overflow: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #333333;
+  border-width: 1px;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #ffffff;
+}
+table.gridtable th{
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #ffffff;
+}
+table.gridtable td{
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #ffffff;
+}

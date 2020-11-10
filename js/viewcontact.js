@@ -111,3 +111,42 @@ function displayContacts() {
 
 displayContacts();
   
+
+// =====UploadContact====//
+
+$(document).ready(function(){
+
+  $('#viewFile').click(function(){
+    var rdr = new FileReader();
+    rdr.onload = function (e) {
+// Convert the role into an array
+    var theRows = e.target.result.split("\n");
+    // ===Loop through the rows=====//
+    for(var row = 0; row < theRows.length; row++){
+    // ======Get The columns into an array====//
+     var columns = theRows[row].split(".");
+    //  =====Get number of column===//
+    var columnCount = columns.length
+    // ====Validate Number of Columns
+    if(columnCount!=8) {
+    
+     
+      newRow="<tr><td>Incorrect number of columns</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>"
+    }else{
+
+    }
+    newRow = "<tr><td>" + columns[0] + "</td><td>" + columns[1] + "</td><td>" + columns[2] + "</td><td>" + columns[3] 
+    + "</td><td>" +  columns[4] + "</td><td>" +  columns[5] + "</td><td>" +  columns[6] + "</td><td>" +  columns[7] + "</td><td>" +  columns[8] + "</td>";
+      $("#tablemain").append(newRow);
+
+    }
+    
+    
+    
+    }
+    rdr.readAsText($('#inputFile')[0].files[0]);
+  });
+
+
+});
+
