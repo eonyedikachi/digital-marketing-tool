@@ -39,44 +39,41 @@ function subscribeUser() {
 
 // delete function
 function empty() {
-   document.getElementById("firstname").value = "",
-   document.getElementById("lastname").value = "",
-   document.getElementById("email").value = "",
-   document.getElementById("phone").value = "",
-   document.getElementById("country").value = "",
-   document.getElementById("state").value = "",
-  document.getElementById("city").value = "",
-  document.getElementById("bday").value = "",
-  src = "";
+  (document.getElementById("firstname").value = ""),
+    (document.getElementById("lastname").value = ""),
+    (document.getElementById("email").value = ""),
+    (document.getElementById("phone").value = ""),
+    (document.getElementById("country").value = ""),
+    (document.getElementById("state").value = ""),
+    (document.getElementById("city").value = ""),
+    (document.getElementById("bday").value = ""),
+    (src = "");
 }
 
+// sweet alert delete function
+function Delete(i) {
+  swal({
+    title: "Are you sure?",
+    text: "Once deleted, you will not be able to recover this!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((willDelete) => {
+    if (willDelete) {
+      subscibers.splice(i, 1);
+      users = subscibers;
+      localStorage.setItem("subscibers", JSON.stringify(subscibers));
+      displayContacts();
+      empty();
 
-// sweet alert delete functon
-function Delete(i){
- 
-    swal({
-      title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover this!",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
-    }).then((willDelete) => {
-      if (willDelete) {
-        subscibers.splice(i, 1);
-        users = subscibers;
-        localStorage.setItem("subscibers", JSON.stringify(subscibers))
-        displayContacts();
-        empty();
-       
-        swal("Your file has been  deleted!", {
-         icon: "success"
-        });
-      
-      }
-    });
-  }
-        
-// POPULATING THE VIEWCONTACT PAGE
+      swal("Your file has been  deleted!", {
+        icon: "success",
+      });
+    }
+  });
+}
+
+// POPULATING THE VIEW CONTACT PAGE
 displayContacts();
 
 function displayContacts() {
@@ -110,43 +107,30 @@ function displayContacts() {
 }
 
 displayContacts();
-  
 
 // =====UploadContact====//
 
-$(document).ready(function(){
-
-  $('#viewFile').click(function(){
+$(document).ready(function () {
+  $("#inputFile").change(function () {
     var rdr = new FileReader();
     rdr.onload = function (e) {
-// Convert the role into an array
-    var theRows = e.target.result.split("\n");
-    // ===Loop through the rows=====//
-    for(var row = 0; row < theRows.length; row++){
-    // ======Get The columns into an array====//
-     var columns = theRows[row].split(".");
-    //  =====Get number of column===//
-    var columnCount = columns.length
-    // ====Validate Number of Columns
-    if(columnCount!=8) {
-    
-     
-      newRow="<tr><td>Incorrect number of columns</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>"
-    }else{
+      // Convert the role into an array
+      var theRows = e.target.result.split("\n");
+      // ===Loop through the rows=====//
+      for (var row = 0; row < theRows.length - 1; row++) {
+        // ======Get The columns into an array====//
+        var columns = theRows[row].split(",");
+        //  =====Get number of column===//
+        var columnCount = columns.length;
 
-    }
-    newRow = "<tr><td>" + columns[0] + "</td><td>" + columns[1] + "</td><td>" + columns[2] + "</td><td>" + columns[3] 
-    + "</td><td>" +  columns[4] + "</td><td>" +  columns[5] + "</td><td>" +  columns[6] + "</td><td>" +  columns[7] + "</td><td>" +  columns[8] + "</td>";
-      $("#tablemain").append(newRow);
+        newRow = "<tr>";
+        for (i = 0; i < columnCount; i++) {
+          newRow += `<td> ${columns[i]}</td>`;
+        }
 
-    }
-    
-    
-    
-    }
-    rdr.readAsText($('#inputFile')[0].files[0]);
+        $("#tablemain").append(newRow);
+      }
+    };
+    rdr.readAsText($("#inputFile")[0].files[0]);
   });
-
-
 });
-

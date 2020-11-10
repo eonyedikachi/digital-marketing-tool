@@ -28,8 +28,6 @@ let signOut = () => {
   localStorage.removeItem("currentUser");
 };
 
-console.log(currentUser[i].pics);
-
 // Profile Pic
 image = document.getElementById("profilePic");
 if (
