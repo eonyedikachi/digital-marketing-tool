@@ -79,38 +79,8 @@
                 </ul>
             </div>
             <div style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh;">
-                <div class="temp-main">
-                    <div class="templates">
-                        <h1>Embedded Form</h1>                       
-                    </div>
-                    <div>
-                        <h4>Preview</h4>
-                        <form action="">
-                            <div style=" height: 30vh; display: flex; flex-direction: column; align-items: center;">
-                                <span>Email Address <input type="text" size="40"></span><br>
-                                <span>First Name <input type="text" size="40"></span><br>
-                                <span>Last Name <input type="text" size="40"></span><br>
-                                <button type="submit">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div>
-                        <h4>Copy/paste onto your site</h4>
-                        <div style=" height: 30vh; display: flex; flex-direction: column; align-items: center;">
-                            <textarea name="embedded-code" id="embedded-code" cols="80" rows="30">
-                                <form action="">
-                                    <div style=" height: 30vh; display: flex; flex-direction: column; align-items: center;">
-                                        <span>Email Address <input type="text" size="40"></span><br>
-                                        <span>First Name <input type="text" size="40"></span><br>
-                                        <span>Last Name <input type="text" size="40"></span><br>
-                                        <button type="submit">Subscribe</button>
-                                    </div>
-                                </form>
-                            </textarea>
-                        </div>
-                    </div>
-                    
-                </div>
+    <div id="fb-editor"></div>
+                
             </div>
             <div class="user-profile position-fixed" style="background-color: #fff;height: 100vh; width: 20%;">
                 <div class="container">
@@ -141,13 +111,27 @@
     </div>
     </div>
 
+
+
+    <!-- jQuery for FormBuilder -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://formbuilder.online/assets/js/form-builder.min.js"></script>
+    <script>
+    jQuery(function($) {
+      $(document.getElementById('fb-editor')).formBuilder();
+    });
+    // const html = $('#fb-editor').formRender('html'); // HTML string
+    // console.log(html)
+    </script>
+
     <!-- jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
     <!-- Sweet Alert CDN -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
