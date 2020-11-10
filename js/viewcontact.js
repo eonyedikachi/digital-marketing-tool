@@ -111,14 +111,13 @@ displayContacts();
 // =====UploadContact====//
 
 $(document).ready(function () {
-  $("#viewFile").click(function () {
+  $("#inputFile").change(function () {
     var rdr = new FileReader();
     rdr.onload = function (e) {
       // Convert the role into an array
       var theRows = e.target.result.split("\n");
       // ===Loop through the rows=====//
-      console.log(theRows[1]);
-      for (var row = 0; row < theRows.length; row++) {
+      for (var row = 0; row < theRows.length - 1; row++) {
         // ======Get The columns into an array====//
         var columns = theRows[row].split(",");
         //  =====Get number of column===//
