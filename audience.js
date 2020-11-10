@@ -4,7 +4,6 @@
 //         $(".naviCont").toggleClass("collapse");
 //     });
 //   });
-  
 
 // Get from local storage
 users = JSON.parse(localStorage.getItem("database"));
@@ -295,14 +294,4 @@ function empty() {
   document.getElementById("username").value = "";
   document.getElementById("password").value = "";
   src = "";
-}
-
-// Upload Image
-function uploadImage(e) {
-  // Upload image
-  var reader = new FileReader();
-  reader.onload = function () {
-    src = reader.result;
-  };
-  reader.readAsDataURL(e.target.files[0]);
 }

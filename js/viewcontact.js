@@ -122,36 +122,12 @@ $(document).ready(function () {
         var columns = theRows[row].split(",");
         //  =====Get number of column===//
         var columnCount = columns.length;
-        // ====Validate Number of Columns
-        // if (columnCount != 8) {
-        //   newRow =
-        //     "<tr><td>Incorrect number of columns</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>";
-        // } else {
-        // }
+
         newRow = "<tr>";
         for (i = 0; i < columnCount; i++) {
           newRow += `<td> ${columns[i]}</td>`;
         }
-        // newRow =
-        //   "<tr><td>" +
-        //   columns[0] +
-        //   "</td><td>" +
-        //   columns[1] +
-        //   "</td><td>" +
-        //   columns[2] +
-        //   "</td><td>" +
-        //   columns[3] +
-        //   "</td><td>" +
-        //   columns[4] +
-        //   "</td><td>" +
-        //   columns[5] +
-        //   "</td><td>" +
-        //   columns[6] +
-        //   "</td><td>" +
-        //   columns[7] +
-        //   "</td><td>" +
-        //   columns[8] +
-        //   "</td>";
+
         $("#tablemain").append(newRow);
       }
     };
