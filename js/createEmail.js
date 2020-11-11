@@ -8,6 +8,8 @@ let templates = JSON.parse(
   localStorage.getItem(`${currentUser[i].userName}Templates`)
 );
 
+let tempID = localStorage.getItem("tempID");
+
 if (currentUser == null) {
   currentUser = [];
 }
@@ -29,7 +31,7 @@ if (templates == null || templates == undefined || templates.length == 0) {
   });
 
   // Load saved template
-  var design = templates[templates.length - 1].json;
+  var design = templates[tempID].json;
   console.log(design);
   unlayer.loadDesign(design);
 }

@@ -36,13 +36,13 @@ function display() {
                                     alt="">
                             </div>
                             <div class="info">
-                                <button id="templateName" class="template-name" onclick="editEmail()">${templates[i].name}</button>
+                                <button id="templateName" class="template-name" onclick="editEmail(${i})">${templates[i].name}</button>
                                 <p><span>Last edited</span> on ${templates[i].date}</p>
                                 <p>by <span>${templates[i].user}</span></p>
                             </div>
                         </div>
                         <div class="edit">
-                            <button id="editBtn" onclick="editEmail()">Edit</button>
+                            <button id="editBtn" onclick="editEmail(${i})">Edit</button>
                             <button onclick="deleteTemp(${i})">Delete</button>
                         </div>
                 </div>`;
@@ -136,6 +136,7 @@ function cancel() {
 }
 
 // Edit Email Template
-function editEmail() {
+function editEmail(id) {
+  localStorage.setItem("tempID", id);
   location.assign("../createEmail.html");
 }
