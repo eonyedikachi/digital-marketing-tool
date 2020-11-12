@@ -44,24 +44,17 @@
           <div class="dropdown">
             <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              <i class="far fa-file-powerpoint"></i> Present
+              <i class="far fa-file-powerpoint"></i> Share
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#"><i class="far fa-file-powerpoint"></i> Present</a>
-              <a class="dropdown-item" href="#"><i class="fas fa-video"></i> Present and record
-              </a>
-              <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as video</a>
+              <a class="dropdown-item" href="#" onclick="getHtml();"><i class="fas fa-video"></i> Download as pdf</a>
+              <a class="dropdown-item" href="#"><i class="fab fa-youtube"></i> Download as image</a>
               <a class="dropdown-item" href="#"><i class="fas fa-cloud-upload-alt"></i> Save on
                 cloud</a>
             </div>
           </div>
         </li>
-        <li class="nav-items">
-          <a href="#" onclick="print();">Share</a>
-        </li>
-        <li class="nav-items">
-          <a href="#"><i class="fas fa-download"></i></a>
-        </li>
+             
         <li class="nav-items">
           <a href="./pricing.html">Try MartReach Pro <i class="fas fa-crown"></i></a>
         </li>
@@ -96,6 +89,20 @@
     projectId: 6993,
     // templateId: "[TEMPLATE-ID]"
   })
+
+function getHtml(){
+  unlayer.exportHtml(function(data) {
+  var json = data.design; // design json
+  var html = data.html; // final html
+
+  // Do something with the json and html
+  var printWindow = window.open('', '', 'height=200,width=400');
+  printWindow.document.write(html);  
+  printWindow.document.close();  
+  printWindow.print();
+  console.log(html)
+})
+}
 
  
 </script>
