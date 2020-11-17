@@ -86,7 +86,7 @@
             </div>
             <div style="width:60%;background-color: #F4F5F7; margin: auto; min-height: 100vh; padding: 2rem;">
                 <h1 class="mb-4">Embedded Subscription Form</h1>
-                <div id="fbEditor"></div>
+                <div id="build-wrap"></div>
                 <div class="html-code my-4">
                     <h4 class="my-3">Copy code and place on your website</h4>
                     <div style="background: #fff; box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2); position: relative;"
@@ -125,16 +125,14 @@
     </div>
 
     <script>
-        var formBuilder;
-
         const code = document.getElementById("markup");
 
         jQuery(function ($) {
-            formBuilder = $(document.getElementById('fbEditor')).formBuilder();
-
+            var fbTemplate = document.getElementById("build-wrap");
             var options = {
                 onSave: function (evt, formData) {
-                    const addLineBreaks = html => html.replace(new RegExp("><", "g"), ">\n<");
+                    const addLineBreaks = (html) =>
+                        html.replace(new RegExp("><", "g"), ">\n<");
 
                     // Grab markup and escape it
                     const $markup = $("<div/>");
@@ -142,20 +140,11 @@
 
                     // set < code > innerText with escaped markup
                     code.innerText = addLineBreaks($markup.formRender("html"));
-                }
+                },
             };
-
-            $(formBuilder).formBuilder(options);
+            $(fbTemplate).formBuilder(options);
         });
     </script>
-
-    <!-- jQuery and Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script> -->
 
     <!-- Sweet Alert CDN -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
