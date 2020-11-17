@@ -13,27 +13,9 @@ body {
 
 .heading {
   text-align: center;
-  color: black;
-  margin-top: 1rem;
-  font-size: 2rem;
+  color: #8c30f5;
+  /* margin-top: 10px; */
   font-weight: bolder;
-}
-/* images categories */
-.img {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-around;
-}
-.img div a:hover {
-  opacity: 0.3;
-}
-.img div a img {
-  max-width: 300px;
-  max-height: 100px;
-}
-.img div h4 {
-  color: black;
-  text-align: center;
 }
 /* Select category */
 .selectcat {

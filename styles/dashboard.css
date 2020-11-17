@@ -266,18 +266,21 @@ a:hover {
   border-radius: 50%;
 }
 #notif {
-  position: absolute;
-  /* content: 1; */
-  /* content:'1'; */
-  /* right: -3px; */
-  right: 30%;
-  bottom: 50%;
-  font-weight: bold;
-  color: #fff;
-  font-size: 10px;
-  padding: 2px 5px;
-  background-color: red;
-  border-radius: 50%;
+position: absolute;
+top: -20%;
+left: 60%;
+font-weight: bold;
+color: #fff;
+font-size: 10px;
+height: 15%;
+width: 15%;
+padding:30%;
+background-color: red;
+border-radius: 50%;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
 }
 
 /* Footer */
