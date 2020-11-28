@@ -1,0 +1,24 @@
+{
+  "name": "martreach",
+  "version": "1.0.0",
+  "description": "digital marketing tool",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazeeeh/Digital-marketing-tool.git"
+  },
+  "keywords": [
+    "digital",
+    "marketing",
+    "tool"
+  ],
+  "author": "martreach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazeeeh/Digital-marketing-tool/issues"
+  },
+  "homepage": "https://github.com/nazeeeh/Digital-marketing-tool#readme"
+}
