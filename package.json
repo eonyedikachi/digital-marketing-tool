@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/nazeeeh/Digital-marketing-tool/issues"
   },
-  "homepage": "https://github.com/nazeeeh/Digital-marketing-tool#readme"
+  "homepage": "https://github.com/nazeeeh/Digital-marketing-tool#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
 }
