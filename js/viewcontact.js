@@ -6,6 +6,12 @@ if (subscibers == null) {
   subscibers = [];
 }
 
+let audienceGroups = JSON.parse(localStorage.getItem("audienceGroups"));
+
+if (audienceGroups == null) {
+  audienceGroups = [];
+}
+
 // update contacts and subscribers count
 // document.getElementById(".subscibe").innerHTML = subscibers.length;
 // document.getElementById("subscribers").innerHTML = subscibers.length;
@@ -134,3 +140,26 @@ $(document).ready(function () {
     rdr.readAsText($("#inputFile")[0].files[0]);
   });
 });
+
+// Groups
+let groupList = document.getElementById("groupList");
+
+for (i = 0; i < subscibers.length; i++) {
+  groupList.innerHTML += `<input type="checkbox" name="${subscibers[i].email}" class="contactGroup">  <label>${subscibers[i].firstName} ${subscibers[i].lastName}</label> <br/>`;
+}
+
+let contactGroup = document.querySelectorAll(".contactGroup");
+
+function saveGroup() {
+  var groupContacts = [];
+  contactGroup.forEach((x) => {
+    if (x.checked) {
+      let contacts = subscibers.find((y) => y.email === x.name);
+      groupContacts.push(contacts);
+    }
+  });
+  let groupName = document.getElementById("groupName").value;
+
+  audienceGroups.push({ groupName: groupName, contacts: groupContacts });
+  localStorage.setItem("audienceGroups", JSON.stringify(audienceGroups));
+}

@@ -64,7 +64,7 @@
           <li class="nav-item flex">
             <a class="nav-link" href="./post_email.html">
               <i class="fas fa-envelope-open"></i>
-              <a href="./post_email.html">Post-Email</a>
+              <a href="./post_email.html">Campaign</a>
             </a>
           </li>
           <li class="nav-item flex">
@@ -108,12 +108,8 @@
                   aria-selected="false">Import Contacts</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link" id="send-email-tab" data-toggle="tab" href="#sendEmail" role="tab"
-                  aria-controls="send-email" aria-selected="false">Send Email</a>
-              </li>
-              <li class="nav-item" role="presentation">
                 <a class="nav-link" id="manage-tab" data-toggle="tab" href="#manage" role="tab" aria-controls="manage"
-                  aria-selected="false">Manage Contacts</a>
+                  aria-selected="false">Groups</a>
               </li>
             </ul>
 
@@ -175,125 +171,6 @@
               </div>
               <!-- View Contact -->
               <div class="tab-pane fade" id="viewContact" role="tabpanel" aria-labelledby="nav-view-contact-tab">
-                <!-- Add A Subscriber Modal -->
-                <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-                  aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="add "
-                          style="color: #fff; border-radius: 30px; font-size: 18px; font-weight: 600;">
-                          Add a Subscriber</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">First Name</label>
-                            <input type="text" class="form-control" id="firstname" placeholder="Enter Firstname">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Last Name</label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Enter Lastname">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Phone No:</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Enter Phone no">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Country</label>
-                            <input type="text" class="form-control" id="country" placeholder="Enter Country">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">State</label>
-                            <input type="text" class="form-control" id="state" placeholder="Enter State">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">City</label>
-                            <input type="text" class="form-control" id="city" placeholder="Enter City">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Birth Day</label>
-                            <input type="text" class="form-control" id="bday" placeholder="Enter Birthday">
-                          </div>
-                        </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" id='save' class="btn btn-primary" style="background-color: #6920bd;"
-                          onclick="subscribeUser()">Save</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Edit Modal -->
-                <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-                  aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle "
-                          style="color: #fff; border-radius: 30px; font-size: 18px; font-weight: 600;">
-                          Edit an existing Subscriber</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Email Address</label>
-                            <input type="email" class="form-control" id="" placeholder="Enter Email Address">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">First Name</label>
-                            <input type="text" class="form-control" id="" placeholder="Enter First Name">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Last Name</label>
-                            <input type="text" class="form-control" id="" placeholder="Enter Last Name">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Phone No:</label>
-                            <input type="text" class="form-control" id="" placeholder="Enter Phone no">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Country</label>
-                            <input type="text" class="form-control" id="e" placeholder="Enter Country">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">State</label>
-                            <input type="text" class="form-control" id="" placeholder="Enter State">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">City</label>
-                            <input type="text" class="form-control" id="" placeholder="Enter City">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Birth Day</label>
-                            <input type="text" class="form-control" id="" placeholder="Enter Birthday">
-                          </div>
-                        </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" style="background-color: #6920bd;"
-                          onclick="subscribeUser()">Save</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-
                 <!-- View Contact Table -->
                 <div class="container" id="" style="background-color: #F4F5F7;">
                   <div class="Jumbotron">
@@ -324,114 +201,204 @@
                               <th class="text-right">Delete</th>
                             </tr>
                           </thead>
-                          <tbody id="contactTable">
-                            <tr>
-                              <td>1</td>
-                              <td>dunfrank@gmail.com</th>
-                              <td>Otto</td>
-                              <td>Joe</td>
-                              <td>08135398131</td>
-                              <td>USA</td>
-                              <td>Texas</td>
-                              <td>Dallas</td>
-                              <td>08/9</td>
-                              <td class="text-right">
-                                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit"
-                                  style="width: 80px; background: #6920bd;">Edit</button>
-                              </td>
-                              <td class="text-right">
-                                <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"
-                                  style="width: 80px;" id="delete" onclick="Delete()">Delete</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th>1</th>
-                              <th>dunfrank@gmail.com</th>
-                              <th>Otto</th>
-                              <td>Joe</td>
-                              <td>08135398131</td>
-                              <td>USA</td>
-                              <td>Texas</td>
-                              <td>Dallas</td>
-                              <td>08/9</td>
-                              <td class="text-right">
-                                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit"
-                                  style="width: 80px; background: #6920bd;">Edit</button>
-                              </td>
-                              <td class="text-right">
-                                <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"
-                                  style="width: 80px;" id="delete" onclick="Delete()">Delete</button>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <th>1</th>
-                              <th>dunfrank@gmail.com</th>
-                              <th>Otto</th>
-                              <td>Joe</td>
-                              <td>08135398131</td>
-                              <td>USA</td>
-                              <td>Texas</td>
-                              <td>Dallas</td>
-                              <td>08/9</td>
-                              <td class="text-right">
-                                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit"
-                                  style="width: 80px; background: #6920bd;">Edit</button>
-                              </td>
-                              <td class="text-right">
-                                <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"
-                                  style="width: 80px;" id="delete" onclick="Delete()">Delete</button>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <th>1</th>
-                              <th>dunfrank@gmail.com</th>
-                              <th>Otto</th>
-                              <td>Joe</td>
-                              <td>08135398131</td>
-                              <td>USA</td>
-                              <td>Texas</td>
-                              <td>Dallas</td>
-                              <td>08/9</td>
-                              <td class="text-right">
-                                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#edit"
-                                  style="width: 80px; background: #6920bd;">Edit</button>
-                              </td>
-                              <td class="text-right">
-                                <button class="btn btn-danger badge-pill" data-toggle="modal" data-target="#"
-                                  style="width: 80px;" id="delete" onclick="Delete()">Delete</button>
-                              </td>
-                            </tr>
-
-
-                          </tbody>
+                          <tbody id="contactTable"></tbody>
                         </table>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <!-- Import Contact -->
               <div class="tab-pane fade" id="import" role="tabpanel" aria-labelledby="nav-import-tab">
                 <div id="buttondiv" class="my-3">
                   <input type="file" id="inputFile" />
-                  
+
                   <br><br>
                 </div>
                 <div class="importcont overflow-auto" id="importcont">
                   <table class="gridtable" id="tablemain">
-              
+
                   </table>
                 </div>
               </div>
-              <!-- Send Email -->
-              <div class="tab-pane fade" id="sendEmail" role="tabpanel" aria-labelledby="nav-send-email-tab">3...</div>
-              <!-- Manage Contacts -->
-              <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="nav-manage-tab">4...</div>
+
+              <!-- Groups -->
+              <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="nav-manage-tab">
+
+                <div class="container" id="" style="background-color: #F4F5F7;">
+                  <div class="Jumbotron">
+                    <div class="card p-3">
+                      <div class="card-body overflow-auto">
+                        <h5 class="card-title">Groups</h5>
+                        <div class="row">
+                          <div class="col-md-12 text-right">
+                            <button class="btn btn-primary  badge-pill" data-toggle="modal" data-target="#groups"
+                              style="background: #6920bd; width: 10rem;">Create Group</button>
+                          </div>
+                        </div>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
         </main>
+      </div>
+    </div>
+
+
+
+
+    <!-- Add A Subscriber Modal -->
+    <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="add "
+              style="color: #fff; border-radius: 30px; font-size: 18px; font-weight: 600;">
+              Add a Subscriber</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">First Name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Enter Firstname">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Last Name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Enter Lastname">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Phone No:</label>
+                <input type="text" class="form-control" id="phone" placeholder="Enter Phone no">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Country</label>
+                <input type="text" class="form-control" id="country" placeholder="Enter Country">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">State</label>
+                <input type="text" class="form-control" id="state" placeholder="Enter State">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">City</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter City">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Birth Day</label>
+                <input type="text" class="form-control" id="bday" placeholder="Enter Birthday">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id='save' class="btn btn-primary" style="background-color: #6920bd;"
+              onclick="subscribeUser()">Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle "
+              style="color: #fff; border-radius: 30px; font-size: 18px; font-weight: 600;">
+              Edit an existing Subscriber</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email Address</label>
+                <input type="email" class="form-control" id="" placeholder="Enter Email Address">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">First Name</label>
+                <input type="text" class="form-control" id="" placeholder="Enter First Name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Last Name</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Last Name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Phone No:</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Phone no">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Country</label>
+                <input type="text" class="form-control" id="e" placeholder="Enter Country">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">State</label>
+                <input type="text" class="form-control" id="" placeholder="Enter State">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">City</label>
+                <input type="text" class="form-control" id="" placeholder="Enter City">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Birth Day</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Birthday">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" style="background-color: #6920bd;"
+              onclick="subscribeUser()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create Group Modal -->
+    <div class="modal fade" id="groups" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle "
+              style="color: #fff; border-radius: 30px; font-size: 18px; font-weight: 600;">
+              Create New Group</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Group Name</label>
+                <input type="text" class="form-control" id="groupName" placeholder="Enter Group Name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Select Contacts </label>
+                <div id="groupList"></div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id='save' class="btn btn-primary" style="background-color: #6920bd;"
+              onclick="saveGroup()">Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
 
