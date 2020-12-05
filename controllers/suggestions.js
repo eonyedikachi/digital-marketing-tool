@@ -17,5 +17,6 @@ const suggestions = (app) => {
   });
 };
 
+
 module.exports = suggestions;
 
