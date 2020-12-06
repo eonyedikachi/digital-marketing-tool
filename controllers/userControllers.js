@@ -59,15 +59,16 @@ var userController = (app) => {
   
         // INSERT into database
         connection.query(
-          `insert into users (firstName,lastName,username,tel,email,password,website,picture,isEnable) values 
-            ('${req.body.firstName}',
+          `insert into users (roleId,firstName,lastName,username,tel,email,password,website,picture,isEnabled) values 
+            ('${req.body.roleId}',
+            '${req.body.firstName}',
             '${req.body.lastName}',
             '${req.body.username}',
             '${req.body.tel}',
             '${req.body.email}',
             '${req.body.website}',
             '${req.body.picture}',
-            '${req.body.isEnable}','${hash}')`,
+            '${req.body.isEnabled}','${hash}')`,
           (error, resp) => {
             if (error) return res.send(error.sqlMessage);
             res.send("User successfully created.");
@@ -97,15 +98,17 @@ var userController = (app) => {
   
         // INSERT into database
         connection.query(
-          `insert into users (firstName,lastName,username,tel,email,password,website,picture,isEnable) values 
-            ('${req.body.firstName}',
+          `insert into users (roleId,firstName,lastName,username,tel,email,password,website,picture,isEnabled) values 
+            
+          ('${req.body.roleId}',
+           '${req.body.firstName}',
             '${req.body.lastName}',
             '${req.body.username}',
             '${req.body.tel}',
             '${req.body.email}',
             '${req.body.website}',
             '${req.body.picture}',
-            '${req.body.isEnable}','${hash}')`,
+            '${req.body.isEnabled}','${hash}')`,
           (error, resp) => {
             if (error) return res.send(error.sqlMessage);
             res.send("User successfully created.");
