@@ -2,8 +2,6 @@ const emailTemplate = (app) => {
   const connection = require("../models/db"); // database module
 
   // GET emailTemplates
-  app.get("/", (req, res) => res.send("Hello World!"));
-
   app.get("/emailTemplates", (req, res) => {
     connection.query(`select * from email_templates`, (err, resp) => {
       if (err) throw err;
