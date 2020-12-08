@@ -5,10 +5,11 @@ const suggestions = require("../controllers/suggestions"); //Suggestions Control
 const reply = require("../controllers/reply"); //Reply Controller
 const billing_info = require("../controllers/billing_info"); //Reply Controller
 const contactUs = require("../controllers/contactUsController"); // contactUsController module
-const users = require('../controllers/userControllers') //userController module
+const users = require("../controllers/userControllers"); //userController module
 const newsletter = require("../controllers/newsletterController"); // newsletterController module
 const audience = require("../controllers/audienceController"); // audienceController module
-
+const role = require("../controllers/roleController"); // roleController module
+const permission = require("../controllers/permissionController"); // permissionController module
 
 // Dynamic port listener
 const port = process.env.PORT || 3000; // set port
@@ -23,6 +24,8 @@ billing_info(app);
 contactUs(app);
 newsletter(app);
 audience(app);
+role(app);
+permission(app);
 
 // Listen on port
 app.listen(port, () => console.log(`Listening on port ${port}...`));
