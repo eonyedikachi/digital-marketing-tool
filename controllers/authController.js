@@ -13,51 +13,43 @@ const authenticate = (req, res, next) => {
   });
 };
 
-// Check Permission to View User
-const viewUser = (req, res, next) => {
-  if (checkPermission("view_user", req.user.data.permissions) === true) {
+// Check User Management Permission
+const manageUser = (req, res, next) => {
+  if (checkPermission("user_management", req.user.data.permissions) === true) {
     next();
   } else {
-    res.status(403).send("You don't have permission to view all users");
+    res.status(403).send("You don't have permission to manage users");
   }
 };
 
-// Check Permission to Edit Users
-const editUser = (req, res, next) => {
-  if (checkPermission("edit_user", req.user.data.permissions) === true) {
+// Check Role Management Permission
+const manageRole = (req, res, next) => {
+  if (checkPermission("role_management", req.user.data.permissions) === true) {
     next();
   } else {
-    res.status(403).send("You don't have permission to edit a user");
+    res.status(403).send("You don't have permission to manage roles");
   }
 };
 
-// Check Permission to Add Users
-const addUser = (req, res, next) => {
-  if (checkPermission("add_user", req.user.data.permissions) === true) {
+// Check Permission Management Permission
+const managePermission = (req, res, next) => {
+  if (
+    checkPermission("permission_management", req.user.data.permissions) === true
+  ) {
     next();
   } else {
-    res.status(403).send("You don't have permission to add a user");
-  }
-};
-
-// Check Permission to Delete Users
-const deleteUser = (req, res, next) => {
-  if (checkPermission("delete_user", req.user.data.permissions) === true) {
-    next();
-  } else {
-    res.status(403).send("You don't have permission to delete a user");
+    res.status(403).send("You don't have permission to manage permissions");
   }
 };
 
 // Find permission
 const checkPermission = (action, data) => {
-  permission = data.some((x) => x.permissionName === action);
+  permission = data.some((x) => x.groupName === action);
   return permission;
 };
 
 // Export modules
 module.exports.authenticate = authenticate;
-module.exports.viewUser = viewUser;
-module.exports.editUser = editUser;
-module.exports.addUser = addUser;
-module.exports.deleteUser = deleteUser;
+module.exports.manageUser = manageUser;
+module.exports.manageRole = manageRole;
+module.exports.managePermission = managePermission;

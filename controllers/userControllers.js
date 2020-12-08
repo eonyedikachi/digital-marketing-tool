@@ -4,8 +4,9 @@ var userController = (app) => {
   const bcrypt = require("bcrypt");
   const jwt = require("jsonwebtoken");
   const auth = require("./authController");
+  const assignRole = require("./defaultRole");
 
-  app.get("/users", auth.authenticate, auth.viewUser, (req, res) => {
+  app.get("/users", auth.authenticate, auth.manageUser, (req, res) => {
     // Get users
     connection.query(`select * from users`, (err, resp) => {
       if (err) throw err;
@@ -14,7 +15,7 @@ var userController = (app) => {
     });
   });
 
-  app.get("/users/:id", auth.authenticate, auth.viewUser, (req, res) => {
+  app.get("/users/:id", auth.authenticate, auth.manageUser, (req, res) => {
     connection.query(
       `select * from users where id = ${req.params.id}`,
       (err, resp) => {
@@ -27,10 +28,12 @@ var userController = (app) => {
   });
 
   // Delete a user
-  app.delete("/users/:id", auth.authenticate, auth.deleteUser, (req, res) => {
+  app.delete("/users/:id", auth.authenticate, auth.manageUser, (req, res) => {
     connection.query(
       `delete from users where id = ${req.params.id}`,
       (err, resp) => {
+        if (resp.affectedRows < 1)
+          return res.status(400).send("Record doesn't exist");
         if (err) return res.send(err);
         res.send("User successfully deleted at ID " + req.params.id);
       }
@@ -38,7 +41,7 @@ var userController = (app) => {
   });
 
   // REST API to Insert users
-  app.post("/users", auth.authenticate, auth.addUser, (req, res) => {
+  app.post("/users", auth.authenticate, auth.manageUser, (req, res) => {
     // Hash password
     bcrypt.hash(req.body.password, 10, (err, hash) => {
       if (err) return res.send(err);
@@ -68,7 +71,7 @@ var userController = (app) => {
   });
 
   //rest api to update record into mysql database
-  app.put("/users/:id", auth.authenticate, auth.editUser, (req, res) => {
+  app.put("/users/:id", auth.authenticate, auth.manageUser, (req, res) => {
     connection.query(
       `update users set firstName = '${req.body.firstName}', lastName = '${req.body.lastName}', username='${req.body.username}' where id=${req.params.id}`,
       (err, response) => {
@@ -80,12 +83,21 @@ var userController = (app) => {
 
   // POST request (Signup)
   app.post("/signup", (req, res) => {
+    if (
+      !req.body.firstName ||
+      !req.body.lastName ||
+      !req.body.email ||
+      !req.body.password
+    ) {
+      return res.status(400).send("Please input all required fields");
+    }
+    if (!req.body.website) req.body.website = null;
+    if (!req.body.tel) req.body.tel = null;
+    if (!req.body.picture) req.body.picture = null;
+
     // Hash password
     bcrypt.hash(req.body.password, 10, (err, hash) => {
       if (err) return res.send(err);
-
-      if (!req.body.website) req.body.website = null;
-      if (!req.body.picture) req.body.picture = null;
 
       // INSERT into database
       connection.query(
@@ -102,6 +114,7 @@ var userController = (app) => {
             'true')`,
         (error, resp) => {
           if (error) return res.send(error.sqlMessage);
+          assignRole(resp.insertId); // assigns user role to new users
           res.send("User successfully created.");
           res.end();
         }
@@ -126,7 +139,7 @@ var userController = (app) => {
             if (result === true) {
               // Check permissions
               connection.query(
-                `select permissionName from permission inner join role_permission on permission.permissionId = role_permission.permissionId where role_permission.roleId = ${resp[0].roleId}`,
+                `select permissionName,groupName from permission inner join role_permission on permission.permissionId = role_permission.permissionId where role_permission.roleId = ${resp[0].roleId}`,
                 (err, resPerm) => {
                   if (err) return res.status(401).send(err);
                   resp[0].permissions = resPerm;
