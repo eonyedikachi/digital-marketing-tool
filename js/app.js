@@ -7,6 +7,7 @@ const billing_info = require("../controllers/billing_info"); //Reply Controller
 const contactUs = require("../controllers/contactUsController"); // contactUsController module
 const users = require('../controllers/userControllers') //userController module
 const newsletter = require("../controllers/newsletterController"); // newsletterController module
+const audience = require("../controllers/audienceController"); // audienceController module
 
 
 // Dynamic port listener
@@ -21,6 +22,7 @@ users(app);
 billing_info(app);
 contactUs(app);
 newsletter(app);
+audience(app);
 
 // Listen on port
 app.listen(port, () => console.log(`Listening on port ${port}...`));
