@@ -9,6 +9,7 @@ const users = require('../controllers/userControllers'); //userController module
 const newsletter = require('../controllers/newsletterController'); // newsletterController module
 const audience = require('../controllers/audienceController'); // audienceController module
 const payment = require('../controllers/payment');
+const stickyNote = require('../controllers/sticky_note')
 
 // Dynamic port listener
 const port = process.env.PORT || 3000; // set port
@@ -24,6 +25,7 @@ contactUs(app);
 newsletter(app);
 audience(app);
 payment(app);
+stickyNote(app)
 
 // Listen on port
 app.listen(port, () => console.log(`Listening on port ${port}...`));
