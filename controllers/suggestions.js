@@ -1,7 +1,15 @@
 const suggestions = (app) => {
   const connection = require("../models/db"); // database module
   
-   // Suggestion
+   // Get Suggestion
+  app.get("/suggestions",  (req, res) => {
+    connection.query(`select * from suggestions`, (err, resp) => {
+      if (err) throw err;
+      res.send(resp);
+    });
+  });
+  
+  //Post Suggestions
    app.post("/suggestions", (req, res) => {
     if (!req.body.userId || !req.body.category || !req.body.message)
       return res.status(400).send("Please fill all required fields");
