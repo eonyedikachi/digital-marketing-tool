@@ -4,9 +4,10 @@ const jwt = require("jsonwebtoken"); // jsonwebtoken
 // Verify Token
 const authenticate = (req, res, next) => {
   const authHeader = req.headers["authorization"]; // Get auth header value
-  if (typeof authHeader === "undefined") return res.sendStatus(403); // Check if authHeader is undefined
-  req.token = authHeader; // Set token
-  jwt.verify(req.token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
+  const token = authHeader && authHeader.split(" ")[1]; // get token
+  if (typeof token === "undefined") return res.sendStatus(403); // Check if token is undefined
+
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
     if (err) return res.status(403).send("Access Denied!");
     req.user = decoded; //decoded token data
     next(); // Next middleware
