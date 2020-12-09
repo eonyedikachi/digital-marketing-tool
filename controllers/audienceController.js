@@ -34,22 +34,22 @@ var audienceController = (app) => {
   
     // REST API to Insert audience
     app.post("/audience", (req, res) => {
-      if (!req.body.userId || !req.body.subscriberGroup || !req.body.firstName || !req.body.lastName || !req.body.email || !req.body.tel || !req.body.country || !req.body.state || !req.body.city || !req.body.birthday)
+      if (!req.body.user_id || !req.body.subscriberGroup || !req.body.firstName || !req.body.lastName || !req.body.email || !req.body.tel || !req.body.country || !req.body.state || !req.body.city || !req.body.birthday)
       return res.status(400).send("Please fill all required fields");
   
         // INSERT into database
         connection.query(
-          `insert into audience (userId,subscriberGroup,firstName,lastName,tel,email,tel,country,state,city,birthday) values 
-              ('${req.body.userId}',
+          `insert into audience (user_id,subscriberGroup,firstName,lastName,tel,email,country,state,city,birthday) values 
+              ('${req.body.user_id}',
               '${req.body.subscriberGroup}',
               '${req.body.firstName}',
               '${req.body.lastName}',
               '${req.body.tel}',
+              '${req.body.email}',
               '${req.body.country}',
               '${req.body.state}',
               '${req.body.city}',
-              '${req.body.birthday}',
-              'true')`,
+              '${req.body.birthday}')`,
           (error, resp) => {
             if (error) return res.send(error.sqlMessage);
             res.send("audience successfully created.");
