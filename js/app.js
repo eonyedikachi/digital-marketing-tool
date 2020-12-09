@@ -1,15 +1,17 @@
-const express = require('express'); // express module
-const bodyParser = require('body-parser'); // body-parser middleware
-const emailTemplate = require('../controllers/emailTemplateController'); // emailTemplateController module
-const suggestions = require('../controllers/suggestions'); //Suggestions Controller
-const reply = require('../controllers/reply'); //Reply Controller
-const billing_info = require('../controllers/billing_info'); //Reply Controller
-const contactUs = require('../controllers/contactUsController'); // contactUsController module
-const users = require('../controllers/userControllers'); //userController module
-const newsletter = require('../controllers/newsletterController'); // newsletterController module
-const audience = require('../controllers/audienceController'); // audienceController module
-const payment = require('../controllers/payment');
-const stickyNote = require('../controllers/sticky_note')
+const express = require("express"); // express module
+const bodyParser = require("body-parser"); // body-parser middleware
+const emailTemplate = require("../controllers/emailTemplateController"); // emailTemplateController module
+const suggestions = require("../controllers/suggestions"); //Suggestions Controller
+const reply = require("../controllers/reply"); //Reply Controller
+const billing_info = require("../controllers/billing_info"); //Reply Controller
+const contactUs = require("../controllers/contactUsController"); // contactUsController module
+const users = require("../controllers/userControllers"); //userController module
+const newsletter = require("../controllers/newsletterController"); // newsletterController module
+const audience = require("../controllers/audienceController"); // audienceController module
+const role = require("../controllers/roleController"); // roleController module
+const permission = require("../controllers/permissionController"); // permissionController module
+const payment = require("../controllers/payment");
+const stickyNote = require("../controllers/sticky_note");
 
 // Dynamic port listener
 const port = process.env.PORT || 3000; // set port
@@ -23,9 +25,11 @@ users(app);
 billing_info(app);
 contactUs(app);
 newsletter(app);
+permission(app);
+role(app);
 audience(app);
 payment(app);
-stickyNote(app)
+stickyNote(app);
 
 // Listen on port
 app.listen(port, () => console.log(`Listening on port ${port}...`));

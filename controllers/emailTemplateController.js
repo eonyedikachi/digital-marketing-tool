@@ -1,8 +1,10 @@
 const emailTemplate = (app) => {
   const connection = require("../models/db"); // database module
+  const auth = require("./authController");
+  const Joi = require("joi"); // validator
 
   // GET emailTemplates
-  app.get("/emailTemplates", (req, res) => {
+  app.get("/emailTemplates", auth.authenticate, (req, res) => {
     connection.query(`select * from email_templates`, (err, resp) => {
       if (err) throw err;
       res.send(resp);
@@ -10,7 +12,7 @@ const emailTemplate = (app) => {
   });
 
   // Get emailTemplates by id
-  app.get("/emailTemplates/:id", (req, res) => {
+  app.get("/emailTemplates/:id", auth.authenticate, (req, res) => {
     connection.query(
       `select * from email_templates where id = ${req.params.id}`,
       (err, resp) => {
@@ -22,9 +24,9 @@ const emailTemplate = (app) => {
   });
 
   // Create new emailTemplate
-  app.post("/emailTemplates", (req, res) => {
-    if (!req.body.user_id || !req.body.name || !req.body.json || !req.body.html)
-      return res.status(400).send("Please input all required fields");
+  app.post("/emailTemplates", auth.authenticate, (req, res) => {
+    const { error } = validateTemplate(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
 
     // INSERT into database
     connection.query(
@@ -37,7 +39,7 @@ const emailTemplate = (app) => {
   });
 
   // Edit emailTemplates
-  app.put("/emailTemplates/:id", function (req, res) {
+  app.put("/emailTemplates/:id", auth.authenticate, (req, res) => {
     connection.query(
       `SELECT * FROM email_templates WHERE id=${req.params.id}`,
       (err, db_res) => {
@@ -75,7 +77,7 @@ const emailTemplate = (app) => {
   });
 
   // DELETE emailTemplate
-  app.delete("/emailTemplates/:id", function (req, res) {
+  app.delete("/emailTemplates/:id", auth.authenticate, (req, res) => {
     connection.query(
       `delete from email_templates where id = ${req.params.id}`,
       (err, resp) => {
@@ -86,6 +88,17 @@ const emailTemplate = (app) => {
       }
     );
   });
+
+  function validateTemplate(template) {
+    const schema = Joi.object({
+      user_id: Joi.required(),
+      name: Joi.string().min(3).required(),
+      json: Joi.string().empty("").required(),
+      html: Joi.string().empty("").required(),
+    });
+
+    return schema.validate(template);
+  }
 };
 
 module.exports = emailTemplate;
