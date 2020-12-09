@@ -4,7 +4,7 @@ var userController = (app) => {
   const bcrypt = require("bcrypt");
   const jwt = require("jsonwebtoken");
   const auth = require("./authController");
-  const assignRole = require("./defaultRole");
+  const assignRole = require("../models/defaultRole");
 
   app.get("/users", auth.authenticate, auth.manageUser, (req, res) => {
     // Get users
