@@ -45,7 +45,7 @@ document.querySelector(".footer").innerHTML = `
           </p>
         </div>
         <div class="copyright mb-3">
-          <p style="font-family:'Rubik', sans-serif;" class="font-weight-lighter">MartReach &copy; 2020, All Rights Reserved.</p>
+          <p style="font-family:'Rubik', sans-serif;" class="font-weight-lighter">MartReach &copy; 2021, All Rights Reserved.</p>
         </div>
         <div class="socials">
           <a class="mr-4" href="#"><i class="fas fa-phone-alt"></i></a>
